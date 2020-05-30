@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            border: 1px solid black;
+        }
+        div + p {
+            background-color: blueviolet;
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Adjacent Sibling Selector</h1>
+    <h3>Div 1</h3>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+    </div>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <span><i> ipsum dolor sit amet.</i></span>
+    <p>Lorem ipsum dolor sit amet.</p><br>
+
+    <h3>Div 2</h3>
+    <div>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+    <span><i> ipsum dolor sit amet.</i></span>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p><br>
+     
+    <h3>Div 3</h3>
+    <div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+    <section>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </section>
+    <p>Lorem ipsum dolor sit amet.</p>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+ 
+    </head>
+<body>
+
+    <div class="container">
+     <h1>Tooltip Example</h1>
+     <a href="#" data-toggle="tooltip" title="hooray" >Hover over me</a>
+    </div>
+
+    <script>
+        $(document).ready(function()
+        {
+            $('[data-toggle = "tooltip"]').tooltip();
+        });    
+    </script>
+
+
+
+
+
+     <div class="container">
+    <h1>Tooltip Example with position right</h1>
+     <a href="#" data-toggle="tooltip" title="hooray" data-placement="right" >Hover over me</a>
+     <br><br>
+     <button type="button" data-toggle="tooltip" title="hooray" data-placement="right" 
+      class="btn btn-primary">Hover over me</button>
+    </div>
+
+    <script>
+        $(document).ready(function()
+        {
+            $('[data-toggle = "tooltip"]').tooltip();
+        });  
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="jquery-3.4.1.min.js"></script>
+        <style>
+            #box {
+                background-color: aqua;
+                width: 300px;
+                height: 300px;
+                padding: 5px;
+                position: relative;
+            }
+        
+        </style>
+
+    </head>
+    <body>
+        <h1>Animate Method</h1>
+        <div id="box">
+            <p>This is just text.</p>
+        </div>
+        <button type="button" id="btn">animate</button>
+        <script>
+            $(document).ready(function(){
+                /*
+                $("#btn").click(function(){
+                    $("#box").animate({
+                    left: "90px",
+                    top: "10px",
+                    width: "50px"
+                   });
+                });
+                */
+                
+                /*
+                // animation work in sequence.
+                $("#btn").click(function(){
+                    $("#box").animate({
+                    left: "90px"
+                   });
+                   $("#box").animate({
+                    top: "90px"
+                   });
+                   $("#box").animate({
+                    padding: "90px"
+                   });
+                   $("#box").animate({
+                    borderRadius: "90px"
+                   });
+                });
+                */
+
+                
+                ///*
+               // Another way to write.
+                $("#btn").click(function(){
+                    $("#box").animate({left: "90px"});
+                   $("#box").animate({top: "90px"});
+                   $("#box").animate({padding: "90px"});
+                   $("#box").animate({borderRadius: "90px"});
+                });
+                 //*/
+
+
+
+            });
+        
+        
+        </script>
+        
+    </body>
+
+</html>

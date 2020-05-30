@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- This is jquery file library   -->
+        <script src="jquery-3.4.1.min.js"></script>
+
+    </head>
+    <body>
+        <h1 id="test">Hello jQuery......</h1>
+        <script>
+          
+                $(document).ready(function(){
+                   var a = $("#test").html();
+                   alert(a);
+                   
+                });
+               
+
+            /* Another way to coding looks like C#.
+
+                $(document).ready(
+                    function()
+                    {
+                       var a = $("#test").html();
+                        alert(a);
+                   
+                    }
+                    );
+            */
+
+           /* Another way ....
+
+            $(document).ready(
+                                function()
+                                {
+                                    var a = $("#test").html();
+                                    alert(a);
+                   
+                                }
+                            );        
+           */
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="jquery-3.4.1.min.js"></script>
+        <style>
+            #box {
+                background-color: aqua;
+                width: 300px;
+                height: 300px;
+                padding: 5px;
+                position: relative;
+            }
+        
+        </style>
+
+    </head>
+    <body>
+        <h1>Stop Method</h1>
+        <div id="box">
+            <p>This is just text.</p>
+        </div>
+        <button type="button" id="btn">animate</button>
+        <button type="button" id="btn2">Stop</button>
+        <script>
+            $(document).ready(function(){
+                $("#btn").click(function(){
+                    $("div").animate({
+                        left: "550px",
+                        top: "10px",
+                        borderRadius: "50px",
+                        padding: "20px",
+                        fontSize: "50px"
+                    },2000);
+                });
+                
+                ///*
+                $("#btn2").click(function(){
+                    $("div").stop();
+                });
+                //*/
+
+                
+                
+                /*
+                $("#btn2").click(function(){
+                    $("div").stop(true,true);
+                });
+                */
+            });
+        
+        
+        </script>
+        
+    </body>
+
+</html>

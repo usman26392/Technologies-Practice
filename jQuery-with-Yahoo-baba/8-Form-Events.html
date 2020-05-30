@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- This is jquery file library   -->
+        <script src="jquery-3.4.1.min.js"></script>
+
+    </head>
+    <body>
+        <h1>Form Events......</h1>
+        <form action="" id="sform">
+            <label for="">Name</label>
+            <input type="text" name="StudentName" id="sName"><br><br>
+
+            <label for="">Class</label>
+            <input type="text" name="StudentId" id="sId"><br><br>
+
+            <label for="">Country</label>
+            <select name="CountryNames" id="sCountry"><br><br>
+                <option value="Pakistan">Pakistan</option>
+                <option value="India">India</option>
+                <option value="England">England</option>
+            </select><br><br>
+            <button type="submit">Button</button>
+        </form>
+        <script>
+                
+                ///*
+                //--------------focus() --------------------
+                $(document).ready(function(){
+                    $("#sName").focus(function(){
+                        $(this).css("background-color","red");
+                    });
+                });
+                // */
+                
+                /*
+                $(document).ready(function(){
+                    $("#sId").focus(function(){
+                        $(this).css("border-color","lime");
+                    });
+               });
+                */
+                
+                /*
+                $(document).ready(function(){
+                    $("#sName, #sId, #sCountry").focus(function(){
+                        $(this).css("background-color","red");
+                    });
+                });
+                */
+                
+                //---------------blur() -----------------------------
+                $(document).ready(function(){
+                    $("#sName").blur(function(){
+                        $(this).css("background-color","lightgray");
+                    });
+                });
+
+
+                //------------------select() ---------------------------
+                $(document).ready(function(){
+                    $("#sCountry").change(function(){
+                        $(this).css("background-color","orange");
+                    });
+                });
+
+                //-----------------submit() ----------------
+                $(document).ready(function(){
+                    $("#sform").submit(function(){
+                        alert("Your form successfully submitted.")
+                    })
+                })
+
+
+
+
+
+        </script>
+
+    </body>
+</html>

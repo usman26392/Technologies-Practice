@@ -1,0 +1,15 @@
+body {
+  background-color: pink;
+}
+hr {
+  width: 30%;
+  border-style: none;
+  border-top-style: dotted;
+  border-color: gray;
+  border-width: 5px;
+}
+h1,
+h2,
+h3 {
+  color: dodgerblue;
+}

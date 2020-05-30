@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="jquery-3.4.1.min.js"></script>
+        <style>
+            .box {
+                border: 1px solid black;
+                padding: 2em;
+                background-color: aquamarine;
+
+            }
+        </style>
+    </head>
+    <body>
+        <h1>jquery hasClass() Method</h1>
+        <div class="box">
+            <p>It is then quite obvious that Pakistan remains prone
+                to a variety of climatic hazards, with global warming – 
+                according to experts in several reports published this year – 
+                contributing to this.</p>
+        </div>
+        <button type="button" id="chkbtn">Check class</button>
+        <script>
+            $(document).ready(function(){
+                $("#chkbtn").click(function(){
+                    var a = $("div").hasClass("box");
+                    alert(a);
+                });
+
+            });
+        
+        </script>
+        
+    </body>
+</html>

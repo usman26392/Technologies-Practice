@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,AAAA,IAAI,EAAC,IAAI,EAAC,EAAE,EAAC,EAAE,CAAC;EACZ,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;CACb;;ADDD,AAAA,IAAI,CAAC;EACD,WAAW,EAAE,4BAA4B;EACzC,SAAS,EAAE,IAAI;EACf,KAAK,EAAE,GAAG;CACb",
+    "sources": [
+        "myAnother.scss",
+        "myStyle6.scss"
+    ],
+    "names": [],
+    "file": "myAnother.css"
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- This is jquery file library   -->
+        <script src="jquery-3.4.1.min.js"></script>
+        <style>
+        #box {
+            border:  solid black;
+            padding: 2em;
+            background-color: pink;
+        }
+        </style>
+
+    </head>
+    <body>
+        <h1>Hello mouse events......</h1>
+        <div id="box" class="test">
+            <h1>Mouse events</h1>
+            <p>He was contracted with Bangladesh until the ICC World Twenty20
+                 in Australia next year but his inability to give the team 
+                 the expected results appear to have cost him his job.
+            </p>          
+        </div>
+        <script>
+            
+            // -----------------click() event ----------------------------
+            $(document).ready(function(){
+                $("#box").click(function(){
+                    $("#box").css("background-color","green");
+                });
+            });
+            
+            /*
+            $(document).ready(function(){
+                $("#box").click(function(){
+                    var a = $("#box").html();
+                    alert(a);
+                });
+            });
+            */
+            
+            //------------------ dblclick  event.-----------------------
+            $(document).ready(function(){
+                $("#box").dblclick(function(){
+                    $("#box").css("background-color","red");
+                });
+            });
+
+            //-------------------mouseenter() event -----------------------
+            $(document).ready(function(){
+                $("#box").mouseenter(function(){
+                    $("#box").css("border-radius","30px");
+                });
+            });
+
+            $(document).ready(function(){
+                $("#box").mouseleave(function(){
+                    $("#box").css("border-radius","0px");
+                });
+            });
+
+
+        </script>
+
+    </body>
+</html>

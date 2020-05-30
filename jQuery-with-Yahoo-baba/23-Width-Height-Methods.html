@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- This is jquery file library   -->
+        <script src="jquery-3.4.1.min.js"></script>
+
+        <style>
+            #box{
+                border: 15px solid black;
+                padding: 1em;
+                background-color: bisque;
+                
+
+            }
+            #box2 {
+                background-color: rgb(221, 117, 117);
+                border: 1px solid black;
+                padding: 1em;
+            }
+            
+        </style>
+
+    </head>
+    <body>
+        <h1>Hello jQuery remove & empty methods......</h1>
+        <div id="box">
+            <h2>test box</h2>
+            <p>All stakeholders involved in Afghanistan need to recognise 
+                that there is no alternative to peace. The country has been 
+                on apart by a war that has essentially continued since 1979
+                and even before that year.</p>
+        </div><br><br>
+
+        <button type="button" id="widthbtn">Width text</button>
+        <button type="button" id="widthbtn2">Width inner border</button>
+        <button type="button" id="widthbtn3">Width with outer border</button>
+        <button type="button" id="widthbtn4">Width outer border</button>
+
+        <script>
+            $(document).ready(function(){
+                $("#widthbtn").click(function(){
+                    $("div p").width(350);
+                });
+
+                $("#widthbtn2").click(function(){
+                    $("div").innerWidth(500);
+                });
+
+                $("#widthbtn3").click(function(){
+                    $("div").outerWidth(600);
+                });
+
+                $("#widthbtn4").click(function(){
+                    $("div").outerWidth(true);
+                });
+            });
+        
+        </script>
+
+    </body>
+</html>

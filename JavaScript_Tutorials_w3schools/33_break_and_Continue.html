@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>JS break and Continue</h1>
+        <h2 id="d"></h2>
+
+        <script>
+        /*    
+        var txt = "";
+        var i;
+        for(i = 0 ; i < 10; i++ )
+        {
+            if( i == 5) break;
+            txt = txt+"<br> The number is "+i;
+        }
+        document.getElementById('d').innerHTML = txt;
+        */
+
+        var txt = "";
+        var i;
+        for(i = 0 ; i < 10; i++ )
+        {
+            if( i % 2 == 0) continue;
+            txt = txt+"<br> The odd number is "+i;
+        }
+        document.getElementById('d').innerHTML = txt;
+
+
+
+
+        
+        
+        </script>
+
+
+
+
+    </body>
+
+</html>

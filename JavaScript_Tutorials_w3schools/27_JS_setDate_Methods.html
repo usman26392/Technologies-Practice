@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>JS set date Methods</h1>
+        <h2 id="d"></h2>
+
+        <script>
+
+            /*
+            var dt = new Date();
+            dt.setFullYear(2020);
+            document.getElementById('d').innerHTML = dt;
+            */
+
+            /*
+            var dt = new Date();
+            dt.setFullYear(2020);
+            document.getElementById('d').innerHTML = dt;
+            */
+
+            /*
+            var dt = new Date();
+            dt.setMonth(11);
+            document.getElementById('d').innerHTML = dt;
+            */
+
+            /*
+            var dt = new Date();
+            dt.setDate(20);
+            document.getElementById('d').innerHTML = dt;
+            */
+
+            var today, someday, text;
+            today = new Date();
+            someday = new Date();
+
+            someday.setFullYear(2100);
+            if(someday > today)
+            {
+                text = "Today is before from year: 2100";
+            }
+            else 
+            {
+                text = "Today is after from year: 2100";
+            }
+
+            document.getElementById('d').innerHTML= text;
+
+        
+        
+        </script>
+    </body>
+</html>

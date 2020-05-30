@@ -1,0 +1,80 @@
+* {
+	margin: 0;
+}
+.wrapper-container {
+	width: 722;
+	height: auto;
+	background-color: #dcffcc;
+}
+.top_container {
+	width: 200px;
+	height: 200px;
+	background-color: #00adb5;
+	text-align: center;
+	border: 10px solid black;
+	padding: 20px;
+}
+
+.middle_container {
+	width: 200px;
+	height: 200px;
+	background-color: red;
+	border: 20px solid green;
+	margin-left: 261px;
+}
+.bottom_container {
+	width: 200px;
+	height: 200px;
+	background-color: blue;
+	border: 10px solid orange;
+	margin-left: 502px;
+}
+
+span {
+	background-color: dodgerblue;
+	display: block;
+}
+span + span {
+	background-color: green;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

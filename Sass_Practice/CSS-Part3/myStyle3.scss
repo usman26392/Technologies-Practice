@@ -1,0 +1,12 @@
+// Sass Variable Scope.
+
+$myColor: red;
+
+h1 {
+    $myColor: green;
+    color: $myColor;
+}
+
+p{
+    color: $myColor;
+}

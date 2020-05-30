@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- This is jquery file library   -->
+        <script src="jquery-3.4.1.min.js"></script>
+    </head>
+    <body>
+        <h1>jquery each() method</h1>
+        <ul>
+            <li>Orange</li>
+            <li>Apple</li>
+            <li>kinnow</li>
+            <li>watermelon</li>
+        </ul>
+        <script>
+            $(document).ready(function(){
+                $("li").each(function(){
+                   var a = $(this).html();
+                   alert(a);    
+                });
+            });
+        
+        </script>
+        
+    </body>
+</html>

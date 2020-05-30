@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- This is jquery file library   -->
+        <script src="jquery-3.4.1.min.js"></script>
+
+        <style>
+        #box {
+            border: 1px solid black;
+            padding: 2em;
+            background-color: pink;
+        }
+        </style>
+
+    </head>
+    <body>
+        <div id="box" class="test abc">
+        <h1>Hello jQuery......</h1>
+        <p>All stakeholders involved in Afghanistan need to 
+        recognise that there is no alternative to peace. 
+        The country has been torn apart by a war that has
+         essentially continued since 1979 and even before that year.
+        Tens of thousands of people have been killed, many have fled
+     the country, families have been destroyed and persons maimed by
+      the violence can be spotted everywhere in a country that
+     literally stumbles to survive. This should not be acceptable
+      to Afghanistan.</p>
+        </div>
+        <script>
+            
+
+            $(document).ready(function(){
+                /*
+                var contentHtml = $("#box p").html();
+                alert(contentHtml);
+                console.log(contentHtml);
+               */
+
+                /*
+                var textHtml = $("#box").text();
+                alert(textHtml);
+                */
+
+                var contentHtml = $("#box").attr("id");
+                alert(contentHtml);
+                console.log()
+                
+                
+                
+                
+            });
+                
+        </script>
+
+    </body>
+</html>

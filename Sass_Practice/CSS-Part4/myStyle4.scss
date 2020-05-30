@@ -1,0 +1,16 @@
+/* The default behavior for variable scope can be 
+ overriden by using the !global switch. */
+
+ /* !global indicates that a variable is global, which means
+  that it is accessible on all levels. */
+
+$myColor: red;
+
+h1{
+    $myColor: green !global;
+    color: $myColor;
+}
+
+p {
+    color: $myColor;
+}

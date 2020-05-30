@@ -1,0 +1,13 @@
+@mixin bordered($color: blue,$width: 1px) {
+    border: $width solid $color;
+}
+
+.chk {
+    @include bordered();
+}
+
+/*
+.chk {
+    @include bordered($color: orange);
+}
+*/

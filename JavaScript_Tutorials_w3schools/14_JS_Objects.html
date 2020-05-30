@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>Js Objects</h1>
+        <h3 id="d"></h3>
+       
+        <!--
+        <script>
+        var car = {
+            type:  "Fiat",
+            model: "500",
+            color: "white"
+        };
+        // Display some data from object.
+        document.getElementById('d').innerHTML =
+        'The car type is '+car.type+'<br>'+
+        'Car model is '+car.model+'<br>'+
+        'Color is '+car.color;
+        </script>
+          -->
+
+          <script>
+          var person = {
+              firstName: "John",
+              lastName: "Doe",
+              id: 5566,
+              FullName:function() 
+              {
+                  return this.firstName+" "+this.lastName;
+              }
+          };
+          document.getElementById('d').innerHTML = person.FullName();
+          
+          </script>
+
+    </body>
+</html>

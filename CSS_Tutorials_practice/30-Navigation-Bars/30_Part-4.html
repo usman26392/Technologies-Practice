@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 25%;
+            border: 1px solid black;
+            position: fixed;
+            height: 50%;
+            overflow: auto;
+            background-color: #f1f1f1;
+        }
+        
+        li  a{
+            display: block;       
+            
+            text-decoration: none;
+            padding: 8px 16px;
+            text-align: center;
+        }      
+         li a.current {
+             background-color: rgb(99, 156, 13);
+             color: black;
+         }
+         li a:hover:not(.current) {
+            background-color: #555;
+            color: white;
+        }
+        
+        
+        div {
+            margin-left: 30%;
+            height: 1000px;
+        }
+       
+    </style>
+</head>
+<body>
+    
+    <ul>
+        <li><a class="current"  href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">about</a></li>
+    </ul>
+    <div>
+        <h1>Full height and fixed navigation bar</h1>
+        <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, aliquid?</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora, dolorem ratione. Cumque minima, facere eum reprehenderit odit ea asperiores fugiat sunt, a illo maxime. Assumenda, nostrum velit. Quo, nemo! Itaque quod in excepturi delectus, consequatur dolorem natus iure sed ea voluptatem tenetur. Voluptatibus quis eaque, unde beatae laborum magnam perspiciatis.</p>
+    </div>
+</body>
+</html>

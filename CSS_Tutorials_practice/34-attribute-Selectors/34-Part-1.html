@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*
+        img[alt] {
+            width: 300px;
+            height: 300px;
+            border-radius: 12px;
+            border: 2px solid red;
+        }
+        */
+
+        /*
+        img[alt=flower] {
+            width: 400px;
+            height: 400px;
+            border: 2px solid violet;
+        }
+        */
+
+        /*
+        img[alt ^= sea ] {
+            border: 5px solid rgb(70, 245, 47);
+        }
+        */
+        img[alt ~= picture ] {
+            border: 5px solid rgb(70, 245, 47);
+        }
+
+
+        input[type=password] {
+            border: 2px solid blue;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body style="height: 2000px;">
+    <h1>attribute selectors</h1>
+    <img src="../img_5terre.jpg" alt="seaside picture ">
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos architecto nemo veniam deserunt, rem aspernatur quis delectus ullam officiis quam consequuntur ex quisquam iste eaque nihil nobis similique suscipit vel. Quidem earum ullam et doloremque eligendi expedita, ducimus perspiciatis odio laboriosam repellat accusantium facere, animi maxime dicta molestiae veniam commodi.</p>
+    </div>
+    <img src="../img_flowers.jpg" alt="flower">
+    <br><br><br>
+
+    <label for="">Student Name</label>
+    <input type="text" name="StdName" id=""><br><br>
+    <label for="">Father's Name</label>
+    <input type="text" name="FatherName">
+    <label for="">Password</label>
+    <input type="password">
+</body>
+</html>

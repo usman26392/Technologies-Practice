@@ -1,0 +1,10 @@
+.chk {
+  border: 1px solid blue;
+}
+
+/*
+.chk {
+    @include bordered($color: orange);
+}
+*/
+/*# sourceMappingURL=myStyle10.css.map */
