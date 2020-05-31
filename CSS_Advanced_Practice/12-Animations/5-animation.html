@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+
+        .d1 {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            animation-name: colorChange;
+            animation-duration: 4s;
+            animation-fill-mode: forwards;
+            animation-delay: 2s;
+        }
+
+        @keyframes colorChange {
+            from {
+                background-color: red;
+            }
+            to {
+                background-color: yellow;
+            }
+        }
+
+        .d2 {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            animation-name: colorChange;
+            animation-duration: 4s;
+            animation-fill-mode: backwards;
+            animation-delay: 2s;
+        }
+        @keyframes colorChange {
+            from {
+                background-color: red;
+            }
+            to {
+                background-color: yellow;
+            }
+        }
+
+        .d3 {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            animation-name: colorChange;
+            animation-duration: 4s;
+            animation-fill-mode: both;
+            animation-delay: 2s;
+        }
+
+        @keyframes colorChange {
+            from {
+                background-color: red;
+            }
+            to {
+                background-color: yellow;
+            }
+        }       
+    </style>
+</head>
+<body>
+    <h1>Animation</h1>
+    <!-- akiri keyframe tak ja hay ga bus. -->
+    <h2>animation-fill-mode: forwards</h2>
+    <div class="d1"></div> 
+     
+    <!-- first keyframe per say start hoga or apnay akiri keyframes ko b chalanay
+    k baad , apni asal position (style) par ahay ga -->   
+    <h2>animation-fill-mode: backwards</h2>
+    <div class="d2"></div> 
+    
+    <!-- paylay "backwards" wali propert lagay gi fr "forwards" wali  -->
+    <h2>animation-fill-mode: both</h2>
+    <div class="d3"></div>
+</body>
+</html>
