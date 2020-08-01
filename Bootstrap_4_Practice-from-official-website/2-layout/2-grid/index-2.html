@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grid Alignment</title>
     <link rel="stylesheet" href="../../bootstrap-4.4.1-dist/css/bootstrap.css">
+    <style>
+        .flex-cont-h {
+            height: 500px;
+        }
+    </style>
 </head>
 <body style="height: 80000px;">
 
@@ -14,10 +19,10 @@
     <div class="container">
         <div class="row justify-content-start">
             <div class="col-3">
-                <img src="../images/menu-1.jpg" class="w-100" alt="chinese dish">
+                <img src="../images/menu-1.jpg" class="img-fluid w-100" alt="chinese dish">
             </div>
             <div class="col-3">
-                <img src="../images/menu-2.jpg" class="w-100" alt="chinese dish">
+                <img src="../images/menu-2.jpg" class="img-fluid w-100" alt="chinese dish">
             </div>
         </div>
     </div>
@@ -27,10 +32,10 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-3">
-                <img src="../images/menu-1.jpg" class="w-100" alt="chinese dish">
+                <img src="../images/menu-1.jpg" class="img-fluid w-100" alt="chinese dish">
             </div>
             <div class="col-3">
-                <img src="../images/menu-2.jpg" class="w-100" alt="chinese dish">
+                <img src="../images/menu-2.jpg" class="img-fluid w-100" alt="chinese dish">
             </div>
         </div>
     </div>
@@ -40,10 +45,10 @@
     <div class="container">
         <div class="row justify-content-end">
             <div class="col-3">
-                <img src="../images/menu-1.jpg" class="w-100" alt="chinese dish">
+                <img src="../images/menu-1.jpg" class="img-fluid w-100" alt="chinese dish">
             </div>
             <div class="col-3">
-                <img src="../images/menu-2.jpg" class="w-100" alt="chinese dish">
+                <img src="../images/menu-2.jpg" class="img-fluid w-100" alt="chinese dish">
             </div>
         </div>
     </div>
@@ -53,10 +58,10 @@
     <div class="container">
         <div class="row justify-content-around">
             <div class="col-3">
-                <img src="../images/menu-1.jpg" class="w-100" alt="chinese dish">
+                <img src="../images/menu-1.jpg" class="img-fluid w-100" alt="chinese dish">
             </div>
             <div class="col-3">
-                <img src="../images/menu-2.jpg" class="w-100" alt="chinese dish">
+                <img src="../images/menu-2.jpg" class="img-fluid w-100" alt="chinese dish">
             </div>
         </div>
     </div>
@@ -66,13 +71,228 @@
     <div class="container">
         <div class="row justify-content-between">
             <div class="col-3">
-                <img src="../images/menu-1.jpg" class="w-100" alt="chinese dish">
+                <img src="../images/menu-1.jpg" class="img-fluid w-100" alt="chinese dish">
             </div>
             <div class="col-3">
-                <img src="../images/menu-2.jpg" class="w-100" alt="chinese dish">
+                <img src="../images/menu-2.jpg" class="img-fluid w-100" alt="chinese dish">
             </div>
         </div>
     </div>
+
+    <br><br>
+    <h1>Alignment</h1>
+    <h2>Vertical alignment of columns (flex items)</h2>
+    <h3>example-1: align-items-stretch</h3>
+    <div class="container">
+        <div class="row align-items-stretch bg-primary flex-cont-h">
+            <div class="col-3">
+                <img src="../images/menu-1.jpg" class="w-100 h-100"
+                 alt="chinese dish">
+            </div>
+            <div class="col-3">
+                <img src="../images/menu-2.jpg" class="w-100 h-100"
+                 alt="chinese dish">
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+    <h3>example-2: align-items-start</h3>
+    <div class="container">
+        <div class="row align-items-start bg-primary flex-cont-h">
+            <div class="col-3">
+                <img src="../images/menu-1.jpg" class="w-100 h-100"
+                 alt="chinese dish">
+            </div>
+            <div class="col-3">
+                <img src="../images/menu-2.jpg" class="w-100 h-100"
+                 alt="chinese dish">
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+    <h3>example-3: align-items-end</h3>
+    <div class="container">
+        <div class="row align-items-end bg-primary flex-cont-h">
+            <div class="col-3">
+                <img src="../images/menu-1.jpg" class="w-100 h-100"
+                 alt="chinese dish">
+            </div>
+            <div class="col-3">
+                <img src="../images/menu-2.jpg" class="w-100 h-100"
+                 alt="chinese dish">
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+    <h3>example-4: align-items-center</h3>
+    <div class="container">
+        <div class="row align-items-center bg-primary flex-cont-h">
+            <div class="col-3">
+                <img src="../images/menu-1.jpg" class="w-100 h-100"
+                 alt="chinese dish">
+            </div>
+            <div class="col-3">
+                <img src="../images/menu-2.jpg" class="w-100 h-100"
+                 alt="chinese dish">
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+    <h3>example-5: align-items-baseline</h3>
+    <div class="container">
+        <div class="row align-items-baseline  flex-cont-h">
+            <div class="col-4">
+                <h1>This is a heading</h1>
+            </div>
+            <div class="col-3">
+                <p>This is a paragraphy</p>
+            </div>
+            <div class="col-4">
+                <h1>This is a heading</h1>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+    <h1>Vertical alignment on specific column</h1>
+    <h3>example-1: </h3>
+    <div class="container">
+        <div class="row bg-primary flex-cont-h">
+            <div class="col-3">
+                <img src="../images/menu-1.jpg" class="w-100 h-100"
+                 alt="chinese dish">
+            </div>
+            <div class="col-3 align-self-center">
+                <img src="../images/menu-2.jpg" class="w-100 h-100"
+                 alt="chinese dish">
+            </div>
+        </div>
+    </div>
+    
+    <br><br>
+    <h1>No gutters</h1>
+    <h3>example-1: .no-gutters </h3>
+    <div class="container">
+        <div class="row no-gutters">
+            <div class="col-3">
+                <img src="../images/menu-1.jpg" class="w-100 h-100"
+                 alt="chinese dish">
+            </div>
+            <div class="col-3">
+                <img src="../images/menu-2.jpg" class="w-100 h-100"
+                 alt="chinese dish">
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+    <h1>Column wrapping</h1>
+    <h3>example-1:</h3>
+    <div class="container">
+        <div class="row bg-primary">
+            <div class="col-9">
+                <img src="../images/menu-1.jpg" class="w-100 h-100"
+                 alt="chinese dish">
+            </div>
+            <div class="col-4">
+                <img src="../images/menu-2.jpg" class="w-100 h-100"
+                 alt="chinese dish">
+            </div>
+            <div class="col-6">
+                <img src="../images/menu-2.jpg" class="w-100 h-100"
+                 alt="chinese dish">
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+    <h1>Column breaks</h1>
+    <h3>example-1:</h3>
+    <div class="container">
+        <div class="row bg-primary">
+            <div class="col-6 col-sm-3">
+                <img src="../images/menu-1.jpg" class="w-100 h-100"
+                 alt="chinese dish">
+            </div>
+            <div class="col-6 col-sm-3">
+                <img src="../images/menu-2.jpg" class="w-100 h-100"
+                 alt="chinese dish">
+            </div>
+            <div class="w-100"></div>
+            <div class="col-6 col-sm-3">
+                <img src="../images/menu-1.jpg" class="w-100 h-100"
+                 alt="chinese dish">
+            </div>
+            <div class="col-6 col-sm-3">
+                <img src="../images/menu-2.jpg" class="w-100 h-100"
+                 alt="chinese dish">
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+    <h3>example-2: column breaks on specific breakpoint</h3>
+    <div class="container">
+        <div class="row bg-primary">
+            <div class="col-6 col-sm-4">
+                <img src="../images/menu-1.jpg" class="w-100 h-100"
+                 alt="chinese dish">
+            </div>
+            <div class="col-6 col-sm-4">
+                <img src="../images/menu-2.jpg" class="w-100 h-100"
+                 alt="chinese dish">
+            </div>
+            <div class="w-100 d-none d-md-block"></div>
+            <div class="col-6 col-sm-4">
+                <img src="../images/menu-1.jpg" class="w-100 h-100"
+                 alt="chinese dish">
+            </div>
+            <div class="col-6 col-sm-4">
+                <img src="../images/menu-2.jpg" class="w-100 h-100"
+                 alt="chinese dish">
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+    <h1>Re ordering of columns</h1>
+    <h3>example-1:</h3>
+    <div class="container">
+        <div class="row bg-primary">
+            <div class="col-6 col-sm-3 order-3">
+                <h3 class="text-white">One</h3>
+                <img src="../images/menu-1.jpg" class="img-fluid w-100"
+                 alt="chinese dish">
+            </div>
+            <div class="col-6 col-sm-3 order-2">
+                <h3 class="text-white">Two</h3>
+                <img src="../images/menu-2.jpg" class="img-fluid w-100"
+                 alt="chinese dish">
+            </div>
+            <div class="col-6 col-sm-3 order-1">
+                <h3 class="text-white">Three</h3>
+                <img src="../images/menu-3.jpg" class="img-fluid w-100"
+                 alt="chinese dish">
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
