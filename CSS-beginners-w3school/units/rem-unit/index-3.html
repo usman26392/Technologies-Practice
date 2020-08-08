@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rem unit</title>
+    <style>
+        /* rem unit  */
+        
+        /* is may aik technique ka istamal kiya gaya hay,
+        wo ye hay k , root element may hum nay percentage aysi set karri hay 
+        jis ki waja say hum ko bar bar pixel base font-size say divide nai karna
+        pary ga bulkay , jo pixels may font-size hoga us may aik dot a jae ga,
+        jis say time b bachay ga.      */
+        html {
+            font-size: 62.5%;    /* 10px = 62.5% */ 
+            /* is jaga may 10px ka b istamal karsakta hun */
+        }
+        
+        /* matlab ye howa k jo may px may point laga raha tha,
+        wo asal may 10px base font-size say divide ho kar ara tha  */
+        h1 {
+            font-size: 9.0rem;   /* 90px = 9.0rem */
+            text-align: center;
+        }
+
+        p {
+            font-size: 3rem;     /* 30px = 3.0rem  */ /* if 24px = 2.4rem */ 
+            text-align: center; 
+        }
+
+        
+
+        /* media queries */
+
+        /* is may hum nay "px" may set kiya hay  */
+        @media (max-width: 991.98px) {
+            html {
+                font-size: 10px;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            html {
+                font-size: 8px;
+            }
+        }
+
+        @media (max-width: 480.98px) {
+            html {
+                font-size: 7px;
+            }               
+        }
+
+        @media (max-width: 414.98px) {
+            html {
+                font-size: 6px;
+            }               
+        }
+
+        
+    </style>
+</head>
+<body>
+    <!-- rem unit sirf apnay root elment (html) k layhaaz say, apnay font-size
+        set karta hay  -->
+    <!-- is ka faida yey hay k hum asani say responsive design set karsaktay hayn,
+            kiyun k hummay har element ka ja ja kar font-size set nahi karna parta ,
+        balkay sirf root element ka font-size set karna hota hay.   -->
+
+    <!-- dosra faida ye hay k yey , accessibility ko b support karta hay   -->
+    <h1>This is a main heading</h1>
+    <div>
+        <p>This is a paragraph inside the div</p>
+    </div>
+</body>
+</html>

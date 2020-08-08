@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>% Unit</title>
+    <style>
+        /* % Unit */
+         
+        /*  992px say, onwards tak, body ka font size hoga 100%,
+        or us 100% k layhaaz say, h1 ka font size 562.5% hoga  */
+        body {
+            font-size: 100%;
+        }
+
+        h1 {
+            /* 90px = 562.5% */
+            font-size: 562.5%;
+            text-align: center;    
+        }
+
+        p {
+            font-size: 187.5%;    /* 30px = 187.5% */
+        }
+
+        .para-wrap {
+            font-size: 50%;            
+        }
+        
+        /* 576px say, 991.98px tak, body ka font size hoga 40%,
+        or us 40% k layhaaz say, h1 ka font size 562.5%  hoga */
+        @media (max-width: 991.98px) {
+            body {
+                font-size: 40%;
+            }
+        }
+        
+        /* 0 say, 575.98px tak, body ka font size 20% hoga,
+        or us 20% k layhaaz say h1 ka font size 562.5% hoga  */
+        @media (max-width: 575.98px) {
+            body {
+                font-size: 100%;
+            }           
+            .para-wrap {
+                font-size: 100%;            
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <h1>This is a main heading</h1>
+
+    <p>paragraph paragraph paragraph paragraph paragraph
+        paragraph paragraph paragraph paragraph paragraph</p>
+
+
+     <div class="para-wrap">
+        <p>paragraph paragraph paragraph paragraph paragraph
+            paragraph paragraph paragraph paragraph paragraph</p>          
+     </div>   
+    
+</body>
+</html>

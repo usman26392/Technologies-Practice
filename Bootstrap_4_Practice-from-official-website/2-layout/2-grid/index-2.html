@@ -11,7 +11,7 @@
         }
     </style>
 </head>
-<body style="height: 80000px;">
+<body>
 
     <h1>Alignment</h1>
     <h2>Horizontal alignment of flex items</h2>
@@ -281,26 +281,49 @@
         </div>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <br><br>
+    <h3>example-2: .order-first, .order-last</h3>
+    <div class="container">
+        <div class="row bg-primary">
+            <div class="col-6 col-sm-3 order-last">
+                <h3 class="text-white">One</h3>
+                <img src="../images/menu-1.jpg" class="img-fluid w-100"
+                 alt="chinese dish">
+            </div>
+            <div class="col-6 col-sm-3">
+                <h3 class="text-white">Two</h3>
+                <img src="../images/menu-2.jpg" class="img-fluid w-100"
+                 alt="chinese dish">
+            </div>
+            <div class="col-6 col-sm-3 order-first">
+                <h3 class="text-white">Three</h3>
+                <img src="../images/menu-3.jpg" class="img-fluid w-100"
+                 alt="chinese dish">
+            </div>
+        </div>
+    </div>
+    
+    <br><br>
+    <h3>example-3: orders on specific breakpoint</h3>
+    <div class="container">
+        <div class="row bg-primary">
+            <div class="col-6 col-sm-3 order-sm-2">
+                <h3 class="text-white">One</h3>
+                <img src="../images/menu-1.jpg" class="img-fluid w-100"
+                 alt="chinese dish">
+            </div>
+            <div class="col-6 col-sm-3 order-sm-3">
+                <h3 class="text-white">Two</h3>
+                <img src="../images/menu-2.jpg" class="img-fluid w-100"
+                 alt="chinese dish">
+            </div>
+            <div class="col-6 col-sm-3 order-sm-1">
+                <h3 class="text-white">Three</h3>
+                <img src="../images/menu-3.jpg" class="img-fluid w-100"
+                 alt="chinese dish">
+            </div>
+        </div>
+    </div>
 
     <script src="../../scripts/jquery-3.4.1.min.js"></script>
     <script src="../../scripts/popper.js"></script>
