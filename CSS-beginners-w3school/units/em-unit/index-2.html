@@ -1,23 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
 
-    <style>
-       
-    </style>
-</head>
-<body>
-    <ul class="parent-ul">
-        <li>Home</li>
-        <li>News</li>
-            <ul class="child-ul">
-                <li>inner Home</li>
-                <li>inner News</li>
-            </ul>
+        <style>
+
+            /* html {
+                font-size: 62.5%;
+            } */
+            /* body {
+                font-size: 62.5%;
+            } */
+
+            /* .box {
+                font-size: 62.5%;  /* 62.5% = 1em = 10px */
+            /*}
+
+            p {
+                font-size: 1em;        /* 1em = 10px */
+            /*} */
+
+            /* ----------------- example 2 -------------- */
+            /* .box {
+                font-size: 30px; /* jo base set karyn gay usi k braber 1em hoga */
+            /*}
+
+            p {
+                font-size: 1em;    /* 1em = 30px */
+        /* } */
+
+            
+        /* -------------- example 3 --------------------- */
+        .box {
+            font-size: 62.5%;    /* 62.5% = 1em = 10px */
+        }
+
+        p {
+            font-size: 1.6em;        /* 1.6em = 16px */
+        }
         
-    </ul>
-</body>
+        /*
+         => .box par agar font-size nai hota toh , fir paragraph us k opar waly level
+            par check karta , jidar milata font-size us k layhaaz say lagta,
+            or isi tarhan apnay body parent k taraf jata , or us may b nai milta toh,
+            root element ki taraf jata   
+         */
+
+
+
+
+
+
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <div class="d2">
+                <div class="d3">
+                    <p>Pakistan, despite not having played international cricket for
+                        several months because of the coronavirus, dominated the majority
+                        of the match and were still favourites when they reduced
+                        England to 117-5, chasing a target of 277, on Saturday´s fourth
+                        day in Manchester.</p>
+                </div>    
+            </div>
+            
+        </div>
+    </body>
 </html>

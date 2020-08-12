@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            font-size: 62.5%;
+        }
+
+        /* body {
+            font-size: 62.5%;
+        } */
+
+        div {
+            display: inline-block;
+            font-size: 50%;
+        }
+
+        .btn-1 {
+            display: inline-block;
+            font-size: 1.8em;  /* with respect to div */
+            padding: 1.11em 2.22em;  /* with respect to its element's font-size */
+            background-color: khaki;
+            border: 0.27em solid #000;    /* 5px = 0.27em with respect to 18px */
+            text-decoration: none;
+            color: #000;
+        }
+
+        
+
+        .btn-2 {
+            display: inline-block;
+            font-size: 1.8rem;  
+            padding: 2rem 4rem;         
+            background-color: khaki;
+            border: 0.5rem solid #000;
+            text-decoration: none;
+            color: #000;
+        }
+
+
+
+        @media (max-width: 767.98px) {
+            html {
+                font-size: 50%;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            html {
+                font-size: 40%;
+            }
+        }
+    </style>
+</head>
+<body>
+     <div>
+        <a href="javascript:;" class="btn-1">Button 1</a>
+     </div>
+    
+    <a href="javascript:;" class="btn-2">Button 2</a>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rem unit</title>
+    <style>
+
+        /* => Important content about "rem" unit */
+        /* => we set default browser setting in root element.  */
+        /* => 10px = 62.5% = 1rem */
+        /* => hum html document ko 10px par set kar k 17px(medium) k layhaaz say 
+            browser par dayk rahay hayn */
+        /*
+           10px = 1rem
+           1px = (1 / 10) rem
+           10px = (1*10) / 10 
+           10px =  1rem
+        */
+
+        html {
+            font-size: 62.5%;
+        }
+
+
+        /* media query for the html document */
+        @media (max-width: 1199.98px) {
+            html {
+                font-size: 50%;  /*  50% = 8px  */
+                /*
+                    62.5% = 10px;
+                    1% = 10 / 62.5 px
+                    50% = (10*50) / 62.5 ;
+                    50% = 8px;               
+               */
+                     
+            }
+        }
+
+
+        p {
+            /*  
+                => jub viewport 1200px say lay kar , onwards ho ga .      
+                given from photoShop: 16px;
+                10px = 1rem;
+                1px = 1 / 10 ;
+                16px = (1*16) / 10 ;
+                16px = 1.6rem
+             */
+            font-size: 1.6rem;
+            
+            /* => jub viewport 0 say 1199.98px tak hoga:
+                1rem = 8px;
+            than, 1.6rem = (8 * 1.6) px;
+                1.6rem =  12.8px;   tub 1.6rem dynamically computed  12.8px ka hoja
+                hay ga.
+
+                => ye sari calculation chrome k layhaaz say hay, kiyun k firefox aik 
+                    pixel zayeda layta hay .
+                    (matlab yey hay k firefox may browser font-size default 17px 
+                    hota hay , hum us ko change kar k chrome k font-size k braber
+                    rakh saktay hayn 16px. )
+                => jo photoshop k zariye pixels a hayn gay , hum wo hi layn gay,
+                   matlab ye hay k agar kisi paragraph ka "font-size 24px" hay toh 
+                   hum isko "2.4rem" layn gay jub root element 62.5% set kiya 
+                   howa ho.    
+             */
+
+            /* => 1200px say onwards paragraph par font-size "16px" lag raha hoga,
+                jub k 0 say 1199.98px tak paragraph par "12.8px" lagay ga
+                8px k layhaaz say, kiyun k root element (html) media query k zariyey
+                8px hojae ga.
+            */
+
+            /* => Microsoft Edge, Google Chrome may 1.6rem = 16px k hi hay,
+                jub k Firefox, "1.6rem" ko computed 17px karta hay.
+                matlab yey howa k aik pixel zayeda rakhta hay. */
+        }
+
+
+    </style>
+</head>
+<body>
+    <p>Pakistan, despite not having played international cricket for
+        several months because of the coronavirus, dominated the majority
+        of the match and were still favourites when they reduced
+        England to 117-5, chasing a target of 277, on Saturday´s fourth
+        day in Manchester.</p>
+</body>
+</html>
