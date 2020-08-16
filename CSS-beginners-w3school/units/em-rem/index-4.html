@@ -9,10 +9,16 @@
             font-size: 62.5%;   /* 10px = 62.5% = 1rem */
         }
 
+
+       /* ye button font-size k kam ya zayeda honay par, is ki 
+         dosri properties jin par "rem" laga hoga wo font-size k
+         layhaaz say adjust nai hun gi, matlab yey hay k ye apna 
+         proportion barkarar nai rakh paye ga. */
         .btn {
             display: inline-block;
-            font-size: 5rem;  /* 5rem = 50px */
-            /* 10px = 1rem;
+            font-size: 15rem;  /* 15rem = 150px */
+
+            /* for padding: 10px = 1rem;
                1px = 1 / 10 ;
             than,  16px = 16 / 10  =  1.6rem
             than,  40px = 40 / 10 =  4rem
@@ -21,7 +27,7 @@
              /* yey padding , root element k font-size k
              layhaaz say lag ri hay. */
             background-color: khaki;
-            border: 0.1rem solid #000;
+            border: 0.1rem solid #000;    /*  1px = 0.1rem */
             text-decoration: none;
             color: #000;
         }
@@ -30,11 +36,12 @@
     </style>
 </head>
 <body>
-    <!-- ye button apnay sai propotion or sai scale k sath rahay ga.
+    <!-- ye button apnay sai propotion or sai scale k sath nahi rahay ga.
             browser font-sizes par or media queries par, kiyun is may
             font-size or padding , border teeno apnay root element k 
             font-size k layhaaz say set horay hayn"
     -->
+    
     <a href="javascript:;" class="btn">Button</a>
 </body>
 </html>

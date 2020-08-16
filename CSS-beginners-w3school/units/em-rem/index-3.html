@@ -5,18 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        html {
-            font-size: 62.5%;
+        /* is may button ko aysa banaya gaya hay k us ka proportion har font-size par
+            , or browser font-size par teakh rahay ga.
+            proportion say murad yey hay k agar hum button ka font-size barha hayn 
+            toh button accurate barhay ga, matlb sai bara kagay ga, or gar font-size 
+            chotah karyn toh phir, button b chota lagay ga.
+            matlab yey hay k is ki padding or border apnay element k font-size k
+            layhaaz say set hogi, matlb yey hay k font-size baray ga toh padding
+            or border b automatically baray ga. isi tarhan kam b hoga.
+         */
+        html { 
+            font-size: 62.5%;     /* 10px = 62.5% = 1rem */
         }
+
         .btn {
             display: inline-block;
-            font-size: 5rem;  /* 5rem = 50px */
-            /* 50px = 1em
+            font-size: 15rem;  /* 15rem = 150px */
+            /*
+                given: 150px
+                we know 10px = 1rem
+                        1px = 1 / 10 rem
+                        150px = (1*150) / 10 rem
+                        150px =  15rem
+             */
+
+
+
+            /*
+                padding: 1em; is ko laga k daykna k padding 150px ari hay ,
+                kiyun k 150px = 1em 
+
+                150px = 1rem; 
+                1px = 1 / 150 rem
+                16px = (1*16) / 150 rem
+
+            */
+            padding: 0.106em  0.266em;
+
+
+            /* if 50px = 1em
                1px = 1 / 50 ;
             than,  16px = 16 / 50  =  0.32em
             than,  40px = 40 / 50 =  0.8em
              */
-            padding: 0.32em 0.8em; 
+            /* padding: 0.32em 0.8em;   with respect to 50px base font-size*/
+
+
             /* => yahan par padding apnay element k font-size k layhaaz say lag ri hay,
                 na k apnay parent k lahaaz say: 
             => jub b "em unit" font-size k elawa kisi property par lagay ga ,
@@ -25,7 +59,7 @@
                 is k element ka font-size hoja hay ga. 
             */
             background-color: khaki;
-            border: 0.02em solid #000;    /* 1px = 0.02em with respect to 50px */
+            border: 0.006em solid #000;    /* 1px = 0.02em with respect to 150px */
             text-decoration: none;
             color: #000;
         }
@@ -36,6 +70,11 @@
 <body>
     <!-- ye button apnay sai "propotion" or sai "scale" k sath rahay ga.
     font-sizes par or breakpoints or viewports par  -->
+
+    <!-- html root element ko developer tools k zariye 
+        is ka font-size kam ya zayeda karnay say pata chalay ga k kis tarhan ye button
+        apnay sai proportion par rahata hay. matlab ye hay padding or border, button
+        k font-size k layhaaz say apnay aap ko set karyn gay. -->
     <a href="javascript:;" class="btn">Button</a>
 </body>
 </html>
