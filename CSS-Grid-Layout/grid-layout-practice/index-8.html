@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>minmax function</title>
+
+    <!-- minmax function  -->
+
+    <style>
+        
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        section {
+            padding: 50px 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0px auto;
+            
+        }
+
+        .grid-container {
+            background: #009fff70;
+            height: 400px;
+            padding: 10px;
+
+            display: grid;          
+            grid-template-rows: repeat(2, minmax(50px, 100px) );   
+            grid-template-columns: 33.33333% 33.33333% minmax(50px, 170px);
+            gap: 15px 15px; 
+
+            
+        }    
+
+        .item-1 {
+            background: red;
+            color: #ffffff;
+        }
+
+        .item-2 {
+            background: green;
+            color: #ffffff;
+        }
+
+        .item-3 {
+            background: blue;
+            color: #ffffff;
+        }
+
+
+        
+        
+    </style>
+</head>
+<body>
+    
+    <section>
+        <div class="container">
+            <div class="grid-container">
+                <div class="item-1">
+                    <p>Paragraph 1 </p>
+                </div>
+                <div class="item-2">
+                    <p>Paragraph 2</p> 
+                </div>
+                <div class="item-3">
+                    <p>Paragraph 3</p> 
+                </div>
+
+                
+            </div>    
+        </div>               
+    </section>
+</body>
+</html>

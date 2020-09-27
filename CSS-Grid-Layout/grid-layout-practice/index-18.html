@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        section {
+            padding:50px 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0px auto;
+        }
+
+        .grid-container {
+            background: #009fff70;
+            height: 400px;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(3,33.33%);
+            grid-template-rows: repeat(1,200px);
+        }
+
+        .item-1 {
+            background: red;
+            color: #ffffff;
+        }
+
+        .item-2 {
+            background: green;
+            color: #ffffff;
+        }
+
+        .item-3 {
+            background: blue;
+            color: #ffffff;
+        }
+
+        
+        /*
+            wesy jub hum "grid system" par kaam kartay hayn toh 
+            media query ki zarorat nahi parti, kiyun k grid , responsive layout
+            provide karta hay.  
+        */
+        @media (max-width: 991px) {
+            .grid-container {
+                grid-template-columns: repeat(1, auto);
+                grid-template-rows: repeat(3, auto);
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    
+    <section>
+        <div class="container">
+            <div class="grid-container">
+                <div class="item-1">
+                    <p>Paragraph 1</p>    
+                </div>
+                <div class="item-2">
+                    <p>Paragraph 2</p> 
+                </div>
+                <div class="item-3">
+                    <p>Paragraph 3</p> 
+                </div>
+            </div>    
+        </div>               
+    </section>
+</body>
+</html>
