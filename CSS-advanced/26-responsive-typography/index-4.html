@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typography  clamp 2</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .content {
+            border: 2px solid #000000;
+            padding: 50px 20px;
+            max-width: 70%;
+            margin:  0 auto;
+        }
+
+        .content > h2 {
+            font-size: clamp(20px, 5vw, 50px);
+        }
+
+        
+
+    
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <h2>This is a heading!</h2>
+        <p>This is a paragraph This is a paragraph This is a paragraph
+            This is a paragraph This is a paragraph This is a paragraph
+            This is a paragraph This is a paragraph This is a paragraph 
+            This is a paragraph This is a paragraph This is a paragraph 
+        </p>
+    </div>
+</body>
+</html>

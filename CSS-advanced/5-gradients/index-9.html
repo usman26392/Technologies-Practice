@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gradient 9</title>
+
+    <style>
+        h1 {
+            font-size: 60px;
+            text-transform: uppercase;
+            background-image: linear-gradient(45deg, 
+                #0066ff, 
+                #00a1ff, 
+                #00c6eb, 
+                #00e087, 
+                #a8eb12);
+                background-clip: text;
+                color: transparent;  
+                background-size: 350%; 
+            animation: bg-animation 5s infinite alternate; 
+        }
+
+        @keyframes bg-animation {
+            0% {
+                background-position: left;
+            }
+            100% {
+                background-position: right;
+            }
+        }
+            
+    </style>
+</head>
+<body>
+
+    <h1>This is a heading !</h1>
+    
+    
+
+    
+    
+</body>
+</html>
