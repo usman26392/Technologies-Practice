@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>justify items grids</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 50px;
+        }
+
+        .grid-wrapper {
+            max-width: 960px;
+            margin: 0 auto;
+            background-color: rgb(246, 228, 228);
+            display: grid;
+            /* grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(2,minmax(150px, auto));
+            gap: 15px; */
+
+            justify-items: start;
+        }
+
+        .grid-wrapper div {
+            background-color: #3bbced;
+        }
+
+        .grid-wrapper div:nth-child(even) {
+            background-color: #777777;
+        }
+
+        .grid-item-1 {
+            
+        }
+        
+        .grid-item-2 {
+            
+            
+        }
+
+
+
+        .grid-item-3 {
+            
+        }
+
+        .grid-item-4 {
+            
+        }
+
+        .grid-item-5 {
+            
+        }
+
+        .grid-item-6 {
+            
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-wrapper">
+        <div class="grid-item-1">
+            <p>Paragraphy 1</p>
+        </div>
+        <div class="grid-item-2">
+            <p>Paragraphy 2</p>
+        </div>
+        <div class="grid-item-3">
+            <p>Paragraphy 3</p>
+        </div>
+        <!-- <div class="grid-item-4">
+            <p>Paragraphy 4</p>
+        </div>
+        <div class="grid-item-5">
+            <p>Paragraphy 5</p>
+        </div>
+        <div class="grid-item-6">
+            <p>Paragraphy 6</p>
+        </div> -->
+    </div>
+    
+</body>
+</html>

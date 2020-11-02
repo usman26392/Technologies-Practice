@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12 columns grids</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        body {
+            margin: 50px;
+        }
+
+        .grid-wrapper {
+            max-width: 960px;
+            margin: 0 auto;
+            background-color: rgb(246, 228, 228);
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-auto-rows: minmax(100px, auto); 
+            gap: 15px;  
+        }        
+
+
+        header {
+        grid-area: 1/1/2/13;
+        background-color:#00c3ff;
+        }
+        main {
+        background-color: #00c3ff;
+        grid-area: 2/4/4/13;
+        }
+        aside {
+        grid-area: 2/1/3/4;
+        background-color: #00c3ff;
+        }
+        nav {
+        grid-area: 3/1/4/4;
+        background-color: #00c3ff;
+        }
+        section {
+        grid-area: 4/1/6/13;
+        background-color: #00c3ff;
+        }
+        footer {
+        grid-area: 6/1/7/13;
+        background-color: #00c3ff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-wrapper">
+        <header>
+            <p>Header</p>
+        </header>
+        <main>
+            <p>main</p>
+        </main>
+        <section>
+            <p>section</p>
+        </section>
+        <aside>
+            <p>aside</p>
+        </aside>
+        <nav>
+            <p>nav</p>
+        </nav>
+        <footer>
+            <p>footer</p>
+        </footer>
+    </div>
+    
+</body>
+</html>
