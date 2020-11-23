@@ -1,0 +1,122 @@
+
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* header */
+header {
+    padding: 2rem;
+    background: red;
+}
+
+header h1 {
+    font-size: 5rem;
+    color: #fff;
+}
+
+
+/* header nav */
+.hdr-nav ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    background: green;
+}
+  
+.hdr-nav a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    padding: 2rem;
+    display: block;
+    color: #fff;
+    font-weight: 700;
+}
+
+.hdr-1 {
+  background-color: teal;
+}
+
+.hdr-2 {
+  background-color: yellowgreen;
+}
+  
+
+/* web main content */
+
+main {
+    display: flex;
+}
+
+main > * {
+  flex: 0 0 50%;
+}
+
+section > h2 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  padding: 2rem 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.web-main-img-cont {
+  display: flex;
+  margin-bottom: 2rem;
+}
+.web-main-img-cont > * {
+  flex: 1 0 50%;
+}
+.web-main-img-cont > p {
+  font-size: 1.6rem;
+  padding: 2rem;
+}
+
+.main-content-list li {
+  font-size: 1.8rem;
+}
+
+/* aside   */
+aside ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+aside a {
+  display: block;
+  padding: 1rem 0;
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #000;
+}
+aside {
+  background: beige;
+}
+
+
+
+
+  /*footer  */
+  footer {
+    padding: 2rem 0.8rem;
+    background: aquamarine;
+  }
+  footer p {
+    font-size: 1.6rem;
+    text-align: right;
+  }
+
+
+.border-top {
+  border: 5px solid white;
+}
