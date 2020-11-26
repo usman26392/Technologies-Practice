@@ -1,0 +1,27 @@
+
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+.wrap {
+  width: 20rem;
+  height: 20rem;
+  background: red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: none;
+}
+
+ p {
+   font-size: 2rem;
+   color: #ffffff;  
+ }
