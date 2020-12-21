@@ -23,8 +23,10 @@
  */
 
 //  showSome(); // can't access lexical declaration 'showSome' before initialization
-let showSome = function show(){
-    console.log("This is a javaScript from fn expression");
-};
+// let showSome = function show(){
+//     console.log("This is a javaScript from fn expression");
+// };
 
-showSome();
+// showSome();
+
+

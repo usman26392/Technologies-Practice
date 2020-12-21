@@ -74,6 +74,9 @@
  * yey method yey karta hay k, agar jesay "p" element select kiya
  * hay toh , poray HTML document may jahan b "p" element ara
  * hoga, un sub ko select karay ga, or returns kary ga. 
+ * or agar humay sub ki koi maniplution karni hay toh
+ * phirh loop k zariyey karni ho gi. kiyon k yey function return 
+ * NodeList karta hay array ki form may.
  */
 
 //  let elements = document.querySelectorAll("p");
