@@ -1,6 +1,8 @@
 /**
  * Immediate Invoked Function  Expression.
  * aik fn hay jo khud call hojata hay.
+ * syntax: 
+ * (anonymous function)();
  */
 
 

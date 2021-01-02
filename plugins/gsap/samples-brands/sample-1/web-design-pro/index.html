@@ -1,0 +1,582 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Custom Web Design Services | Digit Design Studios</title>
+      <meta name="description" content="We’re dedicated to design custom and affordable websites for your business. Reach us today to discuss your project!">
+      <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.png">
+      <link rel="stylesheet" href="assets/css/plugins.css">
+      <link rel="stylesheet" href="assets/css/style.css">
+      <link rel="stylesheet" href="assets/css/responsive.css"/>  
+      
+   </head>
+   <body>
+
+      
+      <!-- popup form -->
+      <div id="popup" class="custom-popup">
+            <div class="container-lg">
+               <a href="javascript:;" id="popup-closed" class="closed"></a>
+               <h3>Let's Build Something Great Together!</h3>
+               <p>Drop us a line or view contact info.</p>
+               <div id="popupform" class="fixedform-1" data-form-type="popup_form">
+                     <form class="jform row leadForm" method="post" enctype="multipart/form-data" action="javascript:void(0)">
+
+                        <!--hidden required values-->
+                        <input type="hidden" id="formType" name="formType">
+                        <input type="hidden" id="referer" name="referer">
+
+                        <div class="col-md-4">
+                           <div class="mm-field namefield">
+                                 
+                                 <input type="text" name="name" class="required" data-validation="required" placeholder="Your Name*">
+                           </div>
+                        </div>
+                        <div class="col-md-4">
+                           <div class="mm-field emailfield">
+                                 
+                                 <input type="email" name="email" class="required email" data-validation="required" placeholder="Email address*">
+                           </div>
+                        </div>
+                        <div class="col-md-4">
+                           <div class="mm-field pnfields">                              
+                                 <input type="tel" name="phone" maxlength="10"  class="number required" placeholder="Phone*" data-validation="required">
+                           </div>
+                        </div>
+                        <div class="col-md-12">
+                           <div class="mm-field textarea">
+                                 
+                                 <textarea name="customers_meta[project_description]"
+                                 placeholder="Enter your comment here" id="" rows="6"></textarea>
+                           </div>
+                        </div>
+                        <div class="col-md-12">
+                           <div class="input-btn">
+                                 <button type="submit">Submit Your Request</button>
+                           </div>
+                           <div id="formResult" style="width: 100%;text-align: center;font-size: 18px;margin: auto;"></div>
+                        </div>
+                     </form>
+               </div>
+            </div>
+         </div>
+      <!-- popup form -->
+
+      <!-- header -->
+      <header>
+         <div class="container-md">
+            <div class="row justify-content-between align-items-center">
+               <div class="col-xl-2 col-3">
+                  <a href="index.php">
+                     <img src="assets/images/logo.png" alt="logo" class="">
+                  </a>
+               </div>
+
+               <div class="col-xl-5 col-9">
+                  <div class="header-cta d-flex">
+
+                     <a href="tel:<?= SITE_PHONE_NUMBER ?>" class="cta-left d-flex align-items-center">
+                        <img src="assets/images/call-icon.png" alt="">
+                        <div class="cta-left-txt">
+                           <span>CALL US</span>
+                           <span><?= SITE_PHONE_NUMBER ?></span>
+                        </div>
+                     </a>   
+                        
+                     
+                     <a href="javascript:;" class=" cta-right  d-flex align-items-center chat">
+                        <img src="assets/images/chat-icon.png" alt="">
+                        <div class="cta-right-txt cta-left-txt chat">
+                           <span>24x7 AVAILABLE</span>
+                           <span>LIVE CHAT</span>
+                        </div>
+                     </a> 
+                     
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+
+      <!-- banner -->
+      <section class="banner-sec">
+         <div class="container">
+            <div class="row no-gutters">
+               <div class="col-lg-7">
+                  <div class="banner-txt-wrap">
+                     <h2>Get a Custom</h2>
+                     <h1 class="ml6">                          
+                              <span>s</span>
+                              <span>u</span>
+                              <span>p</span>
+                              <span>e</span>
+                              <span>r</span>
+                              <span>b</span>
+                              <span>w</span>
+                              <span>e</span>
+                              <span>b</span>
+                              <span>s</span>
+                              <span>i</span>
+                              <span>t</span>
+                              <span>e</span>                         
+                     </h1>
+                     <h2>in no time </h2>
+                  </div>
+                  <ul class="banner-list">
+                     <li>Scale Your Business Faster</li>
+                     <li>Get Your Custom Website Made at <em>75% Off!</em></li>
+                     <li>Save a mountain of time</li> 
+                  </ul>
+                  <div class="form-wrap">
+                     <h2> <strong>Chat Now &</strong> <span>Avail 75% Discount</span>Coupon Instantly</h2>
+                     <div class="form-inner-wrap" data-form-type="popup_form">
+                        <form class="sign_up_form leadForm" id="regForm" method="post" enctype="multipart/form-data" action="javascript:void(0)">
+                                    <!--hidden required values-->
+                                       <input type="hidden" id="formType" name="formType">
+                                       <input type="hidden" id="referer" name="referer">
+                                       <div class="row  no-gutters justify-content-between align-items-center banner-frm-row">                   
+                                          <div class="col-xl-12">
+                                             <div class="form-group side-form-group tab name-field name-field-1" style="display: block;">
+                                                <input type="text" class="form-control" name="name" placeholder="Enter Your Business Name" data-validation="required">
+                                                
+                                             </div>
+                                             <div class="form-group side-form-group tab name-field name-field-2">
+                                                      <input type="email" class="form-control" placeholder="Your E-mail" name="email" data-validation="required">
+                                                   </div>
+                                             <div class="form-group side-form-group tab name-field name-field-3">
+                                                <input type="tel" class="form-control" placeholder="Phone no" name="phone" maxlength="11" data-validation="required">
+                                             </div>
+                                          </div>
+                                          <div class=" text-center">
+                                             <div class="cta-form-btn d-flex">
+                                                <button class="btn-1" type="button" id="prevBtn" onclick="nextPrev(-1)" style="display: none;">
+                                                   Previous 
+                                                   
+                                                </button>
+                                                <button class="btn-1" type="button" id="nextBtn" onclick="nextPrev(1)" style="display: inline;">
+                                                   Next
+                                                      
+                                                </button>
+                                                <button type="submit" class="learn-more-tab btn-1 " id="signupBtn" style="display: none;">
+                                                   Submit 
+                                                   
+                                                </button>                                         
+                                                                                 
+                                             </div>
+                                                <div id="formResult" class="popFormResult"></div>                              
+                                          </div>
+                                       </div>   
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+         <div class="banner-lp">
+            <img src="assets/images/banner-laptops.png" alt="" class="img-fluid">
+         </div>
+
+      </section>
+
+      
+
+      <main>
+
+      <!-- services section -->
+      <section class="serv-sec">
+         <div class="container">
+            <div class="row serv-slider">
+               <div class="col-lg-3">
+                  <div class="serv-wrap" >
+                     <div class="start_animation">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+                              <style type="text/css">
+                                 .st0{fill:none;stroke:#a724b4;stroke-width:2;stroke-miterlimit:10;}
+                              </style>
+                              <path class="st0" d="M18,26.1L2,33l30,12l30-12l-16-6.9" style="stroke-dasharray: 100px, 102px; stroke-dashoffset: 0px;"></path>
+                              <path class="st0" d="M18,39.1L2,46l30,12l30-12l-16-6.9" style="stroke-dasharray: 100px, 102px; stroke-dashoffset: 0px;"></path>
+                              <path class="st0" d="M32,32l30-12L32,7L2,20L32,32z" style="stroke-dasharray: 131px, 133px; stroke-dashoffset: 0px;"></path>
+                           </svg>
+                     </div>
+                     <h3>Website & Files Ownership</h3>
+                     <p>We don’t create dependencies. Everything we do for you is 100% yours.</p>
+                  </div>
+               </div>
+               <div class="col-lg-3">
+                  <div class="serv-wrap" >
+                     <div>
+                           <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+                              <style type="text/css">
+                                 .st0{fill:none;stroke:#a724b4;stroke-width:2;stroke-miterlimit:10;}
+                                 .st1{fill:none;stroke:#a724b4;stroke-width:2;stroke-linejoin:bevel;stroke-miterlimit:10;}
+                              </style>
+                              <path class="st0" d="M16,1h32v62H16V1z" style="stroke-dasharray: 188px, 190px; stroke-dashoffset: 0px;"></path>
+                              <path class="st0" d="M28,5h8" style="stroke-dasharray: 8px, 10px; stroke-dashoffset: 0px;"></path>
+                              <path class="st0" d="M16,51h32 M16,9h32" style="stroke-dasharray: 64px, 66px; stroke-dashoffset: 0px;"></path>
+                              <path class="st1" d="M32,55c1.1,0,2,0.9,2,2s-0.9,2-2,2c-1.1,0-2-0.9-2-2S30.9,55,32,55z" style="stroke-dasharray: 13px, 15px; stroke-dashoffset: 0px;"></path>
+                           </svg>
+                     </div>
+                        
+                     <h3>Mobile Responsive</h3>
+                     <p>Your customers are looking for you on mobile devices. Your website will look stunning on phones and tablets.</p>
+                  </div>
+               </div>
+               <div class="col-lg-3">
+                  <div class="serv-wrap" >
+                     <div>
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+                           <style type="text/css">
+                              .st0{fill:none;stroke:#a724b4;stroke-width:2;stroke-miterlimit:10;}
+                           </style>
+                           <path class="st0" d="M32,0.9c17.2,0,31.1,13.9,31.1,31.1c0,17.2-13.9,31.1-31.1,31.1C14.8,63.1,0.9,49.2,0.9,32
+                              C0.9,14.8,14.8,0.9,32,0.9z" style="stroke-dasharray: 196px, 198px; stroke-dashoffset: 0px;"></path>
+                           <path class="st0" d="M10,32c0-5.6,2.1-11.3,6.4-15.6c8.6-8.6,22.5-8.6,31.1,0C51.9,20.7,54,26.4,54,32" style="stroke-dasharray: 70px, 72px; stroke-dashoffset: 0px;"></path>
+                           <path class="st0" d="M24,26l6.3,7.3 M32,33c1.1,0,2,0.9,2,2s-0.9,2-2,2c-1.1,0-2-0.9-2-2S30.9,33,32,33z" style="stroke-dasharray: 23px, 25px; stroke-dashoffset: 0px;"></path>
+                        </svg>
+                     </div>
+                  
+                     <h3>Fast & Reliable Delivery</h3>
+                     <p>Traditional agencies take ages for small site updates. We deliver in 1-2 business days.</p>
+                  </div>
+               </div>
+               <div class="col-lg-3">
+                  <div class="serv-wrap serv-wrap-4" >
+                     <div>
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+                           <style type="text/css">
+                              .st0{fill:none;stroke:#a724b4;stroke-width:2;stroke-miterlimit:10;}
+                           </style>
+                           <path class="st0" d="M11,48C5.5,48,1,43.5,1,38s4.5-10,10-10h2v20H11z" style="stroke-dasharray: 56px, 58px; stroke-dashoffset: 0px;"></path>
+                           <path class="st0" d="M53,28c5.5,0,10,4.5,10,10s-4.5,10-10,10h-2V28H53z" style="stroke-dasharray: 56px, 58px; stroke-dashoffset: 0px;"></path>
+                           <path class="st0" d="M13,31v-9c0,0,0-16,19-16s19,16,19,16v6" style="stroke-dasharray: 71px, 73px; stroke-dashoffset: 0px;"></path>
+                           <path class="st0" d="M51,48v5l-15,6h-8v-4h8v3" style="stroke-dasharray: 45px, 47px; stroke-dashoffset: 0px;"></path>
+                        </svg>
+                     </div>
+                  
+                     <h3>Power Support</h3>
+                     <p>Just because we work remotely, doesn’t mean we treat you like a stranger</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- packages area -->
+      <section class="packages-area sec-padd">
+         <div class="container">
+            <div class="pack-hdg-cont">
+               <h2>Our Pricing</h2>
+               <p>We have kept our packages user-centric and that too in prices that are less than the market.</p>
+            </div>
+
+            <div class="pack-wrap">
+                  <div class="row pack-slider">                 
+                     <?php
+                        $packages = getPromotionPackages(WEB_DESIGN_PRO_PROMOTION_ID);
+                     
+                        $advancePackages = [];
+                        if (count($packages)) { ?>
+                           <?php foreach ($packages as $package) {
+                              $package['promotion_id'] = WEB_DESIGN_PRO_PROMOTION_ID;
+                              if ($package['is_advance']) {
+                                    $advancePackages[] = $package;
+                              } else { ?>
+                                    <div class="">
+                                       <?php echo generatePackageBox('package_box_web-design-pro', $package); ?>
+                                    </div>
+                              <?php } ?>
+                           <?php } ?>
+                     <?php } ?>                    
+                     
+                  </div>
+            </div>
+            
+         </div>     
+      </section>
+
+      <!-- why trust -->
+      <section class="why-trust sec-padd">
+         <div class="container">
+            <div class="row align-items-center">
+               <div class="col-lg-6 order-lg-1 order-2">
+                  <div class="why-trust-wrap">
+                     <h2> 
+                           <span>W</span>
+                           <span>h</span>
+                           <span>y</span>
+                           <span></span>
+                           <span>T</span>
+                           <span>r</span>
+                           <span>u</span>
+                           <span>s</span>
+                           <span>t</span>
+                           <span>U</span>
+                           <span>s</span>
+                           <span>,</span>
+                           <span>R</span>
+                           <span>i</span>
+                           <span>g</span>
+                           <span>h</span>
+                           <span>t</span>
+                           <span>?</span>
+                        </h2>
+                     <p>For the past 12 years we have been creating custom responsive websites for over 55,000+ clients from all over the world . We believe the right kind of website helps create engagement
+                        with the visitors and persuade them to avail of your products and services.
+                        </p>
+                     <p>At Digit Design Studios, we have a resourceful team of web designers & developers who render a broad scope of customized solutions to startups and large reputable businesses by executing consistent qualities like out of the box approach,
+                        adeptness to latest techniques, innovation, and a knack for style.</p>
+                     <div class="why-trust-btns">
+                        <a href="javascript:;" class="btn-1 popup-open">Get A Free Quote</a>
+                        <a href="javascript:;" class="btn-1 chat">Chat With Us</a>
+                     </div>
+                     
+                  </div>                
+               </div>
+
+               <div class="col-lg-6 mt-5 mt-lg-0 order-lg-2 order-1">
+                  <div class="why-trust-img-wrap">
+                     <img src="assets/images/why-img.png" alt="" class="img-fluid why-trust-img">
+                     <img class="position-absolute" src="assets/images/why-img-2.png" alt="" class="img-fluid why-trust-img">
+                  </div>
+                  
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- cta  -->
+      <section class="cta sec-padd">
+         <div class="container">
+            <div class="cta-wrap">
+               <h3>You Run A Professional Business</h3>
+               <h2>Now Own a Professional Website</h2>
+               <div class="cta-btns-wrap d-flex flex-md-row flex-column justify-content-center align-items-center">
+                  <a href="tel:<?= SITE_PHONE_NUMBER ?>" class="phone-center order-1  order-md-1"><span>Call Toll Free</span><?= SITE_PHONE_NUMBER ?></a>
+                  <a href="javascript:;" class="btn-1 order-3 order-md-2 popup-open">get started</a>
+                  <a href="javascript:;" class="chat-center order-2 order-md-3"><span>Need Help</span> Live chat</a>
+               </div>
+               
+            </div>
+         </div>
+      </section>
+
+      <!-- portfolio -->
+      <section class="portfolio sec-padd">
+         <div class="container">
+            <div class="portfolio-hdg">
+               <h2>Our Beautiful Designs</h2>
+               <p>When there is team work and collaboration, wonderful things can be achieved! Have a look at our recent work.</p>
+            </div>
+            <!-- <div class="portfolio-slider-wrapper">
+               <div class="portfolio-slider">
+                  <div class="port-img">
+                     <img src="assets/images/portfolio1.png" alt="">             
+                  </div>
+                  <div class="port-img">
+                     <img src="assets/images/portfolio2.png" alt="">             
+                  </div>
+                  <div class="port-img">
+                     <img src="assets/images/portfolio3.png" alt="">             
+                  </div>
+                  <div class="port-img">
+                     <img src="assets/images/portfolio4.png" alt="">             
+                  </div>
+                  <div class="port-img">
+                     <img src="assets/images/portfolio5.png" alt="">             
+                  </div>
+                  <div class="port-img">
+                     <img src="assets/images/portfolio1.png" alt="">             
+                  </div>
+                  <div class="port-img">
+                     <img src="assets/images/portfolio1.png" alt="">             
+                  </div>
+                  
+               </div>
+            </div> -->            
+         </div>
+         <div class="screenshot-carousel screenshot-carousel-5f906934ee68d ">
+               <ul>
+                  <li><div class="screen" style="background-image: url(assets/images/portfolio5.png)"></div></li>
+                  <li><div class="screen" style="background-image: url(assets/images/portfolio4.png)"></div></li>
+                  <li><div class="screen" style="background-image: url(assets/images/portfolio1.png)"></div></li>
+                  <li><div class="screen" style="background-image: url(assets/images/portfolio3.png)"></div></li>
+                  <li><div class="screen" style="background-image: url(assets/images/portfolio2.png)"></div></li>
+               </ul>
+            </div>
+      </section>
+
+      <!-- unique design -->
+      <section class="unique-design">
+         <div class="row row-cols-md-2 row-cols-lg-4 no-gutters mb-5 unique-design-wrap">
+            <div class="col">
+               <div class="unique-inner-wrap unique-inner-wrap-1">
+                  <img src="assets/images/unique-1.png" alt="" class="img-fluid mb-0">              
+               </div>
+            </div>
+            <div class="col">
+               <div class="unique-inner-wrap unique-inner-wrap-2">
+                  <img src="assets/images/thumb-icon.png" alt="">
+                  <h3 class="count-num">1200</h3>
+                  <p>Happy Clients</p>
+               </div>
+            </div>
+            <div class="col">
+               <div class="unique-inner-wrap unique-inner-wrap-3">
+                  <img src="assets/images/unique-2.png" alt="" class="img-fluid mb-0">
+                  
+               </div>
+            </div>
+            <div class="col">
+               <div class="unique-inner-wrap unique-inner-wrap-450 unique-inner-wrap-4">
+                  <img src="assets/images/teams.png" alt="">
+                  <h3 class="count-num">450</h3>
+                  <p>Expert Team</p>
+               </div>
+            </div>
+            <div class="col">
+               <div class="unique-inner-wrap unique-inner-wrap-1500 unique-inner-wrap-5">
+                  <img src="assets/images/icons-books.png" alt="">
+                  <h3 class="count-num">1500</h3>
+                  <p>Projects Completed</p>
+               </div>
+            </div>
+
+            <div class="col">
+               <div class="unique-inner-wrap unique-inner-wrap-6">
+                  <img src="assets/images/unique-3.png" alt="" class="img-fluid mb-0">
+                  
+               </div>
+            </div>
+
+            <div class="col">
+               <div class="unique-inner-wrap unique-inner-wrap-7">
+                  <img src="assets/images/car-icon.png" alt="">
+                  <h3>24 / 7</h3>
+                  <p>Customer Support</p>
+               </div>
+            </div>
+            <div class="col">
+               <div class="unique-inner-wrap unique-inner-wrap-8">
+                  <img src="assets/images/unique-4.png" alt="" class="img-fluid mb-0">
+                  
+               </div>
+            </div>
+         </div>
+
+
+         <!-- for mobile -->
+         <div class="unique-design-mobile unique-design-slider">
+            
+                  <div class="unique-inner-wrap unique-inner-wrap-2">
+                     <img src="assets/images/thumb-icon.png" alt="">
+                     <h3 class="count-num">1200</h3>
+                     <p>Happy Clients</p>
+                  </div>
+                
+               
+               
+                  <div class="unique-inner-wrap unique-inner-wrap-450 unique-inner-wrap-4">
+                     <img src="assets/images/teams.png" alt="">
+                     <h3 class="count-num">450</h3>
+                     <p>Expert Team</p>
+                  </div>
+               
+
+               
+                  <div class="unique-inner-wrap unique-inner-wrap-1500 unique-inner-wrap-5">
+                     <img src="assets/images/icons-books.png" alt="">
+                     <h3 class="count-num">1500</h3>
+                     <p>Projects Completed</p>
+                  </div>
+               
+
+               
+                  <div class="unique-inner-wrap unique-inner-wrap-7">
+                     <img src="assets/images/car-icon.png" alt="">
+                     <h3>24 / 7</h3>
+                     <p>Customer Support</p>
+                  </div>
+                                   
+         </div>
+
+
+         <a href="javascript:;" class="btn-1 popup-open">Start Today & Avail 75% OFF</a>
+      </section>
+
+      <!-- contact us -->
+      <section class="contact-us sec-padd">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-5 ml-auto">
+                  <div class="contact-us-wrapper">
+                     <h2>Need Help? <br> Contact Us</h2>
+                     <ul class="contact-list">
+                        <li>10869 N Scottsdale Rd 103 Ste 707 Scottsdale, AZ 85254</li>
+                        <li><a href="mailto:<?= SITE_INFO_EMAIL  ?>" class="text-reset"><?= SITE_INFO_EMAIL  ?></a></li>
+                        <li><a href="tel:<?= SITE_PHONE_NUMBER ?>" class="text-reset"><?= SITE_PHONE_NUMBER ?></a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- reviews -->
+      <section class="reviews sec-padd">
+         <div class="container">
+            <div class="reviews-wraper reviews-wraper-slider ">
+               <div class="review-1">
+                  <img src="assets/images/review-img-2.png" alt="">
+                  <h2>~Kenny</h2>
+                  <p>"Digit design studios did a great job! My new website is so much more professional, good looking and easier to work with than my old site. They also helped me
+                      to understand the marketing and advertising concepts and how to implement it in my business.”</p>
+               </div>
+               <div class="review-1">
+                  <img src="assets/images/review-img-1.png" alt="">
+                  <h2>~Angelina Mike</h2>
+                  <p>"With Digit design studios we were able to update our website graphics to really convey our brand and messaging. The designer quickly narrowed on what we were looking to achieve 
+                     and iterated through designs to land on graphics that we are extremely happy with.”</p>
+               </div>
+               <div class="review-1">
+                  <img src="assets/images/review-img-3.png" alt="">
+                  <h2>~Stephen S</h2>
+                  <p>"I am really happy with my website. I had it redone to be responsive and I’m already witnessing the increase in number. This is amazing! I would highly recommend them.”</p>
+               </div>
+            </div>
+         </div>
+      </section>
+    
+      </main>
+
+      <footer>
+        <div class="container-lg">
+           <div class="ftr-wrap d-flex justify-content-between align-items-center">
+              <ul class="ftr-list pl-0 mb-0">
+                 <li><p>Copyright © 2020 Digit Designs Studios All Rights Reserved.</p></li>
+                 <li><a href="../order/privacy.php">Privacy Policy</a></li>
+                 <li><a href="../order/terms.php">Terms of Use</a></li>
+              </ul>
+              <img src="assets/images/cards.png" alt="cards" class="img-fluid">
+           </div>
+        </div>
+     </footer>
+
+
+
+     
+
+
+      
+      <!-- scripts -->
+      <script src="assets/js/plugins.js"></script>
+      <script src="assets/js/custom.js"></script>
+
+     
+
+   </body>
+</html>
+

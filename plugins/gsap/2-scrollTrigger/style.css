@@ -1,0 +1,46 @@
+body {
+    height: 4000px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    display: block;
+}
+
+
+.box-1 {
+    background-color: red;
+    margin-bottom: 250px;
+}
+
+.box-2 {
+    background-color: green;
+    margin-bottom: 250px;
+}
+
+.box-3 {
+    background-color: blue;
+    margin-bottom: 250px;
+}
+
+
+.box-4 {
+    background-color: rgb(0, 255, 21);
+}
+
+.box-5 {
+    background-color: rgb(1, 8, 1);
+}
+
+
+
+
+
