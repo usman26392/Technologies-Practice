@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Property transform:</title>
+    <style>
+        /* translate(x,y) */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .box-red {
+            width: 200px;
+            height: 200px;
+            color: #ffffff;
+            background-color: red;
+        }
+
+        .box-green {
+            width: 200px;
+            height: 200px;
+            color: #ffffff;
+            background-color: green;
+            transform: translateX(220px);
+        }
+
+        .box-blue {
+            width: 200px;
+            height: 200px;
+            color: #ffffff;
+            background-color: blue;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="box-red">without translate</div>
+    <div class="box-green">translate box</div>
+    <div class="box-blue">without translate</div>
+    
+</body>
+</html>
