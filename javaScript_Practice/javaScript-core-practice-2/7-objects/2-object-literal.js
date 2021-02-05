@@ -17,6 +17,8 @@
      }
  };
 
+    
+
 //  Access object's properties and methods
 console.log(nokia7.weight);
 console.log(nokia7["weight"]);
