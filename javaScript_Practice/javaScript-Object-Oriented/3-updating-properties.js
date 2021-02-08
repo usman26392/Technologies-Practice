@@ -2,7 +2,7 @@
  * updating properties and methods of object.
  * 
  */
-let userOne = {
+let userOne1 = {
     email: "usman@corp.com",
     name: "Muhammad Usman",
     brothers: ["Muhammad Farhan","Fahad Ali","Muhammad Rehan"],
@@ -16,16 +16,16 @@ let userOne = {
 
 
 // updating property
-userOne.name = "Fahad Ali";
+userOne1.name = "Fahad Ali";
 
 // another way for updating property with square brakets
-userOne["name"] = "Fahad Ali";
+userOne1["name"] = "Fahad Ali";
 
 
 // developing new property for the object
-userOne.age = "28";
+userOne1.age = "28";
 
-userOne.LogInfo = function() {
+userOne1.LogInfo = function() {
     console.log("This is public account");
 };
 

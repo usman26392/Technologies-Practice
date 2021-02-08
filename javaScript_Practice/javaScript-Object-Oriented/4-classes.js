@@ -3,10 +3,10 @@
  */
 
 /**
- * This is an old approach
+ * These are all object literals.
  */ 
 
-let userOne = {
+let user1 = {
     email: "usman@corp.com",
     name: "Muhammad Usman",
     Login: function() {
@@ -17,7 +17,7 @@ let userOne = {
     }
 };
 
-let userTwo = {
+let user2 = {
     email: "usman@corp.com",
     name: "Muhammad Farhan",
     Login: function() {
@@ -28,7 +28,7 @@ let userTwo = {
     }
 };
 
-let userThree = {
+let user3 = {
     email: "usman@corp.com",
     name: "Muhammad Rehan",
     Login: function() {
