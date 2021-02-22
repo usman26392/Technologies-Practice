@@ -9,7 +9,7 @@
 
 
 /**
- * access element  By id
+ * -------------  access element  By id -------------------
 */ 
 
 //  let myElement = document.getElementById("p1");
@@ -17,7 +17,7 @@
  
 
 /**
-* access element by tag name:
+*  ----------------access element by tag name: -------------------
 * ye method , returns karta hay HTML collection
 * matlab ye hay k agar may "p" element layta hun
 * document may jitnay b "p" elements hun gay
@@ -29,6 +29,43 @@
 // console.log(myelement);
 
 
+
+
+
+/**
+ * HTML Collection may hum specific b select karsaktay hayn kisi b element ko.
+ */
+let myelement = document.getElementsByTagName("ul")[0];
+console.log(myelement);
+
+/**
+ * or
+ */
+
+// let myelement = document.getElementsByTagName("ul");
+// console.log(myelement[0]);
+
+
+
+
+
+
+
+/** aik question dimagh may ata hay k hum selection elements kiyun karray hayn
+ * , jawab yey hay k ta k elements ki manipulation karsakayn:
+ * is example say samajh a jahay ga.
+ */
+
+// let myelement = document.getElementsByTagName("ul");
+// for(let i = 0; i < myelement.length; i++) {
+//     myelement[i].style.color = "green";
+// }
+
+
+
+
+
+
 /**
  * asterik * element means that all element in the document.
  */
@@ -38,7 +75,7 @@
 
 
 /**
- * access element by class name
+ *  -----------------access element by class name -----------------
  */
 
 //  let element = document.getElementsByClassName("list-1");
@@ -48,15 +85,15 @@
 /**
  * hum aik say zayeda b class use karsakhtay hayn.
  */
- let element = document.getElementsByClassName("list list-2");
- console.log(element);
+//  let element = document.getElementsByClassName("list list-2");
+//  console.log(element);
 
 
 
 
 
 /**
- * querySelector()
+ *  ---------------- querySelector() ---------------
  * yey method yey karta hay k, agar jesay "p" element select kiya
  * hay toh , poray HTML document may jo b first "p" element ara
  * hoga, us ko select karay ga bus, or returns kary ga.
@@ -70,7 +107,7 @@
 
 
 /**
- * querySelectorAll()
+ * -------------- querySelectorAll() -------------------------
  * yey method yey karta hay k, agar jesay "p" element select kiya
  * hay toh , poray HTML document may jahan b "p" element ara
  * hoga, un sub ko select karay ga, or returns kary ga. 
