@@ -35,8 +35,8 @@
 /**
  * HTML Collection may hum specific b select karsaktay hayn kisi b element ko.
  */
-let myelement = document.getElementsByTagName("ul")[0];
-console.log(myelement);
+// let myelement = document.getElementsByTagName("ul")[0];
+// console.log(myelement);
 
 /**
  * or
@@ -78,13 +78,16 @@ console.log(myelement);
  *  -----------------access element by class name -----------------
  */
 
-//  let element = document.getElementsByClassName("list-1");
+
+//  let element = document.getElementsByClassName("list");
 //  console.log(element);
+
 
 
 /**
  * hum aik say zayeda b class use karsakhtay hayn.
  */
+
 //  let element = document.getElementsByClassName("list list-2");
 //  console.log(element);
 
@@ -99,9 +102,20 @@ console.log(myelement);
  * hoga, us ko select karay ga bus, or returns kary ga.
  */
 
-//  let elements = document.querySelector("p");
-// or  let elements = document.querySelector(".list");
-//  console.log(elements);
+
+//  let elements = document.querySelector("ul");
+
+ // or  
+//   let element = document.querySelector(".list");
+
+//   or
+let element = document.querySelector(".list li");
+
+ console.log(element);
+
+ element.classList.add("abcd");
+
+
 
 
 

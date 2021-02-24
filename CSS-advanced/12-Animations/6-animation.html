@@ -3,19 +3,28 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>javascript DOM</title>
+        <title></title>
         <style>
+            /* 
+                is may yey pata chala k aik say zayeda b different animation lagaen ja
+                sakhti hayn kisi aik element par.
+             */
+
             .anim {
                 animation: 
                 check 1s linear 0s infinite alternate,
-                check2 1s linear 2s infinite alternate;
+                check2 .1s linear 3s infinite alternate;
+                /*
+                check2 3s k baad start hogi or .1s may complete hogi, 
+                jo phirh infinite run hoti rahay gi , har .1s may.  
+                 */
             }
             @keyframes check {
                 from {
-                    transform: translateY(0);
+                    transform: translateX(0);
                 }
                 to {
-                    transform: translateY(15px);
+                    transform: translateX(15px);
                 }
             }
 
@@ -36,10 +45,10 @@
     <body>
         <h1 class="hdg-1">We are learning javaScript DOM</h1>
         <p id="p1">This is client side scripting language</p>
-        <ul class="list list-1 ">
+        <ul class="list list-1">
             <li class="anim">Home</li>
             <li >News</li>
-            <li >Blog</li>
+            <li>Blog</li>
         </ul>
         <ul class="list list-2">
             <li>services</li>
@@ -49,7 +58,6 @@
         <p class="p2">This is also a paragraph</p>
 
 
-        <!-- javaScript files -->
-        <script src="script.js"></script>
+        
     </body>
 </html>
