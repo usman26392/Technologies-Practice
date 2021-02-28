@@ -27,9 +27,28 @@
 //  console.log(myElement.parentElement);
 
 
-// let element = document.querySelector("li");
+let element = document.querySelector(".list-1");
+
 // console.log(element.parentNode);
 // console.log(element.parentElement);
+
+// console.log(element.childNodes);
+// console.log(element.children);
+
+console.log(element.firstChild);
+// console.log(element.firstElementChild);
+
+// console.log(element.lastChild);
+// console.log(element.lastElementChild);
+
+// console.log(element.previousSibling);
+// console.log(element.previousElementSibling);
+
+
+// console.log(element.nextSibling);
+// console.log(element.nextElementSibling);
+
+
 
 
 /**
@@ -71,9 +90,9 @@
  *  nextSibling and nextElementSibling
  */
 
- let element = document.querySelector(".second-item");
- console.log(element.nextSibling);
- console.log(element.nextElementSibling);
+//  let element = document.querySelector(".second-item");
+//  console.log(element.nextSibling);
+//  console.log(element.nextElementSibling);
 
 
  

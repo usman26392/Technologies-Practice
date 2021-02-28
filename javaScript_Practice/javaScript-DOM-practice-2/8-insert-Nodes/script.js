@@ -1,9 +1,19 @@
+
+
+
+
+
+
+
+
+
+
 /**
  * cloneNode() method.
  */
 
 //  jis ka clone banay ga. us ko select kiya
- let myEl = document.querySelector(".hdg-div");
+let myEl = document.querySelector(".hdg-div");
 // us node ko clone kiya.
  let cloneNode = myEl.cloneNode(true);
  

@@ -109,14 +109,9 @@
 //   let element = document.querySelector(".list");
 
 //   or
-let element = document.querySelector(".list li");
+// let element = document.querySelector(".list li");
 
- console.log(element);
-
- element.classList.add("abcd");
-
-
-
+//  console.log(element);
 
 
 
@@ -130,28 +125,17 @@ let element = document.querySelector(".list li");
  * NodeList karta hay array ki form may.
  */
 
-//  let elements = document.querySelectorAll("p");
+ let elements = document.querySelectorAll("p");
 // let elements = document.querySelectorAll(".list");
-//  console.log(elements);
+// let elements = document.querySelectorAll(".list-2");
+ console.log(elements);
+
+// check manipulation 
+// elements.forEach((els)=> {
+//     els.style.color = "red";
+// });
 
 
-
-/**
- * more specific selection of elements
- */
-
-//  let parentElement = document.querySelector(".list-2");
-//  let childElement = parentElement.getElementsByTagName("li");
-//  console.log(childElement);
-
-
-/**
- * more more specific selection of element.
- * with the help of HTML Collection index number.
- */
-// let parentElement = document.querySelector(".list-2");
-// let childElement = parentElement.getElementsByTagName("li")[1];
-// console.log(childElement);
 
 
 /**
