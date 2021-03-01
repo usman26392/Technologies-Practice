@@ -3,15 +3,34 @@
  * element Node or Node
  */
 
-let myNewEl = document.createElement("li");
-let myNewTxt = document.createTextNode("New updates");
-myNewEl.appendChild(myNewTxt);
 
-// other way:append textNode in element Node.
-// myNewEl.textContent = "New updates";    
+// yahan par hum nay pahlay element Node ko develop kiya hay 
+// phir us ko append kiya hay DOM may. 
+// let myNewEl = document.createElement("li");
+// let myNewTxt = document.createTextNode("New updates");
+// myNewEl.appendChild(myNewTxt);
 
-let myEl = document.querySelector(".list-1");
-myEl.appendChild(myNewEl);
+// // other way:append textNode in element Node.
+// // myNewEl.textContent = "New updates";    
+
+// let myEl = document.querySelector(".list-1");
+// myEl.appendChild(myNewEl);
+
+
+
+
+// yahan jo pahlay say mojud tha element Node us ko
+// kisi dosray parent element Node may append kiya hay.
+
+// let myElNode = document.querySelector(".li-1");
+// let myParentElNode = document.querySelector(".list-2");
+
+// myParentElNode.appendChild(myElNode);
+
+
+
+
+
 
 
 
