@@ -64,14 +64,48 @@
  * insert kar k 'myli' ko.
  */ 
 
-let myli = "<li>This is a li </li>";
-// select two element Nodes
-let myliElNode1 = document.querySelector(".li-1");
-let myliElNode2 = document.querySelector(".li2-1");
+// let myli = "<li>This is a li </li>";
+// // select two element Nodes
+// let myliElNode1 = document.querySelector(".li-1");
+// let myliElNode2 = document.querySelector(".li2-1");
 
 
-myliElNode1.insertAdjacentHTML("afterend", myli);
-myliElNode2.insertAdjacentHTML("afterend",myli);
+// myliElNode1.insertAdjacentHTML("afterend", myli);
+// myliElNode2.insertAdjacentHTML("afterend",myli);
+
+
+
+/**
+ * ------------------ clone element Node --------------
+ */
+
+// let elNodeC = document.querySelector("#p1");
+// let elDuplicate = elNodeC.cloneNode(true); 
+
+// let elNode = document.querySelector(".list-1");
+
+// elNode.insertAdjacentElement("afterend",elDuplicate);
+
+
+
+// is may hum nay aik say zayeda elements par insert kiya hay #p1 ko.
+// loop k zariyey.
+
+let elNodeC = document.querySelector("#p1");
+let elNode = document.querySelectorAll(".list");
+
+// with forEach loop
+// elNode.forEach(my=> {
+//   let elDuplicate = elNodeC.cloneNode(true); 
+//   my.insertAdjacentElement("afterend",elDuplicate);
+// });
+
+
+//  for of loop
+for (const  myEl of elNode) {
+  let elDuplicate = elNodeC.cloneNode(true); 
+  myEl.insertAdjacentElement("afterend",elDuplicate);
+}
 
 
 

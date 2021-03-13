@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        body {
+            background-color: black;
+        }
+
+        body {
+    background: rgb(27, 27, 27);
+    margin: 0;
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    font-family: 'Poppins';
+    color: white;
+}
+
+.container {
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+    background: #232323;
+    padding: 2em;
+    margin-bottom: 50px;
+}
+
+h1 {
+        margin: 0;
+    }
+    p {
+        color: gray;
+    }
+
+button {
+    background: #343434;
+    margin-top: 2em;
+    border: none;
+    padding: 1em;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    outline: 0;
+    cursor: pointer;
+}
+
+button:hover {
+        background: #424242;
+    }
+
+button:active {
+    background: orange;
+}
+
+.svg {
+    width: 200px;
+    position: absolute;
+    top: -40px;
+    left: -30px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hide {
+    display: none;
+}
+
+
+
+
+    
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="svg hide"></div>
+
+        <h1>My card title</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus dolores ullam, adipisci sint aut magni!</p>
+    
+        <button class="btn-1 lt-1">Get Started</button>
+    </div>
+
+    <div class="container">
+        <div class="svg hide" ></div>
+
+        <h1>My card title</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus dolores ullam, adipisci sint aut magni!</p>
+    
+        <button class="btn-1 lt-2">Get Started</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
