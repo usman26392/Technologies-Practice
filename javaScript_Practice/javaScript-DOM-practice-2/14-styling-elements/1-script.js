@@ -1,4 +1,6 @@
-
+/**
+ * ----- styling elements Nodes -----------
+ */
 
 /**
  * set inline CSS
@@ -14,6 +16,8 @@
 
  let hdgElNode = document.querySelector(".hdg-1");
  hdgElNode.style.cssText = "color:white; background-color: #000000;";
+
+ 
 
 
 

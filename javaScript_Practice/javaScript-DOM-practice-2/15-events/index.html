@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> styling elements </title>
+    <title> events </title>
     <style>
         .hdg-1 {
             font-size: 16px;
@@ -12,7 +12,10 @@
         .hdg-2 {
             font-size: 60px;
             color: blue;
+            padding: 10px;
             font-weight: 700;
+            background-color:darkgray;
+            transition: all .2s linear;
         }
 
 
@@ -20,7 +23,7 @@
     
 </head>
 <body>
-    <h1 class="hdg-1" style="background-color: yellow;">We are learning javaScript DOM</h1>
+    <h1 class="hdg-1">We are learning javaScript DOM</h1>
     <p id="p1" class="para-1" title="paragraph"> This is client side scripting language</p>
     <ul class="list list-1">
         <!-- my first li -->
@@ -34,9 +37,15 @@
         <li>contact</li>
     </ul>
     <p class="p2">This is also a paragraph</p>  
+     
+    <!-- click event with event handler -->
+    <!-- <button onclick="changeCSS()">Button</button> -->
 
-    <button>Button</button>
+    <!-- for event binding with javaScript  -->
+    <button class="btn">Button</button>
 
+    
+    <!-- javaScript files -->
     <!-- <script src="1-script.js"></script> -->
     <script src="2-script.js"></script>
 

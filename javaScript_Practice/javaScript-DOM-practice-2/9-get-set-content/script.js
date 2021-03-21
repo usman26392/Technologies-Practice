@@ -21,9 +21,8 @@
  * textContent
  */
 
-// let elNodeP = document.querySelector(".p3");
-// elNodeP.textContent = "This is a paragraph3";
-
+let pElNode = document.querySelector(".p3");
+pElNode.textContent = "This is a paragraph3";
 
 
 
