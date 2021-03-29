@@ -5,10 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> events </title>
     <style>
+        body {
+            height: 4000px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
         .hdg-1 {
             font-size: 16px;
         }
-
         .hdg-2 {
             font-size: 60px;
             color: blue;
@@ -16,6 +24,37 @@
             font-weight: 700;
             background-color:darkgray;
             transition: all .2s linear;
+        }
+        
+        /* following styling for event propagation */
+
+        .ep {
+            margin-top: 20px;
+        }
+
+        #one {
+            width: 400px;
+            height: 400px;
+            background-color: orange;
+            margin: 20px 0 40px;
+        }
+
+        #two {
+            width: 300px;
+            height: 300px;
+            background-color: lightblue;
+        }
+
+        #three {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        #four {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
         }
 
 
@@ -44,10 +83,37 @@
     <!-- for event binding with javaScript  -->
     <button class="btn">Button</button>
 
+
+    <!-- for event propagation -->
+    <h1 class="ep">Event propagation</h1>
+    <div id="one">1
+        <div id="two">2
+            <div id="three">3
+                <div id="four">4
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- for mouse events too -->
+    <h1>for mouse events with check bubbling phase. </h1>
+    <div id="one">
+        <div id="two"></div>
+    </div>
+
+    <!-- for focus events -->
+    <input type="text" class="input-txt">
+
     
     <!-- javaScript files -->
     <!-- <script src="1-script.js"></script> -->
-    <script src="2-script.js"></script>
+    <!-- <script src="2-script.js"></script> -->
+    <!-- <script src="3-script.js"></script> -->
+    <!-- <script src="4-script.js"></script> -->
+    <!-- <script src="5-script.js"></script> -->
+    <!-- <script src="6-script.js"></script> -->
+    <!-- <script src="7-script.js"></script> -->
+    <script src="8-script.js"></script>
 
     
     
