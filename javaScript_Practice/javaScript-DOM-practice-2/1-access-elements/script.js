@@ -7,7 +7,6 @@
  */
 // console.dir(document);
 
-
 /**
  * -------------  access element  By id -------------------
 */ 

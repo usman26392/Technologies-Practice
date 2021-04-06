@@ -193,13 +193,35 @@
 
 
  /**
-  * map()
+  *  ----------------- map() ----------------
   */
 
- let randomNo = [1,2,3,4,5,6,7,8,9,10,12];
- let myNumbers = randomNo.map((arrNos)=> {
-   return arrNos * 2;
- });
- console.log(myNumbers);
+//  let randomNo = [1,2,3,4,5];
+//  let myEvenNumbers = randomNo.map((arrNos)=> {
+//    return arrNos * 2;
+//  });
+//  console.log(myEvenNumbers);
+//  console.log(`Original Array:  ${randomNo}`);
+
+
+// example 2
+// let randomNo = [1,2,3,4,5];
+//  randomNo.map((arrNos)=> {
+//    console.log(arrNos * 2);
+//  });
+
+
+//  example 3
+
+let itemDesc = [
+  {price:100, productName: "Samsung"},
+  {price: 200, productName: "Nokia"}
+];
+
+// console.log(itemDesc);
+itemDesc.map((el)=>{
+  console.log(el.price);
+});
+ 
 
 
