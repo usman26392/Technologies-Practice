@@ -21,6 +21,20 @@
 
 
 
+$(function() {
+  // let elementPosition = $(".hdg-1").position();
+  let elementPosition = $(".hdg-1").offset();
+  console.log(elementPosition);
+});
+
+
+
+
+
+
+
+
+
 // getting text
 // $(document).ready(function() {
 //     let txt =  $(".box-para").text();
