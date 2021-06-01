@@ -21,11 +21,18 @@
   * -- aik names function b lay sakhtay hayn.
   */
 
-//     function Sum(a,b) {
-//         console.log(a + b);
-//     }
+  //   function Sum(a,b) {
+  //       console.log(a + b);
+  //   }
     
-//   $(document).ready(Sum(2,4));
+  // // $(document).ready(Sum(2,4));
+ 
+  // // or
+  // $(document).ready(function() {
+  //   Sum(4,4);
+  // });
+
+  
 
 
 

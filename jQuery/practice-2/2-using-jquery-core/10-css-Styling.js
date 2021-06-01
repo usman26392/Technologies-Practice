@@ -54,6 +54,18 @@
 //   });
 
 
+// with hasClass()
+$(function(){
+  let elementClass = $(".hdg-1").hasClass("my_heading");
+  if(elementClass) {
+    $(".hdg-1").removeClass("my_heading");
+  }
+  else {
+    $(".hdg-1").addClass("my_heading");
+  }
+});
+
+
 
 
 

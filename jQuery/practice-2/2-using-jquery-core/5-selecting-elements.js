@@ -105,8 +105,24 @@
 // $(document).ready(function() {
 //   // let element = $(".box").has("p");
 //   let element = $(".box").has(".box-para");
-//   console.log(element);
+//   // console.log(element);
+//   element.css({
+//     backgroundColor: "red"
+//   });
 // });
+
+
+// is()
+
+$(function() {
+  let check =  $("div").is(".box");
+  if(check) {
+    $("div.box").css("backgroundColor", "green");
+  }
+});
+
+
+
 
 
 // not()
@@ -134,10 +150,10 @@
 
 
 // eq()
-$(document).ready(function() {
-  let element = $(".list-1 li").eq(2);
-  console.log(element);
-});
+// $(document).ready(function() {
+//   let element = $(".list-1 li").eq(2);
+//   console.log(element);
+// });
 
 
 
