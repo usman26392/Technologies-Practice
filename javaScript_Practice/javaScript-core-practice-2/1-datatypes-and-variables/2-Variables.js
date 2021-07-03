@@ -12,72 +12,140 @@
 /**
  * Declare a variable
  */ 
-let std_Name;
-let std_Id;
-let item_Price;
 
-console.log(typeof item_Price); // Output: undefined
+// let std_Name;
+// let std_Id;
+// let item_Price;
 
-
-
+// console.log(typeof item_Price); // Output: undefined
 
 
 
 
 
-/**
- * Declaration with Initialization of variables.
- */
-
-let mobileCompany = "SamSung";
-let computerHardware = "SSD";
-
-// console.log(mobileCompany);
 
 
 
-/**
- * Other way to declare a variable and initialize:
- * 
-*/
+// /**
+//  * Declaration with Initialization of variables.
+//  */
 
-let client_id;
-client_id = 45;
+// let mobileCompany = "SamSung";
+// let computerHardware = "SSD";
 
-console.log(client_id)
-
+// // console.log(mobileCompany);
 
 
-/**
- * Other ways
- */
 
- let num_1 = 5, num_2 = 15, num_3 = 45;
+// /**
+//  * Other way to declare a variable and initialize:
+//  * 
+// */
+
+// let client_id;
+// client_id = 45;
+
+// console.log(client_id)
+
+
+
+// /**
+//  * Other ways
+//  */
+
+//  let num_1 = 5, num_2 = 15, num_3 = 45;
  
-console.log(typeof num_1 + " and "+ typeof num_2 + " and "+ typeof num_3);
+// console.log(typeof num_1 + " and "+ typeof num_2 + " and "+ typeof num_3);
+
+// /**
+//  * Other ways:
+//  */
+// let num_4,num_5,num_6;
+// num_5 = 52;
+// console.log(num_5);
+
+
+
+// /**
+//  * javascript may variable  interpret hotay waqt , apni
+//  * datatype b change karsaktay hayn.
+//  * javascript isi waja say dynamic language kayhlati hay.
+//  */
+
+// //  assign a number:
+//  let roll_num = 12;
+//  console.log(roll_num);
+
+// //  assign a string value:
+//  roll_num = "twelve";
+// console.log(roll_num);
+
+
 
 /**
- * Other ways:
+ *  What is wrong with global Variables ?
  */
-let num_4,num_5,num_6;
-num_5 = 52;
-console.log(num_5);
+
+// var greeting = "Hello";
+
+// function PrintWord() {
+//     this.name1 = "World";
+//     punct = "!";
+//     console.log(greeting + " " + this.name1 + punct);
+// }
+
+// PrintWord(); 
 
 
 
 /**
- * javascript may variable  interpret hotay waqt , apni
- * datatype b change karsaktay hayn.
- * javascript isi waja say dynamic language kayhlati hay.
+ *  avoiding global variables using closure.
+ *  three technique
  */
 
-//  assign a number:
- let roll_num = 12;
- console.log(roll_num);
 
-//  assign a string value:
- roll_num = "twelve";
-console.log(roll_num);
- 
+// technique-1: place the code in a function
+
+
+//  function Init() {
+//     var user_name = "Usman",
+//         age = 29;
+    
+//         var PrintUserName = function() {
+//             console.log(user_name + " " + age);
+//         }
+
+//         PrintUserName();
+// }
+
+
+// window.addEventListener("load",Init);
+
+
+
+
+
+
+// technique-2: IIFE
+
+// (function() {
+//         var user_name = "Usman",
+//         age = 29;
+//         var PrintUserName = function() {
+//             console.log(user_name + " " + age);
+//         };
+
+//         PrintUserName();
+
+// })();
+
+
+
+// technique-3: use a single object
+
+
+
+
+
 
 

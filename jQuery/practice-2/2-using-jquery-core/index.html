@@ -36,8 +36,8 @@
 
     <h1 class="hdg-1">We are learning jQuery</h1>
     <h1>This is  also a heading</h1>
-    <!-- <iframe src="http://techcrunch.com"></iframe> -->
-
+    <p class="para-sp"><span>Hello</span>, how are you?</p>
+    <p class="para-sp"><span>Hello</span>, how are you?</p>
     <h2 class="hdg-2">This is heading h2 </h2>
     <h2>This is heading h2</h2>
     <section class="main-cont">
@@ -51,6 +51,7 @@
     <div class="box">
         <h2>This is a heading h2</h2>
     </div>
+    
     <h2>This is heading h2</h2>
     <p id="p1"> This is client side scripting language</p>
     <a href="http://jquery.com/">jQuery</a>
@@ -59,8 +60,8 @@
     <ul class="list list-1">
         <!-- my first li -->
         <li class="li-1">Home</li>
-        <li >News</li>
-        <li >Blog</li>
+        <li>News</li>
+        <li>Blog</li>
         <li>New Release</li>
         <li>Services</li>
     </ul>
@@ -71,30 +72,46 @@
         <li class="items">contact</li>
     </ul>
     <p class="p2">This is also a paragraph</p>  
+    
     <a href="http://jquery.com/">jQuery</a>
-
-    <h6>This is less important heading!</h6>
-
-    <form action="">
-        <input type="text">
-    </form>
 
     <button>Button</button>
 
+    <h6 id="h6">This is less important heading!</h6>
 
-    <!-- <h1>This below structure for DOM Traversing</h1>
-    <section class="grandparent">
-        <div class="parent">
-            <ul class="child">
-                <li class="subchild"></li>
-            </ul>
-        </div>
-        <div class="surrogateParent1"></div>
-        <div class="surrogateParent2"></div>
-    </section> -->
+    <form action="">
+        <input type="text" class="text-field">
+        <select name="cars" id="cars" form="carform">
+            <option value="volvo">Volvo-ABC</option>
+            <option value="saab" selected="selected">Saab-DEF</option>
+            <option value="opel">Opel-GHI</option>
+            <option value="audi">Audi-JKL</option>
+        </select> <br>
+
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1"> I have a bike</label><br>
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+        <label for="vehicle2"> I have a car</label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3"> I have a boat</label><br><br>
 
 
-    <h1>This below structure for Children Traversing</h1>
+        <p>Please select your gender:</p>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+
+
+
+
+        <input type="submit">
+    </form>
+
+
+    <h1>This below structure for DOM Traversing</h1>
     <div class="grandparent">
         <div class="parent">
             <div class="child">
@@ -105,12 +122,20 @@
         <div class="surrogateParent2"></div>
     </div>
 
+
+    <div class="mydiv">
+        The values stored were
+        <span></span>
+        and
+        <span></span>
+    </div>
+
     <!-- js files -->
     <script src="../jquery.js"></script>
     <!-- <script src="overview.js"></script> -->
     <!-- <script src="1-doller.js"></script> -->
     <!-- <script src="2-document-ready.js"></script> -->
-    <script src="3-avoiding-conflicts.js"></script>
+    <!-- <script src="3-avoiding-conflicts.js"></script> -->
     <!-- <script src="4-attributes.js"></script> -->
     <!-- <script src="5-selecting-elements.js"></script> -->
     <!-- <script src="6-working-with-selections.js"></script> -->
@@ -118,8 +143,10 @@
     <!-- <script src="8-jQuery-object.js"></script> -->
     <!-- <script src="9-Traversing.js"></script> -->
     <!-- <script src="10-css-Styling.js"></script> -->
+    <!-- <script src="11-Data-methods.js"></script> -->
     <!-- <script src="12-utility-methods.js"></script> -->
     <!-- <script src="13-iterating-objects.js"></script> -->
+    <script src="15-faq.js"></script>
         
 </body>
 </html>

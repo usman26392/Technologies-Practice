@@ -43,13 +43,15 @@
  * Use an Immediately Invoked Function Expression (IIFE)
  */
 
+
 jQuery.noConflict();
 
+// IIFE
 (function($) {
    $("h1").hide(1800);
 })(jQuery);
 
-
+// IIFE
 (function($) {
    $("button").on("click", function() {
       $(".list-1").toggle("slow");

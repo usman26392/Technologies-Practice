@@ -8,6 +8,8 @@
 
 
 
+
+
 // $(document).ready(function(){
 //     $(".empty-anchor").attr({
 //             href: "index.html",
@@ -21,7 +23,7 @@
  * --- jub hum "get" krray hun gay attribute ki value .
  */
 
-$(document).ready(function() {
-    let attrValue = $("a").attr("href");
-    console.log(attrValue);
-});
+// $(document).ready(function() {
+//     let attrValue = $("a").attr("href");
+//     console.log(attrValue);
+// });

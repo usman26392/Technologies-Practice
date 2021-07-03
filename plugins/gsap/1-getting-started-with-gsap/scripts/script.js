@@ -43,14 +43,17 @@
 /**
  *  'Tween': koi b selector say jo object ya phir objects animate hungay
  *          wo 'aik tween' kayh lae ga.
- *  Example of a Tween:
- * gsap.from(".box", {
-      x: 400,
-      duration: 3
-      scale: 1.5,
-      duration: 2,
-      rotation: 360  
-   });
+ *  Example of a Tween:*/
+
+  // gsap.from(".box", {
+  //     x: 400,
+  //     scale: 1.5,
+  //     duration: 2,
+  //     stagger: 2,
+  //     rotation: 360  
+  //  });
+
+/*
  *  A Tween can change a single property of a single object(element) over time.
  *  A Tween can change a multiple properties of a single object over time.
  *  A Tween can change  multiple properties of a multiple objects over time.
@@ -82,6 +85,8 @@
  * 
  */
 
+
+
 // gsap.to(".box", {
 //     x: 400,
 //     y: 200,
@@ -99,7 +104,7 @@
 
   // gsap.from(".box", {
   //     x: 400,
-  //     duration: 3  
+  //     duration: 3 
   // });
 
 
@@ -120,11 +125,11 @@
 //     {
 //         x: 400,
 //         scale: 1,
-//         duration: 3,
+//         duration: 4,
 //         repeat: -1,
 //         ease:  "elastic.inOut(1, 0.3)",
 //         yoyo: true,
-//         skewX: 45
+//         skewY: 45
 //     }
 // );
 
@@ -132,7 +137,7 @@
 
 // gsap.fromTo(".box-2",
 //     {
-//         y: 400,
+//         x: 400,
 //         scale: 3,
 //         rotation: 0,
         
@@ -193,7 +198,7 @@
 //   // ease: "bounce",           /* akirh may bounce hogi */
 //   // ease: "bounce.in",       /* shuro may bounce hogi */
 //   // ease: "bounce.out",         /* akirh may bounce hogi */
-//   ease: "bounce.inOut"    /*  shuro may or akirh may bounce hogi */ 
+//   // ease: "bounce.inOut"    /*  shuro may or akirh may bounce hogi */ 
 // });
 
 // gsap.to(".box-2", {
@@ -201,9 +206,6 @@
 //   duration: 3,
 //   ease: "linear"
 // });
-
-
-
 
 
 
@@ -219,10 +221,11 @@
 
 
 // example 1
+
 // gsap.to(".box", {
 //   x: 400,
 //   duration: 3,
-//   stagger: .7,
+//   stagger: 1
 // });
 
 
@@ -244,11 +247,13 @@
 //         ease: "bounce.inOut",
 //         scale: 1,
 //         y: 200,
-//         repeat: 1,
+//         // repeat: 1,
 //         yoyo: true,
 //         repeat: -1
 //     }
 //  );
+
+
 
 // example 3
 // stagger hum as a object b use karsakhtay hayn:
@@ -263,7 +268,7 @@
 //   duration: 3,
 //   stagger: {
 //     each: .8,
-//     from: "end" 
+//     from: "center" 
 //     /* by default 'left' hoti hay, is kamm yey hay 
 //     k tween objects ki direction set karna */
 //     // from: "center"
@@ -326,6 +331,7 @@
 // with timeline:
 // simple timeline may aik tween ki animation complete honay
 // k baad dosra tween chalay ga. isi tarhan baqi hun gay
+
 //  let animation = gsap.timeline();
 //  animation
 //  .to(".box-1",{duration: 1, x: 400}) // red
@@ -344,18 +350,19 @@
 
 //  with timeline and position  parameters
 // relative values: "+=1,.....+=n" or "-=1,........ -=n"or "<" , "<0.5"
-let animation = gsap.timeline();
- animation
- .to(".box-1",{duration: 2, x: 400})
- .to(".box-2",{duration: 1, x: 400}, "+=1") 
-  /*yey position parameter hay("+=1"), timeline gap is may ye hora hay k '.box-1' ki
-  animation ki duration complete honay k baad  "1 second" ka 'gap' ahay ga ,
-  phirh us k baad '.box-2' ki animation start ho gi.
-  => "<" wala jis tween par b lagay ga is ka matlab ye hoga k wo apnay prevoius waly
-     k timeinterval k sath start hoga. 
-  => "<0.5" is k matlab ye hay k yey tween apnay previous tween k first second k half say
-      start hoga   */
- .to(".box-3",{duration: 1, x: 400})
+
+// let animation = gsap.timeline();
+//  animation
+//  .to(".box-1",{duration: 2, x: 400})
+//  .to(".box-2",{duration: 1, x: 400}, "+=1") 
+//   /*yey position parameter hay("+=1"), timeline gap is may ye hora hay k '.box-1' ki
+//   animation ki duration complete honay k baad  "1 second" ka 'gap' ahay ga ,
+//   phirh us k baad '.box-2' ki animation start ho gi.
+//   => "<" wala jis tween par b lagay ga is ka matlab ye hoga k wo apnay prevoius waly
+//      k timeinterval k sath start hoga. 
+//   => "<0.5" is k matlab ye hay k yey tween apnay previous tween k first second k half say
+//       start hoga   */
+//  .to(".box-3",{duration: 1, x: 400})
 
 
 
@@ -390,11 +397,11 @@ let animation = gsap.timeline();
 // mesaal k torh par hum 3 laytay hayn, toh is ka matklab ye hay k tween
 // 3s k baad start hoga. matlab ye delay hay animation ka.
 
-let animation = gsap.timeline();
-animation
-.to(".box-1",{duration: 2, x: 400})
-.to(".box-2",{duration: 1, x: 400}, "1") 
-.to(".box-3",{duration: 1, x: 400})
+// let animation = gsap.timeline();
+// animation
+// .to(".box-1",{duration: 2, x: 400})
+// .to(".box-2",{duration: 1, x: 400}, "1") 
+// .to(".box-3",{duration: 1, x: 400})
  
  
 

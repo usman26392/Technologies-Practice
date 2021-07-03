@@ -44,7 +44,7 @@
 // });
 
 /**
- * ------- Selecting Elements with a Comma-separated List of Selectors
+ * ------- Selecting Elements with a Comma-separated List of Selectors -----------
  */
 
 //  $(document).ready(function() {
@@ -54,29 +54,42 @@
 
 
 /**
- * --------- by jquery pseudo-selectors
+ * --------- by jquery pseudo-selectors ------------------------------
  */
 
+// select odd li
   // $(document).ready(function() {
   //     let element = $(".list-1 li:even");
   //     console.log(element);
   // });
 
 
-  // need even li
+// need even li
+
 //   $(document).ready(function() {
 //     let element = $(".list-1 li:odd");
 //     console.log(element);
 // });
 
+
+
 // select first child element li
+
 // $(document).ready(function() {
 //     let element = $(".list-1 li:first");
 //     console.log(element);
 // });
 
 
+// $(function() {
+//   let element = $(".list-1 li:last");
+//   console.log(element);
+// });
+
+
 // All select except the first three li.
+// :gt(2) means,  greater than 2.
+
 // $(document).ready(function() {
 //   let elements = $(".list-1 li:gt(2)");
 //   console.log(elements);
@@ -84,7 +97,7 @@
 
 
 /**
- * --------- choosing selectors
+ * --------- choosing selectors ------------------------
  */
 
 // saving selector
@@ -95,8 +108,8 @@
   // });
 
 
-
-
+  
+  
 
 // Refining & Filtering selections
 
@@ -114,20 +127,18 @@
 
 // is()
 
-$(function() {
-  let check =  $("div").is(".box");
-  if(check) {
-    $("div.box").css("backgroundColor", "green");
-  }
-});
-
-
-
+// $(function() {
+//   let check =  $("div").is(".box");
+//   if(check) {
+//     $("div.box").css("backgroundColor", "green");
+//   }
+// });
 
 
 // not()
 // $(document).ready(function() {
 //   let element = $("h1").not(".hdg-1");
+//   element.css("color", "red");
 //   console.log(element);
 // });
 
@@ -136,24 +147,52 @@ $(function() {
 
 // filter()
 // $(document).ready(function() {
+//   // let elements = $(".list li").filter(".items");
 //   let elements = $(".list li").filter(".items");
+//   elements.css("color","red");
 //   console.log(elements);
 // });
 
 
 
 // first()
+
 // $(document).ready(function() {
 //   let elements = $(".list-2 li").first();
+//   elements.css("color","red");
 //   console.log(elements);
 // });
 
 
-// eq()
-// $(document).ready(function() {
-//   let element = $(".list-1 li").eq(2);
+//  last()
+// $(function() {
+//   let element = $(".list-2 li").last();
+//   element.css("color","red");
 //   console.log(element);
 // });
+
+
+
+
+// eq()
+
+// $(document).ready(function() {
+//   let element = $(".list-1 li").eq(2);
+//   element.css("color","red");
+//   console.log(element);
+// });
+
+
+
+// Selecting Form Elements
+$(function() {
+
+  let check = $( "form :input" );
+  check.css("borderColor", "red");
+  console.log(check);
+});
+
+
 
 
 

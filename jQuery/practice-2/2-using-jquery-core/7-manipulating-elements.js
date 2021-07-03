@@ -21,17 +21,16 @@
 
 
 
-$(function() {
-  // let elementPosition = $(".hdg-1").position();
-  let elementPosition = $(".hdg-1").offset();
-  console.log(elementPosition);
-});
+// getting 
 
+// position()
+// offset()
 
-
-
-
-
+// $(function() {
+//   // let elementPosition = $(".hdg-1").position();
+//   let elementPosition = $(".hdg-1").offset();
+//   console.log(elementPosition);
+// });
 
 
 
@@ -47,8 +46,11 @@ $(function() {
  */
 
 // moving
+
 // $(document).ready(function() {
-//     let li = $(".list-1 li:first").appendTo(".list-2");
+//     // let li = $(".list-1 li:first").appendTo(".list-2");
+//     // let li = $(".list-1 li:first").insertBefore(".hdg-1");
+//     // let li = $(".list-1 li:first").insertAfter(".hdg-1");
 //     console.log(li);
 // });
 
@@ -61,27 +63,35 @@ $(function() {
 
 
 // Cloning elements
+
 // $(document).ready(function() {
-//     let li = $(".list-1 li:first").clone().appendTo(".list-2");
+//     let li = $(".list-1 li:first").clone(false).appendTo(".list-2");
 //     console.log(li);
 // });
 
 
 // Removing elements
-// $(document).ready(function() {
-//     $(".hdg-1").remove();
+
+// $(function() {
+  
+//   // let element =  $(".hdg-1").remove();
+//   let element =  $(".hdg-1").detach(); // reserve with data and events
+//   console.log(element);  
 // });
 
 
-// developing new Elements
+
+// developing new Elements:
+
 // $(document).ready(function() {
 //     // let element = $("<li>This is new li from jQuery</li>");
-//     let element = $("<li class=\"new-item\"> This new li from jQuery</li> ");
-//     element.appendTo(".list-2");
+//     let element = $("<li class = \" new-item \"> This new li from jQuery</li> ");
+//     element.appendTo(".list");
+//     console.log(element);
 // });
 
 
-// with attribute object
+// with attribute object:
 // $(document).ready(function() {
 //     let newAnchr = $( "<a/>", {
 //         html: "This is a <strong>new</strong> link",
@@ -90,11 +100,12 @@ $(function() {
 //     });
 
 //     newAnchr.appendTo(".li-1");
-
 // });
 
 
-// develop elements with loop
+
+// develop elements with loop:
+
 // $(document).ready(function() {
 //     var myItems = [];
 //     var myList = $( ".list-2 ");
@@ -104,32 +115,29 @@ $(function() {
 //     }
  
 //     myList.append( myItems.join( "" ) );
-
     
 // });
 
 
 /**
- * ---------- Manipulating Attribute
+ * ---------- Manipulating Attribute -----------------------
  */
   
   // Manipulating a single attribute.
-//   $(document).ready(function() {
-//       $("button").attr("role","Button");
-//   });
+  // $(function() {
+  //   $("button").attr("role","Button");
+  // });
 
 
+// Manipulating multiple attributes.
 
-  // Manipulating multiple attributes.
-//   $(document).ready(function() {
-//       $("button").attr({
-//           role: "Button",
-//           "class": "Blue-btn"
-//       });
-//   });
+  // $(function() {
+  //     $("button").attr({
+  //         role: "Button",
+  //         "class": "Blue-btn"
+  //     });
+  // });
 
 
 
 // Using a function to determine an attribute's new value.
-
-
