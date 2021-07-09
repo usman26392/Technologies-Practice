@@ -1,5 +1,6 @@
 
 
+
 /**
  *  gsap tweens:
  *  gsap.to("CSS selector",
@@ -12,6 +13,7 @@
  * 
  * vars object is contains properties
  */
+
 
 /**
   *  yaad rakhnay wali bataen:
@@ -340,7 +342,7 @@
 
 //  tween with timeline and position parameters:
 //  =>position parameters ka faida yey hay k hum tweens ki animation k
-//    darmiyaan gap b daal sakhtay hayn or tweens ki animation may overlapping b 
+//    darmiyaan gap(delay) b daal sakhtay hayn or tweens ki animation may overlapping b 
 //    karwasakhtay hayn.
 //  =>overlapping say murad ye hay k jesy koi tween ki animation hori hay 'usi dohraan'
 //     hum dosray kisi tween ki b animation karwadayn.
@@ -395,13 +397,14 @@
 // is may overlapping ho sakhti hay.
 //  absolute values: 0,1,2,3, ...............n
 // mesaal k torh par hum 3 laytay hayn, toh is ka matklab ye hay k tween
-// 3s k baad start hoga. matlab ye delay hay animation ka.
+// 3s(second) par say start hoga. matlab ye "delay" hay animation ka.
 
 // let animation = gsap.timeline();
 // animation
 // .to(".box-1",{duration: 2, x: 400})
 // .to(".box-2",{duration: 1, x: 400}, "1") 
 // .to(".box-3",{duration: 1, x: 400})
+
  
  
 
