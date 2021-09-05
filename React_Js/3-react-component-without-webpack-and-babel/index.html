@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React App without babel and webpack , local files</title>
+    
+    <script src="scripts/react.js"></script>
+    <script src="scripts/react-dom.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+        // These code is not recommend.
+        // jo professional work hay wo "babel" or "webpack" k saath hi hota hay.
+        let root_Element = document.querySelector("#root");
+        class App extends React.Component {
+            render() {
+                return (
+                    // React.createElement("h1", null, "Hello World")           
+                    // Nesting React element 
+                    React.createElement("h1", null, React.createElement("strong",null, "Hello World") )               
+                );
+            }
+        }
+
+        ReactDOM.render(
+            React.createElement(App,null), root_Element);
+    </script>
+</body>
+</html>

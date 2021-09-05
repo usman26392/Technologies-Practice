@@ -17,6 +17,7 @@
 
 /**
 *  ----------------access element by tag name: -------------------
+
 * ye method , returns karta hay HTML collection
 * matlab ye hay k agar may "p" element layta hun
 * document may jitnay b "p" elements hun gay
@@ -82,6 +83,13 @@
 //  console.log(element);
 
 
+//example 
+// let a = document.getElementsByClassName("list");
+// for(i =0; i < a.length; i++) {
+//     a[i].style.backgroundColor = "red";
+// }
+
+
 
 /**
  * hum aik say zayeda b class use karsakhtay hayn.
@@ -124,10 +132,10 @@
  * NodeList karta hay array ki form may.
  */
 
- let elements = document.querySelectorAll("p");
-// let elements = document.querySelectorAll(".list");
-// let elements = document.querySelectorAll(".list-2");
- console.log(elements);
+//  let elements = document.querySelectorAll("p");
+// // let elements = document.querySelectorAll(".list");
+// // let elements = document.querySelectorAll(".list-2");
+//  console.log(elements);
 
 // check manipulation 
 // elements.forEach((els)=> {
@@ -148,4 +156,8 @@
 //  let elementLength = document.querySelectorAll(".list");
 //  console.log("Length is " + elementLength.length);
 //  console.log(`length is ${elementLength.length}`);
+
+
+
+
 

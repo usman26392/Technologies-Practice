@@ -15,6 +15,18 @@
  */
 
 
+
+
+
+/*
+ *  A Tween can change a single property of a single object(element) over time.
+ *  A Tween can change a multiple properties of a single object over time.
+ *  A Tween can change  multiple properties of a multiple objects over time.
+ *  A Tween can animate multiple objects with staggered start times.
+ * */
+
+
+
 /**
   *  yaad rakhnay wali bataen:
   * 
@@ -47,20 +59,50 @@
  *          wo 'aik tween' kayh lae ga.
  *  Example of a Tween:*/
 
-  // gsap.from(".box", {
+  // gsap.from(".box-1", {
   //     x: 400,
   //     scale: 1.5,
   //     duration: 2,
-  //     stagger: 2,
+  //     // stagger: 2,
   //     rotation: 360  
   //  });
 
-/*
- *  A Tween can change a single property of a single object(element) over time.
- *  A Tween can change a multiple properties of a single object over time.
- *  A Tween can change  multiple properties of a multiple objects over time.
- *  A Tween can animate multiple objects with staggered start times.
- * */
+
+// duration behavior 
+
+//   gsap.to(".box-1", {
+//       x: 400,
+//       duration: 2  
+//    });
+
+//    gsap.to(".box-2", {
+//     x: 400,
+//     duration: 1
+//  });
+
+//  gsap.to(".box-3", {
+//   x: 400,
+//   duration: 2  
+// });
+
+
+
+
+  // Note: Remember that GSAP isn't just for DOM elements,
+  // so you could even animate custom properties of a raw object like this:
+
+//   var obj = {prop: 10};
+//   gsap.to(obj, {
+//     duration: 1,
+//     prop: 200, 
+//     //onUpdate fires each time the tween updates; we'll explain callbacks later.
+//     onUpdate: function() {
+//       console.log(obj.prop); //logs the value on each update.
+//     }
+// });
+
+
+
 
 /**
  * The gsap (object) is your access point to everything the engine does.
@@ -120,18 +162,18 @@
 
 // gsap.fromTo(".box-1",
 //     {
-//         x: 0,
+//         x: 20,
 //         scale: 1,
-//         rotation: 0
+//         // rotation: 0
 //     },
 //     {
 //         x: 400,
-//         scale: 1,
+//         scale: 2,
 //         duration: 4,
 //         repeat: -1,
-//         ease:  "elastic.inOut(1, 0.3)",
 //         yoyo: true,
-//         skewY: 45
+//         // ease:  "elastic.inOut(1, 0.3)",
+//         // skewY: 45
 //     }
 // );
 
@@ -158,7 +200,25 @@
 // );
 
 
+// set() method
 
+// gsap.set(".box",{
+//   scale: 0
+// });
+
+// gsap.to(".box", {
+//   scale: 1,
+//   x: 200,
+//   duration: 3,
+//   // repeat: -1,
+//   // yoyo: true
+// });
+
+
+
+
+
+// special properties
 
 /**
  *  Properties: delay and repeat , yoyo
@@ -277,6 +337,22 @@
 //     // from: "edges"
 //   }
 // });
+
+
+
+// callbacks
+
+gsap.to(".box",{
+  x: 200,
+  duration: 3,
+  ease:"power4.inOut",
+  onUpdate: function() {
+    console.log("animation is running!");
+  },
+  onComplete: ()=> {
+    console.log("animaton completed Now!");
+  }
+});
 
 
 

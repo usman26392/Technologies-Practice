@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACA,AACI,GADD,CACC,EAAE,CAAC;EACC,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,eAAe,EAAE,IAAI;CACxB;;AALL,AAMI,GAND,CAMC,EAAE,CAAC;EACC,OAAO,EAAE,YAAY;CACxB;;AARL,AASI,GATD,CASC,CAAC,CAAC;EACE,OAAO,EAAE,KAAK;EACd,OAAO,EAAE,QAAQ;EACjB,eAAe,EAAE,IAAI;CACxB",
+    "sources": [
+        "../../Sass_Practice/CSS-Part5/myStyle5.scss"
+    ],
+    "names": [],
+    "file": "myStyle5.css"
+}

@@ -9,9 +9,9 @@
   * call karsakhtay hayn or baad may b.
   */
 //  show();
- function show(){
-     console.log("This is a javaScript");
- }
+//  function show(){
+//      console.log("This is a javaScript");
+//  }
 //  show();
 
 
@@ -28,5 +28,40 @@
 // };
 
 // showSome();
+
+
+
+
+// differenece between function declaration and function expression 
+
+// fn declaration
+// console.log(doSomething);
+// doSomething();
+
+// function doSomething() {
+//   console.log("declare something!");
+// }
+
+// fn expression
+// console.log(something);
+// something();
+
+// var something = function() {
+//   console.log("express something!");
+// };
+
+
+
+// example of fn expression
+var runIt = function(a) {
+  console.log(a);
+  a();
+};
+
+runIt(function() {
+  var b = "Now";
+  console.log(`Running ${b}`);
+});
+
 
 

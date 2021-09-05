@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAIA,AAAA,EAAE,CAAC;EAEC,KAAK,EADK,KAAK;CAElB;;AAED,AAAA,CAAC,CAAA;EACG,KAAK,EARC,GAAG;CASZ",
+    "sources": [
+        "../../Sass_Practice/CSS-Part3/myStyle3.scss"
+    ],
+    "names": [],
+    "file": "myStyle3.css"
+}

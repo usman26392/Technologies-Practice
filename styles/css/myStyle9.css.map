@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAKA,AAAA,UAAU,CAAC;EAHP,MAAM,EAIkB,GAAG,CAJZ,KAAK,CAIF,IAAI;CAEzB;;AAED,AAAA,QAAQ,CAAC;EARL,MAAM,EASiB,GAAG,CATX,KAAK,CASF,GAAG;CACxB",
+    "sources": [
+        "../../Sass_Practice/CSS-Part9/myStyle9.scss"
+    ],
+    "names": [],
+    "file": "myStyle9.css"
+}

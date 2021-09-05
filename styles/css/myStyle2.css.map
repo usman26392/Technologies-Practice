@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA;;+BAE+B;AAQ/B,AAAA,IAAI,CAAC;EACD,WAAW,EANN,SAAS,EAAE,UAAU;EAO1B,SAAS,EALA,IAAI;EAMb,KAAK,EAPC,GAAG;CAQZ;;AAED,AAAA,UAAU,CAAC;EACP,KAAK,EATC,KAAK;EAUX,MAAM,EAAE,eAAe;CAC1B",
+    "sources": [
+        "../../Sass_Practice/CSS-Part2/myStyle2.scss"
+    ],
+    "names": [],
+    "file": "myStyle2.css"
+}

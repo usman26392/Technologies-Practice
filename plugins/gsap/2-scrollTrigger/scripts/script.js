@@ -38,9 +38,10 @@
 
 /**
  *  'start' and 'end' Properties
- *  start: start scroller-start (in doh points k meets par  say animation start hogi)
- *  end: end scroller-end (in doh points k meets par animation end hogi)
+ *  start: "start" "scroller-start" (in doh points k meets par  say animation start hogi)
+ *  end: "end" "scroller-end" (in doh points k meets par animation end hogi)
  */
+
 // gsap.to(".box-3",{
 //     scrollTrigger: {
 //         trigger: ".box-3",
@@ -63,12 +64,15 @@
 //         trigger: ".box-3",
 //         toggleActions: "play none none none",
 //         markers: true,
-//         scrub: false
+//         scrub: true,
+//         start: "top center"
 //     },
 //     x: 400,
 //     duration: 3,
 //     rotation: 360
 // });
+
+
 
 /**
  * scrollTrigger in a timeline
@@ -78,10 +82,11 @@
 //     scrollTrigger: {
 //         trigger: ".box-4",
 //         trigger: ".box-5",
-//         toggleActions: "play none none pause",
+//         toggleActions: "play none none none",
 //         markers: true,
-//         scrub: false,
-//         start: "top 90%"
+//         scrub: true,
+//         start: "top 80%",
+//         end: "100px 200px"
 //     }
 // });
 
@@ -95,7 +100,7 @@
 //     x: 400,
 //     duration: 3,
 //     rotation: 360
-// },"<");
+// },"0");
 
 
 
@@ -103,18 +108,18 @@
  * Pinning element
  */
 
-gsap.to(".box-4",{
-    scrollTrigger:{
-        trigger: ".box-4",
-        markers: true,
-        toggleActions: "play none none pause",
-        start: "top 90%",
-        pin: true
-    },
-    x: 400,
-    rotation: 360,
-    duration: 3
-});
+// gsap.to(".box-4",{
+//     scrollTrigger:{
+//         trigger: ".box-4",
+//         markers: true,
+//         toggleActions: "play none none pause",
+//         start: "top 90%",
+//         pin: true
+//     },
+//     x: 400,
+//     rotation: 360,
+//     duration: 3
+// });
 
 
 

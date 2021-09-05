@@ -1,0 +1,78 @@
+@import "./resets";
+@import "./variables";
+
+
+// functions
+@function weight($weight-name) {
+    @return map-get($font-weights, $weight-name);
+}
+
+
+// mixins
+@mixin twoBoxFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px 0;
+
+    & > * {
+        flex: 0 1 50%;
+    }
+
+}
+
+
+
+body {
+    background-color: $primary-color;
+}
+
+h1 {
+    color: $text-color;
+    font-weight: map-get($font-weights, bold );
+}
+
+
+// Nesting
+nav {
+    ul {
+        padding: 0;
+        list-style-type: none;
+    }
+
+    li {
+        display: inline-block;
+        padding: 0 20px;
+    }
+
+    a {
+        color: $text-color;
+        text-decoration: none;
+        font-size: map-get($font-sizes, large );
+        transition: all 0.5s ease-in-out;
+    }
+    
+    // & represent to parent.
+    & li:hover a  {      
+            color: #fff;
+    }
+}
+
+
+
+// call of function
+nav {
+    li a {
+        font-weight: weight(regular);
+    }
+}
+
+
+
+// call mixins
+.testimonials-main-wrapper {
+    .testimonails {
+        @include twoBoxFlex;
+    }
+}
