@@ -17,7 +17,6 @@
 
 
 
-
 /*
  *  A Tween can change a single property of a single object(element) over time.
  *  A Tween can change a multiple properties of a single object over time.
@@ -202,9 +201,9 @@
 
 // set() method
 
-// gsap.set(".box",{
-//   scale: 0
-// });
+gsap.set(".box",{
+  x: 150
+});
 
 // gsap.to(".box", {
 //   scale: 1,
@@ -342,17 +341,17 @@
 
 // callbacks
 
-gsap.to(".box",{
-  x: 200,
-  duration: 3,
-  ease:"power4.inOut",
-  onUpdate: function() {
-    console.log("animation is running!");
-  },
-  onComplete: ()=> {
-    console.log("animaton completed Now!");
-  }
-});
+// gsap.to(".box",{
+//   x: 200,
+//   duration: 3,
+//   ease:"power4.inOut",
+//   onUpdate: function() {
+//     console.log("animation is running!");
+//   },
+//   onComplete: ()=> {
+//     console.log("animaton completed Now!");
+//   }
+// });
 
 
 

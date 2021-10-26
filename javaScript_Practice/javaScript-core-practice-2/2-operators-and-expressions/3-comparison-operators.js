@@ -24,15 +24,15 @@
 
 // choosing the right operator
 
-let a = 1,
-    b = "1";
+// let a = 1,
+//     b = "1";
 
-    if( a == b ) {
-        console.log("They are equal");
-    }
-    else {
-        console.log("They are not equal")
-    }
+//     if( a == b ) {
+//         console.log("They are equal");
+//     }
+//     else {
+//         console.log("They are not equal")
+//     }
 
 
 
@@ -45,3 +45,20 @@ let a = 1,
     // else {
     //     console.log("They are not equal")
     // }    
+
+
+
+
+// ----------------------------- type coercion -----------------------
+
+// truthy example
+// let i = 10;
+// if(i) {
+//     console.log("it is true");
+// }
+
+// fasly example
+let i = 0;
+if(i) {
+    console.log("it is true");
+}

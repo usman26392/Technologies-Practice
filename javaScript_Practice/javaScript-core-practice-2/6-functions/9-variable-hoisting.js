@@ -63,9 +63,10 @@
  * Case 4
  */
 
-let a = 10;
-console.log(a + "" + b); 
-var b = 45; // with var
+// let a = 10;
+// console.log(a + "" + b); 
+// // with var
+// var b = 45; 
 
 /**
  * ab opar wala code javascript is tarhan interpret kary ga 
@@ -86,3 +87,38 @@ var b = 45; // with var
   * hi decalre kiya jae or agar koi block hay toh us block k
   * top par declare kiya jae.
   */
+
+
+
+ //------------------------- variable and function hoisting ----------------------------
+
+// example-1
+
+// hoisting();
+
+// //  function declaration
+//  function hoisting() {
+//    console.log(hoist);
+
+//    var what = "variable and function declarations with top level!";
+//    console.log(`what is hoisted:  ${what}`);
+
+//    var hoist = "to lift or raise up.";
+//    console.log(`Hoist means:  ${hoist}`);
+//  }
+
+
+
+// example-2
+
+// function expression
+var sum = function() {
+  console.log(`${a + b}`);
+};
+
+sum();
+
+var a = 10,
+    b = 5;
+
+

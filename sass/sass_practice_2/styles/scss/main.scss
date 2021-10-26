@@ -1,0 +1,139 @@
+@import "./resets";
+@import "./variables";
+
+
+// functions
+@function weight($weight-name) {
+    @return map-get($font-weights, $weight-name);
+}
+
+
+// mixins
+@mixin twoBoxFlex($flex-direction-val) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px 0;
+    flex-direction: $flex-direction-val;
+
+    & > * {
+        flex: 0 1 50%;
+        padding: 0 15px;
+    }
+
+}
+
+
+// mixin of color theme
+@mixin theme($light-theme: true) {
+    @if $light-theme {
+        background-color: lighten($primary-color, 100%);
+        color: darken($text-color, 100%);
+    }
+}
+
+// mixin for mobile media query
+@mixin mobile {
+    @media (max-width: 575px) {
+        @content;
+    }
+}
+
+
+
+body {
+    background-color: $primary-color;
+    color: $text-color;
+}
+
+h1 {
+    // color: $text-color;
+    font-weight: map-get($font-weights, bold );
+}
+
+
+// Nesting
+nav {
+    ul {
+        padding: 0;
+        list-style-type: none;
+    }
+
+    li {
+        display: inline-block;
+        padding: 0 20px;
+    }
+
+    a {
+        // color: $text-color;
+        text-decoration: none;
+        font-size: map-get($font-sizes, large );
+        transition: all 0.5s ease-in-out;
+    }
+    
+    // & represent to parent.
+    & li:hover a  {      
+            color: #fff;
+    }
+}
+
+
+
+// call of function
+nav {
+    li a {
+        font-weight: weight(regular);
+    }
+}
+
+
+
+// call mixins
+.testimonials-main-wrapper {
+    .testimonails {
+        @include twoBoxFlex(row);
+        width: 800px / 960px * 100%;
+        margin: 0 auto;
+        text-align: center;
+
+        // .box > * {
+        //     color: $text-color;
+        // }
+
+        // for media query of mobile
+        @include mobile {
+            flex-direction: column;
+
+            .box {
+                margin: 0 0 40px 0;
+            }
+        }
+    }
+}
+
+
+
+
+// light theme mixin call
+.light {
+    @include theme(false);
+}
+
+
+
+.para-sec {
+
+    .para-1 {
+        font-weight: weight(regular);
+        margin-bottom: 20px;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    .para-2 {
+        @extend .para-1;
+        color: red;
+    }
+
+}

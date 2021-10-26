@@ -12,6 +12,9 @@
 //  });
 
 
+
+
+
 /**
  * toggle action:
  * scrollTrigger is an object.
@@ -38,8 +41,8 @@
 
 /**
  *  'start' and 'end' Properties
- *  start: "start" "scroller-start" (in doh points k meets par  say animation start hogi)
- *  end: "end" "scroller-end" (in doh points k meets par animation end hogi)
+ *  start: "start scroller-start" (in doh points k meets par  say animation start hogi)
+ *  end: "end scroller-end" (in doh points k meets par animation end hogi)
  */
 
 // gsap.to(".box-3",{

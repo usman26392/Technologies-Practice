@@ -20,7 +20,7 @@
  */
 
 
- let ballPen = "BLU Signature";
+//  let ballPen = "BLU Signature";
  /**
   * ab is may hum nay variable ki koi datatype nai batai ,
   * browser ka engine is ko automatically khud is ki datatype define
@@ -31,29 +31,82 @@
    * or agar hum is ki dataype check karyn:
    */
 
-console.log(typeof ballPen); // Output: string 
+// console.log(typeof ballPen); // Output: string 
+
+// let randomCharacter = "d";
+// console.log(typeof randomCharacter); // Output: string
+
+// let randomNumber = 21;
+// console.log(typeof randomNumber); // Output: number
+
+// let emptyVariable;
+// console.log(typeof emptyVariable); // Output: undefined
+
+// let bolValue = true;
+// console.log(typeof bolValue); //Output: boolean
+
+// let emptyVariable2 = "";
+// console.log(typeof emptyVariable2); //Output: string
+
+// let variableChk = null;
+// console.log(typeof variableChk); // Output: object
+
+// let variableChk2 = undefined;
+// console.log(typeof variableChk2); // undefined
 
 
-let randomCharacter = "d";
-console.log(typeof randomCharacter); // Output: string
 
-let randomNumber = 21;
-console.log(typeof randomNumber); // Output: number
 
-let emptyVariable;
-console.log(typeof emptyVariable); // Output: undefined
 
-let bolValue = true;
-console.log(typeof bolValue); //Output: boolean
+// --------------------------  undefined & null -----------------------
 
-let emptyVariable2 = "";
-console.log(typeof emptyVariable2); //Output: string
 
-let variableChk = null;
-console.log(typeof variableChk); // Output: object
+// var i;
+// console.log(i);
 
-let variableChk2 = undefined;
-console.log(typeof variableChk2); // undefined
+
+// var obj = {
+// };
+// console.log(obj.firstName);
+
+
+// var test = function() {
+//    return;
+// };
+// console.log(test());
+
+
+// var test_2 = function() {
+//    return;
+// };
+// console.log(test_2());
+
+
+
+
+// if(a === undefined) {
+//    a = 10;
+// }
+// console.log(a);
+
+
+
+// if(typeof a === "undefined") {
+//    a = 10;
+// }
+// console.log(a);
+
+
+
+// var a;
+// if ("a" in window) {
+//    console.log("Has been declared");
+// }
+// if(typeof a === "undefined") {
+//    a = 10;
+// }
+// console.log(a);
+
 
 
 
