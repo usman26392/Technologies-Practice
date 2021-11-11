@@ -1,0 +1,333 @@
+
+
+
+
+// yey partial(_base.scss) file hoti hay: variables , mixins, or functions k liyey.
+// matlab is may hum variables , mixins or functions bana sakhtay hayn.
+
+// variables
+$font-stack:        Helvetica, sans-serif;
+$primary-color:     blue;
+$secondary-color:   red;
+$anchor-ft-size:    20px;
+
+// mapping
+// $font-weights: (
+//     "regular": 400,
+//     "mediuem": 500,
+//     "bold": 700
+// );
+
+// $font-sizes: (
+//     "small": 16px,
+//     "medium": 32px,
+//     "large": 64px,
+//     "extra-large": 90px
+// );
+
+
+// function
+// @function fontValue($fontValue) {
+//     @return map-get($font-sizes, $fontValue);
+// }
+
+// body {
+//     font: 100% $font-stack;
+//     color: $primary-color;
+//     font-size: fontValue("medium");
+//     @media (max-width: 767px) {
+//         font-size: fontValue("small");
+//     }
+// }
+
+
+
+// .container {
+//     position: relative;
+//     z-index: 1;
+//     padding: 0 10%;
+//     @media (max-width: 767px) {
+//         padding: 0 5%;
+//     }
+//     @media (max-width: 575px) {
+//         padding: 0 2%;
+//     }
+// }
+
+
+// h1 {
+//     color: $primary-color;
+//     font-size: map-get($font-sizes, large );
+// }  
+
+
+// nesting
+// nav {
+//     ul {
+//         padding: 0;
+//     }
+
+//     > ul {
+//         margin: 0;
+//     }
+
+//     & ul {
+//         font-size: 24px;
+//     }
+
+//     .links {
+//         font-weight: 400;
+//     }
+
+//     &.links {
+//         font-weight: 700;
+//     }
+
+//     ul {
+//         li {
+//             padding: 20px;
+//             a {
+//                 font-size: 40px;
+//             }
+
+//             &:hover a {
+//                 color: red;
+//             }
+//         }
+
+//     }
+// }
+
+
+// extend / inheritance
+// .title-testi {
+//     font: {
+//         size: 20px;
+//         family: verdana;
+//     }
+// }
+
+// .sec {
+//     .title {
+//         @extend .title-testi;
+//     }
+// }
+
+
+// extend with placeholder class (%)
+// %message-shared {
+//     border: 1px solid #ccc;
+//     padding: 10px;
+//     color: #333;
+// }
+
+// .message {
+//     @extend %message-shared;
+// }
+  
+// .success {
+//     @extend %message-shared;
+//     border-color: green;
+// }
+  
+
+
+// mixin of columns
+// @mixin custom-row($direction, $grow, $shrink, $basis) {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-wrap: wrap;
+//     flex-direction: $direction;
+//     padding: 40px 0;
+
+//     > * {
+//         flex: $grow $shrink $basis
+//     }
+// }
+
+// // call of mixin
+// .client-sec {
+//     .client_row {
+//         @include custom-row(column, 1, 0, 33.33%);
+//     }
+// }
+
+
+
+// mixin
+// @mixin sectionBefore($width, $color) {
+//     content: "";
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+//     bottom: 0;
+//     width: $width;
+//     background-color: $color;
+// }
+
+// @mixin sectionAfter($width, $color) {
+//     content: "";
+//     position: absolute;
+//     right: 0;
+//     top: 0;
+//     bottom: 0;
+//     width: $width;
+//     background-color: $color;
+// }
+
+// // call of mixin
+// .testimonials {
+//     position: relative;
+//     &::before {
+//         @include sectionBefore(60%, #9900997d); 
+//     }
+//     &::after {
+//         @include sectionAfter(40%, #0000ff75);
+//     }
+
+// }
+
+
+// Operators
+
+
+
+// interpolation
+
+// css selector interpolation
+// .client-sec {
+//     padding: 50px;
+//     #{&}__title {
+//         font-size: 30px;
+//         margin: 0 0 10px;
+//     }
+//     #{&}__paragraph {
+//         font-size: 20px;
+//     }
+//     & &__btn {
+//         text-decoration: none;
+//     }
+//     &__btn2 {
+//         background-color: green;
+//     }
+// }
+
+
+// css' property interpolation
+// $property-position: left;
+// .box {
+//     margin-#{$property-position}: 30px; 
+// }
+
+
+
+// functions
+
+//-------- Built-in Numbers functions -----
+// $heights: 30px, 60px, 90px;
+
+// .test {
+//     // margin: abs(-10px);
+//     // margin: ceil(8.8px);
+//     // margin: floor(4.9px);
+//     // margin: round(3.20px);
+//     // margin: round(3.60px);
+    
+//     // margin:  max($heights...);
+//     // margin:  min($heights...);
+//     // margin: percentage(1.2);
+//     // margin: random(10);
+//     // margin: unit(10px);
+//     // margin: unitless(10);
+//     margin: unitless(10px);
+
+// }
+
+
+// colors functions
+// $bg-color-dark: green;
+// $bg-color-light: #b3ffb3;
+
+// body {
+//     // background-color: lighten($bg-color-dark, 60%);
+//     background-color: darken($bg-color-light, 90%);
+// }
+
+
+// @if and @else directives
+
+// $fontWeights:(
+//     "regular": 400,
+//     "medium" : 500,
+//     "large"  : 700
+// );
+
+// @function fontWeightValue($weight) {
+//     @if( $weight != "" ) {
+//         @return map-get($fontWeights, $weight)
+//     }
+//     @else {
+//         @debug "you are missing something!"
+//     }
+// }
+
+// .abc{
+//     font-weight: fontWeightValue(regular);
+// }
+
+
+// @for loop directive
+
+// .testi {
+//     .testi__box {
+//         @for $i from 1 through 4 {
+//             .testi-item:nth-child(#{$i}) {
+//                 transition-delay: ($i * 0.1s);
+//             }
+//         }
+//     }
+// }
+
+
+
+// .menu_nav {
+//     @for $i from 1 through 4 {
+//         .menu-nav-item:nth-child(#{$i}) {
+//             transition-delay: ($i * 0.1s) + 0.15;
+//         }
+//     }
+// }
+
+
+// @each loop directive
+// example with list
+
+// $list-weight: (regular, medium, bold);
+// @each $i in $list-weight  {
+//     .#{$i} {
+//         font-weight: $i;
+//     }
+// }
+
+
+// example with map
+
+$list-weight: (
+    regular: 400, 
+    medium: 500, 
+    bold: 700
+    );
+
+@each $key, $value in $list-weight  {
+    .#{$key} {
+        font-weight: $value;
+    }
+}
+
+
+
+
+
+
+
