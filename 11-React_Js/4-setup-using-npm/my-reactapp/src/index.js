@@ -20,10 +20,12 @@
 
 // my code here
 
-import React from "react";
-import ReactDOM from "react-dom";
-// import elm from "./App";
-import App from "./App";
+// import React from "react";
+// import ReactDOM from "react-dom";
+// // import elm from "./App";
+// import App from "./App";
+// import Student from "./Student";
+
 
 
 // for React element
@@ -31,4 +33,21 @@ import App from "./App";
 
 
 // for a component
-ReactDOM.render(<App/>, document.getElementById("root"));
+// ReactDOM.render(<App/>, document.getElementById("root"));
+// ReactDOM.render(<Student name="usman"/>, document.getElementById("root2"));
+// ReactDOM.render(<Student name="rehan"/>, document.getElementById("root3"));
+
+
+// --------------- for composing component -----------
+// ReactDOM.render(<App/>, document.getElementById("root"));
+
+
+
+
+// ---------------------- state ---------------------
+// import React from "react";
+import ReactDOM from "react-dom";
+import Student from "./App";
+
+
+ReactDOM.render(<Student roll="101"/>, document.getElementById("root"));

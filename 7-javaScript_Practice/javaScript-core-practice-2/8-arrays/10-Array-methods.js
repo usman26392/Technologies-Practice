@@ -156,6 +156,32 @@
 * every() 
 * some() : agar aik b condition true hogi toh "return true" hoga.
 */
+
+// example
+
+// let arr = [0, 100, 95, 45, 65, 80, 75, 90];
+// let check = arr.every(function(elm) {
+//   return elm > 80;
+// });
+
+// console.log(check);
+
+
+// example
+
+// let arr = [0, 100, 95, 45, 65, 80, 75, 90];
+// if(arr.every(function(elm) {
+//   console.log(elm); 
+//   return elm > 80;
+// })) {
+//   console.log("Everyone scored above 80");
+// }
+// else {
+//   console.log("Not everyone scored above 80");
+// }
+
+
+
 // let randomNo = [11,10];
 // let conditionCheck=  randomNo.every((myNo)=> {
 //   return myNo > 9;
@@ -167,6 +193,20 @@
 /**
  * some()
  */
+
+//  let arr = [0, 100, 95, 45, 65, 80, 75, 90];
+//  if(arr.some(function(elm) {
+//    console.log(elm); 
+//    return elm > 80;
+//  })) {
+//    console.log("At least one received above 80");
+//  }
+//  else {
+//    console.log("No one scored above 80");
+//  }
+
+
+
 
 // let randomNo = [3,4,11,10,5];
 // let conditionCheck=  randomNo.some((myNo)=> {
@@ -183,6 +223,17 @@
  * filter()
  * map()
  */
+
+
+// let arr = [0, 100, 95, 45, 65, 80, 75, 90];
+
+// let newArray = arr.filter(function(elm) {
+//   return  elm > 80;
+// });
+
+// console.log(newArray);
+
+
 
 //  let randomNo = [1,2,3,4,5,6,7,8,9,10];
 //  let myNumbers = randomNo.filter((arrNos)=> {
@@ -204,14 +255,18 @@
 //  console.log(`Original Array:  ${randomNo}`);
 
 
-// example 2
-// let randomNo = [1,2,3,4,5];
-//  randomNo.map((arrNos)=> {
-//    console.log(arrNos * 2);
+// example-2
+//  let arr = [1,2,3,4,5];
+//  let newArray = arr.map(function(elm) {
+//    return elm * elm;
 //  });
 
+//  console.log(newArray);
 
-//  example 3
+
+
+
+// example-3
 
 // let itemDesc = [
 //   {price:100, productName: "Samsung"},
@@ -224,4 +279,35 @@
 // });
  
 
+/**
+ * ------------------------ reduce methods -----------------------------
+ */
 
+// example
+
+// let arr = [0, 100, 95, 45, 65, 80, 75, 90];
+// let sum = arr.reduce(function(prevVal, currVal) {
+//   return prevVal + currVal;
+// }); 
+
+// console.log(`The total is  ${sum}`);
+
+
+// example
+
+// let arr = [0, 100, 95, 45, 65, 80, 75, 90];
+
+// let maxNumber = arr.reduce(function(prevVal, currVal) {
+//   return (prevVal > currVal) ? prevVal : currVal;
+// }); 
+
+// console.log(`The highest number is ${maxNumber}`);
+
+
+// example OR
+let arr = [0, 100, 95, 45, 65, 80, 75, 90];
+let maxNumber = function(val1, val2) {
+  return (val1 > val2) ? val1 : val2;
+};
+let max = arr.reduceRight(maxNumber); 
+console.log(`The highest number is ${max}`);

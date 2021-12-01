@@ -103,14 +103,19 @@
 
 
 /**
- *  ---------------- querySelector() ---------------
+ *  -------------------------------------- querySelector() ---------------
  * yey method yey karta hay k, agar jesay "p" element select kiya
  * hay toh , poray HTML document may jo b first "p" element ara
  * hoga, us ko select karay ga bus, or returns kary ga.
  */
 
 
-//  let elements = document.querySelector("ul");
+//  let elements = document.querySelectorAll(".list-1 li");
+//  console.log(elements);
+
+
+
+
 
  // or  
 //   let element = document.querySelector(".list");
@@ -118,12 +123,12 @@
 //   or
 // let element = document.querySelector(".list li");
 
-//  console.log(element);
 
 
 
 /**
- * -------------- querySelectorAll() -------------------------
+ * -------------------------- querySelectorAll() -------------------------
+ * 
  * yey method yey karta hay k, agar jesay "p" element select kiya
  * hay toh , poray HTML document may jahan b "p" element ara
  * hoga, un sub ko select karay ga, or returns kary ga. 
@@ -159,5 +164,22 @@
 
 
 
+
+/**
+ * -------- difference between static collection and live collection-----------------
+ * 
+ */
+
+let node1 = document.getElementsByClassName("red-text");
+console.log(node1);
+
+let node2 = document.querySelector(".red-text");
+console.log(node2);
+
+
+document.querySelector(".list li:nth-child(3)").className = "red-text";
+
+console.log(node1);
+console.log(node2);
 
 

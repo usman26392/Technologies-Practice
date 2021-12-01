@@ -4,14 +4,15 @@
 
 
 /**
- * ------------ parent traversing ----------------
+ * ------------------------------ parent traversing ----------------
  */
 
 //  parent()
-//  $(function() {
-//     let element = $("span.subchild").parent();
-//     console.log(element);
-//  });
+
+ $(function() {
+    let element = $(".subchild").parent();
+    console.log(element);
+ });
 
 
  // parents()
@@ -45,7 +46,7 @@
 
 
 /**
- * ------------ children Traversing ------------------------------
+ * -------------------------------- children Traversing ------------------------------
  */
 
   // children()
@@ -83,7 +84,7 @@
 
 
   /**
-   * --------------------- Sibling Traversing -------------------
+   * ------------------------------------------ Sibling Traversing -------------------
    */
 
   // next()

@@ -34,8 +34,9 @@ var arr = [1,2,3,4,5];
 //     console.log(arr[i] * arr[i]);
 // }
 
-// OR
 
+// OR
+// forEach return nai karta.
 arr.forEach(function(elm, index, theArray) {
     console.log(elm * elm);
     // console.log(theArray[index]);
