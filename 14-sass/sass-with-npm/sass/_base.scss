@@ -1,5 +1,5 @@
 
-
+@charset "utf-8";
 
 
 // yey partial(_base.scss) file hoti hay: variables , mixins, or functions k liyey.
@@ -193,31 +193,47 @@ $anchor-ft-size:    20px;
 
 
 
-// interpolation
+// --------------  interpolation
 
-// css selector interpolation
+// --- css selector interpolation
+
 // .client-sec {
 //     padding: 50px;
 //     #{&}__title {
 //         font-size: 30px;
 //         margin: 0 0 10px;
 //     }
+    
+//     // or similar to above
+//     // & &__title {
+//     //     font-size: 30px;
+//     //     margin: 0 0 10px;
+//     // }
+
 //     #{&}__paragraph {
 //         font-size: 20px;
 //     }
+
 //     & &__btn {
 //         text-decoration: none;
 //     }
+
 //     &__btn2 {
 //         background-color: green;
 //     }
 // }
 
 
-// css' property interpolation
-// $property-position: left;
+//------- css' property interpolation
+
+// $direction: "left";
+// $direction-op: "right";
 // .box {
-//     margin-#{$property-position}: 30px; 
+//     margin-#{$direction}: 30px; 
+//     padding-#{$direction-op}: 60px;
+//     position: relative;
+//     #{$direction}: 70px;
+//     #{$direction-op}: auto;
 // }
 
 
@@ -313,17 +329,17 @@ $anchor-ft-size:    20px;
 
 // example with map
 
-$list-weight: (
-    regular: 400, 
-    medium: 500, 
-    bold: 700
-    );
+// $list-weight: (
+//     regular: 400, 
+//     medium: 500, 
+//     bold: 700
+//     );
 
-@each $key, $value in $list-weight  {
-    .#{$key} {
-        font-weight: $value;
-    }
-}
+// @each $key, $value in $list-weight  {
+//     .#{$key} {
+//         font-weight: $value;
+//     }
+// }
 
 
 

@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAIA,AAAA,IAAI,CAAC;EAED,gBAAgB,EANV,UAAU;EAOhB,KAAK,EANG,KAAK;EAOb,SAAS,EANF,IAAI;CAOd",
-    "sources": [
-        "../../Sass_Practice/CSS/myStyle.scss"
-    ],
-    "names": [],
-    "file": "myStyle.css"
-}

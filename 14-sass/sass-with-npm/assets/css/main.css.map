@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../../sass/main.scss","../../sass/_resets.scss","../../sass/_base.scss"],"names":[],"mappings":"AAIA;AAAA;AAAA;AAAA;AAAA;ACHA;EACI;EACA;EACA;;;AC8TA;EACI,aARM;;;AAOV;EACI,aARM;;;AAOV;EACI,aARM","file":"main.css"}
+{"version":3,"sourceRoot":"","sources":["../../sass/main.scss","../../sass/_resets.scss","../../sass/_practise.scss"],"names":[],"mappings":"AAIA;AAAA;AAAA;AAAA;AAAA;ACHA;EACI;EACA;EACA;;;ACHJ;EACI;;AACA;EACI;;AAEJ;EACI;;AAEJ;EACI;;AAGA;EACI;;AAIR;EACI","file":"main.css"}

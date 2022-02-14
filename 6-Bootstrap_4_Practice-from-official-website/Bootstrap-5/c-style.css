@@ -1,0 +1,19 @@
+
+
+.items {
+    width: 100vw;
+    height: 500px;
+}
+
+.items-1 {
+    background-color: red;
+}
+
+.items-2 {
+    background-color: green;
+}
+
+.items-3 {
+    background-color: blue;
+}
+

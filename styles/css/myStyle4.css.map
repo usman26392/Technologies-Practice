@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA;0CAC0C;AAEzC;yCACwC;AAIzC,AAAA,EAAE,CAAA;EAEE,KAAK,EADK,KAAK;CAElB;;AAED,AAAA,CAAC,CAAC;EACE,KAAK,EALK,KAAK;CAMlB",
-    "sources": [
-        "../../Sass_Practice/CSS-Part4/myStyle4.scss"
-    ],
-    "names": [],
-    "file": "myStyle4.css"
-}

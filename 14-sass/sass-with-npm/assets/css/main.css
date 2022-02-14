@@ -9,16 +9,23 @@ command:
   margin: 0;
 }
 
-.regular {
-  font-weight: 400;
+.card-box {
+  background-color: #726f6f;
 }
-
-.medium {
-  font-weight: 500;
+.card-box__title {
+  font-size: 12px;
 }
-
-.bold {
-  font-weight: 700;
+.card-box__btn {
+  text-decoration: none;
+}
+.card-box__btn--round {
+  border-radius: 20px;
+}
+.card-box:hover .card-box__title {
+  color: #000;
+}
+.card-box__para:first-child {
+  font-size: 8px;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,23 @@
+
+.card-box {
+    background-color: rgb(114, 111, 111);
+    &__title {
+        font-size: 12px;
+    }
+    &__btn {
+        text-decoration: none;
+    }
+    &__btn--round {
+        border-radius: 20px;
+    }
+    &:hover & {
+        &__title {
+            color: #000;
+        }
+    }
+
+    &__para:first-child {
+        font-size: 8px;
+    }
+
+}

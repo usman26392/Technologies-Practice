@@ -20,18 +20,39 @@
  * 
  */
  
-class Mobile {
-    constructor() {
-        this.color = "red";
+// class Mobile {
+//     constructor() {
+//         this.color = "red";
+//     }
+// }
+
+// Mobile.prototype.model_no = "3310";
+
+// let Samsung = new Mobile();
+// let Nokia = new Mobile();
+
+// console.log(Samsung.model_no);
+
+
+
+
+//----------------------------------- example ------------------------------------
+
+var objProto = {
+    greet: function() {
+        console.log(this.greeting + " World!");
     }
+};
+
+var Greeting = function(terms) {
+    this.greeting = terms;
 }
 
-Mobile.prototype.model_no = "3310";
 
-let Samsung = new Mobile();
-let Nokia = new Mobile();
+Greeting.prototype = objProto;
+var obj1 = new Greeting("Howdy");
 
-console.log(Samsung.model_no);
+
 
 
  

@@ -7,10 +7,14 @@
     <title>jquery practice</title>
 
     <style>
+        style {
+            height: 3000px;
+        }
 
         .hdg-1 {
             font-size: 70px;
             font-weight: 700;
+            /* display: none; */
         }
 
         .red-anchor {
@@ -36,6 +40,7 @@
 
         .list-1 {
             position: relative;
+            list-style-type: decimal;
         }
 
         .drop_down_anchor {
@@ -53,13 +58,48 @@
             color: #fff;
         }
 
+
+       
+        .search-icon {
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+        .cross-icon {
+            display: block;
+            margin-bottom: 30px;
+        }
+
+
+        .search-form {
+            display: none;
+            background: aqua;
+        }
+
+        .search-form.open {
+            display: block;
+        }
+
+        
+        
+
     </style>
 </head>
 
 <body>
+    <iframe id="website-frame" src="http://techcrunch.com"></iframe>
+
+
+    <div class="search-wrapper">
+        <a href="javascript:;" class="search-icon">Serach icon</a>
+        <div class="search-form">
+            <a href="javascript:;" class="cross-icon">cross icon</a>
+            <input type="search">
+        </div>
+    </div>
 
     <h1 class="hdg-1">We are learning jQuery</h1>
     <h1>This is  also a heading</h1>
+
     <section class="main-cont" data-duration="500">
         <div class="box">
             <img src="" alt="alt text">
@@ -100,6 +140,20 @@
             <li>News</li>
         </ul>
     </a>
+
+
+    <form action="">
+        <input type="text" placeholder="text">
+        <input type="password" placeholder="password">
+        <input type="radio" id="html" name="fav_language" value="HTML">
+        <input type="radio" id="css" checked  name="fav_language" value="css">
+    </form>
+
+
+
+    
+
+    
    
 
     <!-- js files -->

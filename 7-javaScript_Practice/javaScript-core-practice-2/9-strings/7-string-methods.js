@@ -22,9 +22,22 @@
 // console.log(str_2.trim());
 
 
-var str = "The Cow jumped over the moon.";
+// var str = "The Cow jumped over the moon.";
+// console.log(str);
 
-var parts = str.split();
-console.log(parts);
+// var parts = str.split();
+// console.log(typeof parts);
+
+
+
+/**
+ * ------------- startsWith(), endsWith(), includes() --------------------
+ */
+
+ var str = "The Cow jumped over the moon.";
+//  console.log(str.startsWith("The"));
+//  console.log(str.endsWith("The"));
+ console.log(str.includes("over"));
+
 
 

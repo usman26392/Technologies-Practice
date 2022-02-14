@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,KAAK,CAAA;EACF,UAAU,EAAG,CAAkD;CACjE",
-    "sources": [
-        "../../Sass_Practice/Sass_Practice-Part-2/CSS-Part1/myFun.scss"
-    ],
-    "names": [],
-    "file": "myFun.css"
-}

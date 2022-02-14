@@ -86,15 +86,19 @@
 
 
 
-// function topic
- function ValueNumber(a,b) {
-    return a + b;
-  }
+// // function topic
+//  function ValueNumber(a,b) {
+//     return a + b;
+//   }
   
   
-  function SUM() {
-    let sumTotal = ValueNumber(2,3);
-    console.log(sumTotal);
-  }
+//   function SUM() {
+//     let sumTotal = ValueNumber(2,3);
+//     console.log(sumTotal);
+//   }
   
-  SUM();
+//   SUM();
+
+
+
+var obj = {};

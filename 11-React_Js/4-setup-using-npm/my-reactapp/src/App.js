@@ -112,22 +112,86 @@
 
 
 // ------------------------- State without constructor -----------------------
+// import React, {Component} from "react";
+
+// class Student extends Component {
+//   state = {
+//     name: "usman",
+//     roll: this.props.roll
+//   };
+//   render() {
+//     return (
+//       <h1>Hello {this.state.name}, your roll number is {this.state.roll}</h1>
+//     )
+//   }
+
+// }
+
+// export default Student;
+
+
+
+// -------------------------- state with constructor ----------------
+// import React, {Component} from "react";
+
+// class Student extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       name: "usman",
+//       roll: this.props.roll
+//     };
+//   }
+
+//   render() {
+//     return(
+//       <h1>Hello {this.state.name}, your roll number is {this.state.roll}</h1>
+//     );
+//   }
+  
+// }
+
+
+// export default Student;
+
+
+
+// ---------------------- state , update state using setState() -----------------
+
 import React, {Component} from "react";
 
 class Student extends Component {
-  state = {
-    name: "usman",
-    roll: this.props.roll
-  };
-  render() {
-    return (
-      <h1>Hello {this.state.name}, your roll number is {this.state.roll}</h1>
-    )
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: "usman",
+      roll: this.props.roll
+    };
   }
 
+  handleClick = ()=> {
+    console.log("Button clicked", this);
+    this.setState({
+      name: "Rehan",
+      roll: "105"
+    });
+  };
+
+  render() {
+    return(
+      <div>
+        <h1>Hello {this.state.name}, your roll number is {this.state.roll}</h1>
+        <button onClick={this.handleClick}>Click me</button>
+      </div>
+    );
+  }
+  
 }
 
+
 export default Student;
+
+
 
 
 
