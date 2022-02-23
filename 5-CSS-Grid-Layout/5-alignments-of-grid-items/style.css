@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+section {
+    padding: 50px;
+}
+
+.grid-container {
+    background-color: antiquewhite;
+    max-width: 900px;
+    margin: 0 auto;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    gap: 20px;
+  }
+
+  .grid-container > * {
+    border: 2px solid red;
+  }

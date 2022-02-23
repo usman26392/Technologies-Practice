@@ -166,10 +166,31 @@ $(function() {
 
 
     // form pseudo classes
+    // :checked
+    // $("form :checked").on("click", function() {
+    //     $(this).toggleClass("abc");
+    // });
+    
+    // :disabled
+    // $("form input").filter(":disabled").on("mousemove", function() {
+    //     $(this).toggleClass("ccc");
+    // });
 
-    $("form :checked").on("click", function() {
-        $(this).toggleClass("abc");
+
+    // :enabled
+    $("form input").filter(":enabled").on("click", function() {
+        $(this).toggleClass("ccc");
     });
+
+    
+    // :selected
+    $("form select option").filter(":selected").addClass("yes");
+
+
+    // selecting elements by input types
+
+    $("form input").filter(":password").addClass("yes");
+
 
 
 
@@ -205,4 +226,12 @@ $(function() {
 
 
 
+});
+
+
+
+
+//------------------------------- working with elements' selection ---------------------------
+$(function() {
+    
 });

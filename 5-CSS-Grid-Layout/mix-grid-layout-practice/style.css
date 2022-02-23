@@ -19,14 +19,17 @@ section :is(h2,p) {
 
 
 .container {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.grid-container {
     resize: horizontal;
     overflow-x: hidden;
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ff000017;
 }
+
+/* .grid-container {
+    resize: horizontal;
+    overflow-x: hidden;
+} */
 
 
 
@@ -57,13 +60,14 @@ section :is(h2,p) {
 
 
 
-
-
-
 .grid-container {
+
     height: 400px;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    /* grid-template-columns: 1fr 2fr; */
+    grid-template-columns: repeat(3, auto);
+    justify-items: center;
+    justify-content: center;
 }
 
 

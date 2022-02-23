@@ -15,5 +15,5 @@
 
 
 // arrow function
-let x = (nums) => { return nums * nums };
-console.log(x(3));
+// let x = (nums) => { return nums * nums };
+// console.log(x(3));
