@@ -1,0 +1,54 @@
+
+
+.gradient-text {
+  background: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.orange-btn, 
+.black-btn,
+.transparent-btn {
+  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 2.5rem;
+  background-color: var(--orange-color);
+  color: var(--white-color);
+  border-radius: 5px;
+  border: 0;
+  padding: 1.6rem 4.5rem;
+  text-align: center;
+  text-transform: capitalize;
+  cursor: pointer;
+  -webkit-appearance: button;
+  outline: none;
+}
+
+.black-btn {
+  background-color: var(--black-color);
+  border-radius: 9rem;
+  font-weight: 700;
+  line-height: 3rem;
+}
+
+.transparent-btn {
+  background-color: transparent;
+}
+
+.c-py {
+  padding: 6.5rem 0;
+}
+
+.c-my {
+  margin: 6.5rem 0;
+}
+
+.container {
+  max-width: 144rem;
+  margin: 0 auto;
+}
+
+

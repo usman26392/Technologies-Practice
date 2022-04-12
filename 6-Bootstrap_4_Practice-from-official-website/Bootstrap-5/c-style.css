@@ -1,4 +1,43 @@
 
+body {
+    height: 5000px;
+}
+
+
+.row > div:nth-child(1) {
+    background-color: var(--bs-blue);
+}
+
+.row > div:nth-child(2) {
+    background-color: green;
+}
+
+.row > div:nth-child(3) {
+    background-color: var(--bs-red);
+}
+
+
+.row > div:nth-child(4) {
+    background-color: var(--bs-indigo);
+}
+
+.row > div:nth-child(5) {
+    background-color: var(--bs-pink);
+}
+
+.row > div:nth-child(6) {
+    background-color: var(--bs-orange);
+}
+
+.row > div:nth-child(7) {
+    background-color: var(--bs-yellow);
+}
+
+
+
+
+
+
 
 .items {
     width: 100vw;

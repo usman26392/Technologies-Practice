@@ -1,0 +1,3 @@
+
+
+let tl = gsap.exportRoot();

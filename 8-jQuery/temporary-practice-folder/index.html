@@ -11,11 +11,19 @@
             height: 5000px;
         }
 
-        .hdg-1 {
+        .hdg-1,
+        h1 {
             font-size: 70px;
             font-weight: 700;
             /* display: none; */
+            background-color: red;
         }
+
+        .hdg-2 {
+            background-color: green;
+        }
+
+
 
         .red-anchor {
             color: red;
@@ -99,16 +107,21 @@
     <!-- <iframe id="website-frame" src="http://techcrunch.com"></iframe> -->
 
 
-    <div class="search-wrapper">
-        <a href="javascript:;" class="search-icon">Serach icon</a>
-        <div class="search-form">
-            <a href="javascript:;" class="cross-icon">cross icon</a>
-            <input type="search">
-        </div>
-    </div>
+    <p class="para-sp"><span>Hello</span>, how are you</p>
 
     <h1 class="hdg-1">We are learning jQuery</h1>
-    <h1>This is  also a heading</h1>
+    <h1 class="hdg-2">This is  also a heading</h1>
+
+    <img src="/images/carton.jpg" alt="a empty figure" title="wow">
+
+    <ul class="special-list">
+        <li>
+            <a href="index.html" id="main-anchor">Anchor</a>
+        </li>
+        <li>
+            <a href="index.html" id="main-anchor">Anchor</a>
+        </li>
+    </ul>
 
     <section class="main-cont" data-duration="500">
         <div class="box">
@@ -126,8 +139,8 @@
     <ul class="list list-1">
         <!-- my first li -->
         <li class="li-1">Home</li>
-        <li >News</li>
-        <li >Blog</li>
+        <li>News</li>
+        <li>Blog</li>
         <li>New Release</li>
         <li>Services</li>
     </ul>
@@ -171,12 +184,26 @@
         <input type="radio" id="css" checked  name="fav_language" value="css">
     </form>
 
+    <div class="search-wrapper">
+        <a href="javascript:;" class="search-icon">Serach icon</a>
+        <div class="search-form">
+            <a href="javascript:;" class="cross-icon">cross icon</a>
+            <input type="search">
+        </div>
+    </div>
 
+    <!-- DOM element Traversing -->
+    <div class="grandparent">
+        <div class="parent">
+            <div class="child">
+                <span class="subchild"></span>
+            </div>
+        </div>
+        <div class="surrogateParent1"></div>
+        <div class="surrogateParent2"></div>
+        <div class="surrogateParent3"></div>
+    </div>
 
-    
-
-    
-   
 
     <!-- js files -->
     <script src="../jquery.js"></script>

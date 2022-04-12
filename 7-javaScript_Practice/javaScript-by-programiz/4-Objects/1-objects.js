@@ -40,8 +40,8 @@ let student = {
     PrintFullName: function() {
         console.log(`My full name is ${this.firstName} ${this.lastName} `);
     },
-    PrintSomeThing: () => {
-        console.log(`My full name is ${this.firstName1}  `);
+    PrintSomeThing: function() {
+        console.log(`My full name is ${this.lastName}`);
         // Arrow function can never be a method
     }
 };
