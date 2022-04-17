@@ -1,0 +1,18 @@
+
+.cta-row {
+    background: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+    border-radius: 1.1rem;
+    border: 1px solid var(--black-color);
+    padding: 4.5rem;
+    color: var(--black-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+  .cta-desc h4 {
+      line-height: 4.5rem;
+  }
+
+  

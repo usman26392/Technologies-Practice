@@ -425,6 +425,12 @@ $(function() {
     // let element = $('h1').eq(0).css('background-color', 'yellow');
     // console.log(element);
 
+    // element dimension
+    // let element = $('h1').width();
+    // let element = $('h1').width('400px');
+    let element = $('h1').position();
+    console.log(element);
+
 
 
 });

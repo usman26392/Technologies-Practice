@@ -2,6 +2,10 @@
 
 header {
     padding: 5.5rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 10;
 }
 
 .gpt3__navbar {
@@ -10,9 +14,7 @@ header {
     justify-content: space-between;
 }
 
-.gpt3__navbar__logo {
-    
-}
+
 
 .gpt3__navbar__collapse {
     flex: 1 1 60%;
@@ -49,6 +51,10 @@ header {
     bottom: -4px;
     transition: all 0.3s ease-in-out;
     transform: scaleX(0);
+}
+
+.gpt3__navbar__cta .transparent-btn {
+    border: 0;
 }
 
 

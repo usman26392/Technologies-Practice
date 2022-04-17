@@ -5,10 +5,15 @@
   --white-color:  #fff;
   --black-color:  #000;
   --orange-color: #FF4820;
+  --orange-light:   #FF8A71;
   --blue-color:   #042C54;
+  --light-blue:   #3D6184;
+  --sea-blue:     #13DED2;
   --para-color:   #81AFDD;
   --body-color:   #040C18;
   --footer-bg:    #031B34;
+  --gradient:  linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+  
 }
 
 body {
@@ -22,8 +27,10 @@ body {
     color: var(--para-color);
     line-height: 3rem;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale;  
 }
+
+
 
 *,::before,::after {
   margin: 0;
@@ -36,6 +43,7 @@ img {
   max-width: 100%;
   height: auto;
   object-fit: cover;
+  display: block;
 }
 
 a {
@@ -57,7 +65,7 @@ h1 {
 h2 {
   font-size: 6.2rem;
   font-weight: 800;
-  line-height: 7.5rem;
+  line-height: 8.5rem;
 }
 
 h3 {
@@ -86,6 +94,11 @@ h6 {
 
 p {
   font-size: 1.6rem;
+}
+
+::placeholder {
+  color: var(--light-blue);
+  opacity: 1;
 }
 
 

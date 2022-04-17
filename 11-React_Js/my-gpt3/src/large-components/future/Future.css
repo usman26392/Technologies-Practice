@@ -1,0 +1,44 @@
+
+
+.gpt3-future__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+
+  .gpt3-future__row .gpt3-future__col:first-child {
+    flex: 0 1 30%;
+  }
+
+  .gpt3-future__left-panel__title {
+    margin-bottom: 3.5rem;
+  }
+
+  .gpt3-future__left-panel__link {
+    font-size: 1.6rem;
+    color: var(--orange-light);
+  }
+
+  .gpt3-future__row .gpt3-future__col:last-child {
+    flex: 0 1 50%;
+  }
+
+  .gpt3-future__right-panel__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2rem;
+  }
+
+  .gpt3-future__right-panel__box h4 {
+    flex: 0 1 29%;
+    line-height: 2.4rem;
+    font-size: 1.8rem;
+    padding-top: 1.4rem;
+    padding-right: 3rem;
+  }
+
+  .gpt3-future__right-panel__box p {
+    flex: 0 1 55%;
+  }

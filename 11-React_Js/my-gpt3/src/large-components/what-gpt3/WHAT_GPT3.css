@@ -1,0 +1,56 @@
+
+
+.possibilities-main-wrapper {
+    background: var(--blue-color);
+    padding: 6rem;
+    background: 
+     url('../../assets/images/what-gpt3-bg-top.svg') left top/contain no-repeat,
+     url('../../assets/images/what-gpt3-bg.svg') right bottom/contain no-repeat;
+  }
+
+  .what_gpt3 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 9.2rem;
+  }
+
+  
+
+  .what_gpt3 p {
+    flex: 0 1 73.1rem;
+  }
+
+  .possibilities {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 9rem;
+  }
+
+  .possibilities__title {
+    flex: 0 1 40%;
+    width: 100%
+  }
+
+  .possibilities__link {
+    color: var(--orange-light);
+    font-size: 1.6rem;
+  }
+
+
+  .possibilities-row {
+    display: flex;
+    margin: 0 -1.2rem;
+    flex-wrap: wrap;
+  }
+
+  .possibilities__col {
+    padding: 0 1.2rem;
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+    margin-bottom: 4em;
+  }
+
+  .possibilities__box {
+    padding-right: 9rem;
+  }

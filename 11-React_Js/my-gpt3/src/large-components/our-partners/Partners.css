@@ -1,0 +1,17 @@
+
+
+.partners-row {
+    display: flex;
+    align-items: baseline;
+    max-width: 67.1rem;
+    margin-inline: auto;
+  }
+
+  .partners-col {
+    flex: 0 1 25%;
+    width: 25%;
+  }
+
+  .partners-item {
+    text-align: center;
+  }
