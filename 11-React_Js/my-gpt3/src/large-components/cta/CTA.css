@@ -6,13 +6,26 @@
     padding: 4.5rem;
     color: var(--black-color);
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+  }
+
+  @media (max-width: 767px) {
+      .cta-desc {
+          margin-bottom: 3rem;
+      }
   }
 
 
   .cta-desc h4 {
       line-height: 4.5rem;
+  }
+  
+  @media (max-width: 575px) {
+      .cta-desc h4 {
+          line-height: normal;
+      }
   }
 
   

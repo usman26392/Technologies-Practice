@@ -2,6 +2,7 @@
 
 .gpt3-future__row {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: baseline;
   }
@@ -9,6 +10,18 @@
 
   .gpt3-future__row .gpt3-future__col:first-child {
     flex: 0 1 30%;
+  }
+  
+  @media (max-width: 575px) {
+    .gpt3-future__row .gpt3-future__col:first-child {
+      flex-basis: 100%;
+    }
+  }
+
+  @media (max-width: 575px) {
+    .gpt3-future__left-panel {
+      margin-bottom: 4rem;
+    }
   }
 
   .gpt3-future__left-panel__title {
@@ -22,6 +35,12 @@
 
   .gpt3-future__row .gpt3-future__col:last-child {
     flex: 0 1 50%;
+  }
+  
+  @media (max-width: 575px) {
+    .gpt3-future__row .gpt3-future__col:last-child {
+      flex-basis: 100%;
+    }
   }
 
   .gpt3-future__right-panel__box {

@@ -2,12 +2,26 @@
 
 .imagination-row {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     margin: 0 -1.2rem;
   }
 
   .imagination__col {
+    flex: 0 1 50%;
     padding: 0 1.2rem;
+  }
+  
+  @media (max-width: 575px) {
+    .imagination__col {
+      flex-basis: 100%;
+    }
+  }
+
+  @media (max-width: 575px) {
+    .imagination__text-content {
+      margin-top: 4rem;
+    }
   }
 
   .imagination__text-content p:first-child {

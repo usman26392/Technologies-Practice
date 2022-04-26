@@ -16,11 +16,26 @@
     max-width: 40%;
     padding: 0 2.5rem;
   }
+  
+  @media (max-width: 575px) {
+    .blog-col-40 {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+  }
 
   .blog-col-60 {
     flex: 0 0 60%;
     max-width: 60%;
     padding: 0 2.5rem;
+  }
+  
+  @media (max-width: 575px) {
+    .blog-col-60 {
+      flex-basis: 100%;
+      max-width: 100%;
+      margin-top: 4rem;
+    }
   }
 
   .blog-card {

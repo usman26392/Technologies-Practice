@@ -23,11 +23,11 @@ const Hero = () => {
                     <div className="hero-peoples">
                         <div className="hero-peoples__figures">
                             <div className="hero-peoples__item">
-                                <img src={people1} alt="image of people requested access" width='36' height='36' />
-                                <img src={people2} alt="image of people requested access" width='36' height='36' />
-                                <img src={people3} alt="image of people requested access" width='36' height='36' />
-                                <img src={people4} alt="image of people requested access" width='36' height='36' />
-                                <img src={people5} alt="image of people requested access" width='36' height='36' />
+                                <img src={people1} alt="logo of people requested access" width='36' height='36' />
+                                <img src={people2} alt="logo of people requested access" width='36' height='36' />
+                                <img src={people3} alt="logo of people requested access" width='36' height='36' />
+                                <img src={people4} alt="logo of people requested access" width='36' height='36' />
+                                <img src={people5} alt="logo of people requested access" width='36' height='36' />
                                 <div className="hero-peoples__item__counts">
                                     <span>1.6k+</span>
                                 </div>
@@ -37,7 +37,7 @@ const Hero = () => {
                     </div>
                 </div>
                 <div className="hero-figure">
-                    <img src={hero} alt="hero image" width='2824' height='2852'  />
+                    <img src={hero} alt="hero" width='2824' height='2852'  />
                 </div>
             </div>
           </div>

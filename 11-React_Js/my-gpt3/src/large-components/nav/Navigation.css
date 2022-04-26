@@ -1,7 +1,7 @@
 
 
 header {
-    padding: 5.5rem;
+    padding: 5.5rem 0;
     position: absolute;
     left: 0;
     right: 0;
@@ -14,13 +14,23 @@ header {
     justify-content: space-between;
 }
 
+@media (max-width: 575px) {
+    .gpt3__navbar {
+        align-items: center;
+    }
+}
 
 
 .gpt3__navbar__collapse {
     flex: 1 1 60%;
-    width: 60%;
     margin-left: 6.8rem;
 }
+@media (max-width: 991px) {
+    .gpt3__navbar__collapse {
+        display: none;
+    }
+}
+
 
 .gpt3__navbar__list {
     display: flex;
@@ -56,5 +66,58 @@ header {
 .gpt3__navbar__cta .transparent-btn {
     border: 0;
 }
+
+@media (max-width: 991px) {
+    .gpt3__navbar__cta {
+        margin-left: auto;
+        margin-right: 3rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .gpt3__navbar__cta {
+        margin-right: 1rem;
+    }
+}
+
+
+
+
+.gpt3__navbar__menu {
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .gpt3__navbar__menu {
+        display: block;
+        position: relative;
+        z-index: 99;
+    }
+}
+
+@media (max-width: 991px) {
+    .gpt3__navbar__menu .gpt3__navbar__collapse {
+        display: block;
+        position: absolute;
+        right: 0;
+        min-width: 50rem;
+        background: var(--blue-color);
+        padding: 2rem;
+        border: 1px solid var(--light-blue);
+        border-radius: 5px;
+        top: 150%;
+        margin: 0;
+    }
+    .gpt3__navbar__menu .gpt3__navbar__list {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 575px) {
+    .gpt3__navbar__menu .gpt3__navbar__collapse { 
+        min-width: 45rem;
+    }
+}
+
 
 

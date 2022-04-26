@@ -1,5 +1,23 @@
 
 import './WHAT_GPT3.css';
+import POSSIBILTIES from '../../small-components/possibilties-box/POSSIBILTIES';
+
+const possibilitiesData = [
+  {
+    title: 'Chatbots',
+    text: '1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, repellendus.'
+  },
+  {
+    title: 'Knowledgebase',
+    text: '2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, repellendus.'
+  },
+  {
+    title: 'Education',
+    text: '3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, repellendus.'
+  }
+];
+
+
 
 const WHAT_GPT3 = () => {
   return (
@@ -15,24 +33,35 @@ const WHAT_GPT3 = () => {
               <a href="/" className="possibilities__link">Explore The Library</a>
             </div>
             <div className="possibilities-row">
-              <div className="possibilities__col">
-                <div className="possibilities__box">
-                  <h4 className="top-line-title">Chatbots</h4>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, repellendus. </p>
-                </div>
-              </div>
-              <div className="possibilities__col">
-                <div className="possibilities__box">
-                  <h4 className="top-line-title">Knowledgebase</h4>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt labore earum sapiente quis! </p>
-                </div>
-              </div>
-              <div className="possibilities__col">
-                <div className="possibilities__box">
-                  <h4 className="top-line-title">Education</h4>
-                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, officia error aliquam ratione suscipit adipisci. </p>
-                </div>
-              </div>
+
+                {/* {
+                  possibilitiesData.map((item, index) => (
+                    <POSSIBILTIES titleHeading={item.title} para={item.text} key={index} />
+                    ))
+                  } */}
+
+                  {/* or */}
+
+                {/* {
+                  possibilitiesData.map((item, index)=> {
+                    return (
+                      <POSSIBILTIES titleHeading={item.title} para={item.text} key={index} />
+                    )
+                  })
+                }   */}
+
+                  {/* or */}
+
+                {
+                  possibilitiesData.map(function(item, index) {
+                    return (
+                      <POSSIBILTIES titleHeading={item.title} para={item.text} key={index} />
+                      )
+                    })
+                }
+
+                
+                
             </div>
           </div>
         </div>

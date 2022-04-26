@@ -388,17 +388,17 @@ $(function() {
     // console.log(elements);
     
     // example
-    $(".search-icon").on("click", function() {
-        $(this)
-        .siblings(".search-form")
-        .addClass("open");
-        // $(this).siblings(".search-form").stop().slideDown(2000);
-    });
+    // $(".search-icon").on("click", function() {
+    //     $(this)
+    //     .siblings(".search-form")
+    //     .addClass("open");
+    //     // $(this).siblings(".search-form").stop().slideDown(2000);
+    // });
     
-    $(".cross-icon").on("click", function() {
-        $(this).parents(".search-wrapper").find(".open").removeClass("open");
-        // $(this).parents(".search-wrapper").find(".search-form").stop().slideUp(2000);
-    });
+    // $(".cross-icon").on("click", function() {
+    //     $(this).parents(".search-wrapper").find(".open").removeClass("open");
+    //     // $(this).parents(".search-wrapper").find(".search-form").stop().slideUp(2000);
+    // });
 
 
     /**
@@ -428,10 +428,123 @@ $(function() {
     // element dimension
     // let element = $('h1').width();
     // let element = $('h1').width('400px');
-    let element = $('h1').position();
-    console.log(element);
+    // let element = $('h1').position();
+    // console.log(element);
+
+    /**
+     * ------------- utility methods --------------------
+     */
+    // $.trim()
+    // let myString = $.trim('    lots of extra whitespace     ');
+    // console.log(myString);
+
+    // $.each()
+    // let arrVal = ['Farhan', 'usman', 'rehan'];
+    // $.each(arrVal, function(idx, val ) {
+    //     console.log(idx, val );
+    // });
+
+    // $.inArray()
+    // let myArray = [1,2,3,5];
+    // if( $.inArray(4, myArray) !== -1 ) {
+        //     console.log('found it');
+        // }
+        // else {
+            //     console.log('not found array element!')
+            // }
+            
+    // example
+    // let myArray = [1,2,3,5];
+    // if( $.inArray(5, myArray) !== -1 ) {
+    //     console.log('found it');
+    // }
+    // else {
+    //     console.log('not found array element!')
+    // }
+
+    /**
+     * ------------- iterating over jQuery and non-jQuery Objects ---------------
+     */
+    
+    // $('input').each(function(idx, el) {
+    //     var elm = $(el);
+    //     elm.val(elm.val() + "%");
+    //     console.log(elm);
+    // });
+
+    /**
+     * --------------------- faqs ------------------
+     */
+
+    // How do I test whether an element has a particular class?
+    
+    // console.log($("p").hasClass('para-sp'));
+    // console.log($('p').is('.para-sp'));
+
+    // how do i disable / enable a form element ?
+    
+    // Disabled a form field
+    // $(".p-field").prop("disabled", true);
+
+    // // Enabled a form field
+    // $(".t-field").prop("disabled", false);
+
+    // jo kaam hum nay prop() method k zariyey kiya hay,
+    // wo kaam, hum attr() method k zariyey b karsakhtay hayn.
+
+    // how do i check / uncheck a checkbox input or radio button.
+    // $(".checkbox").on("mouseenter", function(e) {
+    //     console.log($(this).prop("checked", true))
+    // });
+
+    // how do i get the text value of a selected options ?
+    // $('.select').on('change', function() {
+    //     console.log("attribute value of option: " +  $(this).val());
+    //     console.log("text of option: " +  $(this).find("option").filter(":selected").text());
+    //     // OR
+    //     // console.log(`text of option: ${$(this).find("option").filter(":selected").text()}  ` )
+    // });
 
 
+    // how do i change text from the 3rd element of a list.
+    // let thirdLink = $(".list-1 li").eq(2).text("change link");
+    // console.log(thirdLink);
+
+    // how to replace element with another
+    //  let element = $(".items").replaceAll(".li-1");
+    //  console.log(element);
+
+    
+    // native DOM object and jquery object
+    // let element = $("h1")[0]; // return native DOM object
+    // console.log(element);
+
+
+    // let element2 = $("h1").eq(0); // return  jquery object
+    // console.log(element2);
+
+
+    /**
+     * ---------------------- events -----------------------------
+     */
+     
+    // with on() method:  event only apply on event listner elements.
+    // $("button.alert").on('click', function() {
+    //     console.log('A button with the alert class was clicked!');
+    // });
+
+    // $('<button class="alert">This is another btn</button>').insertBefore("body");
+
+    // inside the event handler function: receice an event object
+    $('button').on('click', function(e) {
+        console.log(e);
+        console.log(e.pageX);
+    });
+    
+
+
+    
+    
 
 });
 

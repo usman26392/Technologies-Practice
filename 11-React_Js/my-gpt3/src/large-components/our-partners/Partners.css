@@ -2,16 +2,29 @@
 
 .partners-row {
     display: flex;
+    flex-wrap: wrap;
     align-items: baseline;
     max-width: 67.1rem;
     margin-inline: auto;
   }
 
+
   .partners-col {
-    flex: 0 1 25%;
-    width: 25%;
+    flex: 0 1 20%;
   }
 
-  .partners-item {
-    text-align: center;
+  .partners-item img {
+    margin: 0 auto;
+  }
+
+  @media (max-width: 575px) {
+    .partners-row {
+      justify-content: center;
+    }
+    .partners-col {
+      flex-basis: 50%;
+      margin-bottom: 2rem;
+    }
+
+
   }
