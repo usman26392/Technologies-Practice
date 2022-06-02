@@ -536,17 +536,134 @@ $(function() {
     // $('<button class="alert">This is another btn</button>').insertBefore("body");
 
     // inside the event handler function: receice an event object
-    $('button').on('click', function(e) {
-        console.log(e);
-        console.log(e.pageX);
+    // $('button').on('click', function(e) {
+    //     console.log(e);
+    //     console.log(e.pageX);
+    // });
+
+    // setting up multiple event responses
+    // $('button').on('click mouseover', function() {
+    //     console.log('A button was clicked or changed!');
+    // });
+
+    // multiple events with multiple event handler
+    // $('button').on({
+    //     'click': function() {
+    //         console.log('A button was clicked!')
+    //     },
+    //     'mouseenter': function() {
+    //         console.log('A button was mouseenter!')
+    //     }
+    // });
+
+    // events to run only one.
+    // $('h1').one('click', firstClick);
+
+    // function firstClick() {
+    //     console.log('You just clicked this for the first time!');
+    //     $(this).on('click' ,function() {
+    //         console.log('You have clicked this before!');
+    //         console.log(this)
+    //     });
+    //     console.log($(this))
+    // }
+
+    /**
+     * --------------------- event helpers -----------------------
+     */
+
+    // $('h1').hover(function() {
+    //     $(this).toggleClass('hover-h1')
+    // });
+    
+    // with two function: with two events: mouseenter, mouseleave
+    // $('h1').hover(function() {
+    //     $(this).addClass('mouseenter')
+    // },
+    // function() {
+    //     $(this).addClass('mouseleave')
+    // });
+
+
+    /**
+     * ---------- handling events with on() method -------
+     */
+
+    // $('.para-sp').on('click', function() {
+    //     console.log('you clicked a para tag');
+    // });
+
+    // many events and many event handlers
+    // $('.para-sp').on({
+    //     mouseenter: function() {
+    //         console.log('mouse enter')
+    //     },
+    //     mouseleave: function() {
+    //         console.log('mouse leave')
+    //     },
+    //     click: function() {
+    //         console.log('clicked')
+    //     }
+    // });
+
+    // event object
+    // $('.para-sp').on('click', function(eObj) {
+    //     console.log(eObj);
+    // });
+    
+    // passing data to the event handler
+    // $( ".para-sp" ).on( "click", {
+    //     userName: "usman"
+    // }, function( event ) {
+    //     console.log(event);
+    //     console.log( "event data: " + event.data.userName );
+    // });
+
+
+    // binding events to elements that don't exist yet.
+    // $( "body" ).on( "click", "fieldset", function() {
+    //     console.log( "Something in a <body> was clicked, and we detected that it was an <fieldset> element." );
+    // });
+
+    // event run only once
+    // $( ".para-sp" ).one( "click", function() {
+    //     console.log( "You just clicked this for the first time!" );
+    //     $( this ).click(function() {
+    //         console.log( "You have clicked this before!" );
+    //         // console.log($(this));
+    //     });
+    // });
+
+    // event disconnect
+
+
+
+
+    /**
+     * inside the event handler function
+     */
+
+    // $('.para-sp').on('click', function(e) {
+    //     console.log(e);
+    // });
+
+
+     $( ".hdg-1" ).on( 'click', function( event ) {
+        var elem = $( this );
+        if ( elem.attr( "class" ).match( "hdg-1" ) ) {
+            elem.addClass( "hdg-22" );
+        }
     });
-    
 
 
-    
-    
+
+
+
 
 });
+
+
+
 
 
 

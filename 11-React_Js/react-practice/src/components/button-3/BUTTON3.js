@@ -13,6 +13,8 @@ const BUTTON3 = () => {
           <button onClick={check.handleInc}>
               {check.count}
         </button>
+        <hr/>
+        <hr/>
       </div>
   )
 }

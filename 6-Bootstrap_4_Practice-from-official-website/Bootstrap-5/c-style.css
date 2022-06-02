@@ -1,6 +1,6 @@
 
 body {
-    height: 5000px;
+    height: 50000px;
 }
 
 
@@ -35,10 +35,6 @@ body {
 
 
 
-
-
-
-
 .items {
     width: 100vw;
     height: 500px;
@@ -56,3 +52,6 @@ body {
     background-color: blue;
 }
 
+.alert:focus {
+    border: 2px solid red;
+}

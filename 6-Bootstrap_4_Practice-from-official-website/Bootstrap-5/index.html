@@ -202,8 +202,11 @@
 
         <label for="exampleColorInput" class="form-label">Color picker</label>
         <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color">
-
       </form>
+
+      <hr>
+      <hr>
+      <hr>
 
       <h1>Components</h1>
       <div class="accordion" id="accordionExample">
@@ -245,14 +248,80 @@
         </div>
       </div>
 
+      <h2>alert</h2>
+      <div class="alert alert-primary" role="alert">
+        A simple primary
+        <a href="/" class="alert-link">alert—check it out!</a>
+      </div>
+
+      <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Well done!</h4>
+        <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+        <hr>
+        <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+      </div>
+
+      <div class="alert alert-primary d-flex align-items-center" role="alert">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+          <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+        </svg>
+        <div>An example alert with an icon</div>
+      </div>
+
+  
+      <div class="alert alert-warning alert-dismissible fade show" role="alert" id="myAlert">
+        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+
+      <hr>
+      <hr>
+      <h1>badges</h1>
+      <h1>Example heading <span class="badge bg-secondary">New</span></h1>
+
+      <button type="button" class="btn btn-primary">
+        Notifications 
+        <span class="badge bg-info">4</span>
+      </button>
+
+      <button type="button" class="btn btn-primary position-relative">
+        Inbox
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">99+
+          <span class="visually-hidden">unread messages</span>
+        </span>
+      </button>
+
+      <br>
+
+      <span class="badge rounded-pill bg-primary">Primary</span>
+      
+      <hr>
+      <hr>
+
+      <h1>Breadcrumb</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item"><a href="#">Library</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Data</li>
+        </ol>
+      </nav>
+
+      <h1>Buttons</h1>
+      <button type="button" class="btn btn-success">Success</button>
+      <button type="button" class="btn btn-outline-primary">Success</button>
+
+      
+
+
 
     <!-- call bootstrap js from local file  -->
-    <!-- <script src="library/bootstrap.js"></script> -->
+    <script src="library/bootstrap.js"></script>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
@@ -262,5 +331,9 @@
 
     <!-- jquery only for checking -->
     <script src="library/jquery.js"></script>
+
+    <!-- custom js  -->
+    <script src="custom.js"></script>
+
   </body>
 </html>

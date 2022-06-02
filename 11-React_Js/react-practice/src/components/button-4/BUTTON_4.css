@@ -1,0 +1,16 @@
+
+
+.btn {
+    border: 0;
+    background-color: red;
+    color: black;
+    padding: 1rem 2rem;
+}
+
+
+.btn2 {
+    border: 0;
+    background-color: blue;
+    color: white;
+    padding: 1rem 2rem;
+}
