@@ -1,211 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>jquery practice</title>
 
     <style>
-        body {
-            height: 5000px;
-        }
+      body {
+        height: 5000px;
+      }
 
-        .hdg-1,
-        h1 {
-            font-size: 70px;
-            font-weight: 700;
-            /* display: none; */
-            background-color: red;
-        }
+      .hdg-1,
+      h1 {
+        font-size: 70px;
+        font-weight: 700;
+        /* display: none; */
+        background-color: red;
+      }
 
-        .hdg-2 {
-            background-color: green;
-        }
+      .hdg-2 {
+        background-color: green;
+      }
 
-        .red-anchor {
-            color: red;
-            font-size: 30px;
-            font-weight: 700;
-        }
+      .red-anchor {
+        color: red;
+        font-size: 30px;
+        font-weight: 700;
+      }
 
-        .clr-blue {
-            color: blue;
-        }
+      .clr-blue {
+        color: blue;
+      }
 
-        form {
-            margin-top: 20px;
-            width: 400px;
-        }
+      form {
+        margin-top: 20px;
+        width: 400px;
+      }
 
-        form input,
-        form select {
-            width: 100%;
-        }
+      form input,
+      form select {
+        width: 100%;
+      }
 
-        .list-2 {
-            background-color: red;
-            /* display: none; */
-            /* height: 30px;
+      .list-2 {
+        background-color: red;
+        /* display: none; */
+        /* height: 30px;
             overflow: hidden; */
-        }
+      }
 
-        .list-1 {
-            position: relative;
-            list-style-type: decimal;
-        }
+      .list-1 {
+        position: relative;
+        list-style-type: decimal;
+      }
 
-        .drop_down_anchor {
-            display: block;
-            text-decoration: none;
-        }
+      .drop_down_anchor {
+        display: block;
+        text-decoration: none;
+      }
 
-        .drop_down_anchor ul {
-            display: none;
-            background-color: red;
-            list-style-type: none;
-        }
+      .drop_down_anchor ul {
+        display: none;
+        background-color: red;
+        list-style-type: none;
+      }
 
-        .drop_down_anchor ul li {
-            color: #fff;
-        }
-              
-        .search-icon {
-            display: inline-block;
-            margin-bottom: 30px;
-        }
-        .cross-icon {
-            display: block;
-            margin-bottom: 30px;
-        }
+      .drop_down_anchor ul li {
+        color: #fff;
+      }
 
+      .search-icon {
+        display: inline-block;
+        margin-bottom: 30px;
+      }
+      .cross-icon {
+        display: block;
+        margin-bottom: 30px;
+      }
 
-        .search-form {
-            display: none;
-            background: aqua;
-        }
+      .search-form {
+        display: none;
+        background: aqua;
+      }
 
-        .search-form.open {
-            display: block;
-        }
+      .search-form.open {
+        display: block;
+      }
 
-        .form-wrapper {
-            margin-bottom: 20px;
-        }
-
-        
-        
-
+      .form-wrapper {
+        margin-bottom: 20px;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- <iframe id="website-frame" src="http://techcrunch.com"></iframe> -->
-
 
     <p class="para-sp"><span>Hello</span>, how are you</p>
 
     <h1 class="hdg-1">We are learning jQuery</h1>
-    <h1 class="hdg-2">This is  also a heading</h1>
+    <h1 class="hdg-2">This is also a heading</h1>
 
-    <img src="/images/carton.jpg" alt="a empty figure" title="wow">
+    <button class="btn">Button</button>
+    <button class="btn2">Button2</button>
+    <br>
+    <br>
+
+    <img src="/images/carton.jpg" alt="a empty figure" title="wow" />
 
     <ul class="special-list">
-        <li>
-            <a href="index.html" id="main-anchor">Anchor</a>
-        </li>
-        <li>
-            <a href="index.html" id="main-anchor">Anchor</a>
-        </li>
+      <li>
+        <a href="index.html" id="main-anchor">Anchor</a>
+      </li>
+      <li>
+        <a href="index.html" id="main-anchor">Anchor</a>
+      </li>
     </ul>
 
     <section class="main-cont" data-duration="500">
-        <div class="box">
-            <img src="" alt="alt text">
-            <h3>This is a heading!</h3>
-            <p class="box-para">This is a box paragraph!</p>
-        </div>
+      <div class="box">
+        <img src="" alt="alt text" />
+        <h3>This is a heading!</h3>
+        <p class="box-para">This is a box paragraph!</p>
+      </div>
     </section>
 
     <div class="box">
-        <h2>This is a heading h2</h2>
+      <h2>This is a heading h2</h2>
     </div>
-    
-    
+
     <ul class="list list-1">
-        <!-- my first li -->
-        <li class="li-1">Home</li>
-        <li>News</li>
-        <li>Blog</li>
-        <li>New Release</li>
-        <li>Services</li>
+      <!-- my first li -->
+      <li class="li-1">Home</li>
+      <li>News</li>
+      <li>Blog</li>
+      <li>New Release</li>
+      <li>Services</li>
     </ul>
-    <hr>
+    <hr />
     <ul class="list list-2">
-        <li class="items">services</li>
-        <li>about</li>
-        <li class="items">contact</li>
+      <li class="items">services</li>
+      <li>about</li>
+      <li class="items">contact</li>
     </ul>
-    
+
     <button class="alert">Button</button>
 
     <button class="alert_2">stop animation</button>
 
     <a href="index.html" class="drop_down_anchor">
-        DropDown
-        <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>News</li>
-        </ul>
+      DropDown
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>News</li>
+      </ul>
     </a>
 
-
     <form action="">
-        <div class="form-wrapper">
-            <input type="text" class="t-field" placeholder="text" disabled>
-        </div>
-        <div class="form-wrapper">
-            <input type="password" class="p-field" placeholder="password">
-        </div>
-        
-        <div class="form-wrapper">
-            <select name="" id="" class="select">
-                <option value="1">A</option>
-                <option value="2" selected>B</option>
-                <option value="3">C</option>
-            </select>
-        </div>
-        <input type="radio" id="html" name="fav_language" value="HTML">
-        <input type="radio" id="css" checked  name="fav_language" value="css">
-        <input type="checkbox" class="checkbox">
+      <div class="form-wrapper">
+        <input type="text" class="t-field" placeholder="text" disabled />
+      </div>
+      <div class="form-wrapper">
+        <input type="password" class="p-field" placeholder="password" />
+      </div>
+
+      <div class="form-wrapper">
+        <select name="" id="" class="select">
+          <option value="1">A</option>
+          <option value="2" selected>B</option>
+          <option value="3">C</option>
+        </select>
+      </div>
+      <input type="radio" id="html" name="fav_language" value="HTML" />
+      <input type="radio" id="css" checked name="fav_language" value="css" />
+      <input type="checkbox" class="checkbox" />
     </form>
 
     <div class="search-wrapper">
-        <a href="javascript:;" class="search-icon">Serach icon</a>
-        <div class="search-form">
-            <a href="javascript:;" class="cross-icon">cross icon</a>
-            <input type="search">
-        </div>
+      <a href="javascript:;" class="search-icon">Serach icon</a>
+      <div class="search-form">
+        <a href="javascript:;" class="cross-icon">cross icon</a>
+        <input type="search" />
+      </div>
     </div>
 
     <!-- DOM element Traversing -->
     <div class="grandparent">
-        <div class="parent">
-            <div class="child">
-                <span class="subchild"></span>
-            </div>
+      <div class="parent">
+        <div class="child">
+          <span class="subchild"></span>
         </div>
-        <div class="surrogateParent1"></div>
-        <div class="surrogateParent2"></div>
-        <div class="surrogateParent3"></div>
+      </div>
+      <div class="surrogateParent1"></div>
+      <div class="surrogateParent2"></div>
+      <div class="surrogateParent3"></div>
+    </div>
+
+    <!-- understanding event delegation -->
+    <div id="container">
+      <ul id="list">
+        <li>
+            <a href="http://domain1.com">Item #1</a>
+        </li>
+        <li>
+            <a href="/local/path/1">Item #2</a>
+        </li>
+        <li>
+            <a href="/local/path/2">Item #3</a>
+        </li>
+        <li>
+            <a href="http://domain4.com">Item #4</a>
+        </li>
+      </ul>
     </div>
 
 
     <!-- js files -->
     <script src="../jquery.js"></script>
     <script src="custom.js"></script>
-        
-</body>
+  </body>
 </html>
-

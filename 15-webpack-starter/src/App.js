@@ -1,6 +1,10 @@
 
 
+import "./main.css"
+// import logo from "./logo.svg";
+import Add from "./Add.js";
 
+console.log('Muhammad Usman');
+console.log('wow');
 
-console.log('Muhammad Usman yes');
-
+Add(15,15)

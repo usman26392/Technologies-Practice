@@ -64,57 +64,144 @@ $(function() {
 
 // custom effects with .animate()
 
-$(function() {
-    $(".alert").on("click", function() {
-        $(".list-1").animate(
-            {
-                width: "500px",
-                left: "500",
-                opacity: "0.25",
-            },
-            400,
-            function(){
-                $(this).css({
-                    width: "auto",
-                    opacity: "1",
-                    left: "0px",
-                    transition: "all .3s linear"
-                });
-                console.log("animation done");
-            }
-        );
-    });
-
-
-    // example 2
-    // $(".alert").on("click", function() {
-    //     $(".list-1 li").css({
-    //         position: "relative",
-    //     }).animate(
-    //         {
-    //             bottom: "12px",
-    //             opacity: .25
-    //         },
-    //         400,
-    //         function() {
-    //             $(this).css(
-    //                 {
-    //                     opacity: 1,
-    //                     bottom: "0px",
-    //                     transition: "all 0.2s linear"
+    // $(function() {
+    //     $(".alert").on("click", function() {
+    //         $(".list-1").animate(
+    //             {
+    //                 width: "500px",
+    //                 left: "500",
+    //                 opacity: "0.25",
+    //             },
+    //             400,
+    //             function(){
+    //                 $(this).css({
+    //                     width: "auto",
+    //                     opacity: "1",
+    //                     left: "0px",
+    //                     transition: "all .3s linear"
     //                 });
-    //         }
-    //     );
+    //                 console.log("animation done");
+    //             }
+    //         );
+    //     });
+
+
+    //     // example 2
+    //     // $(".alert").on("click", function() {
+    //     //     $(".list-1 li").css({
+    //     //         position: "relative",
+    //     //     }).animate(
+    //     //         {
+    //     //             bottom: "12px",
+    //     //             opacity: .25
+    //     //         },
+    //     //         400,
+    //     //         function() {
+    //     //             $(this).css(
+    //     //                 {
+    //     //                     opacity: 1,
+    //     //                     bottom: "0px",
+    //     //                     transition: "all 0.2s linear"
+    //     //                 });
+    //     //         }
+    //     //     );
+    //     // });
     // });
-});
 
 
 
-// drop down
+    // drop down
+    // $(function() {
+    //     $(".drop_down_anchor").on("mouseenter", function() {
+    //         $(this).find("ul").stop(true,true).delay(200).slideDown(500);
+    //     }).on("mouseleave", function() {
+    //         $(this).find("ul").stop(true,true).delay(200).slideUp(500);
+    //     });
+    // });
+
+
+/**
+ * ------------- queue and dequeue ---------------
+ *  */    
+  
+// with simple callback
+//   $(function() {
+//     $(".hdg-1").animate({
+//         width: "400",
+//         backgroundColor: "red"
+//     },
+//     2000,
+//     "linear", 
+//     function() {
+//         console.log("animation is finished!");
+//         console.log($(this))
+//     } )
+//   });
+
+
+//    queue() method as callback
 $(function() {
-    $(".drop_down_anchor").on("mouseenter", function() {
-        $(this).find("ul").stop(true,true).delay(200).slideDown(500);
-      }).on("mouseleave", function() {
-        $(this).find("ul").stop(true,true).delay(200).slideUp(500);
-      });
+
+    // example-1
+    // $(".hdg-1").animate({
+    //     width: "400",
+    //     backgroundColor: "red"
+    // },2000,"linear")
+    // .queue(function(next) {
+    //     console.log("animation is finished!");
+    //     console.log($(this))
+    //     next();
+    // })
+    // .queue(function(next) {
+    //     console.log("animation is finished! 2");
+    //     $(this).addClass("ab");
+    //     next()
+    // })
+    // .queue(function(next) {
+    //     console.log("animation is finished! 3");
+    //     $(this).slideUp("slow")
+    //     next()
+    // })
+    // .queue(function(next) {
+    //     console.log("animation is finished! 4");
+    //     $(this).slideDown("slow")
+    //     next()
+    // })
+
+
+
+
+    // example-2 without animate()
+    // $(".hdg-1")
+    //     .queue("steps", function(next) {
+    //         console.log("step-1")
+    //         $(this).slideUp("slow")
+    //         next()
+    //     })
+    //     .queue("steps", function(next) {
+    //         console.log("step-2")
+    //         $(this).slideDown("slow")
+    //         next()
+    //     })
+    //     .dequeue("steps");
+
+
+    // example-3: clearQueue()
+    // .clearQueue() method say opar tamaam .queue() methods
+    // stop hojaen gay.
+    // $(".hdg-1")
+    //     .queue("steps", function(next) {
+    //         console.log("step-1")
+    //         $(this).slideDown("slow")
+    //         next()
+    //     })
+    //     .clearQueue("steps")
+    //     .queue("steps", function(next) {
+    //         console.log("step-2")
+    //         $(this).slideUp("slow")
+    //         next()
+    //     })
+    //     .dequeue("steps");
+    
+
 });

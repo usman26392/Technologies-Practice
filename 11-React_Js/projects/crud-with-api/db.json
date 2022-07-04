@@ -1,0 +1,24 @@
+{
+  "students": [
+    {
+      "studentName": "usman",
+      "email": "usman@mail.com",
+      "id": 1
+    },
+    {
+      "studentName": "Farhan Ali",
+      "email": "Farhan@mail.com",
+      "id": 2
+    },
+    {
+      "studentName": "rehan",
+      "email": "rehan@mail.com",
+      "id": 3
+    },
+    {
+      "studentName": "Fahad Ali",
+      "email": "fahad@mail.com",
+      "id": 4
+    }
+  ]
+}

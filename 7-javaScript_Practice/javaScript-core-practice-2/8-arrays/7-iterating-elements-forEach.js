@@ -34,3 +34,19 @@
     
 
 // console.log(` This is sum of random Numbers of Array:  ${sum}`);
+
+// example
+// let arr = [
+//     {
+//       userName: "Usman"
+//     },
+//     {
+//       userName: "Rehan"
+//     }
+//   ];
+
+//   let check = arr.forEach(function(el) {
+//     console.log(el.userName) 
+//   });
+
+//   console.log(arr)

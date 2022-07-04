@@ -648,15 +648,93 @@ $(function() {
     // });
 
 
-     $( ".hdg-1" ).on( 'click', function( event ) {
-        var elem = $( this );
-        if ( elem.attr( "class" ).match( "hdg-1" ) ) {
-            elem.addClass( "hdg-22" );
-        }
+    //  $( ".hdg-1" ).on( 'click', function( event ) {
+    //     var elem = $( this );
+    //     if ( elem.attr( "class" ).match( "hdg-1" ) ) {
+    //         elem.addClass( "hdg-22" );
+    //     }
+    // });
+
+
+
+    /**
+     * -------------------- event delegation -------------------
+     */
+    // Attach a directly 'bound event handler'
+    // is may 'event listner' sirf un elements ko listen kary ga
+    // jo 'on' method  k call k dohraan mojood hun gay.
+    
+    // example-1
+    // $( "#list a" ).on( "click", function( event ) {
+    //     event.preventDefault();
+    //     console.log( $( this ).text() );
+    // });
+
+
+    // Now Attach a 'delegated event handler':
+    // is may ye hoga k event listner , listen kary ga us element ko b
+    // jo future may append hoga #list may.
+    
+    // example-2
+    // $( "#list" ).on( "click", "a", function( event ) {
+    //     event.preventDefault();
+    //     console.log( $( this ).text() );
+    // });
+
+    // // Add a new element on to our existing list
+    // $( "#list" ).append( "<li><a href='javascript:;'>Item #5</a></li>" );
+
+    /**
+     * --------------------- Effects -------------------------
+     */
+
+    $(".btn").on("click", function() {
+        // hide and show methods
+        // $(".hdg-1").hide("slow");
+        // $(".hdg-1").hide("slow", function() {
+        //     console.log("animation completed")
+        // });
+        // $(".hdg-1").toggle("slow");
+        // $(".hdg-1").toggle(8000);
+
+        // slide up and down methods
+        // $(".hdg-1").slideUp("slow")
+        // $(".hdg-1").slideToggle("slow")
+
+        // fade out and in methods
+        // $(".hdg-1").fadeOut("slow")
+        // $(".hdg-1").fadeToggle("slow")
+        
+
+        // delay
+        // $(".hdg-1").hide(400).delay(2000).show(700);
+
+        // custom animation with .animate()
+        $(".hdg-1").animate({
+            width: 400,
+            opacity: 0.5
+        }, "slow", "linear", 
+        function() {
+            console.log("animation done!")
+        })
+
     });
+     
+    // stop animation
+    // $(".btn2").on("click", function() {
+    //     $(".hdg-1").stop();
+    // });
 
 
-
+    // $(".btn2").on("click", function() {
+    //     $(".hdg-1").animate({
+    //         width: '100%',
+    //         opacity: 1
+    //     }, "slow", "linear", 
+    //     function() {
+    //         console.log("animation done!")
+    //     })
+    // })
 
 
 

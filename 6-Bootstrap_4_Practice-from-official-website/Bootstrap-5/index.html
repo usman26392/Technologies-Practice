@@ -17,6 +17,8 @@
     <title>Hello, world!</title>
   </head>
   <body class="m-5">
+
+    <h1 class="text-center">Bootstrap 5</h1>
     
     <section>
       <h2>containers</h2>
@@ -311,6 +313,141 @@
       <button type="button" class="btn btn-success">Success</button>
       <button type="button" class="btn btn-outline-primary">Success</button>
 
+      <div class="d-grid gap-2">
+        <button class="btn btn-primary" type="button">Button</button>
+        <button class="btn btn-primary" type="button">Button</button>
+      </div>
+
+      <div class="d-grid gap-2 d-md-block">
+        <button class="btn btn-primary" type="button">Button</button>
+        <button class="btn btn-primary" type="button">Button</button>
+      </div>
+
+      <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-primary" type="button">Button</button>
+        <button class="btn btn-primary" type="button">Button</button>
+      </div>
+
+      <div class="btn-group btn-group-vertical" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-primary">Left</button>
+        <div class="btn-group" role="group">
+          <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+          </ul>
+        </div>
+      
+        <button type="button" class="btn btn-primary">Right</button>
+      </div>
+
+      <h1>Cards</h1>
+      <div class="card" style="width: 18rem;">
+        <img src="blog01.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+
+      <div class="card bg-dark text-white mt-5" style="width: 18rem;">
+        <img src="blog01.png" class="card-img" alt="...">
+        <div class="card-img-overlay">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text">Last updated 3 mins ago</p>
+        </div>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-2 g-4 mt-5">
+        <div class="col">
+          <div class="card">
+            <img src="blog01.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="blog01.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="blog01.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="blog01.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <hr>
+
+      <!-- helpers -->
+      <h2>helpers</h2>
+
+      <div class="clearfix">
+        <h2 class="float-end">This a heading</h2>
+      </div>
+
+      <div class="bg-info clearfix">
+        <button type="button" class="btn btn-secondary float-start">Example Button floated left</button>
+        <button type="button" class="btn btn-secondary float-end">Example Button floated right</button>
+      </div>
+
+      <h2>Color and background</h2>
+      <div class="text-bg-primary p-3">Primary with contrasting color</div>
+
+      <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+      <div class="card text-bg-info mb-3" style="max-width: 18rem;">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+
+      <h2>colored links</h2>
+      <a href="javascript:" class="link-primary">Primary link</a>
+
+      <h2>Ratio</h2>
+      <div class="ratio ratio-16x9">
+        <!-- <iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" title="YouTube video" allowfullscreen></iframe> -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/2iOlM9XdOYo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+      <h2>position element</h2>
+      <!-- <div class="text-bg-primary p-3 fixed-top">A position element</div> -->
+      <!-- <div class="text-bg-primary p-3 fixed-bottom">A position element</div> -->
+      <!-- <div class="text-bg-primary p-3 sticky-top">A position element</div> -->
+      <!-- <div class="text-bg-primary p-3 sticky-sm-top">A position element</div> -->
+      <!-- <div class="text-bg-primary p-3 sticky-bottom">A position element</div> -->
+      <div class="text-bg-primary p-3 sticky-sm-bottom">A position element</div>
+      
       
 
 

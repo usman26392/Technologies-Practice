@@ -35,6 +35,21 @@
 // let myColors = color_pimary.join(" / ");
 // console.log(`my array with separator:  ${myColors}`);
 
+  //  example
+  // let arr1 = ["jquery", ""],
+  //     arr2 = [4,5,6];
+
+  // // let arr3 = arr1.join("/");
+  // let arr3 = arr1.join(".min.js");
+  // console.log(arr3)
+
+  // console.log(arr2.join(" < "))
+
+  // // console.log(arr1)
+  // // console.log(arr2)
+
+
+
 
 /**
  *  ----------------------------------- reversing array --------------------
@@ -43,10 +58,11 @@
  *  reverse order karsakhtay hayn.
  *  
  */
-// let color_pimary = ["red", "green","blue"];
-// let myColors = color_pimary.reverse(color_pimary);
-// console.log(myColors);
-// console.log(`Original array changed:  ${myColors}`);
+
+  // let color_primary = ["red", "green","blue"];
+  // let myColors = color_primary.reverse(color_primary);
+  // console.log(myColors);
+  // console.log(color_primary);
 
 
 /*
@@ -54,9 +70,9 @@
 *  slice() 
 */
 
-// let color_pimary = ["red", "green","blue","black","white"];
-// let myColors = color_pimary.slice(1,3);
-// console.log(myColors);
+  // let color_primary = ["red", "green","blue","black","white"];
+  // let myColors = color_primary.slice(1,3);
+  // console.log(myColors);
 
 /**
  * ----------------------- array check --------------------
@@ -77,8 +93,8 @@
 // let myColor = color_primary.splice(2,1);
 // let myColor = color_primary.splice(1,0, "abc", "def" );
 // let myColor = color_primary.splice(1,2, "abc", "def" );
-// console.log( `Returned deleted elements:  ${myColor}`);
-// console.log( `This is modified original array :  ${color_primary}`);
+// console.log(color_primary);
+// console.log( myColor);
 
 
 
@@ -91,9 +107,21 @@
  * findIndex()
  */
 
-// let color_primary = ["red", "green","blue","black","white", "blue","blue"];
-// let myDesireClr = color_primary.indexOf("blue",0);
-// console.log(myDesireClr);
+  // let color_primary = ["red", "green","blue","black","white", "blue","blue"];
+  // // let myDesireClr = color_primary.indexOf("blue",0);
+  // // or
+  // let myDesireClr = color_primary.indexOf("blues",0);
+  // console.log(myDesireClr);
+
+  /**
+   * find()
+   */
+  // let arr = [1,5,2,6,9];
+  // let result = arr.find(function(nm) {
+  //   return nm % 2 == 0;
+  // })
+
+  // console.log(result)
 
 
 
@@ -102,10 +130,10 @@
  * ------------------------------ elements fill in the array ---------------
  * fill()
  */
-// let color_primary = ["red", "green","blue","black","white", "blue","blue"];
-// let myClr = color_primary.fill("orange",5,7);
-// console.log(`Original array is now:  ${myClr}`);
-// console.log(myClr);
+  // let color_primary = ["red", "green","blue","black","white", "blue","blue"];
+  // let myClr = color_primary.fill("orange", 5, 7);
+  // console.log(myClr);
+  // console.log(color_primary);
 
 
 
@@ -216,6 +244,20 @@
 // console.log(conditionCheck);
 
 
+// examples
+//  let arr = [2,6,8,6,0];
+
+//   // let result= arr.every(function(elm) {
+//   //   return  elm > 1;
+//   // });
+
+//   let result= arr.some(function(elm) {
+//     return  elm > 1;
+//   });
+
+//   console.log(result)
+
+
 
 
 /**
@@ -241,6 +283,16 @@
 //  });
 
 //  console.log(myNumbers);
+   
+  // example
+  // let arr = [2,6,8,6,0];
+
+  // let result= arr.filter(function(elm) {
+  //   return  elm > 5;
+  // });
+
+  // console.log(result)
+  // console.log(arr)
 
 
  /**
@@ -251,8 +303,11 @@
 //  let myEvenNumbers = randomNo.map((arrNos)=> {
 //    return arrNos * 2;
 //  });
+
+  //  or shorter syntax
+  // let myEvenNumbers = randomNo.map(arrNos=> arrNos * 2);
 //  console.log(myEvenNumbers);
-//  console.log(`Original Array:  ${randomNo}`);
+//  console.log(randomNo);
 
 
 // example-2
@@ -277,6 +332,12 @@
 // itemDesc.map((el)=>{
 //   console.log(el.price);
 // });
+
+  // example
+  // let arr = [2,6,8,6,0];
+  // let result= arr.map((elm)=>  elm * 2);
+  // console.log(result)
+  // console.log(arr)
  
 
 /**
@@ -305,9 +366,40 @@
 
 
 // example OR
-let arr = [0, 100, 95, 45, 65, 80, 75, 90];
-let maxNumber = function(val1, val2) {
-  return (val1 > val2) ? val1 : val2;
-};
-let max = arr.reduceRight(maxNumber); 
-console.log(`The highest number is ${max}`);
+// let arr = [0, 100, 95, 45, 65, 80, 75, 90];
+// let maxNumber = function(val1, val2) {
+//   return (val1 > val2) ? val1 : val2;
+// };
+// let max = arr.reduceRight(maxNumber); 
+// console.log(`The highest number is ${max}`);
+
+
+
+
+
+/**
+ * ------------ temporary practice
+*/
+
+let arr = [3,4,6,7];
+
+function isEven(nm) {
+  return nm % 2 == 2 
+}
+
+function evenSquare(nm) {
+  return nm * nm;
+}
+
+let result = arr.filter(isEven).map(evenSquare)
+console.log(result)
+
+  
+
+  
+
+
+    
+
+  
+

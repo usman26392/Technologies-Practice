@@ -1,0 +1,17 @@
+
+
+.count_1 {
+    font-size: 30px;
+    background-color: red;
+}
+
+.box {
+    margin-top: 40px;
+    border: 1px solid red;
+    &__title {
+        font-size: 30px;
+    }
+    &__para {
+        color: rgb(125, 108, 108);
+    }
+}
