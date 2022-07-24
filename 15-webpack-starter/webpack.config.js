@@ -7,6 +7,7 @@ module.exports = {
     entry: {
         main: path.resolve(__dirname, 'src/App.js')
     },
+
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].[contenthash].js',
@@ -14,7 +15,9 @@ module.exports = {
         assetModuleFilename: '[name] [ext]',
         clean: true
     },
+
     devtool: 'inline-source-map',
+    // development server
     devServer:{
         static: path.resolve(__dirname, 'dist'),
         port: 5001,
@@ -50,7 +53,6 @@ module.exports = {
             }
         ]
     },
-
     //plugins
     plugins: [ 
         new HtmlWebpackPlugin({

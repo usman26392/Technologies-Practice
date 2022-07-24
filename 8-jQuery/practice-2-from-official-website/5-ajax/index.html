@@ -5,13 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ajax</title>
+    <style>
+        .user-list li {
+            padding: 1em;
+            background: red;
+            margin-bottom: 1em;
+            color: #fff;
+        }
+    </style>
 </head>
-<body>
+<body class="">
     <!-- first: run live server with the help of vs extension "Go Live"  -->
 
     <ul class="user-list">
 
     </ul>
+
+    <h1>ajax form</h1>
+    <form id="postForm" action="https://jsonplaceholder.typicode.com/posts">
+        <input type="text" id="firtName" placeholder="Enter your name">
+        <br>
+        <textarea placeholder="enter your message" id="textareabody"></textarea>
+        <br>
+        <input type="submit" value="send">
+    </form>
     
 
     <!-- js -->
