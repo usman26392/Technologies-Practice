@@ -25,6 +25,7 @@ module.exports = {
         hot: true,
         watchFiles: [path.resolve(__dirname, 'src')]
     },
+
     // loaders
     module: {
         rules: [
@@ -53,6 +54,7 @@ module.exports = {
             }
         ]
     },
+    
     //plugins
     plugins: [ 
         new HtmlWebpackPlugin({

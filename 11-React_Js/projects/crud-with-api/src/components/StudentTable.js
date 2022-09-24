@@ -8,7 +8,7 @@ const StudentTable = () => {
 
   useEffect(()=> {
     getAllData();
-  },[]);
+  },[setStudent]);
   
   // yey function axios k through request bayjay ga.
   async function getAllData() {
@@ -23,7 +23,8 @@ const StudentTable = () => {
       console.log(error)
     }
   }
-
+  
+  // delete item
   async function Del(id) {
     await axios.delete(`http://localhost:3333/students/${id}`)
     const oldItem = [...student];

@@ -11,15 +11,17 @@ const Addform = () => {
     });
 
     function textFieldChange(env) {
-        setStudent({
-            ...student,
-            [env.target.name]: env.target.value
+        setStudent(
+        {
+            ...student,[env.target.name]: env.target.value
         })
-        console.log(env.target.value)
-        console.log(student)   
+        console.log(env)
+        console.log(env.target)
+
+        // console.log(student)   
     }
     
-    // for setting data
+    // for setting data: with help of POST method
     async function formSubmit(env) {
         env.preventDefault()
         try {
@@ -41,6 +43,7 @@ const Addform = () => {
                          className="form-control" 
                          placeholder="Student's Name"
                          name="studentName"
+                         value={student.studentName}
                          onChange={(e)=> {
                             textFieldChange(e)
                          }} />
@@ -51,6 +54,7 @@ const Addform = () => {
                          placeholder="Student's email" 
                          required
                          name="email"
+                         value={student.email}
                          onChange={(e)=> {
                             textFieldChange(e)
                          }} />

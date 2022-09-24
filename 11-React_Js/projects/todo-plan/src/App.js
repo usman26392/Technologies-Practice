@@ -9,15 +9,13 @@ import Plan from "./components/Plan";
 
 
 function App() {
+
   const[ items, setItems] = useState([]);
   const[ text, setText] = useState("");
-
+  
+  // delete item
   function Del(id) {
-    // console.log("deleted items")
-    // console.log(i)
-    const oldItem = [...items];
-    // console.log(oldItem)
-    const restItems = oldItem.filter((elm, i)=> {
+    const restItems = items.filter((elm, i)=> {
       return (
         i !== id 
       )
@@ -35,12 +33,14 @@ function App() {
             <div className="row justify-content-center">
               <div className="col-md-9">
                 <input type="text"
-                  className="form-control"
-                  placeholder="write plan here" 
-                  value={text}
-                  onChange = {(e)=> {
-                    setText(e.target.value);
-                  }}  
+                        className="form-control"
+                        placeholder="write plan here" 
+                        value={text}
+                        onChange = {(e)=> {
+                          setText(e.target.value);
+                          // console.log(e.target.value)
+                          // console.log(text)
+                        }}  
                     />
               </div>
               <div className="col-md-2">
@@ -48,22 +48,23 @@ function App() {
                   onClick={(e)=> {
                     if(text !== "") {
                       const arr = [...items, text];
+                      // console.log(arr)
                       setItems(arr);
                       setText("");
                       // console.log(arr)
                       // console.log(items)
                     }
                   }}
-
                 >Add</button>
               </div>
+
               <div className="col-12">
                 <div className="container-fluid">
                   <ul className="list-unstyled p-3">
                     {
-                      items.map((item, idx)=> {
+                       items.map((item, idx)=> {
                         return (
-                          <Plan listItem = {item} key={idx} id={idx} del={Del} />
+                          <Plan listItem={item} key={idx} id={idx} del={Del} />
                         )
                       })
                     }
@@ -74,8 +75,12 @@ function App() {
           </div>
         </div>
       </div>
+
     </div>
   );
 }
 
 export default App;
+
+
+

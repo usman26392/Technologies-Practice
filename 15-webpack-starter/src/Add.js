@@ -1,7 +1,7 @@
 
 
-function Add(a, b) {
+function Sum(a, b) {
     console.log(a + b)
 }
 
-export default Add;
+export default Sum;

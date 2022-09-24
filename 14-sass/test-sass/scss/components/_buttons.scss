@@ -1,0 +1,29 @@
+
+
+
+$icons: (
+    "eye": "\f112",
+    "start": "\f12e", 
+    "stop": "\f12f",
+    "end": "\f34e",
+    "wow": "avc"
+);
+
+@each $key, $value in $icons {
+  .icon-#{$key}::before {
+    display: inline-block;
+    font-family: "Icon Font";
+    content: $value;
+  }
+}
+
+$th-font:(
+  "fss1": 12px,
+  "fss2": 120px,
+);
+
+@each $key, $value in $th-font {
+  .#{$key} {
+    font-size: $value;
+  }
+}

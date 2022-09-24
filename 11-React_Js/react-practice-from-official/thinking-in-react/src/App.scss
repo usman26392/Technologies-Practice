@@ -1,0 +1,38 @@
+
+.filterable-product-table {
+  background: #0000006b;
+  width: 60rem;
+  margin: 1rem;
+
+  &__search-bar {
+    margin-bottom: 1rem;
+    > input {
+      width: 100%;
+      font-size: 2rem;
+      padding: 0.5em;
+    }
+    label {
+      font-size: 2em;
+    }
+
+  }
+
+  &__category-table {
+    table {
+      width: 100%;
+    }
+    &__row {
+      text-align: center;
+    }
+  }
+
+
+}
+
+table {
+  tr {
+    td {
+      font-size: 2em;
+    }
+  }
+}

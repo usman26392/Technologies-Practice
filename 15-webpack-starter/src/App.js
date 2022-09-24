@@ -2,9 +2,9 @@
 
 import "./main.css"
 // import logo from "./logo.svg";
-import Add from "./Add.js";
+import Sum from "./Add.js";
 
 console.log('Muhammad Usman');
 console.log('wow');
 
-Add(15,15)
+Sum(25,25)
