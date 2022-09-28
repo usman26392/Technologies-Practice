@@ -1,14 +1,44 @@
 
 
-<!--
-    modification
-    add sourcemap with css
- -->
+# ----- devdependency npm packages
+npm install --save-dev gulp-mode
+npm install --save-dev gulp-rtlcss
 
- <!--
- 1) js with webpack
- 2) bootstrap add
- -->
+
+# mode
+ mode.production()
+ mode.development()
+
+
+ # --------------------- task --------------------------
+
+ # for styling
+  sass --> css(unminfy) --> sourcemap --> for development
+  css --> minify
+  rtlcss
+
+
+ # for js
+  js --> babel --> sourcemap --> for development
+  js --> babel --> minify --> for production
+
+
+ # for images
+  jpg, png --> tiny and webp
+
+
+
+ # commands
+
+ # --- for development ----
+ gulp
+
+ # --- for production -----
+ gulp --production
+
+
+
+
 
  
 

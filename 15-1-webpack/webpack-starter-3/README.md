@@ -33,7 +33,19 @@ npm start
 
 
 
+## ---------------------- task --------------------------
 
+# src(folder) --> will unminify and not optimize -- for development
+# dist(folder) -- will minify and optimize       -- for production
+
+# on development mode
+
+## --- for style ------
+# 1) sass --> css --> minify --> source map
+
+# 2) js --> minify --> sourcemap
+
+# 3) jpg, png, --> webp
 
 
 

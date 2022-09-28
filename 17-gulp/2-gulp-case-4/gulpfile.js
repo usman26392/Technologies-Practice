@@ -1,6 +1,4 @@
 
-
-
 const { src, dest, watch, series} = require('gulp');
 //  gulp-sass no longer includes a default compiler. Install sass as a dev dependency `npm i -D sass` 
 const sass = require('gulp-sass')(require('sass')); 
@@ -14,19 +12,37 @@ const sourcemaps = require('gulp-sourcemaps');
 // const babel = require('gulp-babel');
 const webpack = require('webpack-stream');
 const path = require('path');
+const mode = require('gulp-mode')();
+const rtlcss = require('gulp-rtlcss');
 
 
 
-//compile, prefix, and min scss
+
+
+//compile, prefix, and min css
 function compilescss() {
-  return src('src/scss/*.scss') // change to your source directory
-    .pipe(sourcemaps.init())
+  return src('src/scss/*.scss') 
+    .pipe( mode.development( sourcemaps.init() ) )
       .pipe(sass())
-      .pipe(prefix('last 2 versions'))
+      .pipe( mode.production(prefix('last 2 versions')) )
       .pipe(minify())
-    .pipe(sourcemaps.write('./'))
-    .pipe(dest('build/css')) // change to your final/public directory
+    .pipe( mode.development( sourcemaps.write('./') ) )
+    .pipe(dest('build/css')) 
 };
+
+
+// rtl css
+// function compilesRtl() {
+//   return src('build/css/main.css') 
+//     .pipe( mode.development( sourcemaps.init() ) )
+//       // .pipe( mode.production(prefix('last 2 versions')) ) 
+//       .pipe( rtlcss() )
+//       // .pipe(minify())
+//     .pipe( mode.development( sourcemaps.write('./') ) )
+//     .pipe(dest('build/css')) 
+// };
+
+
 
 //optimize and move images into distribution folder
 // images hum src k images, folder may rakhayn gay.  

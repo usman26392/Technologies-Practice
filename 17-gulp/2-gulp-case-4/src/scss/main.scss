@@ -2,13 +2,13 @@
 // Option A: Include all of Bootstrap
 
 // Include any bootstrap default variable overrides here (though functions won't be available)
-@import "abstracts/varaibles";
+@import "./abstracts/varaibles";
 
 // bootstrap
-@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+// @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
 // Then add additional custom code here
-@import "abstracts/mixins";
-@import "base/reset";
-@import "base/typography";
-@import "components/buttons";
+@import "./abstracts/mixins";
+@import "./base/reset";
+@import "./base/typography";
+@import "./components/buttons";
