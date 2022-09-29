@@ -16,7 +16,7 @@
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"counter\": () => (/* binding */ counter),\n/* harmony export */   \"num1\": () => (/* binding */ num1)\n/* harmony export */ });\n// function 2\nfunction counter() {\n  console.log(\"counter count js code\");\n}\n\nlet num1 = 5600;\n\n\n//# sourceURL=webpack://1-gulp-case-1/./src/js/counter.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"counter\": () => (/* binding */ counter),\n/* harmony export */   \"num1\": () => (/* binding */ num1)\n/* harmony export */ });\n// function 2\nfunction counter() {\n  console.log(\"counter count js code\");\n}\n\nlet num1 = 5600;\n\n\n//# sourceURL=webpack://1-gulp-case-4/./src/js/counter.js?");
 
 /***/ }),
 
@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _counter__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./counter */ \"./src/js/counter.js\");\n/* harmony import */ var _multiple__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./multiple */ \"./src/js/multiple.js\");\n// this is entry point.\n\n // add numbers\n\nfunction add(a, b) {\n  return a + b;\n}\n\nconsole.log(add(4, 5));\n(0,_counter__WEBPACK_IMPORTED_MODULE_0__.counter)();\nconsole.log(_counter__WEBPACK_IMPORTED_MODULE_0__.num1);\nconsole.log((0,_multiple__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(4, 2));\n\n//# sourceURL=webpack://1-gulp-case-1/./src/js/custom.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _counter__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./counter */ \"./src/js/counter.js\");\n/* harmony import */ var _multiple__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./multiple */ \"./src/js/multiple.js\");\n// this is entry point.\n\n // add numbers\n\nfunction add(a, b) {\n  return a + b;\n}\n\nconsole.log(add(4, 5));\n(0,_counter__WEBPACK_IMPORTED_MODULE_0__.counter)();\nconsole.log(_counter__WEBPACK_IMPORTED_MODULE_0__.num1);\nconsole.log((0,_multiple__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(4, 2));\n\n//# sourceURL=webpack://1-gulp-case-4/./src/js/custom.js?");
 
 /***/ }),
 
@@ -36,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _cou
   \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// function 1\nfunction multiple(a, b) {\n  return a * b;\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (multiple);\n\n//# sourceURL=webpack://1-gulp-case-1/./src/js/multiple.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// function 1\nfunction multiple(a, b) {\n  return a * b;\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (multiple);\n\n//# sourceURL=webpack://1-gulp-case-4/./src/js/multiple.js?");
 
 /***/ })
 

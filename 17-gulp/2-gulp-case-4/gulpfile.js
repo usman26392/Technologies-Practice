@@ -14,34 +14,28 @@ const webpack = require('webpack-stream');
 const path = require('path');
 const mode = require('gulp-mode')();
 const rtlcss = require('gulp-rtlcss');
+const rename = require('gulp-rename');
 
-
-
-
+const postcss = require('gulp-postcss');
+const cssnano = require('cssnano');
+// const autoprefixer = require('autoprefixer');
+let sorting = require('postcss-sorting');
 
 //compile, prefix, and min css
-function compilescss() {
+function compilescss(callback) {
   return src('src/scss/*.scss') 
     .pipe( mode.development( sourcemaps.init() ) )
       .pipe(sass())
       .pipe( mode.production(prefix('last 2 versions')) )
-      .pipe(minify())
+      // .pipe(minify())
+      .pipe(dest('build/css'))  // Output LTR stylesheets.
+      .pipe(rtlcss()) // Convert to RTL.
+      .pipe(postcss([ cssnano() ]))
+      .pipe(rename({ suffix: '-rtl' })) // Append "-rtl" to the filename.
     .pipe( mode.development( sourcemaps.write('./') ) )
-    .pipe(dest('build/css')) 
+      .pipe(dest('build/css')) // Output RTL stylesheets
+      callback();
 };
-
-
-// rtl css
-// function compilesRtl() {
-//   return src('build/css/main.css') 
-//     .pipe( mode.development( sourcemaps.init() ) )
-//       // .pipe( mode.production(prefix('last 2 versions')) ) 
-//       .pipe( rtlcss() )
-//       // .pipe(minify())
-//     .pipe( mode.development( sourcemaps.write('./') ) )
-//     .pipe(dest('build/css')) 
-// };
-
 
 
 //optimize and move images into distribution folder
