@@ -21,21 +21,37 @@ const cssnano = require('cssnano');
 // const autoprefixer = require('autoprefixer');
 let sorting = require('postcss-sorting');
 
-//compile, prefix, and min css
+
+
+//compile scss, prefix, and minify css
 function compilescss(callback) {
+  return src('src/scss/*.scss') 
+    .pipe( mode.development(sourcemaps.init()))
+      .pipe(sass())
+      .pipe( mode.production(prefix('last 4 versions')) )
+      .pipe(minify())
+    .pipe( mode.development(sourcemaps.write('./')))
+    .pipe(dest('build/css'))  // Output LTR stylesheets.
+      
+    callback();
+};
+
+
+// RTL css
+function compilesRTL(callback) {
   return src('src/scss/*.scss') 
     .pipe( mode.development( sourcemaps.init() ) )
       .pipe(sass())
-      .pipe( mode.production(prefix('last 2 versions')) )
-      // .pipe(minify())
-      .pipe(dest('build/css'))  // Output LTR stylesheets.
+      .pipe( mode.production(prefix('last 4 versions')) )
       .pipe(rtlcss()) // Convert to RTL.
       .pipe(postcss([ cssnano() ]))
       .pipe(rename({ suffix: '-rtl' })) // Append "-rtl" to the filename.
     .pipe( mode.development( sourcemaps.write('./') ) )
-      .pipe(dest('build/css')) // Output RTL stylesheets
-      callback();
+    .pipe(dest('build/css')) // Output RTL stylesheets
+
+    callback();
 };
+
 
 
 //optimize and move images into distribution folder
@@ -96,9 +112,12 @@ function jsmin(){
     .pipe(dest('build/js')); 
 }
 
-//watchtask
+
+
+// watchtask
 function watchTask(){
   watch('src/scss/**/*.scss', compilescss); 
+  watch('src/scss/**/*.scss', compilesRTL); 
   watch('src/js/*.js', jsmin); 
   watch('src/images/*', optimizeimg); 
   watch('build/images/*.{jpg,png}', webpImage); 
@@ -108,6 +127,7 @@ function watchTask(){
 // Default Gulp task 
 exports.default = series(
   compilescss,
+  compilesRTL,
   jsmin,
   optimizeimg,
   webpImage,

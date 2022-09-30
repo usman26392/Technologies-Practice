@@ -37,7 +37,6 @@ npm install --save-dev postcss-sorting
 
 
  # commands
-
  # --- for development ----
  gulp
 
@@ -49,11 +48,23 @@ npm install --save-dev postcss-sorting
 
  # RTL description example:
  body {
-    font-size: 3rem;
-    font-size: 16px #{"/*rtl:11px*/"}; // this not last style so it's work without simicolon
-    position: relative;
-    left: 20px #{"/*rtl:11px*/;"}; // this last style so you should add the simicolon
+    font-family: "Droid Sans", sans-serif #{"/*rtl:prepend:'Droid Arabic Kufi',*/"} ;
+    font-size: 46px #{"/*rtl:8px*/"};
+    direction: ltr;
 }
+
+
+
+# unit testing.
+ 
+ # --- for css 'ltr' --------
+ # when development
+    sass --> sourcemap --> minify and checking value on run time --- done
+ # when production
+    sass --> remove sourcemap --> add prefixes --> minify --> can be value change -- done
+
+
+
 
 
 

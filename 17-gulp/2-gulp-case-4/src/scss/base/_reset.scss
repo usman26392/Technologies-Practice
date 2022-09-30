@@ -1,5 +1,14 @@
 
 
+html {
+    z-index: 30;
+    font-family: "Droid Sans", sans-serif #{"/*rtl:prepend:'Droid Arabic Kufi',*/"} ;
+    direction: ltr;
+    font-size: 46px #{"/*rtl:8px*/"};
+    user-select: none;
+    transition: width 12s;
+}
+
 *,::before,::after {
     box-sizing: border-box;
     margin: 0;
