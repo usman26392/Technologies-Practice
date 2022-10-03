@@ -21,6 +21,7 @@ const cssnano = require('cssnano');
 // const autoprefixer = require('autoprefixer');
 let sorting = require('postcss-sorting');
 
+var cleanFiles = require('gulp-clean');
 
 
 //compile scss, prefix, and minify css
@@ -54,24 +55,25 @@ function compilesRTL(callback) {
 
 
 
-//optimize and move images into distribution folder
-// images hum src k images, folder may rakhayn gay.  
+// optimize and move images into distribution / build folder
+// images, hum src k folder(images) ,  may rakhayn gay.  
 function optimizeimg() {
   return src('src/images/*.{jpg,png}') 
-    .pipe(imagemin([
+    .pipe( mode.production( imagemin([
       imagemin.mozjpeg({ quality: 80, progressive: true }),
       imagemin.optipng({ optimizationLevel: 2 }),
-    ]))
-    .pipe(dest('build/images')) 
+    ])) )  
+    .pipe(cleanFiles())
+    .pipe(dest('build/images')); 
 };
 
-//optimize and convert images into webp
-// jo images optimize ho kar dist k folder images may a e,
+// convert images into webp
+// jo images optimize ho kar dist / build k folder images may a e,
 // yey un ko webp may convert karay ga.
 function webpImage() {
   return src('build/images/*.{jpg,png}') 
     .pipe(imagewebp())
-    .pipe(dest('build/images/webp-images')) 
+    .pipe(dest('build/images/webp-images'));
 };
 
 
