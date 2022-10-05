@@ -5,7 +5,6 @@ import { useState, useEffect } from "react";
 
 const StudentTable = () => {
   const [student, setStudent] = useState([]);
-
   useEffect(()=> {
     getAllData();
   },[setStudent]);

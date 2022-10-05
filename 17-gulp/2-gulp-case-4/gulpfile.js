@@ -2,37 +2,34 @@
 const { src, dest, watch, series} = require('gulp');
 //  gulp-sass no longer includes a default compiler. Install sass as a dev dependency `npm i -D sass` 
 const sass = require('gulp-sass')(require('sass')); 
-const prefix = require('gulp-autoprefixer');
-const minify = require('gulp-clean-css');
-// const terser = require('gulp-terser');
-const imagemin = require('gulp-imagemin');
-const imagewebp = require('gulp-webp');
-const sourcemaps = require('gulp-sourcemaps');
-// const concat = require('gulp-concat');
-// const babel = require('gulp-babel');
-const webpack = require('webpack-stream');
-const path = require('path');
-const mode = require('gulp-mode')();
-const rtlcss = require('gulp-rtlcss');
-const rename = require('gulp-rename');
 
-const postcss = require('gulp-postcss');
-const cssnano = require('cssnano');
-// const autoprefixer = require('autoprefixer');
-let sorting = require('postcss-sorting');
-
-var cleanFiles = require('gulp-clean');
+const prefix = require('gulp-autoprefixer'),
+      minify = require('gulp-clean-css'),
+      imagemin = require('gulp-imagemin'),
+      imagewebp = require('gulp-webp'),
+      sourcemaps = require('gulp-sourcemaps'),
+      webpack = require('webpack-stream'),
+      path = require('path'),
+      mode = require('gulp-mode')(),
+      rtlcss = require('gulp-rtlcss'),
+      rename = require('gulp-rename'),
+      postcss = require('gulp-postcss'),
+      cssnano = require('cssnano');
 
 
-//compile scss, prefix, and minify css
+
+// compile scss, prefix, and minify css
 function compilescss(callback) {
   return src('src/scss/*.scss') 
     .pipe( mode.development(sourcemaps.init()))
       .pipe(sass())
       .pipe( mode.production(prefix('last 4 versions')) )
       .pipe(minify())
+      .pipe( rename({ 
+        prefix: "custom-",
+       }))
     .pipe( mode.development(sourcemaps.write('./')))
-    .pipe(dest('build/css'))  // Output LTR stylesheets.
+    .pipe(dest('build/assets/css'));  // Output LTR stylesheets.
       
     callback();
 };
@@ -46,72 +43,78 @@ function compilesRTL(callback) {
       .pipe( mode.production(prefix('last 4 versions')) )
       .pipe(rtlcss()) // Convert to RTL.
       .pipe(postcss([ cssnano() ]))
-      .pipe(rename({ suffix: '-rtl' })) // Append "-rtl" to the filename.
+      .pipe( rename({ 
+        prefix: "custom-",
+        suffix: '-rtl',
+       })) // Append "-rtl" to the filename.
     .pipe( mode.development( sourcemaps.write('./') ) )
-    .pipe(dest('build/css')) // Output RTL stylesheets
-
-    callback();
+    .pipe(dest('build/assets/css')); // Output RTL stylesheets
+  callback();
 };
 
 
 
 // optimize and move images into distribution / build folder
-// images, hum src k folder(images) ,  may rakhayn gay.  
-function optimizeimg() {
-  return src('src/images/*.{jpg,png}') 
+// images, hum src k folder(images) , may rakhayn gay.  
+function optimizeimg(callback) {
+  return src('src/images/**/*.{jpg,png}') 
     .pipe( mode.production( imagemin([
       imagemin.mozjpeg({ quality: 80, progressive: true }),
       imagemin.optipng({ optimizationLevel: 2 }),
     ])) )  
-    .pipe(cleanFiles())
-    .pipe(dest('build/images')); 
+    .pipe(dest('build/assets/images')); 
+  callback();
 };
 
+
+
 // convert images into webp
-// jo images optimize ho kar dist / build k folder images may a e,
-// yey un ko webp may convert karay ga.
-function webpImage() {
-  return src('build/images/*.{jpg,png}') 
+function webpImage(callback) {
+  return src('build/assets/images/*.{jpg,png}') 
     .pipe(imagewebp())
-    .pipe(dest('build/images/webp-images'));
+    .pipe(dest('build/assets/images/webp-images'));
+  callback();
 };
 
 
 // minify js and webpack
-function jsmin(){
+// gulp ka source map nai kaam karraha webpack k sath.
+// jub hum webpack ka mode: development rakhtay hayn
+// tab ata hay source map.
+function jsmin(callback){
   return src('src/js/custom.js') 
-    .pipe(sourcemaps.init())
-      .pipe(webpack({
-        mode: 'development',
-        entry: {
-          main: path.resolve(__dirname, 'src/js/custom.js')
-        },
-        output: {
-            path: path.resolve(__dirname, 'build'),
-            // filename: '[name].[contenthash].js',
-            filename: '[name].bundle.js',
-            assetModuleFilename: '[name] [ext]',
-            clean: true
-        },
-        module: {
-          rules: [
-            {
-              test:/\.js$/,
-              exclude: /node_modules/,
-              use: {
-                  loader: 'babel-loader',
-                  options: {
-                      presets: [
-                          ['@babel/preset-env', { targets: "defaults" }]
-                      ]
-                  }
-              }
+    .pipe(webpack({
+      mode: 'production',
+      devtool: 'source-map',
+      entry: {
+        custom: path.resolve(__dirname, 'src/js/custom.js')
+      },
+      output: {
+          path: path.resolve(__dirname, 'build'),
+          // filename: '[name].[contenthash].js',
+          filename: '[name].bundle.js',
+          assetModuleFilename: '[name] [ext]',
+          clean: true
+      },
+      module: {
+        rules: [
+          {
+            test:/\.js$/,
+            exclude: /node_modules/,
+            use: {
+                loader: 'babel-loader',
+                options: {
+                    presets: [
+                        ['@babel/preset-env', { targets: "defaults" }]
+                    ]
+                }
             }
-          ],
-        },
-      }))
-    .pipe(sourcemaps.write('./'))
-    .pipe(dest('build/js')); 
+          }
+        ],
+      },
+    }))
+    .pipe(dest('build/assets/js')); 
+  callback();
 }
 
 
