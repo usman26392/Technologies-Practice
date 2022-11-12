@@ -1,0 +1,31 @@
+
+
+.page-404 {
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:0 1em
+   }
+
+   .page-404 .generic-sec-header_inner {
+    text-align:center
+   }
+
+   .page-404 .generic-sec-header_inner .generic-sec_title {
+    padding:0
+   }
+
+   .page-404 .generic-sec-header_inner .generic-sec_title::before {
+    display:none
+   }
+
+   .page-404 .generic-sec-header_inner .generic-sec_subtitle {
+    font-size:10em;
+    margin:0
+   }
+   
+   .page-404 .generic-sec-header_inner p {
+    margin-bottom:.5em
+   }
+

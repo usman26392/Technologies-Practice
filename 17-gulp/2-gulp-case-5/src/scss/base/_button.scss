@@ -1,0 +1,175 @@
+
+// theme button
+.thm-btn {
+    font-family: $basefont;
+    font-size: em(18);
+    font-weight: 700;
+    line-height: 1.3125em;
+    color: $white-color;
+    background-color: transparent;
+    text-transform: capitalize;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border-radius: em(30);
+    padding: 0;
+    border: 2px solid $red-color;
+    width: 10.722em;
+    display: flex;
+    align-items: center;
+    position: relative;
+    @media #{$mob} {
+        width: 10em;
+    }
+    &__text {
+        background: $red-color;
+        border: 1px solid $red-color;
+        border-radius: inherit;
+        padding: 0.5em 0;
+        flex: 0 1 70%;
+        transition: $transition-ease;
+        box-shadow: 0 0 0 1px $red-color;
+        @media #{$mob} {
+            padding: 0.5em 0;
+        }
+    }
+    &__icon {
+        position: absolute;
+        z-index: 1;
+        right: 7%;
+        top: 52%;
+        transform: translateY(-50%);
+        transition: $transition-ease;
+        svg {
+            width: em(26);
+            @media #{$mob} {
+                width: 1.4em;
+            }
+        }
+        path {
+            transition: $transition-ease;
+        }
+    }
+    &:hover &__text {
+        flex-grow: 1;
+    }
+    &:hover &__icon {
+        right: 9%;
+        @media #{$mob} {
+            right: 7%;
+        }
+        path {
+            fill: $white-color;
+        }
+    }
+
+    &--blue {
+        border-color: $blue-color;
+        .thm-btn__text {
+            background-color: $blue-color;
+            border-color:  $blue-color;
+            box-shadow: 0 0 0 1px $blue-color;
+        }
+        .thm-btn__icon {
+            path {
+                fill: $blue-color;
+            }
+        }
+    }
+
+    &--gray {
+        border-color: $primary-color;
+        .thm-btn__text {
+            background-color: $primary-color;
+            border-color:  $primary-color;
+            box-shadow: 0 0 0 1px $primary-color;
+        }
+        .thm-btn__icon {
+            path {
+                fill: $primary-color;
+            }
+        }
+    }
+
+    &--white {
+        border-color: $white-color;
+        .thm-btn__text {
+            background-color: $white-color;
+            border-color:  $white-color;
+            color: $red-color;
+            box-shadow: 0 0 0 1px $white-color;
+        }
+        .thm-btn__icon {
+            path {
+                fill: $white-color;
+            }
+        }
+        &:hover .thm-btn__icon {
+            path {
+                fill: $red-color;
+            }
+        }
+    }
+
+    &--white-border {
+        border-color: $white-color;
+        .thm-btn__text {
+            background-color: $white-color;
+            border-color:  $white-color;
+            color: $green-color;
+            box-shadow: 0 0 0 1px $white-color;
+        }
+        .thm-btn__icon {
+            path {
+                fill: $white-color;
+            }
+        }
+        &:hover .thm-btn__icon {
+            path {
+                fill: $green-color;
+            }
+        }
+    }
+
+    &--transparant {
+        color: $red-color;
+        text-align: left;
+        border-color: transparent;
+        width: 9.063em;
+        .thm-btn__text {
+            background-color: transparent;
+            border-color:  transparent;
+            color: $red-color;
+            box-shadow: 0 0 0 1px transparent;
+        }
+        
+        &:hover { 
+            .thm-btn__icon {
+                path {
+                    fill: $red-color;
+                }
+            } 
+            .thm-btn__text {
+                color: $blue-color;
+            }
+
+        }
+
+
+
+    }
+
+
+
+
+} 
+
+
+button {
+    -webkit-appearance: button;
+    // @extend .thm-btn;
+}

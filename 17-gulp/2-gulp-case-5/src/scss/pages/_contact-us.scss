@@ -1,0 +1,236 @@
+
+
+.lets-connect {
+    position: relative;
+    margin-top: em(-230);
+    &__form {
+        padding: em(38) em(75) em(35);
+        background: $white-color;
+        box-shadow: 0px 16px 90px 14px rgba(112, 144, 176, 0.1);
+        border-radius: 10px;
+        position: relative;
+        @media #{$ipadpro} {
+            padding: 2.375em 2.688em 2.1875em;
+        }
+        @media #{$ipad} {
+            padding: 2em;
+        }
+        .h4 {
+            margin-bottom: 2.4333em;
+        }
+        &__field {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: em(48);
+            label {
+                font-size: em(12);
+                color: $black-color;
+                text-transform: uppercase;
+                margin-bottom: 2.16666em;
+                font-family: var(--basefont);
+            }
+            input,
+            textarea {
+                border: 0;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.31);
+                padding-bottom: 0.8571em;
+                font-family: var(--basefont);
+                width: 100%;
+            }
+
+            textarea {
+                width: 100%;
+                height: em(73);
+            }
+
+            .wpcf7-form-control-wrap {
+                width: 100%;
+                display: block;
+                &.agree {
+                    width: auto;
+                }
+            }
+
+            .wpcf7-list-item {
+                margin: 0;
+                > label {
+                    margin: 0;
+                }
+            }
+
+
+            .thm-btn {
+                margin: em(60) auto 0;
+                border: 0;
+                padding: 0.5em;
+                border-radius: 1.666em;
+                justify-content: center;
+                width: 30%;
+                @media #{$mob} {
+                    margin-top: 0.75em;
+                    width: 40%;
+                }
+            }
+
+            .wpcf7-spinner {
+                margin: 1em auto 0;
+            }
+
+            .wpcf7-not-valid-tip {
+                position: absolute;
+                bottom: -1.5em;
+            }
+
+
+
+            input::placeholder,
+            textarea::placeholder {
+                font-size: 12px;
+                text-transform: uppercase;
+                color: rgba(0, 0, 0, 0.31);
+                font-family: var(--basefont);
+                opacity: 1;
+
+                @media #{$ipadpro} {
+                    font-size: 9px;
+                }
+            }
+
+            input:focus,
+            textarea:focus {
+                outline: 0;
+                border-color: var(--black-color);
+            }
+
+            a {
+                font-weight: 700;
+                color: $black-color;
+            }
+
+            &--checkbox {
+                flex-direction: row;
+                align-items: center;
+                label {
+                    order: 2;
+                    margin: 0 0 0 em(10);
+                    text-transform: capitalize;
+                    a {
+                        transition: $transition-ease;
+                        &:hover {
+                            color: $blue-color;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                input {
+                    order: 1;
+                    margin: 0;
+                }
+
+                .wpcf7-not-valid-tip {
+                    display: none;
+                }
+            }
+        }
+
+        .twocol-row {
+            margin: 0 em(-30);
+            .col-50,
+            .col-100 {
+                padding: 0 em(30);
+                @media #{$ipad} {
+                    padding: 0 1em;
+                }
+            }
+        }
+
+        .wpcf7-response-output {
+            border-color: var(--red-color) !important;
+            color: var(--red-color);
+            position: absolute;
+            right: 0;
+            left: 0;
+            width: 90%;
+            margin: 0 auto !important;
+            text-align: center;
+            bottom: 5em;
+            @media #{$ipadpro} {
+                bottom: 3em;
+            }
+        }
+
+
+    }
+
+    &__map-wrapper {
+        @media #{$tab} {
+            // padding: 0 3em;
+            margin-top: 2em;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__details {
+        padding-top: em(47);
+        .h5 {
+            margin-bottom: 0.961em;
+            color: var(--blue-color);
+        }
+        address {
+            @media #{$tab} {
+                margin-bottom: 2.5em;
+            }
+            p,
+            a,
+            span {
+                font-size: em(16);
+                font-style: normal;
+                color: $black-color;
+            }
+            ul {
+                list-style: none;
+                padding: 0;
+                li {
+                    margin-bottom: em(9);
+                }
+            }
+
+            a {
+                transition: $transition-ease;
+                &:hover {
+                    color: $blue-color;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    &__map {
+        height: em(235);
+    }
+
+    .twocol-row {
+        justify-content: space-between;
+    }
+
+    .container {
+        padding: 0 2.5% 0 10.5%;
+        @media #{$ipad} {
+            padding: 0 2.5% 0 5em;
+        }
+    
+        @media #{$tab} {
+            padding: 0 3em;
+        }
+    
+        @media #{$mob} {
+            padding: 0 15px;
+        }
+    }
+
+
+}
