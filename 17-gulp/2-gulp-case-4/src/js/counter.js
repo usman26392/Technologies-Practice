@@ -7,6 +7,6 @@ function counter() {
     console.log("counter count js code")
 }
 
-let num1 = 5600;
+let num1 = 12600;
 
 export {counter, num1};

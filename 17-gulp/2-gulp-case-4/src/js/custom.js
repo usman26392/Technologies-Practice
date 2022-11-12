@@ -15,7 +15,7 @@ console.log(add(4,5));
 counter();
 console.log(num1);
 
-console.log(multiple(4, 2))
+console.log(multiple(4, 6))
 
 
 
