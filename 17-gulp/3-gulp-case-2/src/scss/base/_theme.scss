@@ -1,0 +1,641 @@
+@use "sass:list";
+@use "sass:math";
+$browser-context: 16;
+
+@function em($pixels, $context: $browser-context) {
+    @return math.div($pixels, $context) * 1em;
+}
+
+@mixin secspacing() {
+    padding: 5em 0;
+
+    @media #{$tab} {
+        padding: 3em 0;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+    writing-mode: horizontal-tb; 
+    direction: ltr;
+}
+
+
+// css variables
+:root {
+    --primary-color: #5A5A5A;
+    --black-color: #000000;
+    --white-color: #ffffff;
+    --grey-color: #5A5A5A;
+    --grey-color-light: #ccceef;
+    --blue-color: #2E3191;
+    --yellow-color: #FFCA1D;
+    --purple-color: #7670B3;
+    --green-color: #92C446;
+    --red-color: #931E5A;
+    --red-color-light: #f1c7dc;
+    --el-messeri: 'El Messiri', sans-serif;
+    --basefont: 'Avenir LT Std';
+}
+
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+$basefont: 'Avenir LT Std';
+$el-messeri: 'El Messiri', sans-serif;
+
+$arialfont: 'Arial';
+$arialfontbold: 'Arial Bold';
+
+
+
+body {
+    font-family: $basefont #{"/*rtl:prepend:'Droid Arabic Kufi',*/"};
+    font-size: 16px #{"/*rtl:14px*/"};
+    line-height: 1.14;
+    font-weight: 400;
+    color: $primary-color;
+    text-align: left;
+    overflow-x: hidden;
+    min-height: 100%;
+    margin: 0;
+    background-color: $white-color;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    direction: ltr;
+
+    @media (max-width: 1400px) and (min-width: 1300px) and (min-height: 900px) {
+        font-size: 11.485px;
+    }
+
+    @media #{$ipadpro} {
+        font-size: 12px;
+        overflow-x: hidden;
+    }
+
+    @media #{$tab} {
+        font-size: 14px;
+    }
+
+    &.disabled-scroll {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+
+        &::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.7);
+            width: 100vh;
+            height: 100vh;
+            z-index: 6;
+            animation: overlay 0.7s ease 0s 1 forwards;
+        }
+    }
+}
+
+@keyframes overlay {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: 0;
+    }
+
+}
+
+.loadjs {
+    overflow: hidden;
+}
+
+::marker {
+    color: $black-color;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+picture {
+    display: block;
+}
+
+img,
+svg {
+    vertical-align: middle;
+    display: block;
+}
+
+.animate {
+    opacity: 0;
+}
+
+.lazy-img {
+    opacity: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+input:focus,
+input:focus-visible {
+    outline: none;
+}
+
+
+main {
+    position: relative;
+}
+
+.img-wrapper {
+    width: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+    padding: 0;
+    z-index: 2;
+}
+
+.sec__wrapper {
+    flex-direction: column;
+}
+
+.section {
+    padding: em(119) 0;
+
+    @media #{$ipad} {
+        padding: 3em 0;
+    }
+}
+
+.container {
+    max-width: 100%;
+    padding: 0 10.5%;
+
+    @media #{$ipad} {
+        padding: 0 5em;
+    }
+
+    @media #{$tab} {
+        padding: 0 3em;
+    }
+
+    @media #{$mob} {
+        padding: 0 15px;
+    }
+}
+
+
+.gray-bg {
+    background-color: #F8F8FB;
+}
+
+.gray-bg-2 {
+    background-color: #e5e5e5;
+}
+
+.blue-bg {
+    background-color: $blue-color;
+}
+
+.light-blue-bg {
+    background-color: #7670B3;
+}
+
+.red-bg {
+    background-color: $red-color;
+}
+
+.black-bg {
+    background-color: $black-color;
+}
+
+
+// padding top and bottom
+.thm-py-225 {
+    padding: em(225) 0;
+
+    @media #{$ipadpro} {
+        padding: 3em 0;
+    }
+
+    @media #{$ipad} {
+        padding: 4.5em 0;
+    }
+
+    @media #{$mob} {
+        padding: 2.25em 0;
+    }
+}
+
+.thm-py-190 {
+    padding: em(190) 0;
+
+    @media #{$ipadpro} {
+        padding: 3em 0;
+    }
+    @media #{$ipad} {
+        padding: 4.5em 0;
+    }
+    @media #{$mob} {
+        padding: 2.25em 0;
+    }
+}
+
+
+.thm-py-175 {
+    padding: em(175) 0;
+    @media #{$ipadpro} {
+        padding: 3em 0;
+    }
+
+    @media #{$ipad} {
+        padding: 4.5em 0;
+    }
+
+    @media #{$mob} {
+        padding: 2.25em 0;
+    }
+}
+
+.thm-py-120 {
+    padding: em(120) 0;
+    @media #{$ipadpro} {
+        padding: 3em 0;
+    }
+
+    @media #{$ipad} {
+        padding: 4.5em 0;
+    }
+
+    @media #{$mob} {
+        padding: 2.25em 0;
+    }
+}
+
+.thm-py-100 {
+    padding: em(100) 0;
+    @media #{$ipadpro} {
+        padding: 3em 0;
+    }
+
+    @media #{$ipad} {
+        padding: 4.5em 0;
+    }
+
+    @media #{$mob} {
+        padding: 2.25em 0;
+    }
+}
+
+.thm-py-90 {
+    padding: em(90) 0;
+    @media #{$ipadpro} {
+        padding: 3em 0;
+    }
+
+    @media #{$ipad} {
+        padding: 4.5em 0;
+    }
+
+    @media #{$mob} {
+        padding: 2.25em 0;
+    }
+}
+
+.thm-py-85 {
+    padding: em(85) 0;
+    @media #{$ipadpro} {
+        padding: 3em 0;
+    }
+
+    @media #{$ipad} {
+        padding: 4.5em 0;
+    }
+
+    @media #{$mob} {
+        padding: 2.25em 0;
+    }
+}
+
+.thm-py-75 {
+    padding: em(75) 0;
+    @media #{$ipadpro} {
+        padding: 3em 0;
+    }
+
+    @media #{$ipad} {
+        padding: 4.5em 0;
+    }
+
+    @media #{$mob} {
+        padding: 2.25em 0;
+    }
+}
+
+.thm-py-65 {
+    padding: em(65) 0;
+    @media #{$ipadpro} {
+        padding: 3em 0;
+    }
+
+    @media #{$ipad} {
+        padding: 4.5em 0;
+    }
+
+    @media #{$mob} {
+        padding: 2.25em 0;
+    }
+}
+
+.thm-py-0 {
+    padding: 0;
+}
+
+
+
+
+// padding bottom properties
+.thm-pb-225 {
+    padding-bottom: em(225);
+
+    @media #{$ipadpro} {
+        padding-bottom: 5em;
+    }
+
+    @media #{$ipad} {
+        padding-bottom: 2.5em;
+    }
+
+    @media #{$mob} {
+        padding-bottom: 2em;
+    }
+}
+
+.thm-pb-190 {
+    padding-bottom: em(190);
+
+    @media #{$ipadpro} {
+        padding-bottom: 5em;
+    }
+
+    @media #{$ipad} {
+        padding-bottom: 2.5em;
+    }
+
+    @media #{$mob} {
+        padding-bottom: 2em;
+    }
+}
+
+
+
+
+.thm-pb-175 {
+    padding-bottom: em(175);
+
+    @media #{$ipadpro} {
+        padding-bottom: 5em;
+    }
+
+    @media #{$ipad} {
+        padding-bottom: 2.5em;
+    }
+
+    @media #{$mob} {
+        padding-bottom: 2em;
+    }
+}
+
+.thm-pb-120 {
+    padding-bottom: em(120);
+
+    @media #{$ipadpro} {
+        padding-bottom: 5em;
+    }
+
+    @media #{$ipad} {
+        padding-bottom: 2.5em;
+    }
+
+    @media #{$mob} {
+        padding-bottom: 2em;
+    }
+}
+
+.thm-pb-110 {
+    padding-bottom: em(110);
+
+    @media #{$ipadpro} {
+        padding-bottom: 5em;
+    }
+
+    @media #{$ipad} {
+        padding-bottom: 2.5em;
+    }
+
+    @media #{$mob} {
+        padding-bottom: 2em;
+    }
+}
+
+.thm-pb-100 {
+    padding-bottom: em(100);
+
+    @media #{$ipadpro} {
+        padding-bottom: 5em;
+    }
+
+    @media #{$ipad} {
+        padding-bottom: 2.5em;
+    }
+
+    @media #{$mob} {
+        padding-bottom: 2em;
+    }
+}
+
+.thm-pb-90 {
+    padding-bottom: em(90);
+
+    @media #{$ipadpro} {
+        padding-bottom: 5em;
+    }
+
+    @media #{$ipad} {
+        padding-bottom: 2.5em;
+    }
+
+    @media #{$mob} {
+        padding-bottom: 2em;
+    }
+
+}
+
+.thm-pb-80 {
+    padding-bottom: em(80);
+
+    @media #{$ipadpro} {
+        padding-bottom: 5em;
+    }
+
+    @media #{$ipad} {
+        padding-bottom: 2.5em;
+    }
+
+    @media #{$mob} {
+        padding-bottom: 2em;
+    }
+}
+
+.thm-pb-70 {
+    padding-bottom: em(70);
+
+    @media #{$ipadpro} {
+        padding-bottom: 5em;
+    }
+
+    @media #{$ipad} {
+        padding-bottom: 2.5em;
+    }
+
+    @media #{$mob} {
+        padding-bottom: 2em;
+    }
+}
+
+.thm-pb-60 {
+    padding-bottom: em(60);
+
+    @media #{$ipadpro} {
+        padding-bottom: 5em;
+    }
+
+    @media #{$ipad} {
+        padding-bottom: 2.5em;
+    }
+
+    @media #{$mob} {
+        padding-bottom: 2em;
+    }
+}
+
+.thm-pb-50 {
+    padding-bottom: em(50);
+
+    @media #{$ipadpro} {
+        padding-bottom: 5em;
+    }
+
+    @media #{$ipad} {
+        padding-bottom: 2.5em;
+    }
+
+    @media #{$mob} {
+        padding-bottom: 2em;
+    }
+}
+
+.thm-pb-40 {
+    padding-bottom: em(40);
+
+    @media #{$ipadpro} {
+        padding-bottom: 5em;
+    }
+
+    @media #{$ipad} {
+        padding-bottom: 2.5em;
+    }
+
+    @media #{$mob} {
+        padding-bottom: 2em;
+    }
+    
+}
+
+
+.thm-pb-0 {
+    padding-bottom: 0;
+}
+
+
+.m-0 {
+    margin: 0;
+}
+
+.p-0 {
+    padding: 0;
+}
+
+
+.text-center {
+    text-align: center;
+}
+
+
+// title counter
+.head-number {
+    position: relative;
+    display: inline-flex;
+    padding-right: 0.8em;
+
+    .small-number {
+        opacity: .2;
+        color: #000;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #000;
+        position: absolute;
+        right: 0;
+        font-size: 1.4em;
+    }
+}
+
+
+// scroll
+.c-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: $purple-color transparent;
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $purple-color;
+        border-radius: 10px;
+        border: 0px;
+    }
+}
+
+
+.position-relative {
+    position: relative;
+    z-index: 1;
+}
