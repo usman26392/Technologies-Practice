@@ -7,10 +7,10 @@
 
 
 # commands
-# --- for development ----
+# --- for development -----
     gulp
 
-# --- for production when all pages are done! now don't run this command due to some reason -----
+# --- for production! -----
     gulp --production
 
 
