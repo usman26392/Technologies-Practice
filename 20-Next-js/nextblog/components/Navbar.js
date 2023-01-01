@@ -1,11 +1,11 @@
 
 import Link from "next/link"
-
+import style from './Navbar.module.css'
 
 const Navbar = () => {
   return (
-    <div>
-        <ul>
+    <nav>
+        <ul className= {`${style['main-nav']} ${style['gray_bg']}   globalClassName`} > 
             <li>
                 <Link href="/">Home</Link>
             </li>
@@ -15,9 +15,8 @@ const Navbar = () => {
             <li>
                 <Link href="news">News</Link>
             </li>
-            
         </ul>
-    </div>
+    </nav>
   )
 }
 

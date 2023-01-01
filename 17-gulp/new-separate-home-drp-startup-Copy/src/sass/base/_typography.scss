@@ -1,0 +1,118 @@
+h1,
+.h1 {
+  font-size: 5em;
+  font-weight: 700;
+  margin: 0 0 0.75em 0;
+  line-height: 0.9em;
+  letter-spacing: -1px;
+  text-transform: capitalize;
+
+  @media #{$ipadpro} {
+    font-size: 3.5em;
+  }
+
+  @media #{ $ipad} {
+    font-size: 2em;
+    margin: 0 0 1em 0;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 3em;
+  font-weight: 700;
+  margin: 0 0 0.833em 0;
+  line-height: 1.5em;
+  letter-spacing: -1px;
+  text-transform: capitalize;
+
+  @media #{$ipadpro} {
+    font-size: 2em;
+    margin-bottom: 1.1em;
+  }
+
+  @media #{$ipad} {
+    font-size: 1.75em;
+  }
+
+  @media #{$mob} {
+    margin-bottom: 0.7em;
+    // line-height: 0.7em;
+  }
+}
+
+h3,
+.h3 {
+  font-size: 2.1875em;
+  font-weight: 700;
+  margin: 0 0 1.142em 0;
+  line-height: 1.285em;
+  text-transform: capitalize;
+
+  @media #{$ipadpro} {
+    font-size: em(32);
+  }
+
+  @media #{ $ipad} {
+    font-size: 1.5em;
+  }
+}
+
+h4,
+.h4 {
+  font-size: 1.5625em;
+  font-weight: 700;
+  margin: 0 0 0.6em 0;
+  line-height: 1.28em;
+  text-transform: capitalize;
+
+  @media #{$ipadpro} {
+    font-size: 1.5em;
+  }
+
+  @media #{$mob} {
+    font-size: 1.25em;
+  }
+}
+
+h5,
+.h5 {
+  font-size: 1.375em;
+  font-weight: 700;
+  margin: 0 0 0.6818em 0;
+  line-height: 1.772em;
+  text-transform: capitalize;
+
+  @media #{ $ipad} {
+    font-size: 1.125em;
+  }
+
+  @media #{$mob} {
+    font-size: 1em;
+  }
+}
+
+h6,
+.h6 {
+  font-size: 1.25em;
+  font-weight: 700;
+  margin: 0 0 0.75em 0;
+  line-height: 1.3em;
+  text-transform: capitalize;
+}
+
+p,
+.para {
+  font-size: 1.1875em;
+  font-weight: 500;
+  margin: 0 0 1.578em 0;
+  line-height: 1.3684em;
+
+  @media #{$ipadpro} {
+    font-size: 1.125em;
+  }
+
+  @media #{$ipad} {
+    font-size: 1.1em;
+  }
+}

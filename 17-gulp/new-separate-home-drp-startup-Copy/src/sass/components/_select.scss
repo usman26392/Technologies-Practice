@@ -1,0 +1,79 @@
+
+
+
+.select {
+  position: relative;
+  margin-bottom: 0.9375em;
+}
+
+.select .selectBtn {
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  border: 1px solid $graycol;
+  border-radius: 30em;
+  padding: 0.8125em 1.875em;
+  background-color: $whitecol;
+  padding-right: 3.5em;
+  color: $graycol4;
+  font-weight: 700;
+}
+
+.select .selectBtn:after {
+  content: "";
+  position: absolute;
+  top: 45%;
+  right: 1.5em;
+  width: 8px;
+  height: 8px;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+  transform: translateY(-50%) rotate(45deg);
+  border-right: 2px solid $secondarycol;
+  border-bottom: 2px solid $secondarycol;
+  transition: 0.2s ease;
+}
+.select .selectBtn.toggle {
+  border-radius: 3px 3px 0 0;
+}
+.select .selectBtn.toggle:after {
+  -webkit-transform: translateY(-50%) rotate(-135deg);
+  transform: translateY(-50%) rotate(-135deg);
+}
+.select .selectDropdown {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  border-radius: 0 0 3px 3px;
+  overflow: hidden;
+  background: var(--bg1);
+  border-top: 1px solid #eee;
+  z-index: 1;
+  background: $whitecol;
+  -webkit-transform: scale(1, 0);
+  transform: scale(1, 0);
+  -webkit-transform-origin: top center;
+  transform-origin: top center;
+  visibility: hidden;
+  transition: 0.2s ease;
+  box-shadow: $bx-shadow;
+  border-radius: 10px;
+}
+.select .selectDropdown .option {
+  padding: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.select .selectDropdown .option:hover {
+  background: $primarycol;
+  color: $whitecol;
+}
+.select .selectDropdown.toggle {
+  visibility: visible;
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+}

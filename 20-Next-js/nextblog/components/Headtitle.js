@@ -6,7 +6,7 @@ import Head from 'next/head'
 const Headtitle = ({titleDes}) => {
   return (
     <Head>
-        <title>{titleDes}</title>
+      <title>{titleDes}</title>
     </Head>
   )
 }

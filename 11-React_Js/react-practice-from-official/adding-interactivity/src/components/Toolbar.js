@@ -1,6 +1,7 @@
 
 
 // example-1: way1
+
 // btn component
 // function Button({textbtn, click}) {
 //     return (
@@ -38,21 +39,53 @@
 
 
 // example-2: way-2
-function Button({textbtn, click}) {
-    return (
-        <button onClick={click}> 
-            {textbtn} 
-        </button>
-    )
+
+// function Button({textbtn, click}) {
+//     return (
+//         <button onClick={click}> 
+//             {textbtn} 
+//         </button>
+//     )
+// }
+
+// const Toolbar = ({playMovie, uploadImg}) => {
+//   return (
+//     <div>
+//         <Button textbtn="Play movie" click={playMovie}  />
+//         <Button textbtn="Upload image" click={uploadImg} />
+//     </div>
+//   )
+// }
+
+// export default Toolbar
+
+
+
+
+// way-3:
+function Button({click, children }) {
+  return (
+    <button onClick={click}>
+      {children}
+    </button>
+  );
 }
 
-const Toolbar = ({playMovie, uploadImg}) => {
+
+function Toolbar({ playMovie, uploadImg }) {
   return (
     <div>
-        <Button textbtn="Play movie" click={playMovie}  />
-        <Button textbtn="Upload image" click={uploadImg} />
+      <Button click={playMovie}>
+        Play Movie
+      </Button>
+      <Button click={uploadImg}>
+        Upload Image
+      </Button>
     </div>
-  )
+  );
 }
 
 export default Toolbar
+
+
+

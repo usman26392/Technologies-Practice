@@ -2,35 +2,29 @@
 // import logo from './logo.svg';
 import './App.css';
 import Toolbar from './components/Toolbar';
-
-
+import SculptureGallery from './components/SculptureGallery';
+import Chat from './components/chat/Chat';
+import Button from './RespondingToEvents/Responding';
 
 function App() {
   return (
     <div className="App">
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-      
+
       {/* way-1 */}
       {/* <Toolbar/> */}
 
-      {/* way-2 */}
+      {/* way-2 or way-3 */}
       <Toolbar 
-        playMovie={()=> {alert('playing movie!')}}
+        playMovie={()=> {alert('playing movie! abc')}}
         uploadImg={()=> {alert('uploading image!')}}
       />
+
+      <SculptureGallery/>
+      <Chat/>
+
+      {/* responding to events topics from here */}
+      <Button/>
+
 
     </div>
   );

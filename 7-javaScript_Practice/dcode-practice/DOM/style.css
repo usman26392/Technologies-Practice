@@ -1,0 +1,15 @@
+
+
+.tabs-content > div {
+    display: none;
+}
+
+.tabs-content .active {
+    display: block;
+}
+
+
+
+.tabs .active {
+    color: red;
+}

@@ -1,8 +1,13 @@
 
+import Headtitle from "../components/Headtitle"
+
 
 const news = () => {
   return (
-    <div>news</div>
+    <main>
+        <Headtitle titleDes="news page title."/>
+        <h1>news page</h1>
+    </main>
   )
 }
 

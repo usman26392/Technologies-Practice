@@ -22,6 +22,13 @@
 
 
 
+# i will add in gulp
+
+# css lint
+# js lint
+
+
+
  
 
 

@@ -1,0 +1,112 @@
+.home-hero {
+    padding: 10em 0 5.625em 0;
+
+    @media #{$ipad} {
+        padding: 8em 0 2em 0;
+    }
+
+    &__left-wrapper {
+        padding: 0;
+
+        @media #{$ipadXL} {
+            padding: 0 4em 0 0;
+        }
+    }
+
+    &__right-wrapper {
+        position: absolute;
+        width: 50%;
+        right: 0;
+        bottom: -9em;
+        z-index: 2;
+
+        @media #{$ipad} {
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    }
+
+    .hero-image {
+        position: relative;
+    }
+
+    &__image-description {
+        display: flex;
+
+        @media #{$ipad} {
+            padding: 0 0 6em 0;
+        }
+
+        @media #{$mob} {
+            flex-direction: column;
+        }
+
+        .left-img {
+            position: absolute;
+            left: 0;
+            width: 19.1875em;
+            height: 15em;
+
+            @media #{$ipadpro} {
+                width: 17em;
+            }
+
+            @media #{$ipad} {
+                display: none;
+            }
+        }
+
+        .finger-tips {
+            padding: 0 0 0 11em;
+
+            @media #{$ipadpro} {
+                padding: 0 0 0 14em;
+            }
+
+            @media #{$ipad} {
+                width: 100%;
+                padding: 0;
+            }
+        }
+    }
+}
+
+
+.design-closet {
+    display: flex;
+    align-items: center;
+    border-radius: 4.9375em;
+    width: 17.5625em;
+    height: 5.4375em;
+    padding: 0.4375em 0.625em;
+    position: absolute;
+    top: -2.8125em;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    @media #{$mob} {
+        width: 15em;
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+    }
+
+    .img-wrapper {
+        width: 4.5625em;
+        height: 3.5625em;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    &--heading {
+        padding: 0 0 0 1.125em;
+
+        @media #{$mob} {
+            padding: 0 0 0 1em;
+        }
+    }
+}

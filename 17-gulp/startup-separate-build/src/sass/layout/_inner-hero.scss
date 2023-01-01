@@ -1,0 +1,37 @@
+.inner-hero {
+  height: 40.625em;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $whitecol;
+  @media #{$mob} {
+    height: 38.4615em;
+  }
+  &__figure {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.15);
+    }
+  }
+  picture {
+    height: 100%;
+  }
+
+  .h1 {
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+  }
+}
