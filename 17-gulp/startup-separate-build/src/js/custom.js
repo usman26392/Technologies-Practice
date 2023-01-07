@@ -165,6 +165,7 @@ window.addEventListener('scroll', (event) => {
 
 
 // about us page
+
 // thumb of timeline history
 if (document.querySelector('.historyContent')) {
     var timeThumbSlider = new Swiper(".historyContent > .swiper", {
@@ -195,6 +196,11 @@ if (document.querySelector('.history-timeline__slider')) {
         }
     });
 }
+
+
+console.log("this code is comming from inner page's js");
+
+
 
 
 

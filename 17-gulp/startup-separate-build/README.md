@@ -25,21 +25,22 @@ body {
 # testing
 # sass checking
 ltr home scss checking on run time  --> done
-ltr inner scss checking on run time --> 
+ltr inner scss checking on run time --> done
 
-rtl home scss checking on run time --> 
-rtl inner scss checking on run time. -->
+rtl home scss checking on run time -->    done
+rtl inner scss checking on run time. -->  done
 
 
 # js checking
-ltr & rtl for home js checking on run time -->
-ltr & rtl for inner js checking on run time -->
+ltr  for home js checking on run time --> done
+ltr  for inner js checking on run time --> done
+
+rtl  for home js checking on run time --> done
+rtl  for inner js checking on run time --> done
+
 
 
 # images on production.
   for ltr convert into webp
   for rtl convert into webp
 
-
-
-can be updating arabic css ----> done

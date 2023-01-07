@@ -5,9 +5,12 @@
   justify-content: center;
   align-items: center;
   color: $whitecol;
+  // background-color: yellow;
+
   @media #{$mob} {
     height: 38.4615em;
   }
+
   &__figure {
     position: absolute;
     left: 0;

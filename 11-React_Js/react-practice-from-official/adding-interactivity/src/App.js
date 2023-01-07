@@ -4,7 +4,12 @@ import './App.css';
 import Toolbar from './components/Toolbar';
 import SculptureGallery from './components/SculptureGallery';
 import Chat from './components/chat/Chat';
-import Button from './RespondingToEvents/Responding';
+// import Button from './RespondingToEvents/Responding';
+// import Toolbar2 from "./RespondingToEvents/Responding";
+// import Toolbar3 from './RespondingToEvents/Responding';
+import Toolba4 from './RespondingToEvents/Responding';
+
+
 
 function App() {
   return (
@@ -23,7 +28,15 @@ function App() {
       <Chat/>
 
       {/* responding to events topics from here */}
-      <Button/>
+      {/* <Button/> */}
+      {/* <Toolbar2/> */}
+      <hr />
+      {/* <Toolbar3/> */}
+      <hr />
+      <Toolba4/>
+
+
+
 
 
     </div>

@@ -162,3 +162,8 @@ if (document.querySelector('.home-hero__slider')) {
         },
     });
 }
+
+
+
+console.log("this code is comming from home's js");
+
