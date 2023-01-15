@@ -1,0 +1,32 @@
+
+
+.tabs-content > div {
+    display: none;
+}
+
+.tabs-content .active {
+    display: block;
+}
+
+
+
+.tabs .active {
+    color: red;
+}
+
+#area {
+    background-color: black;
+    color: #fff;
+    padding: 30px;
+    margin: 20px 0;
+}
+
+
+.red-box {
+    background-color: red;
+    padding: 20px;
+}
+
+.colors li {
+    margin-bottom: 1em;
+}

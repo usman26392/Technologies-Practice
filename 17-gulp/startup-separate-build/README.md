@@ -41,6 +41,14 @@ rtl  for inner js checking on run time --> done
 
 
 # images on production.
-  for ltr convert into webp
-  for rtl convert into webp
+  for ltr convert into webp --> done
+  for rtl convert into webp --> done
+
+
+# overview
+separate home sass from inner pages.
+separete home js from inner pages.
+about favicon
+rtl done.(no need to update rtl again and again)
+about build folder. (for production.)
 

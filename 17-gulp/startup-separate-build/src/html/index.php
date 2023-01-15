@@ -54,6 +54,10 @@
                     <h1 class="description2 text-upper animate fadein-Up" data-delay="0.2s">THE PROPERTY SOLUTION</h1>
                 </div>              
             </section>
+            <!-- testing purpose image -->
+            <div class="img-wrapper">
+                <img src="/assets/images/home/avatar.png" alt="">        
+            </div>
         </main>
 
         <!-- Footer -->

@@ -116,8 +116,6 @@ function replacePath() {
 }
 
 
-
-
 // copy assets for arabic
 function copyAssets(callback) {
   return src('src/html/assets/**/*') 
@@ -141,8 +139,6 @@ function DeleteAssetsArabicImages() {
 }
 
 
-
-
 // convert images into webp
 function webpImage(callback) {
   return src('src/html/assets/images/**/*.{jpg,png}')
@@ -158,6 +154,29 @@ function webpArabicImage(callback) {
     .pipe(mode.production(dest('build/ar/assets/images/')));
   callback();
 }
+
+// tiny images
+function tinyImg(callback) {
+  return src('src/html/assets/images/**/*.{jpg,png}')
+    .pipe( mode.production( imagemin([
+      imagemin.mozjpeg({ quality: 80, progressive: true }),
+      imagemin.optipng({ optimizationLevel: 2 }),
+    ])) )  
+    .pipe(dest('src/html/assets/images/'));
+  callback();
+}
+
+// tiny images for Arabic
+function tinyArabicImg(callback) {
+  return src('src/html/ar/assets/images/**/*.{jpg,png}')
+    .pipe( mode.production( imagemin([
+      imagemin.mozjpeg({ quality: 80, progressive: true }),
+      imagemin.optipng({ optimizationLevel: 2 }),
+    ])) )  
+    .pipe(dest('src/html/ar/assets/images/'));
+  callback();
+}
+
 
 
 
@@ -265,6 +284,8 @@ if (isProduction) {
     DeleteAssetsArabicImages,
     webpArabicImage,
     replacePath,
+    tinyImg,
+    tinyArabicImg
   )
 } else {
   exports.default = series(

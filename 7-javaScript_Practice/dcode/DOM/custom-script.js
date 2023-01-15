@@ -223,7 +223,6 @@
 // example:
 // let tabsList = document.querySelectorAll(".tabs li"),
 //     tabsContentEl = document.querySelector(".tabs-content");
-
 // tabsList.forEach(function(el, i) {
 //     el.addEventListener("click", function(evt) {
 //         let currentList = evt.target;
@@ -234,18 +233,17 @@
 //             // console.log(li);
 //             li.classList.remove("active");
 //         }
-
 //         currentList.classList.add("active");
-
 
 //         // for tabs content
 //         let currentListData = evt.target.dataset;
-//         // console.log(currentListData);
+//         console.log(currentListData);
 //         // console.log(currentListData.id)
 //         let currentTabsContentEl =  document.querySelector(`#${currentListData.id}`);
 //         // console.log(currentTabsContentEl.parentElement.children);
-//         let tabsContentChildren = currentTabsContentEl.parentElement.children;
-        
+//         // let tabsContentChildren = currentTabsContentEl.parentElement.children;
+//         // we should use closest method to select a parent element.
+
 //         for (const chld of tabsContentChildren) {
 //             // console.log(chld)    
 //             chld.classList.remove("active");
@@ -530,6 +528,166 @@
 
 // This particular method can provide you a lot of flexibility when inserting an element due
 //  to its four possible positions of insertion: beforebegin, afterbegin, beforeend and afterend.
+
+
+//  where insert positions
+/**
+ * beforebegin - insert, before element
+ * afterend -  insert, after element.
+ * beforeend -  insert, after last text child
+ * afterbegin - insert,  before first text child
+ */
+
+// example-1:
+
+    // let area = document.querySelector("#area");
+    // let box = document.createElement("div");
+    // box.classList.add("red-box");
+
+
+    // area.insertAdjacentElement("beforebegin", box);
+    // area.insertAdjacentElement("afterend", box);
+    // area.insertAdjacentElement("beforeend", box);
+    // area.insertAdjacentElement("afterbegin", box);
+
+
+// ----------------------------- Element.insertAdjacentText() --------------
+// Similar to the innerText property and the appendChild() method,
+//  the insertAdjacentText() method within the JavaScript Document Object Model lets you insert
+//  a string of text (TextNode) relative (or adjacently) to an HTML Element.
+//  This method can provide a lot of flexibility when inserting text into your HTML document
+//  as it has four possible positions of insertion: beforebegin, afterbegin, beforeend and afterend. 
+
+//  where insert positions
+/**
+ * beforebegin - insert, before element
+ * afterend -  insert, after element.
+ * beforeend -  insert, after last text child
+ * afterbegin - insert,  before first text child
+ */
+
+    // let area = document.querySelector("#area");
+    // // area.insertAdjacentText("beforebegin", "decode wow");
+    // // area.insertAdjacentText("afterend", "wow");
+    // // area.insertAdjacentText("beforeend", "wow");
+    // area.insertAdjacentText("afterbegin", "wow");
+
+
+
+// ---------------------------- Element.matches() -----------------------------
+// You can use the matches() method within the JavaScript Document Object Model (DOM)
+//  to check whether or not an element "matches" a query selector.
+//  You may or may not find this useful within your own personal projects but
+//  I think it has its place when trying to interface with a third party library.
+
+    // let area = document.querySelector("#area");
+    // let result = area.matches("div");
+    // let result = area.matches("#area");
+    // let result = area.matches(".area");
+    // console.log(result);
+
+
+// ---------------------- event delegation -------------------------------
+// we take a look at what exactly Event Delegation is and how to implement in JavaScript
+//  without using a front-end library such as jQuery. By doing it this way,
+//  we get a better explanation of what it is and why it's useful.
+
+// a way you can an event listener once for multiple elements with support
+// for adding extra children.
+
+    // let colorsList = document.querySelector(".colors");
+    // colorsList.addEventListener("click", function(e) {
+    //     console.log(e);
+    //     const currentItm = e.target;
+    //     if(currentItm.matches("li") ) {
+    //         currentItm.style.backgroundColor = "dodgerblue"
+    //     }
+    // });
+
+    // let btn = document.querySelector(".libtn");
+    // let newli = document.createElement("li");
+    // newli.textContent = "purple";
+
+    // btn.addEventListener("click", function() {
+    //     colorsList.appendChild(newli);
+    // });
+    
+
+// ------------------------------ replaceChild() -----------------------------
+// replaceChild() is part of Node and allows you to replace an existing child node with
+//  a new child node, and is called on a parent node.
+
+// let colors = document.querySelector(".colors"),
+//     listItm = colors.children[1];
+
+// let newItm = document.createElement("li");
+//     newItm.textContent = "dodgerblue";
+
+// colors.replaceChild(newItm, listItm);
+
+
+// -------------------------- append() ----------------------------------------
+// Append multiple elements at once
+
+// let emptyDiv = document.querySelector(".myDiv");
+
+// let p1 = document.createElement("p"),
+//     p2 = document.createElement("p"),
+//     textC = document.createTextNode("wow");
+
+//     p1.textContent = "Usman";
+//     p2.textContent = "Rehan";
+
+//     emptyDiv.append(p1, p2, "a simple text", textC);
+
+
+// ------------------------------- replaceWith() ---------------------------------
+// In this video I'll be showing you how to use the new ChildNode.replaceWith() method
+//  that's part of the JavaScript Document Object Model (DOM). This method allows you
+//  to replace a child node with one or more other nodes.
+
+    // let pTag = document.querySelector(".sample-div p");
+
+    // let newInput = document.createElement("input");
+    // newInput.value = "I am new";
+
+    // let newBtn = document.createElement("button");
+    // newBtn.textContent = "submit";
+
+    // // pTag.replaceWith(newInput);
+    // pTag.replaceWith(newInput, newBtn);
+
+
+// -------------------- live collection = HTMLCollection ------------------------
+//  getElementsByClassName() return HTMLCollection
+// getElementsByTagName() return HTMLCollection
+
+
+
+
+// -------------------------- 5 MUST KNOW JavaScript DOM Methods --------------------
+// 1) closest() find a parent
+// 2) append()
+// 3 insertAdjacentHTML()
+// 4) matches()
+// 5) replaceWith()
+
+
+let itm = document.querySelector(".item2");
+console.log(itm.closest("ul"));
+console.log(itm.closest(".vegetables"));
+
+
+
+
+
+
+
+    
+
+
+
+
 
 
 
