@@ -26,7 +26,7 @@ del = require("del");
 
 
 // compile scss, prefix, and minify css
-function compilescss(callback) {
+function compileScss(callback) {
   return src('src/sass/style.scss')
     .pipe(mode.development(sourcemaps.init()))
     .pipe(sass())
@@ -45,7 +45,7 @@ function compilescss(callback) {
 }
 
 // home page scss
-function Homescss(callback) {
+function homeScss(callback) {
   return src('src/sass/home.scss')
     .pipe(mode.development(sourcemaps.init()))
     .pipe(sass())
@@ -125,14 +125,14 @@ function copyAssets(callback) {
 
 
 // delete files
-function DeleteFiles() {
+function deleteFiles() {
   return del(['build/assets/images/*'], {
     force: true
   });
 }
 
 // delete assets images from build's arabic
-function DeleteAssetsArabicImages() {
+function deleteAssetsArabicImages() {
   return del(['build/ar/assets/images/*'], {
     force: true
   });
@@ -178,10 +178,8 @@ function tinyArabicImg(callback) {
 }
 
 
-
-
 // minify js and webpack
-function jsmin(callback) {
+function jsMin(callback) {
   return src('src/js/custom.js')
     .pipe(webpack({
       mode: 'production',
@@ -217,7 +215,7 @@ function jsmin(callback) {
 
 
 // home js
-function Homejsmin(callback) {
+function homeJsMin(callback) {
   return src('src/js/home.js')
     .pipe(webpack({
       mode: 'production',
@@ -252,7 +250,6 @@ function Homejsmin(callback) {
 }
 
 
-
 // copy html folder to build folder
 function copyFolder(callback) {
   return src('src/html/**/*') 
@@ -264,12 +261,12 @@ function copyFolder(callback) {
 
 // watchtask
 function watchTask() {
-  watch('src/sass/**/*.scss', compilescss);
-  watch('src/sass/**/*.scss', Homescss);
+  watch('src/sass/**/*.scss', compileScss);
+  watch('src/sass/**/*.scss', homeScss);
   watch('src/sass/**/*.scss', compilesRTL);
   watch('src/sass/**/*.scss', homeRTL);
-  watch('src/js/**/*.js', jsmin);
-  watch('src/js/**/*.js', Homejsmin);
+  watch('src/js/**/*.js', jsMin);
+  watch('src/js/**/*.js', homeJsMin);
   watch('src/html/assets/**/*', copyAssets);
 }
 
@@ -279,9 +276,9 @@ var isProduction = mode.production();
 if (isProduction) {
   exports.default = series(
     copyFolder,
-    DeleteFiles,
+    deleteFiles,
     webpImage,
-    DeleteAssetsArabicImages,
+    deleteAssetsArabicImages,
     webpArabicImage,
     replacePath,
     tinyImg,
@@ -289,12 +286,12 @@ if (isProduction) {
   )
 } else {
   exports.default = series(
-    compilescss,
-    Homescss,
+    compileScss,
+    homeScss,
     compilesRTL,
     homeRTL,
-    jsmin,
-    Homejsmin,
+    jsMin,
+    homeJsMin,
     copyAssets,
     watchTask
   )
