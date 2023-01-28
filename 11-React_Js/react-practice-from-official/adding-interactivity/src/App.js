@@ -8,6 +8,10 @@ import Chat from './components/chat/Chat';
 // import Toolbar2 from "./RespondingToEvents/Responding";
 // import Toolbar3 from './RespondingToEvents/Responding';
 import Toolba4 from './RespondingToEvents/Responding';
+// import { SnapShot } from './snapshot/SnapShot';
+// import Form from './snapshot/SnapShot';
+// import TrafficLight from './snapshot/SnapShot';
+import { MovingDot, EmailForm } from './updating/Objects';
 
 
 
@@ -34,10 +38,13 @@ function App() {
       {/* <Toolbar3/> */}
       <hr />
       <Toolba4/>
-
-
-
-
+      {/* <SnapShot/> */}
+      <h1>State over time!</h1>
+      {/* <Form/> */}
+      {/* <TrafficLight/> */}
+      <h1>Updaing Objects</h1>
+      <MovingDot/>
+      <EmailForm/>
 
     </div>
   );

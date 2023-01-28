@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+
+
+.red-container {
+  position: relative;
+  height: 200px;
+  border: 1px solid black;
+}
+
+.red-circle {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: -3%;
+  top: -50%;
+}
+
+label {
+  display: block;
+  margin-bottom: 1rem;
+}

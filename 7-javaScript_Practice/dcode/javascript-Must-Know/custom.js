@@ -182,10 +182,47 @@
 // console.log(navList.contains(navLink));
 
 // 3. cloneNode()
-let list = document.querySelector(".color-list"),
-    item = document.querySelector(".color-list__item"),
-    copyItem = item.cloneNode(true);
+// let list = document.querySelector(".color-list"),
+//     item = document.querySelector(".color-list__item"),
+//     copyItem = item.cloneNode(true);
 
-    list.appendChild(copyItem)
+//     list.appendChild(copyItem)
+
+// 4. before() and after()
+// let colorList = document.querySelector('.color-list');
+// let colorItem = document.querySelector(".color-list__item");
+
+// let btn = document.createElement("button");
+// btn.textContent = "new button text";
+
+// // colorList.before(btn);
+// colorItem.before(btn);
+// // colorList.after(btn);
+
+
+// 5. remove()
+// let listItem = document.querySelector(".color-list__item");
+// let removeBtn = document.querySelector(".remove-btn");
+
+// removeBtn.addEventListener("click", function() {
+//     listItem.remove();
+// });
+
+// ---------- One Of the Most IMPORTANT Parts of JavaScript - Truthy and Falsy EXPLAINED -----------
+
+// falsy values are:
+//  false, 0, -0, "", null, undefined, NaN, 0n, document.all
+
+// example:1
+// if(0) {
+//     console.log("false")
+// }
+// else {
+//     console.log("else statement run");
+// }
+
+
+// ------------------- 5 EASY WAYS to Get BETTER at JavaScript -------------------------
+// 1. use 'const' over let
 
 

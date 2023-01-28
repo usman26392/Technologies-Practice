@@ -50,7 +50,7 @@ h3,
   text-transform: capitalize;
 
   @media #{$ipadpro} {
-    font-size: em(32);
+    font-size: 2em;
   }
 
   @media #{ $ipad} {
