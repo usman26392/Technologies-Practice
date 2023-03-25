@@ -12,6 +12,7 @@ import Toolba4 from './RespondingToEvents/Responding';
 // import Form from './snapshot/SnapShot';
 // import TrafficLight from './snapshot/SnapShot';
 import { MovingDot, EmailForm } from './updating/Objects';
+import InspireSculpture, { Sculplist, ShapeEditor } from './updating/Arrays';
 
 
 
@@ -44,7 +45,18 @@ function App() {
       {/* <TrafficLight/> */}
       <h1>Updaing Objects</h1>
       <MovingDot/>
+      <hr />
+      <hr />
       <EmailForm/>
+      <hr />
+      <hr />
+      <InspireSculpture/>
+      <hr />
+      <hr />
+      <Sculplist/>
+      <hr />
+      <hr />
+      <ShapeEditor/>
 
     </div>
   );

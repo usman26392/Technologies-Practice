@@ -1,0 +1,28 @@
+{
+  "shirts": [
+      {
+          "id": 1,
+          "title": "shirt 1",
+          "price": 121,
+          "description": "description content 1"
+      },
+      {
+          "id": 2,
+          "title": "shirt 2",
+          "price": 22000,
+          "description": "description content 2"
+      },
+      {
+          "id": 3,
+          "title": "shirt 3",
+          "price": 3000,
+          "description": "description content 3"
+      },
+      {
+          "id": 4,
+          "title": "shirt 4",
+          "price": 4000,
+          "description": "description content 4"
+      }
+  ]
+}
