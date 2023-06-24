@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/vendors/swiper-bundle.min.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+
+      img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+      }
+
+      .swiper-pagination-bullet {
+        width: 50px;
+        height: 50px;
+      }
+
+      
+
+      
+    </style>
+  </head>
+  <body>
+    <h1>loop example</h1>
+    <section class="section">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="img-wrapper">
+              <img src="./assets/images/holiday-1.jpg" alt="" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-wrapper">
+              <img src="./assets/images/holiday-2.jpg" alt="" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-wrapper">
+              <img src="./assets/images/holiday-3.jpg" alt="" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-wrapper">
+              <img src="./assets/images/property-1.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!-- scripts  -->
+    <script src="./assets/vendors/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        slidesPerView: 2,
+        loop: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+    </script>
+  </body>
+</html>
