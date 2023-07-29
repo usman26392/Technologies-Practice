@@ -52,3 +52,24 @@ let nokia7 = new mobile("180g", "6.3 Full HD", "black");
 let samsung = new mobile("100g" , "Full HD", "White");
 console.log(nokia7);
 console.log(samsung);
+
+
+
+
+// real life example
+function elementStyle(el, colorName) {
+    this.el = document.querySelector(el);
+    this.colorName = colorName;
+    this.applyStyle = function() {
+        this.el.style.backgroundColor = this.colorName
+    }
+}
+
+let title1 = new elementStyle(".title1", "red")
+let title2 = new elementStyle(".title2", "green")
+let title3 = new elementStyle(".title3", "blue")
+
+
+title1.applyStyle();
+title2.applyStyle();
+title3.applyStyle();

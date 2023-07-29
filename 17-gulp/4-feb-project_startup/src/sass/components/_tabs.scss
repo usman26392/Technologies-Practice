@@ -1,0 +1,45 @@
+.tabs {
+  &__list {
+    list-style: none;
+    background: $whitecol;
+    border-radius: 30em;
+    display: inline-flex;
+    padding: 8px;
+    box-shadow: $bx-shadow;
+  }
+  .c_btn:not(:last-child) {
+    margin-right: 0.666em;
+  }
+  &--home-hero {
+    position: relative;
+    z-index: 2;
+    .c_btn {
+      @media #{$mob} {
+        font-size: 0.9em;
+        padding: 1em 1.5em;
+        line-height: 1;
+      }
+    }
+  }
+  &--features {
+    @media #{$mob} {
+      margin-bottom: 1em;
+    }
+  }
+
+  &--dropdown {
+    .tabs__list {
+      // width: 100%;
+    }
+    .c_btn {
+      justify-content: center;
+      font-size: 1.0625em;
+      padding: 0.5em 1.388em;
+      flex: 1 1 50%;
+      @media #{$mob} {
+        font-size: 1em;
+      }
+
+    }
+  }
+}

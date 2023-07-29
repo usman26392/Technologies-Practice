@@ -198,11 +198,11 @@
 //          console.log('fighting crime!')
 //     }
 
-//     const batman = new SuperHero("Asim", "Bajwa", "212-B" );
+//     const armyChief = new SuperHero("Asim", "Bajwa", "212-B" );
 
-//     console.log(batman);
-//     console.log(batman.getFullName())
-//     batman.fightCrime();
+//     console.log(armyChief);
+//     console.log(armyChief.getFullName())
+//     armyChief.fightCrime();
 
 // })();
 
@@ -222,7 +222,6 @@
           house: houseNo,
         };
       }
-      
       // prototype instance
       getFullName() {
         return `${this.firstName} ${this.lastName}`;
@@ -242,13 +241,16 @@
     }
     
     
-    let spiderman = new SuperHero("Asim", "Bajwa", "212-B" );
+    let armyChief = new SuperHero("Asim", "Bajwa", "212-B" );
     
-    console.log(spiderman);
-    console.log(spiderman.getFullName() )
-    console.log(spiderman.firstName)
-    console.log(spiderman.isSuperHero)
-    spiderman.fightCrime()
+    console.log(armyChief);
+    console.log(armyChief.getFullName() )
+    console.log(armyChief.firstName)
+    console.log(armyChief.isSuperHero)
+    armyChief.fightCrime()
 
 })();
+
+
+
 

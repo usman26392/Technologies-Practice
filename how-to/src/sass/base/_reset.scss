@@ -1,0 +1,87 @@
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  &:focus {
+    outline: none;
+  }
+}
+
+body {
+  font-family: $basefont;
+  font-weight: 400;
+  color: $secondarycolor;
+  line-height: 1em;
+  margin: 0;
+  padding: 0;
+  direction: ltr;
+  text-align: left;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul,
+ol {
+  font-size: 1.375em;
+  font-weight: 400;
+  line-height: 1.5909em;
+  margin: 0 0 0.5em 0;
+  list-style-position: inside;
+  @media #{$ipadpro} {
+    font-size: 1em;
+  }
+}
+
+html[lang="ar"] {
+  ol {
+    list-style-type: arabic-indic;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $primarycolor;
+}
+
+iframe {
+  border: 0;
+}
+
+button {
+  -webkit-appearance: button;
+  appearance: button;
+  &:focus {
+    outline: none;
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+picture {
+  display: block;
+}
+
+hr {
+  margin: 2em 1em 3em 1em;
+  height: 0.5em;
+  background: $secondarycolor;
+}

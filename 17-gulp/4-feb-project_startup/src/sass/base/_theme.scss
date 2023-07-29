@@ -1,0 +1,136 @@
+body {
+  font-family: $basefont;
+  font-weight: 500;
+  color: $secondarycol;
+  line-height: 1.625em;
+}
+
+
+.loadjs {
+  overflow: hidden;
+}
+
+
+.img-wrapper {
+  position: relative;
+}
+
+.container-fluid {
+  max-width: 100%;
+  padding: 0;
+
+  @media #{$ipad} {
+    padding: 0 5em;
+  }
+
+  @media #{$ipad} {
+    padding: 0 3em;
+  }
+
+  @media #{$mob} {
+    padding: 0 2em;
+  }
+}
+
+.container-s {
+  max-width: 100%;
+  padding: 0 3.385%;
+
+  @media #{$ipad} {
+    padding: 0 3em;
+  }
+
+  @media #{$mob} {
+    padding: 0 2em;
+  }
+}
+
+.container {
+  max-width: 100%;
+  padding: 0 8.7%;
+
+  @media #{$ipadpro} {
+    padding: 0 5em;
+  }
+
+  @media #{$ipad} {
+    padding: 0 3em;
+  }
+
+  @media #{$mob} {
+    padding: 0 2em;
+  }
+
+  &.center-content-box {
+    padding: 0 23.69%;
+
+    @media #{$ipad} {
+      padding: 0 5em;
+    }
+
+    @media #{$ipad} {
+      padding: 0 3em;
+    }
+
+    @media #{$mob} {
+      padding: 0 2em;
+    }
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  position: relative;
+  padding: 0 0.9375em;
+  z-index: 2;
+}
+
+.sec__wrapper {
+  flex-direction: column;
+}
+
+.section {
+  position: relative;
+  padding: 2em 0;
+
+  @media #{$tab} {
+    padding: 3em 0;
+  }
+
+  @media #{$desktop} {
+    padding: 5em 0;
+  }
+}
+
+
+
+.generic-panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 87.5em;
+
+  &__rightside {
+    align-self: flex-end;
+    @media #{$mob} {
+      position: absolute;
+      bottom: 2.5em;
+      z-index: 2;
+      left: 0;
+      right: 0;
+      text-align: center;
+    }
+  }
+
+  &--full {
+    max-width: 100%;
+  }
+
+  .h2 {
+    @media #{$mob} {
+      margin-bottom: 1em;
+    }
+  }
+}

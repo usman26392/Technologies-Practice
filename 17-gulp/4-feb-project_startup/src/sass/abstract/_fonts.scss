@@ -1,0 +1,18 @@
+// these fonts url path from custom-min.css because we will need in production mode.
+
+// 300
+// @font-face {
+//   font-family: "Didot";
+//   src: url("../fonts/Didot-HTF-L06-Light.woff2") format("woff2"),
+//     url("../fonts/Didot-HTF-L06-Light.woff") format("woff"),
+//     url("../fonts/Didot-HTF-L06-Light.ttf") format("ttf");
+//   font-weight: 300;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600&display=swap');
+
+
+

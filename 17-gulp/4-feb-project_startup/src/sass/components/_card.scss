@@ -1,0 +1,363 @@
+.card {
+  border: 1px solid $graycol;
+  border-radius: 10px;
+  transition: $transition;
+  position: relative;
+
+  &-wrapper {
+    display: block;
+    color: $secondarycol;
+    padding-bottom: 5.125em;
+    border-radius: inherit;
+  }
+
+  &__figure {
+    width: 100%;
+    height: 19.3125em;
+    border-radius: inherit;
+    background: $primarycol;
+    @media #{$mob} {
+      height: 15em;
+    }
+
+    img {
+      border-radius: 10px 10px 0px 0px;
+      transition: $transition;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__body {
+    padding: 1.75em 1.875em;
+    position: relative;
+  }
+  &__header {
+    padding-bottom: 1em;
+    border-bottom: 1px solid $graycol;
+  }
+  &__category {
+    font-size: 1em;
+    line-height: 1.625em;
+    color: $primarycol;
+  }
+  &__title {
+    font-size: 1.5625em;
+    margin-bottom: 0;
+    text-transform: capitalize;
+    line-height: 2em;
+  }
+  &__description {
+    font-size: 1.0625em;
+    color: $graycol3;
+    margin-bottom: 0;
+  }
+
+  &__amount-description {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.9375em 0;
+    .price {
+      margin: 0;
+      padding-right: 0.5em;
+    }
+    .features {
+      display: flex;
+      padding-left: 1em;
+      border-left: 1px solid $graycol;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 -10px;
+    }
+    .type {
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+      .icon {
+        margin-right: 8px;
+        flex: 0 0 18px;
+      }
+      .quantitiy {
+        font-size: 1.25em;
+        font-weight: 700;
+        height: 1.6em;
+      }
+    }
+  }
+
+  &-cta {
+    background: $graycol2;
+    color: $secondarycol;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: $transition;
+    padding: 1em 1.3em;
+    margin: 0 1.875em 1.5625em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    &__avatar {
+      display: flex;
+      .avatar {
+        border-radius: 50%;
+        border: 1px solid $primarycol;
+        flex: 0 0 3.1875em;
+        width: 3.1875em;
+      }
+      .title {
+        padding-left: 0.9375em;
+        > * {
+          display: block;
+        }
+        .listby {
+          font-size: 0.875em;
+          font-weight: 700;
+          color: $lightgray3;
+          line-height: 1.5714em;
+          transition: $transition;
+        }
+        .owner {
+          font-size: 1.125em;
+          font-weight: 700;
+          transition: $transition;
+        }
+      }
+    }
+
+    &__icon {
+      width: 2.1875em;
+      height: 2.1875em;
+      animation: whatsappAnim 1s linear 0s infinite alternate;
+    }
+
+    &:hover {
+      background-color: $secondarycol;
+      .listby {
+        color: $whitecol;
+      }
+      .owner {
+        color: $primarycol;
+      }
+    }
+  }
+
+  &__route-icon {
+    width: 3.5625em;
+    height: 3.5625em;
+    background: $primarycol;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 1.75em;
+    top: -1.8em;
+    transition: $transition;
+    cursor: pointer;
+    img {
+      transition: $transition;
+      width: 1.1875em;
+      height: 0.8125em;
+    }
+  }
+
+  &:hover {
+    box-shadow: $bx-shadow;
+  }
+
+  &:hover &__route-icon {
+    background-color: $secondarycol;
+    img {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+@keyframes whatsappAnim {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-5px);
+  }
+}
+
+// interior card
+.card-interior {
+  display: block;
+  width: 100%;
+  &__figure {
+    height: 38.0625em;
+    margin-bottom: 1.875em;
+    @media #{$ipad} {
+      height: 30em;
+    }
+    @media #{$mob} {
+      height: 23em;
+    }
+
+    img {
+      border-radius: 10px;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .c_btn {
+    padding-left: 0;
+    color: $whitecol;
+  }
+  &:hover {
+    .c_btn {
+      color: $primarycol;
+    }
+    .round-c_btn {
+      img {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+// card advertisement
+.card-advertisement {
+  max-width: 34.6875em;
+  height: 47.75em;
+  position: absolute;
+  right: -17.34375em;
+  bottom: 0;
+  z-index: 2;
+  padding: 4.6875em 18.75em 2.5em 2.375em;
+  display: none;
+  @media #{$desktop} {
+    display: block;
+  }
+
+  &__figure {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+  &__text {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 100%;
+    color: $whitecol;
+  }
+
+  &__title {
+    .h3 {
+      line-height: 1.142em;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .item {
+      font-size: 1.25em;
+      line-height: 1.5em;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: $whitecol;
+      transition: $transition;
+    }
+  }
+}
+
+// card orange calendar
+.box-date {
+  width: 6.375em;
+  height: 5.625em;
+  background-color: $primarycol;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $whitecol;
+  border-radius: 10px;
+  transition: $transition;
+  &__day {
+    font-size: 3.125em;
+    font-weight: 700;
+    line-height: 0.6em;
+    margin-bottom: 0.16em;
+  }
+  &__month {
+    font-size: 1em;
+    font-weight: 700;
+  }
+}
+
+// meet card
+.meet-team {
+  &__card {
+    box-shadow: $bx-shadow;
+    overflow: hidden;
+    border-radius: 10px;
+    &:hover {
+      .meet-team__description {
+        background-color: $primarycol;
+      }
+      .meet-team__figure {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  &__figure {
+    height: 25.0625em;
+    @media #{$ipad} {
+      height: 30em;
+    }
+  }
+
+  img {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    transition: $transition;
+    @media #{$mob} {
+      object-position: top;
+    }
+  }
+
+  &__description {
+    background: $secondarycol;
+    color: $whitecol;
+    text-align: center;
+    padding: 1.375em 1.25em 1.25em;
+    border-radius: 10px;
+    margin-top: -10px;
+    transition: $transition;
+    position: relative;
+    z-index: 1;
+
+    .h4 {
+      margin-bottom: 4px;
+    }
+    .designation {
+      font-size: 1.0625em;
+      display: block;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+}
