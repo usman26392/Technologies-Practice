@@ -3,8 +3,12 @@ import './App.css';
 import Gallery from './components/Gallery';
 import PackingList from './components/PackingList';
 import ScienstistList from './components/ScienstistList';
+import Teaset from './components/Teaset';
 import Todolist from './components/Todolist';
+import Toolbar from './components/Toolbar';
 import WomanProfile from './components/WomanProfile';
+
+
 
 
 
@@ -24,6 +28,18 @@ function App() {
       <hr />
       <hr />
       <ScienstistList/>
+      <hr />
+      <hr />
+      <Teaset/>
+
+      <hr />
+      <hr />
+      <Toolbar
+        onPlayMovie={()=> {alert('playing')}}
+        onUploadImage={()=>{alert('Uploading')}}
+       />
+
+
     </div>
   );
 }

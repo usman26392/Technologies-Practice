@@ -1,0 +1,39 @@
+.c-tabs {
+  &__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    flex: 1 0 13.1em;
+    margin-bottom: 1em;
+  }
+
+  &__button {
+    font-size: 2rem;
+    user-select: none;
+    cursor: pointer;
+    background: $blackcolor;
+    color: $whitecolor;
+    border: 0;
+    padding: 0.8em 2em;
+    transition: $transition;
+    width: 100%;
+    text-align: center;
+    &:hover {
+      background: $primarycolor;
+    }
+    &.active {
+      background: $primarycolor;
+    }
+  }
+
+  &__pane {
+    &:not(.active) {
+      display: none;
+    }
+  }
+}

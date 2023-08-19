@@ -10,7 +10,7 @@
         <!-- home CSS -->
         <link rel="stylesheet" href="/assets/css/home.min.css">
     </head>
-    <body>
+    <body style="height: 49999px;">
         
         <main class="main-wrapper">
             <h2>icon bar horizontal</h2>
@@ -36,7 +36,7 @@
             
             <h2>icon bar vertical</h2>
             <nav class="icon-bar icon-bar--vertical">
-                <a href="javascript:;" class="icon-bar__icon">
+                <a href="javascript:;" class="icon-bar__icon active">
                     <img src="./assets/svg/house-door-fill.svg" alt="home icon">
                 </a>
                 <a href="javascript:;" class="icon-bar__icon">
@@ -53,9 +53,90 @@
                 </a>
             </nav>
 
+            <hr>
 
+            <h2>tabs</h2>
+            <div class="c-tabs">
+                <ul class="c-tabs__list">
+                    <li class="c-tabs__item">
+                        <button class="c-tabs__button active" data-id="home">Home</button>
+                    </li>
+                    <li class="c-tabs__item">
+                        <button class="c-tabs__button" data-id="profile">Profile</button>
+                    </li>
+                    <li class="c-tabs__item">
+                        <button class="c-tabs__button" data-id="about">About</button>
+                    </li>
+                    <li class="c-tabs__item">
+                        <button class="c-tabs__button" data-id="news">News</button>
+                    </li>
+                    <li class="c-tabs__item">
+                        <button class="c-tabs__button" data-id="blog">Blog</button>
+                    </li>
+                    <li class="c-tabs__item">
+                        <button class="c-tabs__button" data-id="article">Articles</button>
+                    </li>
+                </ul>
+                <div class="c-tabs__content">
+                    <div class="c-tabs__pane active" id="home">
+                        <p>Home content: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis, itaque.</p>
+                    </div>
+                    <div class="c-tabs__pane" id="profile">
+                        <p>Profile content: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis, itaque.</p>
+                    </div>
+                    <div class="c-tabs__pane" id="about">
+                        <p>About content: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis, itaque.</p>
+                    </div>
+                    <div class="c-tabs__pane" id="news">
+                        <p>News content: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis, itaque.</p>
+                    </div>
+                    <div class="c-tabs__pane" id="blog">
+                        <p>blog content: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis, itaque.</p>
+                    </div>
+                    <div class="c-tabs__pane" id="article">
+                        <p>article content: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis, itaque.</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+            <h2>Accordion</h2>
+            <div class="c-accordion">
+                <div class="c-accordion__item">
+                    <div class="c-accordion__header">
+                        <button class="c-accordion__button">Accordion</button>
+                    </div>
+                    <div class="c-accordion__collapse">
+                        <div class="c-accordion__collapse__body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nam.
+                        </div>
+                    </div>
+                </div>
+                <div class="c-accordion__item">
+                    <div class="c-accordion__header">
+                        <button class="c-accordion__button">Accordion</button>
+                    </div>
+                    <div class="c-accordion__collapse">
+                        <div class="c-accordion__collapse__body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nam.
+                        </div>
+                    </div>
+                </div>
+                <div class="c-accordion__item">
+                    <div class="c-accordion__header">
+                        <button class="c-accordion__button">Accordion</button>
+                    </div>
+                    <div class="c-accordion__collapse">
+                        <div class="c-accordion__collapse__body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nam.
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </main>
+
+
 
 
         

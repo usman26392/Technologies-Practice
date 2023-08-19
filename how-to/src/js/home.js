@@ -1,20 +1,22 @@
-// icon bar active class toggle
-(function () {
-  function toggleActiveClass(parent, iconElms) {
-    let parentEl = document.querySelector(parent),
-        childElms = parentEl.querySelectorAll(iconElms);
+import  Accordion1  from "./components/accordions/accordion";
+import iconToggleActiveClass from "./components/menus/iconBar";
+import customTab1 from "./components/tabs/tab-1";
 
-    childElms.forEach(function (childElm) {
-      childElm.addEventListener("click", function () {
-        let currentchildElm = this;
-        if (!currentchildElm.classList.contains("active")) {
-          childElms.forEach(function (childElm) {
-            childElm.classList.remove("active");
-          });
-          currentchildElm.classList.add("active");
-        }
-      });
-    });
-  }
-  toggleActiveClass(".icon-bar", ".icon-bar__icon");
-})();
+
+// menus
+iconToggleActiveClass(".icon-bar", ".icon-bar__icon");
+iconToggleActiveClass(".icon-bar--vertical", ".icon-bar__icon");
+
+
+// tabs
+customTab1('.c-tabs__list', '.c-tabs__button', '.c-tabs .c-tabs__pane' );
+
+
+// accordions
+Accordion1()
+
+
+
+
+
+

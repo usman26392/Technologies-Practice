@@ -1,4 +1,7 @@
-# 
+# jo b component banao, us k andar javascript kuch na kuch honi chayey.
+
+
+
 
 # for installation npm packages
     npm i
@@ -21,26 +24,4 @@ body {
     direction: ltr;
 }
 
-
-# testing
-# sass checking
-ltr home scss checking on run time  --> done
-ltr inner scss checking on run time --> done
-
-rtl home scss checking on run time -->    done
-rtl inner scss checking on run time. -->  done
-
-
-# js checking
-ltr  for home js checking on run time --> done
-ltr  for inner js checking on run time --> done
-
-rtl  for home js checking on run time --> done
-rtl  for inner js checking on run time --> done
-
-
-
-# images on production.
-  for ltr convert into webp
-  for rtl convert into webp
 
