@@ -1,7 +1,7 @@
 
 
 function Cup(props) {
-    console.log(props)
+    // console.log(props)
     // props.name = "rehan"; // props are immutable i.e props(object) property values can not change.
     // props object ki jo properties hoti hayn, un ki values change nai ho sakhteen.
     return (
@@ -11,7 +11,7 @@ function Cup(props) {
 
 // or
 function Cup2({name}) {
-    console.log(name)
+    // console.log(name)
     // name = "rehan"; // can change variable's value. 
     return (
         <h2>Tea cup for guest {name}</h2>
