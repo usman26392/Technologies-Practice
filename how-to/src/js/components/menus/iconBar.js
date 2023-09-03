@@ -4,6 +4,7 @@
 function iconToggleActiveClass(parent, iconElms) {
   let parentEl = document.querySelector(parent),
       childElms = parentEl.querySelectorAll(iconElms);
+      
   childElms.forEach(function (childElm) {
     childElm.addEventListener("click", function () {
       let currentchildElm = this;

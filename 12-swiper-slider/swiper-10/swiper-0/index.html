@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>swiper</title>
+    <link rel="stylesheet" href="../assets/vendors/swiper-bundle.min.css" />
+
+    <style>
+      .swiper {
+        max-width: 600px;
+        height: 300px;
+        margin: 0 auto 40px;
+      }
+
+      .swiper1 .swiper-wrapper .swiper-slide:nth-child(1) {
+        background-color: red;
+      }
+
+      .swiper1 .swiper-wrapper .swiper-slide:nth-child(2) {
+        background-color: green;
+      }
+      .swiper1 .swiper-wrapper .swiper-slide:nth-child(3) {
+        background-color: blue;
+      }
+      .swiper1 .swiper-wrapper .swiper-slide:nth-child(4) {
+        background-color: blueviolet;
+      }
+      .swiper1 .swiper-wrapper .swiper-slide:nth-child(5) {
+        background-color: darkgray;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Slider main container -->
+    <div class="swiper swiper1">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">Slide 4</div>
+        <div class="swiper-slide">Slide 5</div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+
+    <!-- js files -->
+    <script src="../assets/vendors/swiper-bundle.min.js"></script>
+
+    <script>
+      window.onload = function () {
+        var swiper1 = new Swiper(".swiper1", {
+          loop: false,
+          spaceBetween: 10,
+          speed: 600,
+          slidesPerView: 2,
+          freeMode: false,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+            clickable: true,
+          },
+        });
+
+        
+      };
+
+    </script>
+  </body>
+</html>

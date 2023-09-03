@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>swiper</title>
+    <link rel="stylesheet" href="../assets/vendors/swiper-bundle.min.css" />
+
+    <style>
+      .swiper {
+        width: 600px;
+        height: 300px;
+        margin: 0 auto 40px;
+      }
+
+      .img-wrapper,
+       img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .bullets-wrapper-slider {
+        position: relative;
+        padding-bottom: 20px;
+      }
+
+      .swiper-pagination-bullet {
+        margin: 0 20px !important;
+      }
+
+      .custom-sliderfractions {
+        font-size: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>custom animation swiper</h1>
+
+    <!-- Slider main container -->
+    <h2>swiper1</h2>
+    <div class="bullets-wrapper-slider">
+      <div class="swiper swiper1">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="img-wrapper">
+              <img src="./assets/images/bg-1.jpg" alt="" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-wrapper">
+              <img src="./assets/images/bg-2.png" alt="" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-wrapper">
+              <img src="./assets/images/bg-3.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="custom-sliderfractions"></div>
+    </div>
+
+    <!-- js files -->
+    <script src="../assets/vendors/swiper-bundle.min.js"></script>
+
+    <script>
+      (function () {
+        var swiper = new Swiper(".swiper1", {
+          pagination: {
+            el: ".custom-sliderfractions",
+            type: "custom",
+            renderCustom: function (swiper, current, total) {
+              return (
+                `<div class="custom-sliderfractions__inner"> <span>0${current} / </span> <span>0 ${total}</span>  </div>` 
+              )   
+            },
+          },
+          
+        });
+      })();
+    </script>
+  </body>
+</html>

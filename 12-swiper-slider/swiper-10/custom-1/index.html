@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>swiper controller</title>
+    <link rel="stylesheet" href="../assets/vendors/swiper-bundle.min.css">
+
+    <style>
+        .swiper {
+            width: 600px;
+            height: 300px;
+            margin: 0 auto 40px;
+        }
+
+        .img-wrapper,
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper1 .swiper-slide {
+            overflow: hidden;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>custom animation swiper</h1>
+
+    <!-- Slider main container -->
+    <h2>swiper1</h2>
+    <div class="swiper swiper1">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <div class="img-wrapper">
+                    <img src="./assets/images/bg-1.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="img-wrapper">
+                    <img src="./assets/images/bg-2.png" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="img-wrapper">
+                    <img src="./assets/images/bg-3.jpg" alt="">
+                </div>
+            </div>            
+        </div>
+ 
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+    
+
+  
+
+
+    <!-- js files -->
+    <script src="../assets/vendors/swiper-bundle.min.js"></script>
+
+    <script>
+        (function() {
+            var mainSliderParallaxSelector = '.swiper1', interleaveOffset = 0.5;
+            var mainSliderParallaxOptions = {
+                slidesPerView: 1,
+                spaceBetween: 0,
+                loop: true,
+                speed: 1000,
+                autoplay: false,
+                grabCursor: true,
+                watchSlidesProgress: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                on: {
+                    progress: function() {
+                        var swiper = this;
+                        for (var i = 0; i < swiper.slides.length; i++) {
+                            var slideProgress = swiper.slides[i].progress,
+                                innerOffset = swiper.width * interleaveOffset,
+                                innerTranslate = slideProgress * innerOffset;
+                            swiper.slides[i].querySelector('.img-wrapper').style.transform = 'translateX(' + innerTranslate + 'px)';
+                        }
+                    },
+                    touchStart: function() {
+                        var swiper = this;
+                        for (var i = 0; i < swiper.slides.length; i++) {
+                            swiper.slides[i].style.transition = '';
+                        }
+                    },
+                    setTransition: function(swiper, speed) {
+                        for (var i = 0; i < swiper.slides.length; i++) {
+                            swiper.slides[i].style.transition = speed + 'ms';
+                            swiper.slides[i].querySelector('.img-wrapper').style.transition = speed + 'ms';
+
+                        }
+                    }
+                }
+            };
+            var mainSliderParallax = new Swiper(mainSliderParallaxSelector, mainSliderParallaxOptions);
+        })();
+    </script>
+
+</body>
+</html>

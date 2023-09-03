@@ -133,6 +133,58 @@
                     </div>
                 </div>
             </div>
+            <hr>
+            <hr>
+
+            <h2>Modals</h2>
+            <div class="modal" tabindex="-1">
+                <div class="modal__dialog">
+                    <div class="modal__content">
+                        <div class="modal__header">
+                            <button class="modal__cancel">X</button>
+                        </div>
+                        <div class="modal__body">
+                            <h2>Lorem, ipsum dolor.</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium animi libero et quaerat rerum at possimus nemo quo ut aliquam sunt, maxime cumque beatae nulla odit, natus, doloribus esse minima.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium animi libero et quaerat rerum at possimus nemo quo ut aliquam sunt, maxime cumque beatae nulla odit, natus, doloribus esse minima.</p>
+                        </div>
+                        <div class="modal__footer"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-backdrop"></div>
+
+            <button class="show-modal">show popup</button>
+
+            <hr>
+            <hr>
+            <h2>custom cursor</h2>
+            <section class="custom-cursor-sec">
+                <div class="cursor">Drag</div>
+                <div class="container">
+                    <div class="custom-row">
+                        <div class="col_lg_4">
+                            <div class="box">
+                                <h3 class="box__title">Lorem, ipsum dolor.</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, quo.</p>
+                            </div>
+                        </div>
+                        <div class="col_lg_4">
+                            <div class="box">
+                                <h3 class="box__title">Lorem, ipsum dolor.</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, quo.</p>
+                            </div>
+                        </div>
+                        <div class="col_lg_4">
+                            <div class="box">
+                                <h3 class="box__title">Lorem, ipsum dolor.</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, quo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
 
         </main>
 

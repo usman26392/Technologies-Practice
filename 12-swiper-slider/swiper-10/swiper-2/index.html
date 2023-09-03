@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>swiper controller</title>
+    <link rel="stylesheet" href="../assets/vendors/swiper-bundle.min.css">
+
+    <style>
+        .swiper {
+            width: 600px;
+            height: 300px;
+            margin: 0 auto 40px;
+        }
+
+        .swiper1 .swiper-wrapper .swiper-slide:nth-child(odd) {
+            background-color: red;
+        }
+
+        .swiper1 .swiper-wrapper .swiper-slide:nth-child(even) {
+            background-color: green;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <h1>swiper Controllers</h1>
+
+    <!-- Slider main container -->
+    <h2>swiper1</h2>
+    <div class="swiper swiper1">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 5</div>
+            <div class="swiper-slide">Slide 6</div>
+        </div>
+
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+    
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    
+        <!-- If we need scrollbar -->
+        <!-- <div class="swiper-scrollbar"></div> -->
+    </div>
+
+    <!-- swiper 2 -->
+    <h2>swiper2</h2>
+    <div class="swiper swiper2">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 5</div>
+            <div class="swiper-slide">Slide 6</div>
+        </div>
+
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+    
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    
+        <!-- If we need scrollbar -->
+        <!-- <div class="swiper-scrollbar"></div> -->
+    </div>
+
+  
+
+
+    <!-- js files -->
+    <script src="../assets/vendors/swiper-bundle.min.js"></script>
+
+    <script>
+        
+        // swiper1
+        const swiper1 = new Swiper('.swiper1', {
+            spaceBetween: 10,
+            // freeMode: true,
+            watchSlidesProgress: true,
+
+            // // If we need pagination
+            pagination: {
+                el: '.swiper1 .swiper-pagination',
+                clickable: true
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper1 .swiper-button-next',
+                prevEl: '.swiper1 .swiper-button-prev',
+            },
+
+            // // And if we need scrollbar
+            // scrollbar: {
+            //     el: '.swiper-scrollbar',
+            // },
+
+                       
+        });
+
+
+        // swiper2
+        const swiper2 = new Swiper('.swiper2', {
+            slidesPerView: 1,   
+            // If we need pagination
+            pagination: {
+                el: '.swiper2 .swiper-pagination',
+                clickable: true
+            },
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper2 .swiper-button-next',
+                prevEl: '.swiper2 .swiper-button-prev',
+            },                  
+        });
+
+
+
+        swiper2.controller.control = swiper1;
+        swiper1.controller.control = swiper2;
+
+        // swiper1 ka control , swiper2 k pass hay or 
+        // swiper2 ka control , swiper1 k pass hay.
+
+        // control say muraad yahan yey hay k dono sliders k "navigation" and "pagination".
+
+
+        
+
+    </script>
+
+</body>
+</html>

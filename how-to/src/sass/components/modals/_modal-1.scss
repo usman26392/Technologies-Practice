@@ -1,0 +1,62 @@
+.modal {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 1051;
+  max-width: 31.25em;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: 0 auto;
+  display: none;
+  &.show {
+    display: block;
+  }
+  &__dialog {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  &__content {
+    padding: 2rem;
+    background-color: $blackcolor;
+  }
+  &__header {
+    margin-bottom: 1rem;
+    position: relative;
+  }
+
+  &__body {
+    color: $whitecolor;
+    h2 {
+      color: $whitecolor;
+    }
+  }
+
+  &__cancel {
+    color: $whitecolor;
+    background: $primarycolor;
+    border: 0;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.547);
+  display: none;
+  &.show {
+    display: block;
+  }
+}

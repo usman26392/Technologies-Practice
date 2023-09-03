@@ -1,0 +1,42 @@
+.box {
+  border: 1px solid $blackcolor;
+  cursor: none;
+  padding: 4em 1em;
+}
+
+.cursor {
+    font-size: 2rem;
+    text-transform: uppercase;
+    background: $blackcolor;
+    color: $primarycolor;
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+    user-select: none;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 300ms ease;
+    &.show {
+        transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
+
+
+
+
+
+
+p:hover {
+    background-color: red;
+}
+
+
