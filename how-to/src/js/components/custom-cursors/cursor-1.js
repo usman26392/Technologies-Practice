@@ -36,11 +36,6 @@ function Cursor() {
             // console.log(' "this" object' , this);
             cursorElement.classList.remove("show");
         });
-
-        
-
-
-
 }
 
 export default Cursor;

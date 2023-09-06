@@ -1,11 +1,5 @@
 
 
-/**
- * ---------- incomplete hay yey code abi
- * .c-accordion__collapse__body panel par click karo toh error ara hay.
- */
-
-
 export default function Accordion1() {
 
     let c__accordion = document.querySelector('.c-accordion'),
