@@ -1,0 +1,55 @@
+.bar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+  &__socials-links {
+    @media (max-width: 575px) {
+      display: none;
+    }
+    ul {
+      list-style: none;
+      display: flex;
+      margin: 0 -1rem;
+    }
+    li {
+      padding: 0 1rem;
+    }
+  }
+  &__logo {
+    font-size: 2rem;
+    font-weight: 700;
+    max-width: 30rem;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 0 1.5rem;
+    > nav {
+      padding: 0 2rem 0 0;
+      @media (max-width: 575px) {
+        display: none;
+      }
+      ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        margin: 0 -1rem;
+      }
+      li {
+        padding: 0 1rem;
+      }
+    }
+    > a {
+      @media (max-width: 575px) {
+        display: none;
+      }
+    }
+  }
+}

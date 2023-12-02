@@ -1,0 +1,20 @@
+
+.feature-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 -1.5rem;
+}
+
+.feature__col {
+    flex: 0 0 48%;
+    width: 48%;
+    padding: 0 1.5rem;
+    position: relative;
+}
+
+.feature-figure {
+    position: relative;
+    height: 50rem;
+}

@@ -30,7 +30,6 @@
        smAlert.textContent = "Text is Valid";
        textField.style.borderColor = "green";    
        smAlert.style.color = "green";
-
      }
      else {
       textField.style.borderColor = "red";

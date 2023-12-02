@@ -1,0 +1,25 @@
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1rem;
+  
+  &__item {
+    flex: 0 1 16.66%;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+  }
+  &__card {
+    display: flex;
+    border-radius: 1rem;
+    padding: 1rem;
+    align-items: center;
+  }
+}
+
+.figure {
+  border-radius: 50%;
+  overflow: hidden;
+  flex: 0 0 3.2rem;
+  height: 3.2rem;
+  margin-right: 1rem;
+}

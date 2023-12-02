@@ -1,5 +1,5 @@
 /**
- * --------- Exception Handling --------------------
+ * --------- error or exception Handling --------------------
  */
 
 
@@ -28,7 +28,7 @@
  *  */    
 
 
-function  getRectArea(w,h) {
+function getRectArea(w,h) {
     if(isNaN(w) || isNaN(h)) {
         throw `Parameters are not a number`;
     }

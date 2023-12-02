@@ -4,7 +4,8 @@
 
  let myElement = document.querySelector("#hdg-1");
 
-//  console.log(myElement.attributes);
+ console.log(myElement.attributes);
+ console.log(typeof myElement.attributes)
 //  console.log(myElement.attributes[0]);
 //  console.log(myElement.attributes[1]);
 //  console.log(myElement.attributes[0].nodeName);

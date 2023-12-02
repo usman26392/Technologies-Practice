@@ -11,14 +11,14 @@ class Person {
     }
 }
 
-// add function in prototype object with the help of class.
+// add function in prototype object with the help of 'class'.
 Person.prototype.fly = function() {
     return "Can fly"
 }
 
 
 let farhan = new Person();
-// add function in prototype object with the help of object
+// add function in prototype object with the help of 'object'
 farhan.__proto__.run = function() {
     return "Can run"
 }

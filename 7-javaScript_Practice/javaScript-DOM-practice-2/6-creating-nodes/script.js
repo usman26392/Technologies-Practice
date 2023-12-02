@@ -4,17 +4,12 @@
  */
 
 
-
-
-
 /**
  * element node.
  */
 
 // let eNode = document.createElement("h2");
 // console.log(eNode);
-
-
 
 
 /**

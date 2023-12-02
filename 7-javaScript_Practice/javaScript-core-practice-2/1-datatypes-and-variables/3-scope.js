@@ -1,9 +1,5 @@
 
-
-
-
 var a = 10;
-
 
 var add5 = function(num) {
     var b = 5;

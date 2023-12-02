@@ -6,15 +6,15 @@
 
 
 # topics of this tutorial
-1. components(class and functional)
-2. JSX
-3. props
-4. state
-5. setState
-6. destructuring props and state
-7. event handling
-8. method as props
-9. conditional rendering (etc: with ternary operator)
+1.  components(class and functional)
+2.  JSX
+3.  props
+4.  state
+5.  setState
+6.  destructuring props and state
+7.  event handling
+8.  method as props
+9.  conditional rendering (etc: with ternary operator)
 10. list rendering (etc: with map method )
 11. component styling
 12. form handling

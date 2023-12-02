@@ -5,16 +5,20 @@
 // let hdgElNode1 = document.querySelector(".hdg-1");
 // let myButton1 = document.querySelector(".btn");
 
-// myButton1.onclick = changeStyle2;
-// myButton1.onclick = changeStyle3;
 
 // function changeStyle2() {
-//     hdgElNode1.style.cssText = "background-color: yellow";
+//     hdgElNode1.style.cssText = "background-color: yellow;font-size:60px;";
 // }
 
 // function changeStyle3() {
 //     hdgElNode1.style.cssText = "background-color: green;";
 // }
+
+
+// myButton1.onclick = changeStyle2;
+// myButton1.onclick = changeStyle3;
+
+
 
 
 
@@ -25,22 +29,26 @@
 // let hdgElNode = document.querySelector(".hdg-1");
 // let myButton = document.querySelector(".btn");
 
-// way-1
+// // way-1: with named function 'this' will point to myButton
 // myButton.addEventListener("click",changeCSS);
 // function changeCSS() {
 //     hdgElNode.style.cssText = "font-size: 60px;";
+//     console.log(this)
 // }
 
-// way-2
-// myButton.addEventListener("click",function(){
+// way-2: with normal function 'this' will point to myButton 
+// myButton.addEventListener("click", function(){
 //     // hdgElNode.style.cssText = "background-color:red; color: white;";
 //     hdgElNode.classList.toggle("hdg-2");
+//     console.log(this)
 // });
 
 
-// way-3
+// way-3: with arrow function 'this' keyword will not point to myButton
+// 'this' will point to window global object
 // myButton.addEventListener("click",()=> {
 //     hdgElNode.style.cssText = "background-color:red; color: white;";
+//     console.log(this)
 // });
 
 
@@ -48,14 +56,18 @@
  * cases
  */
 
-// case-1: binding more than one events and more than one event handler on an element.
-// myButton.addEventListener("mouseover",()=>{
-//     hdgElNode.style.cssText = "background-color:green; color: white;";   
-// });
+let hdgElNode = document.querySelector(".hdg-1");
+let myButton = document.querySelector(".btn");
 
-// myButton.addEventListener("click",()=>{
-//     hdgElNode.classList.toggle("hdg-2");
-// });
+// case-1: binding more than one events and more than one event handler on an element.
+myButton.addEventListener("mouseover",function() {
+    hdgElNode.style.cssText = "background-color:green; color: white;";   
+});
+
+myButton.addEventListener("click", function() {
+    hdgElNode.classList.toggle("hdg-2");
+});
+
 
 // case-2: 
 

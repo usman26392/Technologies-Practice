@@ -3,13 +3,13 @@
  */
 
   
-//   function geeky(callback) {
-//       callback();
-//   }
+  function geeky(callback) {
+      callback();
+  }
 
-//   geeky(function() {
-//       console.log("abc");
-//   });
+  geeky(function() {
+      console.log("abc");
+  });
 
 
 //   example 2: with parameter

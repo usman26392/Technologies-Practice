@@ -4,8 +4,10 @@
 
 # video will be start: video 67
 
-<!-- command -->
+<!-- commands -->
 # npm run serve-json
+# npm run dev
+
 
 
 # topics

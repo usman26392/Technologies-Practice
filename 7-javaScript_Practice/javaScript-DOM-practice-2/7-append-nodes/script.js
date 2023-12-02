@@ -1,6 +1,6 @@
 /**
  * is may hum append karyn gay 
- * element Node or Node
+ * elementNode or Node
  */
 
 

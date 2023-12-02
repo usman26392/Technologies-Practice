@@ -1,0 +1,57 @@
+
+.theme-toggle {
+    width: 4rem;
+    flex: 0 0 4rem;
+    height: 2rem;
+    background: var(--black);
+    border-radius: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    margin-right: 2rem;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1.5rem;
+      height: 1.5rem;
+      background: var(--white);
+      border-radius: 50%;
+      left: 0;
+      z-index: 1;
+      cursor: pointer;
+      pointer-events: none;
+      transition: var(--transition);
+    } 
+    &__light {
+      &::before {
+        left: 0;
+      }
+    }   
+    &__dark {
+      &::before {
+        left: calc(100% - 1.5rem);
+      }
+    }
+}
+
+
+.active {
+    &::before {
+        left: calc(100% - 1.5rem);
+    }
+}
+
+
+.figure-moon {
+  pointer-events: none;
+  user-select: none;
+}
+
+
+.figure-sun {
+  pointer-events: none;
+  user-select: none;
+}
+  
