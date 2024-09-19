@@ -1,0 +1,1 @@
+IndexedDB is a low-level API for client-side storage of significant amounts of structured data, including files/blobs. This API uses indexes to enable high-performance searches of this data. It is useful for applications that need to store data on the client side and make it available offline.

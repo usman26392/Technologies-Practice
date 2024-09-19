@@ -11,6 +11,3 @@
 
 
 
-# topic: 20 things javascript developers should know
-fetch API
-
