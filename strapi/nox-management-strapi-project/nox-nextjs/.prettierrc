@@ -1,0 +1,16 @@
+{
+    "endOfLine": "crlf",
+    "semi": true,
+    "singleQuote": false,
+    "tabWidth": 2,
+    "useTabs": true,
+    "trailingComma": "es5",
+    "printWidth": 120,
+    "plugins": ["prettier-plugin-tailwindcss"],
+    "htmlWhitespaceSensitivity": "ignore",
+    "proseWrap": "preserve",
+    "bracketSameLine": true,
+    "jsxBracketSameLine": true,
+    "arrowParens": "always"
+  }
+  

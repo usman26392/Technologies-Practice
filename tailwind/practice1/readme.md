@@ -33,7 +33,7 @@ py-24 = 24 * 4  =  96px
 i have a 28px in design so i want to add a class for it.
 4px = prefix-1
 1px = prefix-1/4
-28px = 28 * 1 / 4 = 
+28px = 28 * 1 / 4 = 7
 28px = 28/4 = 7 means class will be .prefix-7 for example for margin: .mt-7
 # means: px value will be divided by base value i.e 4
 # Mnemonic: 28/4 = 7 == .mt-7
@@ -46,7 +46,7 @@ i have a 28px in design so i want to add a class for it.
 
 <!-- px convert into rem -->
 # i know 
-# 16px == 1rem
+16px == 1rem
 1px == 1/16 rem
 so if 28px
 28px = 28/16 rem = 1.75 rem

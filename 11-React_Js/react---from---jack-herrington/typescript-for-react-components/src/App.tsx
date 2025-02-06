@@ -1,6 +1,7 @@
 import React, { ReactNode, useState } from "react";
 import "./App.css";
-import Button, { SuperButton } from "./components/Button";
+import Button from "./components/Button";
+// import {SuperButton } from "./components/Button";
 
 // example1: conventional props
 type HeadingProps = {
@@ -184,14 +185,15 @@ function App() {
       {/* <Button
         type="reset"
         color="blue"
-      />
+      /> */}
 
-      <SuperButton color="red" type="submit" size="lg"/> */}
+      {/* <SuperButton color="red" type="submit" size="lg"/> */}
+
 
       {/* example: for Typing event handler functions */}
       {/* <Button/> */}
 
-      {/* example: for  Typing usestate hook */}
+      {/* example: for Typing usestate hook */}
 
       {/* example: for Typing useRef hook */}
       {/* <Button/> */}

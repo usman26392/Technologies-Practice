@@ -27,6 +27,7 @@ function UserDataDisplay() {
             console.log('Component will unmount');
         }
     },[]) // Empty dependency array means it runs once on mount
+    
     return (
         <div>
             <h1>User Data </h1>

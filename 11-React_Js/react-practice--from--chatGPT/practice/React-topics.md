@@ -16,27 +16,34 @@
   - form handling 
   - controlled and uncontrolled components
   - lifecycle methods of component
-  - portals: -------------------------------------- pending 
-            we can render a component outside the DOM root element (where id="root" ). use for modal or popups
-  - HOC: 
-        A pattern where a component is wrapped with another component to enhance its functionality.
-  - Render Props: 
-                A technique for sharing code between React components using a 'prop' whose value is a function.
-  - Error Boundaries: 
+  - createPortal:(done) , we can render a component outside the DOM root element (where id="root" ). use for modal or popups
   
 
 
-
-
-
 # hooks
- - useState(): local state management.
- - useEffect(): any code that needs to be executed after the component renders.
- - useContext(): similar concept of context API.
- - useReducer(): for global state management, similar to redux.
- - useCallback(): use for performance optimization. only render that component, that will be updated.
- - useMemo(): use for performance optimization and pure component
- - useRef(): we can directly access DOM nodes with the help of useRef() hook.
- - use custom hook: alternative to HOC.
+ - useState(): (done),  local state management.
+ - useEffect():  any code that needs to be executed after the component renders and after the mount.
+ - useContext(): (done), similar concept of context API. and third party libraray like Redux
+ - useCallback(): (done), use for performance optimization. only render that component, that will be updated.
+ - useMemo(): (done), use for performance optimization and pure component.
+ - useReducer(): (done), hook is useful for managing complex state logic in React, particularly when you have multiple state variables that depend on one another
+ - useRef(): (done), we can directly access DOM nodes with the help of useRef() hook and don't need of re-rendering
+ - use custom hook:
+
+
+# React Built-in Components
+- <Fragment> i.e <>...</>
+- <Profiler>
+- <StrictMode>
+- <Suspense>
+
+
+# APIs
+- createContext
+- memo
+- lazy
+
+
+
 
     

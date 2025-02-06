@@ -1,20 +1,80 @@
-
 @tailwind base;
+
+/* This will always be included in your compiled CSS */
+*,
+::before,
+::after {
+	margin: 0;
+	padding: 0;
+}
+/* end of above */
+
 @tailwind components;
 @tailwind utilities;
 
+/* for base style: typography etc */
+/* @layer base {
+  body {
+    font-size: 1rem;
+    background-color: #fff;
+  }
+  h1 {
+    font-size: 90px;
+    line-height: 1;
+  }
+  h2 {
+    font-size: 70px;
+    line-height: 1.14;
+  }
+} */
+
+/* There are a lot of disadvantages uses like this class with @apply directive. */
+/* don’t use @apply just to make things look “cleaner” */
+/* If you start using @apply for everything, you are basically just writing CSS again and throwing away all of the workflow and maintainability advantages Tailwind gives you. */
+/* for example: */
+/* 1) You have to think up class names all the time.  */
+/* 2) You have to jump between multiple files to make changes. */
+/* 3) Changing styles is scarier. */
+/* 4) Your CSS bundle will be bigger.  */
+/* agar hum koi js framework ( Next.js or Angular ) use karray hayn toh phirh is ko hargis use na karein. */
+/* This won't be included in your compiled CSS unless you actually use it into HTML */
+
+@layer components {
+	.btn-primary {
+		@apply rounded-full bg-violet-500 px-5 py-2 font-semibold text-white shadow-md hover:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-400 focus:ring-opacity-75;
+	}
+	/* .event-card {
+      background-color: black;
+      border-radius: 12px;
+      @apply py-2 px-5;
+    } */
+	.card {
+		background-color: theme("colors.white");
+		border-radius: theme("borderRadius.lg");
+		padding: theme("spacing.6");
+		box-shadow: theme("boxShadow.xl");
+		border: 1px solid theme("borderColor.purple.400");
+	}
+}
+
+@layer utilities {
+	/* custom utility class */
+	.content-auto {
+		content-visibility: auto;
+	}
+}
 
 
-/* @layer components {
-    .btn-primary {
-      @apply py-2 px-5 bg-violet-500 text-white font-semibold rounded-full shadow-md hover:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-400 focus:ring-opacity-75;
-    }
+/* screen function of Tailwind */
+/* @media screen(sm) {
+	body {
+		background-color: lightblue;
+	}
+}
+@media screen(lg) {
+	body {
+		background-color: lightgreen;
+	}
 } */
 
 
-@layer utilities {
-    /* custom class */
-    .content-auto {
-        content-visibility: auto;
-    }
-}

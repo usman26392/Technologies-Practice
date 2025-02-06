@@ -1,8 +1,6 @@
 import React, { ReactElement, useEffect, useRef, useState } from "react";
 import { type ThemeColor } from "../../lib/types";
 
-
-
 // examples: Typing variables.
 let num: number;
 num = 12;
@@ -31,7 +29,6 @@ function convertCurrency3(amount: number, currency: string): string {
   return `${amount} ${currency} `;
 }
 convertCurrency3(16, "USD");
-
 
 // example: React typing props
 // type ButtonProps = {
@@ -81,9 +78,6 @@ convertCurrency3(16, "USD");
 //   );
 // }
 
-
-
-
 // example: React.CSSProperties
 // type ButtonProps = {
 //   styleBtn: React.CSSProperties
@@ -96,8 +90,6 @@ convertCurrency3(16, "USD");
 //     </button>
 //   );
 // }
-
-
 
 // example: Record type
 // type ButtonProps = {
@@ -126,8 +118,6 @@ convertCurrency3(16, "USD");
 //   );
 // }
 
-
-
 // example: Typing function
 // type ButtonProps = {
 //   click: ()=> void;
@@ -140,7 +130,6 @@ convertCurrency3(16, "USD");
 //     </button>
 //   );
 // }
-
 
 // // example: Typing function with parameter
 // type ButtonProps = {
@@ -155,7 +144,6 @@ convertCurrency3(16, "USD");
 //   );
 // }
 
-
 // example: Typing children: React.ReactNode( accept all things e.g text node and element node)
 // type ButtonProps = {
 //   children: React.ReactNode
@@ -168,7 +156,6 @@ convertCurrency3(16, "USD");
 //     </button>
 //   );
 // }
-
 
 // example: Typing children: JSX.Element ( it is more restrict as campared to React.ReactNode)
 // type ButtonProps = {
@@ -183,8 +170,6 @@ convertCurrency3(16, "USD");
 //   );
 // }
 
-
-
 // example: Typing useState setter function
 // type ButtonProps = {
 //   countValue: number;
@@ -193,14 +178,12 @@ convertCurrency3(16, "USD");
 
 // export default function Button({countValue, setterFunc}: ButtonProps  ) {
 //   return (
-//     <button 
+//     <button
 //       onClick={()=> setterFunc(countValue + 1)}>
 //         you clicked me times: {countValue}
 //     </button>
 //   );
 // }
-
-
 
 // example: default prop values
 // type ButtonProps = {
@@ -212,7 +195,6 @@ convertCurrency3(16, "USD");
 //     <button>default prop value: {countValue}</button>
 //   );
 // }
-
 
 // example: Type alias vs interface
 // // type ButtonProps = {
@@ -227,7 +209,7 @@ convertCurrency3(16, "USD");
 
 // example: component props without ref
 // yey type hum tub use karty hayn, jub hummay kissi component k
-// built-in attributes as a props pass karnay hun. 
+// built-in attributes as a props pass karnay hun.
 // type ButtonProps = React.ComponentPropsWithoutRef<"button">;
 
 // export default function Button({type, disabled, className }: ButtonProps  ) {
@@ -235,8 +217,6 @@ convertCurrency3(16, "USD");
 //     <button type={type} disabled={disabled} className={className} >click me now</button>
 //   );
 // }
-
-
 
 // example: rest prop
 // type ButtonProps = React.ComponentPropsWithoutRef<"button">;
@@ -247,9 +227,6 @@ convertCurrency3(16, "USD");
 //     <button type={type} disabled={disabled} {...rest}>click me now</button>
 //   );
 // }
-
-
-
 
 // example: intersection ( & )
 // type ButtonProps = React.ComponentPropsWithoutRef<"button"> & {
@@ -262,7 +239,6 @@ convertCurrency3(16, "USD");
 //     <button type={type} disabled={disabled} {...rest} className={`${variant}-btnn`} >click me now</button>
 //   );
 // }
-
 
 // example:2
 // type ButtonProps = {
@@ -280,34 +256,29 @@ convertCurrency3(16, "USD");
 //   );
 // }
 
-
-
-
 // example: interface extend: jo kaam hum nay SuperButtonProps( intersection ) say kiya hay
 // wo kaam hum intersection extend say b kar sakhtay hayn.
 // These interfaces will be gone into Types.ts
-interface ButtonProps  {
-  type: "submit" | "reset";
-  color: "red" | "blue" | "green"
-}
+// interface ButtonProps  {
+//   type: "submit" | "reset";
+//   color: "red" | "blue" | "green"
+// }
 
-interface SuperButtonProps extends ButtonProps  {
-  size?: "sm" | "md" | "lg"
-}
+// interface SuperButtonProps extends ButtonProps  {
+//   size?: "sm" | "md" | "lg"
+// }
 
-export default function Button({type, color }: ButtonProps) {
-  return (
-    <button type={type} color={color}>click me now</button>
-  );
-}
+// export default function Button({type, color }: ButtonProps) {
+//   return (
+//     <button type={type} color={color}>click me now</button>
+//   );
+// }
 
-export function SuperButton({type, color, size }: SuperButtonProps) {
-  return (
-    <button type={type} color={color} className={`btnn-${size}`} >click me now</button>
-  );
-}
-
-
+// export function SuperButton({type, color, size }: SuperButtonProps) {
+//   return (
+//     <button type={type} color={color} className={`btnn-${size}`} >click me now</button>
+//   );
+// }
 
 // example: Typing event handler functions
 // export default function Button() {
@@ -315,13 +286,13 @@ export function SuperButton({type, color, size }: SuperButtonProps) {
 //   const handleClick = (
 //     evt: React.MouseEvent<HTMLButtonElement, MouseEvent>
 //   ) => {
-//     console.log("click me now!");
+//     console.log("click me now!", evt);
 //   };
 
 //   return (
 //     <>
-//       {/* infered here: detect type automatically   */}
-//       <button onClick={(evt) => console.log("check now!")}>check now</button>
+//       {/* infered here: detect type automatically because of inline js   */}
+//       <button onClick={(evt) => console.log("check now!", evt)}>check now</button>
 //       {/* dont infered here: dont detect type  */}
 //       <button onClick={handleClick}>click me now</button>
 //     </>
@@ -355,9 +326,9 @@ export function SuperButton({type, color, size }: SuperButtonProps) {
 
 // example: Typing useRef hook
 // export default function Button() {
-//   const btnRef = useRef<HTMLButtonElement>(null);
+//   const btnRef = useRef<HTMLButtonElement | null>(null);
 
-//   console.log("when initial render:" ,  btnRef.current);
+//   console.log("Before mount:",  btnRef.current);
 
 //   useEffect(() => {
 //     console.log("when component is mounted", btnRef)
@@ -401,14 +372,13 @@ export function SuperButton({type, color, size }: SuperButtonProps) {
 //   );
 // }
 
-
 // example: "as" Type assertion
 // type ButtonColor = "red" | "green" | "blue";
 
 // export default function Button() {
+
 //   useEffect(() => {
 //     const previousButtonColor = localStorage.getItem("buttonColor") as ButtonColor;
-    
 //   }, []);
 
 //   return (
@@ -416,26 +386,24 @@ export function SuperButton({type, color, size }: SuperButtonProps) {
 //       <button>Click me!</button>
 //     </>
 //   );
+
 // }
 
 // example: Generics with typescript
 // function convertToArray(value: string): string[] {
 //   return [value]
 // }
-
 // convertToArray(2); // Here it cannot accept number because function's type has string
 // convertToArray("red");
 
 // Now convert above function for generic: it can accept all types( string, number, boolean ) and return array depends on argument.
 // function will do return array, that will be depends on argument's type.
-// example: 
+// example:
 // function convertToArray<T>(value: T): T[] {
 //   return [value]
 // }
-
-// convertToArray(2); 
+// convertToArray(2);
 // convertToArray("red");
-
 
 // example: Generics type in React
 // Define same relationship among props.
@@ -444,8 +412,7 @@ export function SuperButton({type, color, size }: SuperButtonProps) {
 //   countHistory: T[];
 // }
 
-
-// export default function Button<T extends string | number>({ countValue, countHistory}:ButtonProps<T>) {
+// export default function Button<T extends string | number>({ countValue, countHistory}: ButtonProps<T>) {
 //   return (
 //     <>
 //       <button>{countValue}</button>
@@ -458,16 +425,14 @@ export function SuperButton({type, color, size }: SuperButtonProps) {
 //   );
 // }
 
-
 // difference between index.d.ts and types.ts files
-
 // example:
 // type ButtonProps = {
-//   color: ThemeColor;
+//   color: ThemeColor; // It is coming from types.ts
 //   fontSize: number;
 // }
 
-// export default function Button({ color, fontSize }:ButtonProps) {
+// export default function Button({ color, fontSize }: ButtonProps) {
 //   return (
 //     <>
 //       <button style={{
@@ -480,21 +445,20 @@ export function SuperButton({type, color, size }: SuperButtonProps) {
 
 
 
-// example: "unknown" type]
 
+
+// example: "unknown" type
 // export default function Button() {
-//   useEffect(() => {
-//     fetch('https://jsonplaceholder.typicode.com/todos/1')
-//     .then((res)=> res.json())
-//     .then((data: unknown)=> {
-//       // data.name.toUpperCase
-//       // here Run it through Zod.
-//       // const todo = todoSchema.parse(data); // don't uncomment code because of it is part of Zod.
-//     })
-    
-//   }, [])
-  
 
+//   useEffect(() => {
+//     fetch("https://jsonplaceholder.typicode.com/todos/1")
+//       .then((res) => res.json())
+//       .then((data: unknown) => {
+//         // data.name.toUpperCase
+//         // here Run it through Zod.
+//         // const todo = todoSchema.parse(data); // don't uncomment code because of it is part of Zod.
+//       });
+//   }, []);
 
 //   return (
 //     <>

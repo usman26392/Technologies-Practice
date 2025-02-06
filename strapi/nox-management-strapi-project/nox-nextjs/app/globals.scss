@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* for base style: typography etc */
+@layer base {
+	html {
+		font-size: 0.875rem; // 14px = 0.875rem
+		@media (min-width: 1200px) {
+			font-size: 0.625rem; // 10px = 0.625rem
+		}
+		@media (min-width: 1366px) {
+			font-size: 0.75rem; // 12px = 0.75rem
+		}
+		@media (min-width: 1600px) {
+			font-size: 0.8125rem; // 13px: 0.8125rem, 13/16 = 0.8125 
+		}
+		@media (min-width: 1920px) {
+			font-size: 1rem;
+		}
+	}
+	body {
+		font-size: 1rem;
+		font-weight: 300;
+		background-color: theme("colors.black");
+		color: theme("colors.white");
+		line-height: 1.15;
+	}
+	h1 {
+		font-size: 3rem;
+		font-weight: 400;
+		line-height: 1.1em;
+		margin-bottom: 0.345em;
+		@media (min-width: 768px) {
+			font-size: 3.5rem;
+		}
+		@media (min-width: 1200px) {
+			font-size: 5.625rem; // 90px
+			margin: 0 0 0.5em 0;
+		}
+	}
+
+	h2 {
+		font-size: 2.5rem;
+		font-weight: 400;
+		margin-bottom: 0.545em;
+		line-height: 1.11111em;
+		@media (min-width: 1200px) {
+			font-size: 4.375rem; // 70px
+			margin: 0 0 0.5em 0;
+		}
+	}
+
+	h3 {
+		font-size: 1.75rem;
+		font-weight: 400;
+		line-height: 1.2;
+		margin: 0 0 0.5em 0;
+		@media (min-width: 1200px) {
+			font-size: 2.25rem; // 36px
+		}
+	}
+
+	h4 {
+		font-size: 1.25rem;
+		font-weight: 400;
+		line-height: 1.1818em;
+		margin: 0 0 0.5em 0;
+		@media (min-width: 1200px) {
+			font-size: 1.875rem; // 30px
+		}
+	}
+
+	h5 {
+		font-size: 1.2rem;
+		font-weight: 400;
+		line-height: 1.2777em;
+		margin: 0 0 0.5em 0;
+		@media (min-width: 1200px) {
+			font-size: 1.75rem; // 28px
+		}
+	}
+
+	h6 {
+		font-size: 1.2rem;
+		font-weight: 400;
+		line-height: 1.3125em;
+		margin: 0 0 0.5em 0;
+		@media (min-width: 1200px) {
+			font-size: 1.25rem; // 20px
+		}
+	}
+
+	p {
+		font-size: 1rem;
+		font-weight: 400;
+		margin-bottom: 1em;
+		line-height: 1.4em;
+		@media (min-width: 1200px) {
+			font-size: 1.25rem; // 20px
+			margin: 0 0 1.2727em 0;
+		}
+	}
+
+	ul,
+	ol {
+		font-size: 1rem;
+		font-weight: 400;
+		line-height: 1.4em;
+		list-style-position: outside;
+		list-style-type: disc;
+		padding-left: 1em;
+		margin-bottom: 1em;
+		@media (min-width: 1200px) {
+			font-size: 1.25rem; // 20px
+			margin: 0 0 1.25em 0;
+		}
+		li {
+			margin-bottom: 0.63636em;
+			&::marker {
+				// color: var(--primary-color);
+				width: 0.625em;
+				height: 0.625em;
+			}
+		}
+		ol,
+		ul {
+			font-size: 1em;
+			font-weight: 400;
+			margin-top: 1em;
+		}
+
+		ol {
+			list-style-type: decimal;
+		}
+	}
+}
+
+/* Next js built-in css setup */
+
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+} */
+

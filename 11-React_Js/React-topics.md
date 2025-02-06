@@ -29,7 +29,7 @@
 
 # hooks
  - useState(): local state management.
- - useEffect(): any code that needs to be executed after the component renders.
+ - useEffect(): any code that needs to be executed after the component renders( after mounted ).
  - useContext(): similar concept of context API.
  - useReducer(): for global state management, similar to redux.
  - useCallback(): use for performance optimization. only render that component, that will be updated.
