@@ -13,7 +13,7 @@
 			font-size: 0.75rem; // 12px = 0.75rem
 		}
 		@media (min-width: 1600px) {
-			font-size: 0.8125rem; // 13px: 0.8125rem, 13/16 = 0.8125 
+			font-size: 0.8125rem; // 13px: 0.8125rem, 13/16 = 0.8125
 		}
 		@media (min-width: 1920px) {
 			font-size: 1rem;
@@ -118,7 +118,7 @@
 		li {
 			margin-bottom: 0.63636em;
 			&::marker {
-				// color: var(--primary-color);
+				color: theme("colors.brown");
 				width: 0.625em;
 				height: 0.625em;
 			}
@@ -134,7 +134,31 @@
 			list-style-type: decimal;
 		}
 	}
+	ol {
+		list-style-type: decimal;
+	}
 }
+
+// @layer utilities {
+// 	/* custom utility class */
+// 	.container-lg {
+// 		width: 100%;
+// 		padding: 0 2rem;
+// 		@media (min-width: 768px) {
+// 			padding: 0 3rem;
+// 		}
+// 		@media (min-width: 1200px) {
+// 			padding: 0 3.90625%;
+// 		}
+// 	}
+// }
+
+
+
+
+
+
+
 
 /* Next js built-in css setup */
 

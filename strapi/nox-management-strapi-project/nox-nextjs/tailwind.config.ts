@@ -7,9 +7,15 @@ export default {
 		"./app/**/*.{js,ts,jsx,tsx,mdx}",
 	],
 	// ignore specific classes that it detects in your text content:
-	blocklist: ["container", "collapse"],
+	// blocklist: ["container", "collapse"],
 	theme: {
+		fontFamily: {
+			gotham: ["Gotham", "Gotham Fallback", "sans-serif"],
+		},
 		colors: {
+			inherit: "inherit",
+			current: "current",
+			transparent: "transparent",
 			brown: "#A37B65",
 			black: "#181818",
 			black2: "#060606",
@@ -72,6 +78,14 @@ export default {
 		},
 		container: {
 			center: true,
+			padding: {
+				DEFAULT: "2rem",
+				sm: "2rem",
+				md: "2rem",
+				lg: "2.5rem",
+				xl: "3rem",
+				"2xl": "4.6875rem",
+			},
 		},
 		screens: {
 			// xs: "475px", // self created
@@ -80,8 +94,22 @@ export default {
 			lg: "992px",
 			xl: "1200px",
 			"2xl": "1366px",
+			"3xl": "1600px",
+			"4xl": "1920px",
 		},
-		extend: {},
+		extend: {
+			zIndex: {
+				"1": "1",
+				"2": "2",
+				"3": "3",
+				"4": "4",
+				"5": "5",
+				"6": "6",
+				"7": "7",
+				"8": "8",
+				"9": "9",
+			},
+		},
 	},
 	plugins: [
 		require("@tailwindcss/forms")({

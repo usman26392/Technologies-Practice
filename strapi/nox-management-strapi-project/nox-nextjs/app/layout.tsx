@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.scss";
-
+import Footer from "./components/footer";
 
 // fonts
 const Gotham = localFont({
@@ -29,7 +29,6 @@ const Gotham = localFont({
 	],
 });
 
-
 // Meta data
 export const metadata: Metadata = {
 	title: "Create Next App",
@@ -43,8 +42,11 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en" className={`${Gotham.className}` }>
-			<body className={`${Gotham.className } antialiased`}>{children}</body>
+		<html lang="en" className={`${Gotham.className}`}>
+			<body className={`${Gotham.className} antialiased`}>
+				{children}
+				<Footer />
+			</body>
 		</html>
 	);
 }
