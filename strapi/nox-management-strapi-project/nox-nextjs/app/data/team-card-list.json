@@ -1,5 +1,31 @@
 {
+	"title": "Team",
 	"teamCardList": [
+		{
+			"url": "/images/cards/team-1.jpg",
+			"personName": "Nabil Zeineddine",
+			"personDesignation": "Chief Investment Officer"
+		},
+		{
+			"url": "/images/cards/team-1.jpg",
+			"personName": "Nabil Zeineddine",
+			"personDesignation": "Chief Investment Officer"
+		},
+		{
+			"url": "/images/cards/team-1.jpg",
+			"personName": "Nabil Zeineddine",
+			"personDesignation": "Chief Investment Officer"
+		},
+		{
+			"url": "/images/cards/team-1.jpg",
+			"personName": "Nabil Zeineddine",
+			"personDesignation": "Chief Investment Officer"
+		},
+		{
+			"url": "/images/cards/team-1.jpg",
+			"personName": "Nabil Zeineddine",
+			"personDesignation": "Chief Investment Officer"
+		},
 		{
 			"url": "/images/cards/team-1.jpg",
 			"personName": "Nabil Zeineddine",

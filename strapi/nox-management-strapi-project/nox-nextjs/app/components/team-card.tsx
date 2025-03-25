@@ -1,15 +1,19 @@
 import Image from "next/image";
 
-type TeamcardProps = {
+export interface TeamcardProps {
 	url: string;
 	personName: string;
 	personDesignation: string;
-};
+}
+
+
+
+
 
 export default function Teamcard({ url, personName, personDesignation }: TeamcardProps) {
 	return (
 		<div className="group/team-card block text-center">
-			<div className="relative mx-auto mb-[2.1875em] h-[26.25em] w-[26.25em] overflow-hidden rounded-full bg-brown transition">
+			<div className="team-figure relative mx-auto mb-[2.1875rem] h-[17.2142rem] w-[17.2142rem] overflow-hidden rounded-full bg-brown transition md:h-[24.25rem] md:w-[24.25rem] xl:h-[26.25rem] xl:w-[26.25rem]">
 				<Image
 					src={url}
 					alt="Team member"

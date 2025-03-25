@@ -27,8 +27,18 @@ py-20 = 20 * 4  =  80px
 py-24 = 24 * 4  =  96px
 
 
+# if py-4 = 14px
+than
+py-1 = 14/4 = 3.5px
+py-2 = 2 * 3.5 = 7px
+py-3 = 3 * 3.5 = 10.5
+py-4 = 4 * 3.5 = 14px
+py-5 = 5 * 3.5 = 17.5px
 
-# how to find a class from px value to class name in Tailwind css
+
+
+
+# when base is 4: how to find a class from px value to class name in Tailwind css
 # for example
 i have a 28px in design so i want to add a class for it.
 4px = prefix-1

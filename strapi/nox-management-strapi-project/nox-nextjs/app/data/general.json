@@ -1,0 +1,103 @@
+{
+	"privacyTitle": "Privacy Policy",
+	"privacyUrl": "/",
+	"headerCta": [
+		{
+			"title": "9652424514",
+			"url": "9652424514"
+		},
+		{
+			"title": "info@nox.com",
+			"url": "info@nox.com"
+		}
+	],
+	"logoUrl": "/svgs/logo.svg",
+	"headerNavigation": [
+		{
+			"title": "Discover Nox",
+			"url": "/"
+		},
+		{
+			"title": "Business Sectors",
+			"url": "/"
+		},
+		{
+			"title": "Contact Us",
+			"url": "/"
+		}
+	],
+	"footerDescription": "Approaching exciting opportunities with a fresh ideology",
+	"footerNavigation": [
+		{
+			"importantLinks": {
+				"title": "Important Links",
+				"links": [
+					{
+						"title": "Home",
+						"url": "/"
+					},
+					{
+						"title": "Discover Nox",
+						"url": "/"
+					},
+					{
+						"title": "Brands",
+						"url": "/"
+					},
+					{
+						"title": "Contact Us",
+						"url": "/"
+					}
+				]
+			}
+		},
+		{
+			"businessSectors": {
+				"title": "Business Sectors",
+				"links": [
+					{
+						"title": "Culinary",
+						"url": "/"
+					},
+					{
+						"title": "Retail",
+						"url": "/"
+					},
+					{
+						"title": "Family & Entertainment",
+						"url": "/"
+					},
+					{
+						"title": "Manufacturing",
+						"url": "/"
+					},
+					{
+						"title": "Facilities Management",
+						"url": "/"
+					}
+				]
+			}
+		},
+        {
+            "getInTouch": {
+                "numberUrl": "96522062310",
+                "emails": ["info@noxmanagement.com", "careers@noxmanagement.com"],
+                "addressUrl": "Kuwait City, Mohammad Thunayyan Street , Salhiya Commercial Complex , Gate 1,5th Floor",
+                "linkedIn": "/"
+            }
+        }
+	],
+    "footerCata": {
+        "copyRightText": "<p>Copyright © 2024 <strong>NOX Management</strong></p>",
+        "linksUrls": [
+            {
+                "title": "Privacy Policy",
+                "url": "/"
+            },
+            {
+                "title": "Terms & Conditions",
+                "url": "/"
+            }
+        ]
+    }
+}

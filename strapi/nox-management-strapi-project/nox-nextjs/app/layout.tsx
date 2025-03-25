@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.scss";
 import Footer from "./components/footer";
+import Header from "./components/header";
 
 // fonts
 const Gotham = localFont({
@@ -44,6 +45,7 @@ export default function RootLayout({
 	return (
 		<html lang="en" className={`${Gotham.className}`}>
 			<body className={`${Gotham.className} antialiased`}>
+				<Header/>
 				{children}
 				<Footer />
 			</body>

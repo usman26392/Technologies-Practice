@@ -1,0 +1,15 @@
+.team-slider {
+	@media (min-width: 1200px) {
+		cursor: url('/svgs/custom-cursor.svg') 55 55, auto;
+	}
+		
+	.team-figure {
+		filter: grayscale(100%);
+	}
+
+	.swiper-slide-active {
+		.team-figure {
+			filter: grayscale(0%);
+		}
+	}
+}

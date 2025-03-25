@@ -27,6 +27,7 @@ export default {
 			"gray-light2": "#484848",
 		},
 		fontSize: {
+			DEFAULT: "1rem",
 			xs: [
 				"1.25rem", // 20px
 				{
@@ -79,7 +80,7 @@ export default {
 		container: {
 			center: true,
 			padding: {
-				DEFAULT: "2rem",
+				DEFAULT: "1.5rem",
 				sm: "2rem",
 				md: "2rem",
 				lg: "2.5rem",
