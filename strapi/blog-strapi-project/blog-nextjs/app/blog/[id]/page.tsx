@@ -21,9 +21,6 @@ async function fetchBlog(id: number) {
   }
 }
 
-
-
-
 // Dynamic page component
 export default async function Page({
   params,
@@ -40,10 +37,8 @@ export default async function Page({
   // console.log("blog detail", specificBlogData);
   const blogDetail = specificBlogData?.data;
 
-
   // image url set
   const imageUrlwithHTTP = `http://localhost:1337${blogDetail?.Image?.url}`;
-
 
   return (
     <div className="max-w-3xl mx-auto p-4">
@@ -58,12 +53,12 @@ export default async function Page({
         />
       </div>
       <div className="mt-4">
-        <h1 className="text-3xl font-semibold">
-          { blogDetail?.Title }
-        </h1>
-        <p className="text-gray-600 mt-2"> {blogDetail?.Description }  </p>
+        <h1 className="text-3xl font-semibold">{blogDetail?.Title}</h1>
+        <p className="text-gray-600 mt-2"> {blogDetail?.Description} </p>
         <div className="mt-4 flex items-center text-gray-400 ">
-          <span className="text-sm">Published on {new Date(blogDetail?.updatedAt).toLocaleString() } </span>
+          <span className="text-sm">
+            Published on {new Date(blogDetail?.updatedAt).toLocaleString()}{" "}
+          </span>
         </div>
       </div>
     </div>

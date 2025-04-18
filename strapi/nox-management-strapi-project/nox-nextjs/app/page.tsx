@@ -10,6 +10,7 @@ import teamCardsData from "@/app/data/team-card-list.json";
 
 
 export default function Home() {
+  console.log("home page rendered");
   return (
     <main>
       <Hero/>

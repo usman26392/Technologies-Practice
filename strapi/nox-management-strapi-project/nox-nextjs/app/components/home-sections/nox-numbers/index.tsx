@@ -4,6 +4,7 @@
 
 
 export default function NoxNumbers() {
+    console.log("Nox numbers component rendered");
   return (
     <section className="py-8 xl:py-48 bg-no-repeat bg-bottom bg-contain " style={{'backgroundImage': 'url(/svgs/nox-bg.svg)' }}>
         <div className="container">

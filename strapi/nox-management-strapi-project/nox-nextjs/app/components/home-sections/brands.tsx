@@ -9,6 +9,7 @@ type BrandLogoProps = {
 };
 
 export default function Brands({ title, bgColor }: BrandLogoProps) {
+	console.log("Brands component rendered");
 	return (
 		<section className={`py-8 ${bgColor} xl:py-24`}>
 			<div className="container">

@@ -4,11 +4,13 @@
 	"headerCta": [
 		{
 			"title": "9652424514",
-			"url": "9652424514"
+			"url": "9652424514",
+			"tagLine": "telephone"
 		},
 		{
 			"title": "info@nox.com",
-			"url": "info@nox.com"
+			"url": "info@nox.com",
+			"tagLine": "email"
 		}
 	],
 	"logoUrl": "/svgs/logo.svg",
@@ -26,78 +28,73 @@
 			"url": "/"
 		}
 	],
-	"footerDescription": "Approaching exciting opportunities with a fresh ideology",
+	"BannerVideo": "/videos/nox-mangement.mp4",
+	"footerDescription": "Approaching exciting opportunities with a fresh ideology.",
 	"footerNavigation": [
 		{
-			"importantLinks": {
-				"title": "Important Links",
-				"links": [
-					{
-						"title": "Home",
-						"url": "/"
-					},
-					{
-						"title": "Discover Nox",
-						"url": "/"
-					},
-					{
-						"title": "Brands",
-						"url": "/"
-					},
-					{
-						"title": "Contact Us",
-						"url": "/"
-					}
-				]
-			}
+			"title": "Important Links",
+			"links": [
+				{
+					"title": "Home",
+					"url": "/"
+				},
+				{
+					"title": "Discover Nox",
+					"url": "/"
+				},
+				{
+					"title": "Brands",
+					"url": "/"
+				},
+				{
+					"title": "Contact Us",
+					"url": "/"
+				}
+			]
 		},
 		{
-			"businessSectors": {
-				"title": "Business Sectors",
-				"links": [
-					{
-						"title": "Culinary",
-						"url": "/"
-					},
-					{
-						"title": "Retail",
-						"url": "/"
-					},
-					{
-						"title": "Family & Entertainment",
-						"url": "/"
-					},
-					{
-						"title": "Manufacturing",
-						"url": "/"
-					},
-					{
-						"title": "Facilities Management",
-						"url": "/"
-					}
-				]
-			}
-		},
-        {
-            "getInTouch": {
-                "numberUrl": "96522062310",
-                "emails": ["info@noxmanagement.com", "careers@noxmanagement.com"],
-                "addressUrl": "Kuwait City, Mohammad Thunayyan Street , Salhiya Commercial Complex , Gate 1,5th Floor",
-                "linkedIn": "/"
-            }
-        }
+			"title": "Business Sectors",
+			"links": [
+				{
+					"title": "Culinary",
+					"url": "/"
+				},
+				{
+					"title": "Retail",
+					"url": "/"
+				},
+				{
+					"title": "Family & Entertainment",
+					"url": "/"
+				},
+				{
+					"title": "Manufacturing",
+					"url": "/"
+				},
+				{
+					"title": "Facilities Management",
+					"url": "/"
+				}
+			]
+		}
 	],
-    "footerCata": {
-        "copyRightText": "<p>Copyright © 2024 <strong>NOX Management</strong></p>",
-        "linksUrls": [
-            {
-                "title": "Privacy Policy",
-                "url": "/"
-            },
-            {
-                "title": "Terms & Conditions",
-                "url": "/"
-            }
-        ]
-    }
+	"getInTouch": {
+		"numberUrl": "96522062310",
+		"emails": ["info@noxmanagement.com", "careers@noxmanagement.com"],
+		"addressUrl": "Kuwait City, Mohammad Thunayyan Street , Salhiya Commercial Complex , Gate 1,5th Floor",
+		"linkedIn": "/"
+	},
+	"footerCta": {
+		"copyRightText": "<p>Copyright © 2024 <strong>NOX Management</strong></p>",
+		"linksUrls": [
+			{
+				"title": "Privacy Policy",
+				"url": "/"
+			},
+			{
+				"title": "Terms & Conditions",
+				"url": "/"
+			}
+		]
+	}
 }

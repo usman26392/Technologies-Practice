@@ -12,6 +12,7 @@ import Image from "next/image";
 
 
 export default function BussinessSectors() {
+	console.log("BussinessSectors component rendered");
 	const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
 
 	return (

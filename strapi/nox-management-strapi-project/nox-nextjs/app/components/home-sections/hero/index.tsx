@@ -1,4 +1,5 @@
 export default function Hero() {
+	console.log("hero component rendered")
 	return (
 		<section className="relative z-1 h-screen w-screen overflow-hidden">
 			<video

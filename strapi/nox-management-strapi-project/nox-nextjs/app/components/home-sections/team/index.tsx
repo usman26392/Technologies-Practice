@@ -13,6 +13,7 @@ type TeamProps = {
 
 
 export default function Team({ title, teamCardList }: TeamProps) {
+	console.log("Team component rendered");
 	// console.log(teamCardList);
 	return (
 		<section className="py-8 xl:py-24">

@@ -6,6 +6,7 @@ import Partnerlogo from "@/app/components/partner-logo";
 import brandLogo from "@/app/data/brand-logo.json";
 
 export default function Page() {
+	console.log("style guide page rendered");
 	return (
 		<section>
 			<div className="container">
