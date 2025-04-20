@@ -51,8 +51,6 @@ const getIconForCta = (cta: { url?: string; tagLine?: string }): string => {
 	}
 };
 
-
-
 // Component to render the header
 export default function Header({
 	privacyTitle,

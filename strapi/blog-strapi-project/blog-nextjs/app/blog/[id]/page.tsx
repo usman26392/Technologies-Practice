@@ -22,12 +22,8 @@ async function fetchBlog(id: number) {
 }
 
 // Dynamic page component
-export default async function Page({
-  params,
-}: {
-  params: Promise<{ id: number }>;
+export default async function Page({params,}: {params: Promise<{ id: number }>;
 }) {
-
   // fetch id from page component
   const { id } = await params;
   // console.log("slug", id);
