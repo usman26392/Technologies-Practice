@@ -1,0 +1,118 @@
+
+
+
+// .not-found-wrapper {
+//   height: 100vh;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   .content-wrapper {
+//     max-width: 50.875em;
+//     text-align: center;
+//     p {
+//       padding: 0 2em;
+//     }
+//     .not-found-anchor-wrapper {
+//       display: flex;
+//       justify-content: center;
+//       flex-direction: row;
+//       flex-wrap: wrap;
+//       gap: 1em;
+//     }
+//   }
+// }
+
+// .ajax-loader {
+//   text-align: center;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   margin: 6em 0 0;
+//   @media #{$mobL} {
+//     margin-top: 2em;
+//   }
+//   .icon {
+//     width: 1.875em;
+//     height: 1.875em;
+
+//     animation: ajxLoader 0.5s linear 0s infinite forwards;
+//   }
+//   .title {
+//     font-weight: 700;
+//     text-transform: uppercase;
+//     margin: 0.75em 0 0;
+//     @media #{$desktop} {
+//       font-size: 1.25em;
+//     }
+//   }
+// }
+
+// @keyframes ajxLoader {
+//   from {
+//     transform: rotate(0);
+//   }
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }
+
+
+
+
+
+// .iti {
+//   display: block;
+//   .iti__flag-container {
+//     height: 5em;
+//     @media #{$ipadpro} {
+//       height: 3em;
+//     }
+//     &:hover {
+//       .iti__selected-flag {
+//         background-color: transparent;
+//       }
+//     }
+//   }
+//   .iti__country-list {
+//     color: var(--primary-color);
+
+//   }
+//   .iti__selected-dial-code {
+//     color: var(--white);
+//   }
+//   .iti__arrow {
+//     border-top-color: var(--white);
+//   }
+//   .iti__selected-flag {
+//     background-color: transparent;
+//   }
+//   .invalid-feedback {
+//     margin-top: 1.375em;
+//     display: block;
+//   }
+// }
+
+
+.form-message {
+  padding: 0.5em;
+  text-align: center;
+  border: 1px solid #28b328;
+  margin-top: 1em;
+  color: #28b328;
+}
+
+.grecaptcha-badge {
+  display: none;
+}
+
+
+
+
+
+.content-editor {
+  h4 {
+    @media #{$desktop} {
+      margin-bottom: 0.8em;
+    }
+  }
+}

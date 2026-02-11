@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@400;700&family=Raleway:wght@300;400;700&display=swap');
+
+.reservation-section {
+  position: relative;
+  background: #fff;
+  min-height: 980px;
+  width: 100vw;
+  overflow: hidden;
+  font-family: 'Playwrite IN', sans-serif;
+  z-index: 1;
+}
+
+.reservation-bg-img {
+  position: absolute;
+  left: 0;
+  top: 142px;
+  width: 400px;
+  height: 440px;
+  background: url('http://localhost:3845/assets/794d7fb8075656285bbc46cd7f76eee75ca1874c.png') center/cover no-repeat;
+  z-index: 2;
+}
+.reservation-bar-img {
+  position: absolute;
+  right: 0;
+  top: 40px;
+  width: 390px;
+  height: 448px;
+  background: url('http://localhost:3845/assets/75ddde7e02a97f346b1dacce7ff6414909c3f114.png') center/cover no-repeat;
+  z-index: 2;
+}
+.reservation-cicada-img {
+  position: absolute;
+  left: 18.5%;
+  top: 56px;
+  width: 180px;
+  height: 97px;
+  background: url('http://localhost:3845/assets/e860196cd8f1bcc0d4ddb65f2745c7d3b1481c80.png') center/cover no-repeat;
+  z-index: 3;
+}
+.reservation-palm-img {
+  position: absolute;
+  right: 100px;
+  top: 610px;
+  width: 173px;
+  height: 296px;
+  background: url('http://localhost:3845/assets/c4639557ec7947983879bb0f86ccc0f41c6a7ed5.png') center/cover no-repeat;
+  z-index: 3;
+}
+.reservation-circle-img {
+  position: absolute;
+  left: 17%;
+  top: 0;
+  width: 172px;
+  height: 172px;
+  transform: rotate(90deg);
+  z-index: 4;
+}
+.reservation-circle-img img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.reservation-content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 180px;
+  text-align: center;
+}
+
+.reservation-title {
+  font-size: 50px;
+  color: #8c5d65;
+  font-family: 'Playwrite IN', sans-serif;
+  margin-bottom: 24px;
+  letter-spacing: 2px;
+}
+
+.reservation-desc {
+  font-size: 20px;
+  color: #000;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  margin-bottom: 48px;
+  max-width: 836px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reservation-btn {
+  display: inline-block;
+  background: #8c5d65;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  padding: 16px 48px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 32px;
+  transition: background 0.2s;
+  letter-spacing: 1px;
+}
+.reservation-btn:hover {
+  background: #6a434b;
+}
+
+@media (max-width: 1200px) {
+  .reservation-bg-img,
+  .reservation-bar-img {
+    display: none;
+  }
+  .reservation-content {
+    padding-top: 80px;
+  }
+}

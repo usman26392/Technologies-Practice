@@ -381,20 +381,153 @@ export interface ApiGeneralGeneral extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    Banner_Video: Schema.Attribute.Media<'videos' | 'images'> &
+      Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    Footer_Cta: Schema.Attribute.Component<'unique.footer-cta', false> &
+      Schema.Attribute.Required;
+    Footer_Description: Schema.Attribute.String & Schema.Attribute.Required;
+    Footer_Navigation: Schema.Attribute.Component<
+      'unique.footer-navigation',
+      true
+    > &
+      Schema.Attribute.Required;
+    Get_In_Touch: Schema.Attribute.Component<'unique.get-in-touch', false>;
+    Header_CTA: Schema.Attribute.Component<'unique.cta', true>;
+    Header_Navigation: Schema.Attribute.Component<
+      'unique.header-navigation',
+      true
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::general.general'
     > &
       Schema.Attribute.Private;
+    logo: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     Privacy_Title: Schema.Attribute.String & Schema.Attribute.Unique;
     Privacy_URL: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique;
     publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiHomeHome extends Struct.SingleTypeSchema {
+  collectionName: 'homes';
+  info: {
+    description: '';
+    displayName: 'Home';
+    pluralName: 'homes';
+    singularName: 'home';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Affiliates__Brands: Schema.Attribute.Component<
+      'sections.home-brands',
+      false
+    >;
+    Bussiness__sectors__section: Schema.Attribute.Component<
+      'sections.bussiness-sectors',
+      false
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Home__Brands: Schema.Attribute.Component<'sections.home-brands', false>;
+    Home__history__section: Schema.Attribute.Component<
+      'sections.home-history',
+      false
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::home.home'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    Team__Title: Schema.Attribute.String & Schema.Attribute.Required;
+    team_lists: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::team-list.team-list'
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Video__Url: Schema.Attribute.Media<'videos' | 'images'> &
+      Schema.Attribute.Required;
+  };
+}
+
+export interface ApiTeamListTeamList extends Struct.CollectionTypeSchema {
+  collectionName: 'team_lists';
+  info: {
+    description: '';
+    displayName: 'Team list';
+    pluralName: 'team-lists';
+    singularName: 'team-list';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
+    Figure_lg: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    Figure_sm: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::team-list.team-list'
+    > &
+      Schema.Attribute.Private;
+    personDesignation: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
+    personName: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiTeamTeam extends Struct.SingleTypeSchema {
+  collectionName: 'teams';
+  info: {
+    description: '';
+    displayName: 'Team';
+    pluralName: 'teams';
+    singularName: 'team';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::team.team'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    team_lists: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::team-list.team-list'
+    >;
+    Title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -911,6 +1044,9 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::general.general': ApiGeneralGeneral;
+      'api::home.home': ApiHomeHome;
+      'api::team-list.team-list': ApiTeamListTeamList;
+      'api::team.team': ApiTeamTeam;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

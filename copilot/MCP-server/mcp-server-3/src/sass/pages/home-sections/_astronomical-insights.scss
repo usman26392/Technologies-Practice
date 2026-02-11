@@ -1,0 +1,91 @@
+.astronomical-insights-sec {
+  border-radius: 1.875em;
+  overflow: hidden;
+  background-color: var(--black-color);
+  transition: var(--transition-ease);
+
+  &.active {
+    background-color: var(--white-color);
+    .generic-center-title {
+      .h2 {
+        color: var(--black-color);
+      }
+    }
+    .astromical-tabs {
+      li {
+        color: rgba(var(--black-color-rgba), 0.4);
+        &:not(:last-child)::before {
+          background-color: rgba(var(--black-color-rgba), 0.4);
+        }
+      }
+      .active {
+        color: var(--black-color);
+      }
+    }
+    .astrography-card {
+      * {
+        color: var(--black-color);
+      }
+      .btnn__icon {
+        path {
+          fill: var(--black-color);
+        }
+      }
+      .btnn {
+        &::before {
+          background: var(--black-color);
+        }
+        &:hover {
+          .btnn__icon svg path {
+            path {
+              fill: var(--black-color);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.astromical-tabs {
+  color: var(--white-color);
+  margin-bottom: 3em;
+  @media #{$mobL} {
+    margin-bottom: 2em;
+  }
+
+  ul {
+    font-size: 1em; // 16px base
+    padding: 0;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+  }
+
+  li {
+    font-size: 1.875em; // 30px/16px
+    font-weight: 500;
+    padding: 0 2.333em; // 70px/30px
+    position: relative;
+    color: rgba(var(--white-color-rgba), 0.5);
+    transition: var(--transition-ease);
+    cursor: pointer;
+    &:hover,
+    &.active {
+      color: rgba(var(--white-color-rgba), 1);
+    }
+    @media #{$mobL} {
+      padding: 0 1em;
+      font-size: 1.5em;
+    }
+
+    &:not(:last-child)::before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      background: var(--white-color);
+      right: 0;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_unique_brand_logos",
+  "info": {
+    "displayName": "Brand__logo",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Brand__Logo__white": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Brand__logo__color": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

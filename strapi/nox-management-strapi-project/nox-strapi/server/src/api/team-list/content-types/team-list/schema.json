@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "team_lists",
+  "info": {
+    "singularName": "team-list",
+    "pluralName": "team-lists",
+    "displayName": "Team list",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "personName": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "personDesignation": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Figure_sm": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "Figure_lg": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

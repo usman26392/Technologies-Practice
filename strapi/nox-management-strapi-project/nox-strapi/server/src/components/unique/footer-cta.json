@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_unique_footer_ctas",
+  "info": {
+    "displayName": "Footer_Cta",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Copy_Right_Text": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Footer_Links_Urls": {
+      "type": "component",
+      "repeatable": true,
+      "component": "unique.footer-links-urls"
+    }
+  }
+}

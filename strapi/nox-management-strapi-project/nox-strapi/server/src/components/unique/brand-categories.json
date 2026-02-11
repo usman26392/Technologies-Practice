@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_unique_brand_categories",
+  "info": {
+    "displayName": "Brand__Categories",
+    "icon": "bold"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}

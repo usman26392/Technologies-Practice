@@ -1,5 +1,5 @@
 import Innerhero from "@/app/components/inner-hero";
-import { getTeamDetails } from "@/app/lib/data";
+import { getTeamDataDetails, STRAPI_URL } from "@/app/lib/data";
 import Image from "next/image";
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
@@ -7,34 +7,41 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 	// console.log(await params);
 
 	const { slug } = await params;
+	console.log("slugs", slug);
 
-	const specificTeamDetailData = await getTeamDetails(slug);
-	// console.log(specificTeamDetailData)
+	const specificTeamDetailData = await getTeamDataDetails(slug);
+	// console.log("team detail object", specificTeamDetailData);
 
-	const url = specificTeamDetailData?.url;
+	const url = specificTeamDetailData?.Figure_sm?.url;
 	const personName = specificTeamDetailData?.personName;
 	const personDesignation = specificTeamDetailData?.personDesignation;
 	const description = specificTeamDetailData?.description;
 
+	// console.log("large image", url);
+
 	return (
-		<div>
+		<section>
 			<Innerhero />
-			{/* make two column layout with tailwind grid and responsive */}
-			<div className="grid grid-cols-1 gap-4 p-4 md:grid-cols-2">
-				<div className="flex items-center justify-center">
-          {/* <Image/> */}
-					<img
-						src={specificTeamDetailData?.url}
-						alt={specificTeamDetailData?.personName}
-						className="h-auto w-full"
-					/>
-				</div>
-				<div className="flex flex-col items-start justify-center p-4">
-					<h2 className="text-2xl font-bold">{specificTeamDetailData?.personName}</h2>
-					<p className="text-lg">{specificTeamDetailData?.personDesignation}</p>
-					<p className="mt-4">{specificTeamDetailData?.description}</p>
+			<div className="container">
+				<div className="grid grid-cols-1 items-center gap-y-10 md:gap-y-0 gap-x-48 py-8 md:grid-cols-2 xl:py-32">
+					<div className="relative h-0 w-full pb-[100%]">
+						{url && (
+							<Image
+								src={`${STRAPI_URL}${url}`}
+								alt={personName ? personName : ""}
+								className="figure-grayscale h-auto w-full"
+								fill
+								sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+							/>
+						)}
+					</div>
+					<div className="">
+						{personName && <h2 className="">{personName}</h2>}
+						{personDesignation && <p className="">{personDesignation} </p>}
+						{description && <p className="">{description}</p>}
+					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 }

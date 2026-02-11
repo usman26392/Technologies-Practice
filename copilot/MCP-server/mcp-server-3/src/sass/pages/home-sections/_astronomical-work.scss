@@ -1,0 +1,52 @@
+.astronomical-work-sec {
+  overflow: hidden;
+
+  .grid-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5625em;
+    padding: 1.5625em 0;
+
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    &.custom-positioned {
+      position: relative;
+    }
+    @media #{$mobL} {
+      grid-template-columns: 1fr;
+      gap: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  .grid-item {
+    width: calc(50% - 0.78125em);
+    margin: 0 0 1.5625em 0;
+    padding: 0;
+    float: left;
+    height: 56.25em;
+    transition: $transition;
+    @media #{$ipadpro} {
+      height: 39.25em;
+    }
+    @media #{$mobL} {
+      height: 35.25em;
+    }
+
+    .astronomical-card {
+      height: 100%;
+      margin: 0;
+      background-color: transparent;
+      color: var(--white-color);
+    }
+
+    &.offset-item {
+      z-index: 1;
+    }
+    
+  }
+}

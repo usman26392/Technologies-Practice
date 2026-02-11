@@ -1,0 +1,108 @@
+/* the container must be positioned relative:*/
+.custom-select {
+  position: relative;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  .invalid-feedback {
+    order: 10;
+    margin-top: 1.25em;
+    @media #{$tab} {
+      margin-top: 1.375em;
+    }
+  }
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  content: "";
+  background: var(--primary-color) url("../svg/arrow-down.svg") center/auto no-repeat;
+  position: absolute;
+  right: .78em;
+  text-indent: 0;
+  width: 1.625em;
+  height: 1.625em;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  transform: translateY(-50%) scale(-1);
+}
+
+// .select-items div,
+.select-selected {
+  font-family: $basefont;
+  font-weight: 700;
+  user-select: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  position: relative;
+  border-bottom: 0;
+  border-radius: 10px;
+  padding: 0.9em 5em 0.9em 1.5em;
+  background-color: var(--white-color);
+  color: var(--black-color);
+  line-height: initial;
+  transition: $transition;
+  width: 11.5625em;
+
+  @media #{$desktop} {
+    font-size: 1em; 
+  }
+  
+  
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  width: 100%;
+  border-radius: 0 0 3px 3px;
+  overflow: hidden;
+  z-index: 9;
+  background: var(--black-color2);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 17px rgba(55, 72, 106, 0.1);
+  border-radius: 0px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  max-height: 10em;
+  color: var(--white-color);
+  overflow-y: auto;
+  top: 3.5em;
+  border: 1px solid var(--lightgray-color);
+  @media #{$ipadpro} {
+    top: 3.5em;
+  }
+
+  > div {
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    color: var(--white-color);
+  }
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  top: 4em;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: var(--black-color);
+  font-weight: 700;
+}

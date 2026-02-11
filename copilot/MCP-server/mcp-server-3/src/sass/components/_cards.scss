@@ -1,0 +1,496 @@
+// .system-card {
+//   position: relative;
+//   overflow: hidden;
+//   display: block;
+//   &:hover {
+//     &::before {
+//       bottom: -6.84375em;
+//     }
+//     &::after {
+//       opacity: 1;
+//       visibility: visible;
+//     }
+//     .system-card__body {
+//       transform: translateY(-3.125em);
+//     }
+//   }
+//   &__figure {
+//     position: relative;
+//     z-index: 1;
+//     height: 100%;
+//     &::before {
+//       content: "";
+//       position: absolute;
+//       inset: 0;
+//       opacity: 0.8;
+//       background: linear-gradient(180deg, rgba(0, 0, 0, 0) 54.75%, #000 100%);
+//       z-index: 1;
+//       pointer-events: none;
+//     }
+//   }
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     width: 13.6875em;
+//     height: 13.6875em;
+//     background-color: var(--black-color);
+//     bottom: -14.0625em;
+//     user-select: none;
+//     border-radius: 50%;
+//     left: 0;
+//     right: 0;
+//     margin: 0 auto;
+//     z-index: 2;
+//     transition: var(--transition-ease);
+//     transition-delay: 0.1s;
+//     pointer-events: none;
+//   }
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     inset: 0;
+//     background: rgb(var(--secondary-color-rgba), 0.8);
+//     opacity: 0;
+//     visibility: hidden;
+//     transition: var(--transition-ease);
+//     pointer-events: none;
+//     z-index: 1;
+//   }
+//   &__body {
+//     position: absolute;
+//     inset: 0;
+//     z-index: 3;
+//     padding: 0 1.25em 0 3.125em;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: flex-start;
+//     justify-content: flex-end;
+//     transform: translateY(2.975em);
+//     transition: var(--transition-ease);
+//     @media #{$ipadpro} {
+//       padding: 0 1.25em 0 1.5em;
+//     }
+//   }
+
+//   .h3 {
+//     line-height: 1.3;
+//   }
+
+//   &--industry {
+//     height: 31.875em;
+//     cursor: inherit;
+//     @media #{$ipad} {
+//       height: 22.875em;
+//     }
+//     &:hover {
+//       &::before {
+//         bottom: -4em;
+//       }
+//       .system-card__body {
+//         transform: translateY(0);
+//       }
+//       .btnn {
+//         transform: translateY(0);
+//       }
+//     }
+//     &::before {
+//       left: unset;
+//       right: -3em;
+//       margin: 0;
+//       background: var(--primary-color);
+//     }
+
+//     .system-card__body {
+//       flex-direction: row;
+//       align-items: flex-end;
+//       transform: translateY(0);
+//       .h4 {
+//         max-width: 12.1111em;
+//         margin-right: auto;
+//         margin-bottom: 1.4em;
+//       }
+//     }
+//     .btnn {
+//       margin-bottom: 2.5em;
+//       transform: translateY(6.25em);
+//     }
+//   }
+// }
+
+// // blog card
+// .blog-card {
+//   position: relative;
+//   display: block;
+//   cursor: inherit;
+//   &:hover {
+//     .blog-card__category {
+//       background-color: var(--secondary-color);
+//       color: var(--white-color);
+//     }
+//     .blog-card__title {
+//       color: var(--secondary-color);
+//     }
+//     .blog-card__date {
+//       color: var(--primary-color);
+//     }
+//     .blog-card__figure {
+//       &::before {
+//         animation: blogHoverFlush 0.5s ease 0s 1 forwards;
+//       }
+//     }
+//   }
+//   &__category {
+//     font-size: 1.125em;
+//     background-color: var(--light-blue2-color);
+//     display: inline-block;
+//     padding: 0.7em 1.2em;
+//     font-weight: 700;
+//     border-radius: 30em;
+//     margin-bottom: 1.666em;
+//     transition: var(--transition-ease);
+//   }
+//   &__figure {
+//     height: 24.375em;
+//     margin-bottom: 1.875em;
+//     position: relative;
+//     @media #{$ipad} {
+//       height: 19.375em;
+//     }
+//     &::before {
+//       content: "";
+//       position: absolute;
+//       inset: 0;
+//     }
+//   }
+//   &__date {
+//     font-size: 1.25em;
+//     display: block;
+//     margin-bottom: 0.75em;
+//     transition: var(--transition-ease);
+//   }
+//   &__title {
+//     transition: var(--transition-ease);
+//   }
+// }
+
+// @keyframes blogHoverFlush {
+//   from {
+//     background-color: rgba(var(--white-color-rgba), 0.8);
+//   }
+//   to {
+//     background-color: rgba(var(--white-color-rgba), 0);
+//   }
+// }
+
+// // brand logo
+// .brand-card {
+//   border: 1px solid #f3f3f3;
+//   img,
+//   svg {
+//     width: auto;
+//     max-width: 90%;
+//     max-height: 9.375em;
+//     margin: 0 auto;
+//   }
+//   &__logo {
+//     padding: 2.5em 1.875em;
+//     background: var(--white-color);
+//     @media #{$mobL} {
+//       padding: 2em;
+//     }
+//   }
+// }
+
+// // record card
+// .record-card {
+//   &__count {
+//     font-size: 7.5em;
+//     color: var(--primary-color);
+//     font-weight: 700;
+//     line-height: 1;
+//     margin-bottom: 0.1em;
+//     @media #{$mobL} {
+//       font-size: 4.5em;
+//     }
+//   }
+//   &__title {
+//     font-size: 1.25em;
+//     font-weight: 700;
+//     padding-right: 5em;
+//     @media #{$mobL} {
+//       padding-right: 0;
+//     }
+//   }
+// }
+
+// // investor card
+// .investor__card {
+//   color: var(--white-color);
+//   border: 1px solid #6375d2;
+//   padding: 5.375em 3.5em 3em 4.375em;
+//   margin-left: -1px;
+//   background: var(--secondary-color);
+//   height: 100%;
+//   @media #{$ipadpro} {
+//     padding: 1.5em;
+//   }
+//   @media #{$mobL} {
+//     margin-left: 0;
+//   }
+
+//   &__desc {
+//     color: var(--white-color);
+//     font-weight: 700;
+//   }
+//   &__label {
+//     font-size: 1.25em;
+//     font-weight: 700;
+//     margin-bottom: 1em;
+//     display: block;
+//   }
+//   &__title {
+//     margin-bottom: 0.4em;
+//   }
+// }
+
+// // new cards from here
+// .company-card {
+//   &:hover {
+//     .img-hack {
+//       transform: scale(1.1);
+//     }
+//   }
+//   &__figure {
+//     height: 23.875em;
+//     margin-bottom: 1em;
+//     background: var(--secondary-color);
+//     @media #{$ipadpro} {
+//       height: 15.875em;
+//     }
+//   }
+// }
+
+// .leadership-card {
+//   display: flex;
+//   flex-wrap: wrap;
+//   margin-left: 5.1875em;
+//   @media #{$ipadpro} {
+//     margin-left: 0;
+//   }
+//   &__left-side {
+//     padding: 5.3125em 8em 5.3125em 2.8125em;
+//     flex: 0 0 50%;
+//     @media #{$ipadpro} {
+//       padding: 3em;
+//     }
+//     @media #{$mobL} {
+//       padding: 2em;
+//       flex-basis: 100%;
+//       order: 2;
+//     }
+//     .p {
+//       font-size: 1.5em;
+//       font-weight: 400;
+//       line-height: 1.25em;
+//     }
+//   }
+//   &__right-side {
+//     flex: 0 0 50%;
+//     @media #{$mobL} {
+//       flex-basis: 100%;
+//       order: 1;
+//     }
+//   }
+// }
+
+// // report podcast
+
+// .report-podcast__card {
+//   display: block;
+//   padding: 1.25em;
+//   &:hover {
+//     .report-podcast__card__figure {
+//       .img-hack {
+//         transform: scale(1.1);
+//       }
+//     }
+//     .icon {
+//       background: var(--secondary-color);
+//     }
+//   }
+//   &__figure {
+//     margin-bottom: 1.25em;
+//     height: 14.0625em;
+//     position: relative;
+//     background: var(--secondary-color);
+//   }
+//   .h3 {
+//     font-size: 1.25em;
+//     color: var(--secondary-color);
+//     letter-spacing: -0.02em;
+//   }
+//   .icon {
+//     display: block;
+//     width: 2em;
+//     height: 2em;
+//     background: var(--primary-color);
+//     border-radius: 50%;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     transition: var(--transition-ease);
+//   }
+
+//   &--video {
+//     .report-podcast__card__figure {
+//       height: 22.5em;
+//     }
+//     .video-icon {
+//       position: absolute;
+//       width: 3.625em;
+//       height: 3.625em;
+//       top: 50%;
+//       left: 50%;
+//       transform: translate(-50%, -50%);
+//       user-select: none;
+//     }
+//   }
+// }
+
+
+
+
+
+
+// news cards from here
+
+.astrography-card {
+  color: var(--white-color);
+  &:hover {
+    .astrography-card__figure {
+      img {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  &__figure {
+    border-radius: 0.625em;
+    overflow: hidden;
+    height: 29.375em;
+    @media #{$mobL} {
+      height: 21.375em;
+    }
+    
+    img {
+      transition: var(--transition-ease);
+    }
+  }
+
+  &__header {
+    position: relative;
+    margin-bottom: 1.875em;
+  }
+
+  &__label {
+    position: absolute;
+    background: var(--white-color);
+    top: 1.8125em;
+    left: 1.8125em;
+    z-index: 1;
+    color: var(--primary-color);
+    font-weight: 600;
+    border-radius: 999px;
+    padding: 0 0.6em;
+    letter-spacing: -0.64px;
+  }
+
+  &__body {
+    padding-left: 1em;
+
+    .h6 {
+      letter-spacing: -1.44px;
+    }
+
+    .p {
+      font-size: 1.125em;
+      letter-spacing: -0.02em;
+      @media #{$mobL} {
+        font-size: 1em;
+      }
+    }
+  }
+}
+
+
+.astronomical-card {
+  position: relative;
+  color: var(--white-color);
+  border-radius: 1.875em; // 30px ÷ 16px
+  overflow: hidden;
+  
+  .card-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: inherit;
+    * {
+      border-radius: inherit;
+    }
+    .atropos {
+      height: 100%;
+    }
+  }
+  
+  .card-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    padding: 1.875em 8.1875em 3.125em 2.8125em; // 30px 131px 50px 45px ÷ 16px
+    pointer-events: none;
+    @media #{$ipad} {
+      padding-right: 1em;
+    }
+    @media #{$mobL} {
+      padding: 2em;
+    }
+  }
+  
+  .card-header {
+    color: var(--white-color);
+    
+    h3 {
+      font-size: 2.5em; // 40px ÷ 16px
+      font-weight: 700;
+      letter-spacing: -0.06em; // -2.4px ÷ 40px
+      @media #{$mobL} {
+        font-size: 2em;
+      }
+    }
+  }
+  
+  .card-description {
+    p {
+      font-size: 1.25em; // 20px ÷ 16px
+      letter-spacing: -0.04em; // -0.8px ÷ 20px
+    }
+  }
+  
+  .counter {
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px var(--white-color); // Keep border as px
+    -moz-text-fill-color: transparent;
+    background-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 4.375em; // 70px ÷ 16px
+    letter-spacing: -0.02em; // -1.4px ÷ 70px
+    font-weight: 700;
+  }
+}

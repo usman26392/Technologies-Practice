@@ -1,0 +1,22 @@
+
+
+@mixin clamp {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+
+
+@mixin imageHover {
+  overflow: hidden;
+  &:hover & {
+    & {
+      transform: scale(1.1);
+    }
+  }
+  // img {
+  //   transition: $transition;
+  // }
+}

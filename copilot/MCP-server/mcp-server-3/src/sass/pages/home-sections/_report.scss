@@ -1,0 +1,136 @@
+// report section
+.report-sec {
+  padding: 6.25em 0 3em;
+  position: relative;
+  @media #{$desktop} {
+    height: 41.25em;
+  }
+  @media #{$ipad} {
+    padding: 3em 0;
+  }
+}
+
+.report-figure-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  &::before {
+    content: "";
+    opacity: 0.3;
+    background: linear-gradient(90deg, #173056 5.07%, rgba(50, 105, 188, 0) 41.76%);
+    mix-blend-mode: multiply;
+    position: absolute;
+    inset: 0;
+  }
+}
+
+.report-panel {
+  margin-bottom: 8.5em;
+  .h4 {
+    margin-bottom: 2em;
+  }
+}
+
+.report-card {
+  border-radius: 0.75em;
+  background: var(--white-color);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.625em 0.625em 0.625em 0;
+  margin: 0 -0.6875em;
+  @media #{$ipad} {
+    padding: 1em;
+  }
+
+  &__left-panel {
+    flex: 0 0 42%;
+    width: 42%;
+    padding: 0 0.6875em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media #{$mobL} {
+      flex: 0 0 56%;
+      width: 56%;
+    }
+    .p {
+      margin-bottom: 0.8em;
+    }
+    .btnn {
+      font-size: 0.8125em;
+    }
+
+    .address-date {
+      display: flex;
+      align-items: center;
+
+      .address {
+        font-size: 1em;
+        font-weight: 500;
+        letter-spacing: -0.04em;
+        line-height: normal;
+      }
+
+      .date {
+        line-height: 1;
+        text-align: center;
+
+        span {
+          &:first-child {
+            font-size: 1.5em;
+            font-weight: 600;
+            letter-spacing: -0.04em;
+          }
+
+          &:last-child {
+            font-size: 1.125em;
+            font-weight: 600;
+            letter-spacing: -0.03444em;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+  &__right-panel {
+    flex: 0 0 58%;
+    width: 58%;
+    padding: 0 0.6875em;
+    @media #{$mobL} {
+      flex: 0 0 44%;
+      width: 44%;
+    }
+  }
+  .figure {
+    width: 100%;
+    height: 100%;
+  }
+
+  &--hero {
+    width: 100%;
+    margin: 0;
+    .report-card__left-panel {
+      padding: 0 0.3875em;
+      * {
+        color: var(--black-color);
+      }
+    }
+    .h4 {
+      font-size: 1.25em;
+      font-weight: 600;
+      padding-right: 1em;
+    }
+    .p {
+      font-size: 1.125em;
+      color: var(--white-color);
+      line-height: 1.44444em;
+      margin-bottom: 1.5em;
+    }
+    .figure {
+      height: 9.25em;
+      @media #{$mobL} {
+        height: 7.25em;
+      }
+    }
+  }
+}

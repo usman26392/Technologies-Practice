@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { STRAPI_URL } from "../lib/data";
 
 // Define the type for the data
 export interface IGeneralData {
@@ -10,7 +11,7 @@ export interface IGeneralData {
 	headerCta?: {
 		title?: string;
 		url?: string;
-		tagLine?: string;
+		tag_line?: string;
 	}[];
 	logoUrl?: string | undefined;
 	headerNavigation?: {
@@ -21,30 +22,34 @@ export interface IGeneralData {
 	footerDescription?: string;
 	footerNavigation?: {
 		title?: string;
-		links?: {
-			title?: string;
-			url?: string;
+		Important_Links?: {
+			link_title?: string;
+			link_url?: string;
 		}[];
 	}[];
 	getInTouch?: {
-		numberUrl?: string;
-		emails?: string[];
-		addressUrl?: string;
-		linkedIn?: string;
+		Get_in_Title?: string;
+		Number_Url?: string;
+		Emails?: {
+			Email_One?: string;
+			Email_Two?: string;
+		}[] | [];
+		Address_Url?: string;
+		LinkedIn_Url?: string;
 	};
 	footerCta?: {
-		copyRightText?: string;
-		linksUrls?: {
+		Copy_Right_Text?: string;
+		Footer_Links_Urls?: {
 			title?: string;
 			url?: string;
 		}[];
 	};
 }
 
-const getIconForCta = (cta: { url?: string; tagLine?: string }): string => {
-	if (cta.tagLine?.includes("telephone")) {
+const getIconForCta = (cta: { url?: string; tag_line?: string }): string => {
+	if (cta.tag_line?.includes("telephone")) {
 		return "/svgs/call.svg"; // Icon for phone
-	} else if (cta.tagLine?.includes("email")) {
+	} else if (cta.tag_line?.includes("email")) {
 		return "/svgs/mail.svg"; // Icon for email
 	} else {
 		return "/svgs/call.svg"; // Default icon
@@ -88,7 +93,7 @@ export default function Header({
 		};
 	}, []);
 
-	console.log("header component rendered");
+	console.log("header component rendered", privacyTitle);
 
 	return (
 		<header>
@@ -97,7 +102,7 @@ export default function Header({
 					<div className="flex items-center justify-between">
 						<div className="group/anim-line relative">
 							{privacyUrl && privacyTitle && (
-								<Link href={privacyUrl} className="font-normal">
+								<Link href={privacyUrl ? privacyUrl : "#"} className="font-normal">
 									{privacyTitle}
 								</Link>
 							)}
@@ -106,25 +111,32 @@ export default function Header({
 								className="absolute bottom-[-0.19rem] left-0 h-0.5 w-full origin-left scale-x-0 bg-white transition duration-500 group-hover/anim-line:scale-100"></span>
 						</div>
 						<ul className="m-0 flex list-none gap-6 p-0 text">
-							{headerCta?.map((cta, idx: number) => (
-								<li className="group/anim-line relative m-0" key={idx}>
-									<Link href={`tel:${cta?.url}`} className="flex items-center gap-2">
-										<span className="shrink-0">
-											<img
-												src={getIconForCta(cta)}
-												alt="call"
-												width={16}
-												height={16}
-												className="h-full w-full"
-											/>
-										</span>
-										<span>{cta?.title}</span>
-									</Link>
-									<span
-										aria-hidden="true"
-										className="absolute bottom-[-0.19rem] left-0 h-0.5 w-full origin-left scale-x-0 bg-white transition duration-500 group-hover/anim-line:scale-100"></span>
-								</li>
-							))}
+							{headerCta?.map((cta, idx: number) => {
+								// console.log("check cta", cta);
+								return (
+									<li className="group/anim-line relative m-0" key={idx}>
+										<Link
+											href={`
+											${cta?.tag_line == "telephone" ? `tel:${cta?.url}` : `mailto:${cta?.url}`}   
+											`}
+											className="flex items-center gap-2">
+											<span className="shrink-0">
+												<img
+													src={getIconForCta(cta) ? getIconForCta(cta) : ""}
+													alt="call"
+													width={16}
+													height={16}
+													className="h-full w-full"
+												/>
+											</span>
+											<span>{cta?.title}</span>
+										</Link>
+										<span
+											aria-hidden="true"
+											className="absolute bottom-[-0.19rem] left-0 h-0.5 w-full origin-left scale-x-0 bg-white transition duration-500 group-hover/anim-line:scale-100"></span>
+									</li>
+								);
+							})}
 						</ul>
 					</div>
 				</div>
@@ -133,7 +145,7 @@ export default function Header({
 				<div className="flex items-center justify-between py-4">
 					<div className="w-1/2">
 						<Link href="/">
-							<Image src={logoUrl || ""} alt="header logo" width={280} height={103} />
+							<Image src={`${STRAPI_URL}${logoUrl || ""}` } alt="header logo" width={280} height={103} />
 						</Link>
 					</div>
 					<nav

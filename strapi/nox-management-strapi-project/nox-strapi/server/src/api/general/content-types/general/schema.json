@@ -21,6 +21,55 @@
       "type": "string",
       "required": true,
       "unique": true
+    },
+    "Header_CTA": {
+      "type": "component",
+      "repeatable": true,
+      "component": "unique.cta",
+      "required": false
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Header_Navigation": {
+      "type": "component",
+      "repeatable": true,
+      "component": "unique.header-navigation"
+    },
+    "Banner_Video": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "videos",
+        "images"
+      ]
+    },
+    "Footer_Description": {
+      "type": "string",
+      "required": true
+    },
+    "Footer_Navigation": {
+      "type": "component",
+      "repeatable": true,
+      "component": "unique.footer-navigation",
+      "required": true
+    },
+    "Get_In_Touch": {
+      "type": "component",
+      "repeatable": false,
+      "component": "unique.get-in-touch"
+    },
+    "Footer_Cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "unique.footer-cta",
+      "required": true
     }
   }
 }

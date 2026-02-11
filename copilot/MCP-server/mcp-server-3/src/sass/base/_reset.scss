@@ -1,0 +1,154 @@
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  &:focus {
+    outline: none;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  direction: ltr;
+  text-align: left;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  // overflow-x: hidden;
+
+  @media (max-width: 1400px) and (min-width: 1300px) and (min-height: 900px) {
+    font-size: 11.485px;
+  }
+
+  @media #{$desktop} {
+    font-size: 16px;
+  }
+
+  @media #{$ipadpro} {
+    font-size: 14px !important;
+  }
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
+ul,
+ol {
+  font-size: 1.25em; // 20px
+  font-weight: 400;
+  line-height: 1.5em;
+  margin: 0 0 1.4em 0;
+  list-style-position: outside;
+  padding-left: 1em;
+  @media #{$ipadpro} {
+    font-size: 1em;
+    margin-bottom: 1em;
+  }
+  li {
+    margin-bottom: 0.63636em;
+    &::marker {
+      color: var(--black-color);
+    }
+  }
+  ol,
+  ul {
+    font-size: 1em;
+    font-weight: 400;
+    margin-top: 1em;
+  }
+}
+
+html[lang="ar"] {
+  ol {
+    list-style-type: arabic-indic;
+  }
+}
+
+a {
+  font-size: inherit;
+  text-decoration: none;
+  color: var(--primary-color);
+  &:hover {
+    color: rgba(var(--primary-color), 0.7);
+  }
+}
+
+
+iframe {
+  border: 0;
+}
+
+
+button {
+  font-family: $basefont;
+  -webkit-appearance: button;
+  appearance: button;
+  font-size: inherit;
+  background: transparent;
+  border: 0;
+  &:focus {
+    outline: none;
+  }
+}
+
+textarea {
+  font-size: inherit;
+  resize: none;
+}
+
+::placeholder {
+  opacity: 1;
+  color: var(255, 255, 255, 0.7);
+}
+
+
+picture {
+  display: block;
+  height: 100%;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+// if you are un commenting this code , please set according to project.
+
+// input:-webkit-autofill,
+// input:-webkit-autofill:hover,
+// input:-webkit-autofill:focus,
+// input:-webkit-autofill:active {
+//   -webkit-background-clip: text;
+//   -webkit-text-fill-color: rgba(var(--black-color), 1);
+//   transition: background-color 5000s ease-in-out 0s;
+//   box-shadow: inset 0 0 20px 20px transparent;
+// }
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}

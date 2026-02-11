@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_unique_header_navigations",
+  "info": {
+    "displayName": "Header_Navigation"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,78 @@
+.our-product-sec {
+  .absolute-btn-right {
+    @media #{$mobL} {
+      padding: 0 2em;
+    }
+  }
+}
+
+.our-products-main-slider-wrapper {
+  .swiper-slide {
+    .img-wrapper {
+      transition: all 0.5s ease;
+      border-radius: 1.875em;
+      overflow: hidden;
+      width: 31.0625em;
+      @media #{$ipad} {
+        width: 21.063em;
+      }
+      @media #{$mobL} {
+        width: 18.063em;
+      }
+      * {
+        border-radius: inherit;
+      }
+    }
+  }
+  .swiper-slide-prev {
+    .img-wrapper {
+      @media #{$desktop} {
+        transform: translateX(25em);
+      }
+    }
+  }
+}
+
+.our-product-verticle-main-slider-wrapper {
+  position: absolute;
+  left: 63em;
+  z-index: 2;
+  top: 27em;
+  max-width: 33em;
+  @media #{$ipadpro} {
+    position: static;
+    margin: 3em auto;
+  }
+  @media #{$mobL} {
+    padding: 0 2em;
+    margin-bottom: 0;
+  }
+
+  .our-product-description {
+    color: var(--white-color);
+    .h3 {
+      padding-right: 6em;
+      line-height: 1;
+      @media #{$mobL} {
+        padding-right: 0;
+      }
+    }
+  }
+  .our-product-description p {
+    color: var(--white-color);
+    font-size: 1.25em;
+  }
+  .swiper {
+    height: 25em;
+    @media #{$ipadpro} {
+      height: 20em;
+    }
+  }
+  .swiper-slide {
+    opacity: 0;
+    transition: all 1.5s ease;
+    &-active {
+      opacity: 1;
+    }
+  }
+}

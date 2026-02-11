@@ -1,0 +1,54 @@
+{
+  "kind": "singleType",
+  "collectionName": "homes",
+  "info": {
+    "singularName": "home",
+    "pluralName": "homes",
+    "displayName": "Home",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Video__Url": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "videos",
+        "images"
+      ]
+    },
+    "Home__history__section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.home-history"
+    },
+    "Home__Brands": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.home-brands"
+    },
+    "Affiliates__Brands": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.home-brands"
+    },
+    "Bussiness__sectors__section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.bussiness-sectors"
+    },
+    "team_lists": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::team-list.team-list"
+    },
+    "Team__Title": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    }
+  }
+}

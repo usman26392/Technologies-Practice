@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_unique_emails",
+  "info": {
+    "displayName": "Emails"
+  },
+  "options": {},
+  "attributes": {
+    "Email_One": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Email_Two": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_unique_footer_navigations",
+  "info": {
+    "displayName": "Footer_Navigation",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Important_Links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "unique.important-links",
+      "required": true
+    }
+  }
+}

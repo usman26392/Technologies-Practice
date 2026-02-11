@@ -1,0 +1,37 @@
+// h-news-letter
+.h-news-letter {
+  &__inner-wrapper {
+    padding-bottom: 0.8125em;
+    padding-top: 3.75em;
+    border-bottom: 1px solid rgba(var(--black-color), 0.15);
+    @media #{$mobL} {
+      padding-top: 2em;
+    }
+  }
+
+  &__form {
+    form {
+      display: flex;
+      align-items: center;
+      @media #{$mobL} {
+        flex-wrap: wrap;
+      }
+    }
+
+    .c_form-field {
+      flex: 0 0 29%;
+      margin: 0 4.375em 0 0;
+      @media #{$mobL} {
+        flex: 0 0 100%;
+        margin: 0;
+      }
+    }
+
+    .btnn {
+      margin-left: auto;
+      @media #{$mobL} {
+        margin: 1em 0 0;
+      }
+    }
+  }
+}

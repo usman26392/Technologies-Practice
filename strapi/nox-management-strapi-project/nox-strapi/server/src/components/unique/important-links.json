@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_unique_important_links",
+  "info": {
+    "displayName": "important_links"
+  },
+  "options": {},
+  "attributes": {
+    "link_title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "link_url": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}

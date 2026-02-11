@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_unique_bussiness_slides",
+  "info": {
+    "displayName": "Bussiness__slides",
+    "icon": "bell",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Brands__Count": {
+      "displayName": "Brands__count",
+      "type": "component",
+      "repeatable": true,
+      "component": "unique.brands-count"
+    },
+    "Brand__Categories": {
+      "displayName": "Brand__Categories",
+      "type": "component",
+      "repeatable": false,
+      "component": "unique.brand-categories"
+    },
+    "Desktop__Figure": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Mobile__Figure": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  }
+}

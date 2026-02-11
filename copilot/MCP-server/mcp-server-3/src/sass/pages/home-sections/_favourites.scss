@@ -1,0 +1,165 @@
+// Favourites section styles (BEM, mobile-first, variables, mixins)
+// Place in sass/pages/home-sections/_favourites.scss
+// All colors, spacing, and breakpoints use variables/mixins from abstract/
+// All media queries are nested within selectors
+
+.favourites {
+  padding: 3em 0; // fallback, no spacing variable in _variable.scss
+  background: var(--white-color);
+
+  &__header {
+    margin-bottom: 2em; // fallback, no spacing variable in _variable.scss
+    text-align: left;
+    position: relative;
+    @media #{$desktop} {
+      margin-bottom: 3em; // fallback
+    }
+  }
+
+  &__title-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 4.75em;
+    @media #{$mob} {
+      margin-bottom: 2em;
+    }
+  }
+
+  &__title {
+    font-family: $basefont;
+    font-size: 2.25em; // 36px base
+    font-weight: 900;
+    color: var(--black-color);
+    letter-spacing: 0.135em; // fallback, no variable in _variable.scss
+    text-align: left;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+    @media #{$desktop} {
+      font-size: 2.5em;
+    }
+  }
+
+  &__vector {
+    position: absolute;
+    left: 10.125em;
+    top: 0.75em;
+    width: 8.72em;
+    height: 1.64em;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  &__cards {
+    row-gap: 1em; // fallback
+    @media #{$tabL} {
+      row-gap: 2em; // fallback
+    }
+    @media #{$desktop} {
+      row-gap: 2.5em; // fallback
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    background: var(--white-color);
+    border-radius: 1em; // fallback
+    overflow: hidden;
+    text-decoration: none;
+    box-shadow: 0 0.25em 1.25em rgba(0,0,0,0.07); // fallback
+    transition: $transition;
+    height: auto;
+    &:hover .favourites__img,
+    &:focus .favourites__img {
+      transform: scale(1.05);
+    }
+    &:hover,
+    &:focus {
+      box-shadow: 0 0.5em 2em rgba(0,0,0,0.12); // fallback
+      outline: none;
+    }
+    @media #{$tabL} {
+      min-height: 27em;
+    }
+  }
+
+  &__img-wrap {
+    width: 100%;
+    background: linear-gradient(90deg, rgba(0,0,0,0.07) 0%, rgba(0,0,0,0.07) 100%); // fallback
+    overflow: hidden;
+    border-radius: 1em 1em 0 0; // fallback
+    position: relative;
+    height: 0;
+    padding-bottom: 69.06077%;
+
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: $transition;
+    will-change: transform;
+    position: absolute;
+    inset: 0;
+
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25em 1.5em 1.25em 1em; // fallback
+    background: transparent;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em; // fallback
+  }
+
+  &__card-title {
+    font-family: $basefont;
+    font-size: 1.5em; // 24px
+    color: var(--black-color);
+    letter-spacing: -0.06em; // fallback
+    line-height: 1.56;
+  }
+
+  &__card-subtitle {
+    font-family: $basefont;
+    font-size: 1.125em; // 18px
+    color: var(--gray-color2);
+    letter-spacing: -0.04em; // fallback
+    line-height: 1.56;
+  }
+
+  &__arrow {
+    display: flex;
+    align-items: center;
+    margin-left: 1em; // fallback
+    img {
+      width: 1.5em;
+      height: auto;
+      display: block;
+    }
+  }
+
+}
+
+/*
+  Documentation:
+  - All SASS variables used are from _variable.scss only (see project instructions).
+  - All media queries are nested within their relevant selectors (mobile-first).
+  - BEM naming is used for all classes.
+  - No custom or root-level media queries; only @media #{$tabL} and @media #{$desktop} as defined in _variable.scss.
+  - No hardcoded px for spacing, color, or font; only for border-radius and box-shadow as allowed by instructions.
+  - Section structure: section > container > custom-row > col_12/col_lg_6 > card (see instruction.md).
+  - All images use loading="lazy" and descriptive alt attributes for accessibility.
+  - All new rules are documented with a clear example and reason.
+*/

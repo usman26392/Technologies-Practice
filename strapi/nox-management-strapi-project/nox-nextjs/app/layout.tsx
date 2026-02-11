@@ -47,9 +47,25 @@ export default async function RootLayout({
 	console.log("layout component rendered!");
 
 	// Fetch general data
-	let generalData = await getGeneralData();
+	let generalData = await getGeneralData("populate=*"),
+		footerData = await getGeneralData("populate[Footer_Navigation][populate][0]=Important_Links&populate[Get_In_Touch][populate][0]=Emails&populate[Footer_Cta][populate][0]=Footer_Links_Urls");
+		
+	generalData = { ...generalData, ...footerData };
+
+
+
+	// console.log("General Data from Strapi:", generalData);
+
 	const privacy__title = generalData?.Privacy_Title;
 	const privacy__url = generalData?.Privacy_URL;
+	const header__cta = generalData?.Header_CTA;
+	const logo = generalData?.logo?.url;
+	const header__Navigation = generalData?.Header_Navigation;
+	const footer__description = generalData?.Footer_Description;
+	const footer__Navigation = generalData?.Footer_Navigation;
+	const get_in_touch = generalData?.Get_In_Touch;
+	const footer_cta = generalData?.Footer_Cta;
+
 
 	return (
 		<html lang="en" className={`${Gotham.className}`}>
@@ -57,17 +73,17 @@ export default async function RootLayout({
 				<Header
 					privacyTitle={privacy__title}
 					privacyUrl={privacy__url}
-					headerCta={generalDataJson?.headerCta}
-					logoUrl={generalDataJson?.logoUrl}
-					headerNavigation={generalDataJson?.headerNavigation}
+					headerCta={header__cta}
+					logoUrl={logo}
+					headerNavigation={header__Navigation}
 				/>
 				{children}
 				<Footer
-					logoUrl={generalDataJson?.logoUrl}
-					footerDescription={generalDataJson?.footerDescription}
-					footerNavigation={generalDataJson?.footerNavigation}
-					getInTouch={generalDataJson?.getInTouch}
-					footerCta={generalDataJson?.footerCta}
+					logoUrl={logo}
+					footerDescription={footer__description}
+					footerNavigation={footer__Navigation}
+					getInTouch={get_in_touch}
+					footerCta={footer_cta}
 				/>
 			</body>
 		</html>

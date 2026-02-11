@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "teams",
+  "info": {
+    "singularName": "team",
+    "pluralName": "teams",
+    "displayName": "Team",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "team_lists": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::team-list.team-list"
+    },
+    "Title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}

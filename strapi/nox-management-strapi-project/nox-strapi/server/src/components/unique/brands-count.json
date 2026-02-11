@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_unique_brands_counts",
+  "info": {
+    "displayName": "Brands__count",
+    "icon": "bold"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Count": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}

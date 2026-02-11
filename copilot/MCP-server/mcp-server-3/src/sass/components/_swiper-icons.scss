@@ -1,0 +1,52 @@
+.swiper-icons {
+  .swiper-button {
+    &-prev,
+    &-next {
+      width: 2.375em;
+      height: 2.375em;
+      background: #000;
+      border-radius: 50%;
+      transition: $transition;
+      margin: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      @media #{$mob} {
+        width: 2em;
+        height: 2em;
+      }
+
+      &:hover {
+        background-color: rgba(var(--primary-color), 1);
+      }
+      &::after {
+        font-size: inherit;
+        content: "";
+        width: 0.9375em;
+        height: 0.875em;
+      }
+    }
+    &-prev {
+      &::after {
+        background: url("../svg/swiper-icon-left.svg") center center/contain
+          no-repeat;
+      }
+    }
+    &-next {
+      &::after {
+        background: url("../svg/swiper-icon-right.svg") center center/contain
+          no-repeat;
+      }
+    }
+  }
+
+  &--tilt {
+    .swiper-button {
+      &-prev {
+        transform: rotate(40deg);
+      }
+      &-next {
+        transform: rotate(-40deg);
+      }
+    }
+  }
+}

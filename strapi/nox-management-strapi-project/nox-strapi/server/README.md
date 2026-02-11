@@ -63,6 +63,6 @@ Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/
 
 
 # credentials
-http://localhost:1337/admin/auth/login
+http://localhost:1337/
 usmannawaz53@gmail.com
 34Pi56455

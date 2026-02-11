@@ -1,0 +1,80 @@
+.space-lovers-sec {
+  .space-lovers__video {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    inset: 0;
+    video,
+    iframe {
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      inset: 0;
+      object-fit: cover;
+    }
+  }
+}
+
+.space-lovers__panels-wrapper {
+  position: relative;
+  z-index: 1;
+  padding-top: 20em;
+  @media #{$ipad} {
+    padding-top: 10em;
+  }
+  @media #{$mobL} {
+    padding-top: 5em;
+  }
+
+  .space-lovers__item {
+    text-align: center;
+    color: var(--white-color);
+    font-weight: 700;
+    max-width: 80%;
+    margin: 0 auto 20em;
+    min-height: 50vh;
+    @media #{$ipad} {
+      margin-bottom: 10em;
+    }
+    @media #{$mobL} {
+      margin-bottom: 5em;
+      max-width: 100%;
+    }
+
+    .h2 {
+      font-size: 7.5em; // 120px/16px
+      font-weight: 700;
+      line-height: 1;
+      text-shadow: 0px 0px 25px rgba(255, 255, 255, 0.6); // kept px for shadow
+      @media #{$ipadpro} {
+        font-size: 3.5em;
+      }
+      @media #{$mobL} {
+        font-size: 2.5em;
+      }
+    }
+
+    .p {
+      color: var(--white-color);
+      font-size: 1.5em; // 24px/16px
+      font-weight: 400;
+      padding: 0 10em;
+      @media #{$ipadpro} {
+        padding: 0 2em;
+      }
+      @media #{$mobL} {
+        padding: 0 0;
+        font-size: 1em;
+      }
+    }
+
+    .space-lovers__logo {
+      max-width: 22.625em; // 362px/16px
+      margin: 0 auto 4em;
+      @media #{$mobL} {
+        margin: 0 auto 2em;
+        max-width: 13.625em;
+      }
+    }
+  }
+}

@@ -14,6 +14,9 @@ type TeamProps = {
 export default function Team({ title, teamCardList }: TeamProps) {
 	console.log("Team component rendered");
 	// console.log(teamCardList);
+	// console.log("firsts", title)
+
+
 	return (
 		<section className="py-8 xl:py-24">
 			<div className="container">{title && <h2>{title}</h2>}</div>
@@ -49,17 +52,18 @@ export default function Team({ title, teamCardList }: TeamProps) {
 							},
 						}}
 						className="team-slider">
-						{teamCardList.map((card: TeamcardProps, idx: number) => {
-							// Destructure the card object to get the properties we need
+						{teamCardList.map((card: any, idx: number) => {
+							// Destructure the card object to get the properties what we need
+							// console.log("cards", card);
 							const deStructuredCard = {
 								id: card?.id,
-								url: card?.url,
+								url: card?.Figure_sm?.url,
 								personName: card?.personName,
 								personDesignation: card?.personDesignation,
 							};
 
-							console.log("actual Card", card);
-							console.log("deStructuredCard", deStructuredCard);
+							// console.log("actual Card", card);
+							// console.log("deStructuredCard", deStructuredCard);
 
 							return (
 								<SwiperSlide key={idx}>

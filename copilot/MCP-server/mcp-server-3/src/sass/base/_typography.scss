@@ -1,0 +1,130 @@
+h1,
+.h1 {
+  font-size: 7.5em; // 120px
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.05em;
+  margin: 0 0 0.5em 0;
+  @media #{$ipadpro} {
+    font-size: 3.5em;
+  }
+  @media #{$mob} {
+    font-size: 3em;
+    margin-bottom: 0.345em;
+  }
+}
+
+
+
+
+h2,
+.h2 {
+  font-size: 4.375em; // 70px
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  margin: 0 0 0.5em 0;
+  @media #{$ipadpro} {
+    font-size: 2em;
+    margin-bottom: 0.545em;
+  }
+
+  b,
+  strong {
+    font-weight: 600;
+  }
+}
+
+h3,
+.h3 {
+  font-size: 2.5em; // 40px
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  margin: 0 0 0.5em 0;
+  @media #{$ipadpro} {
+    font-size: 1.75em;
+    line-height: 1.2;
+  }
+}
+
+h4,
+.h4 {
+  font-size: 3.125em; // 50px
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  margin: 0 0 0.5em 0;
+
+  @media #{$ipadpro} {
+    font-size: 1.25em;
+  }
+
+  // b,
+  // strong {
+  //   font-weight: 400;
+  // }
+}
+
+
+
+
+h5,
+.h5 {
+  font-size: 1.875em; // 30px
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  margin: 0 0 0.5em 0;
+  @media #{$ipadpro} {
+    font-size: 1.2em;
+  }
+
+  &.font-20 {
+    font-size: 1.25em;
+    letter-spacing: normal;
+  }
+  
+}
+
+
+
+h6,
+.h6 {
+  font-size: 1.5em; // 24px
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5em 0;
+  @media #{$ipadpro} {
+    font-size: 1.2em;
+  }
+}
+
+p,
+.p {
+  font-size: 1.25em; 
+  font-weight: 400;
+  line-height: 1.5em;
+  margin: 0 0 1.4em 0;
+  @media #{$ipadpro} {
+    font-size: 1em;
+    margin-bottom: 1em;
+  }
+  b, strong {
+    font-weight: 600;
+    line-height: 1.2em;
+  }
+}
+
+.p-large {
+  font-size: 1.125em; // 18px
+}
+
+.p-small {
+  font-size: 1.25em; // 20px
+}
+
+p + .btnn {
+  margin-top: 0.5em;
+}

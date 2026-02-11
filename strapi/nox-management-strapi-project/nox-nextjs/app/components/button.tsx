@@ -62,13 +62,14 @@ export default function Button({ title, targetValue, btnElement }: ButtonProps) 
 type ButtonConnectProps = {
 	title: string;
 	targetValue?: string;
+	LinkedIn_Url?: string
 
 }
 
-export function ButtonConnect({title, targetValue}:ButtonConnectProps) {
+export function ButtonConnect({title, targetValue, LinkedIn_Url}:ButtonConnectProps) {
 	return (
 		<Link
-			href="?!"
+			href={LinkedIn_Url || "#"}
 			className="group/icon group/linkedin-icon relative inline-flex cursor-pointer select-none items-center justify-center gap-[0.6em] rounded-xl border-2 border-solid border-gray-dark2 bg-black3 p-[.8em_1em] text-center align-middle font-gotham text-[1.125rem] capitalize leading-none no-underline outline-none transition hover:border-transparent hover:bg-brown"
 			target={targetValue ? "_blank" : "_self"}>
 			{title}

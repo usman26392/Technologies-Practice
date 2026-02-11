@@ -4,6 +4,7 @@
 		{
 			"id": "44",
 			"url": "/images/cards/team-1-sm.jpg",
+			"url2": "/images/cards/team-1-lg.jpg",
 			"personName": "Ahmed Al-Farsi",
 			"personDesignation": "Chief Investment Officer",
 			"description": "Ahmed Al-Farsi is the Chief Investment Officer. Oversees the company's investment strategies and portfolio management. Ahmed brings over 20 years of experience in global financial markets, specializing in asset allocation, risk assessment, and portfolio diversification. He has successfully led multiple high-value investment projects and is known for his analytical approach and strategic vision. Ahmed collaborates closely with other executives to ensure alignment with the company's long-term financial goals and regularly presents market insights to stakeholders. His leadership has resulted in consistent portfolio growth and strong investor confidence."
@@ -11,6 +12,7 @@
 		{
 			"id": "45",
 			"url": "/images/cards/team-2-sm.jpg",
+			"url2": "/images/cards/team-2-lg.jpg",
 			"personName": "Omar Al-Khaled",
 			"personDesignation": "Chief Technology Officer",
 			"description": "Omar Al-Khaled is the Chief Technology Officer. Leads the technology vision and ensures robust IT infrastructure. Omar has a proven track record in implementing scalable technology solutions and driving digital transformation. He is passionate about innovation, cybersecurity, and building high-performing engineering teams. Omar works closely with all departments to align technology initiatives with business objectives."
@@ -18,6 +20,7 @@
 		{
 			"id": "46",
 			"url": "/images/cards/team-3-sm.jpg",
+			"url2": "/images/cards/team-3-lg.jpg",
 			"personName": "Yusuf Al-Amiri",
 			"personDesignation": "Head of Marketing",
 			"description": "Yusuf Al-Amiri is the Head of Marketing. Directs marketing campaigns and brand development initiatives. Yusuf excels in strategic marketing, digital outreach, and customer engagement. He has successfully launched several high-impact campaigns and is dedicated to enhancing the company's brand presence and market share."
@@ -25,6 +28,7 @@
 		{
 			"id": "47",
 			"url": "/images/cards/team-4-sm.jpg",
+			"url2": "/images/cards/team-4-lg.jpg",
 			"personName": "Hassan Al-Najjar",
 			"personDesignation": "Lead Developer",
 			"description": "Hassan Al-Najjar is the Lead Developer. Manages the development team and oversees software projects. Hassan is skilled in software architecture, agile methodologies, and full-stack development. He ensures code quality, mentors junior developers, and drives the adoption of best practices in software engineering."
@@ -32,6 +36,7 @@
 		{
 			"id": "48",
 			"url": "/images/cards/team-5-sm.jpg",
+			"url2": "/images/cards/team-5-lg.jpg",
 			"personName": "Khalid Al-Mutairi",
 			"personDesignation": "Chief Financial Officer",
 			"description": "Khalid Al-Mutairi is the Chief Financial Officer. Responsible for financial planning, risk management, and reporting. Khalid has extensive experience in finance, budgeting, and corporate governance. He oversees financial operations, ensures regulatory compliance, and provides strategic recommendations to support business growth."
@@ -39,6 +44,7 @@
 		{
 			"id": "49",
 			"url": "/images/cards/team-6-sm.jpg",
+			"url2": "/images/cards/team-6-lg.jpg",
 			"personName": "Sami Al-Hashimi",
 			"personDesignation": "Head of Operations",
 			"description": "Sami Al-Hashimi is the Head of Operations. Supervises daily operations and ensures process efficiency. Sami is experienced in operational excellence, process optimization, and resource management. He focuses on streamlining workflows, improving productivity, and maintaining high standards of service delivery."
@@ -46,6 +52,7 @@
 		{
 			"id": "50",
 			"url": "/images/cards/team-7-sm.jpg",
+			"url2": "/images/cards/team-7-lg.jpg",
 			"personName": "Bilal Al-Sabah",
 			"personDesignation": "Product Manager",
 			"description": "Bilal Al-Sabah is a Product Manager. Coordinates product development and manages product lifecycle. Bilal is adept at product strategy, market analysis, and cross-functional collaboration. He works with engineering, design, and marketing teams to deliver products that meet customer needs and business goals."
@@ -53,6 +60,7 @@
 		{
 			"id": "51",
 			"url": "/images/cards/team-8-sm.jpg",
+			"url2": "/images/cards/team-8-lg.jpg",
 			"personName": "Tariq Al-Amin",
 			"personDesignation": "Product Manager",
 			"description": "Tariq Al-Amin is a Product Manager. Oversees product strategy and collaborates with cross-functional teams. Tariq has a strong background in product management and innovation. He is responsible for defining product roadmaps, gathering requirements, and ensuring successful product launches."
