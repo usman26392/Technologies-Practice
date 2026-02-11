@@ -1,30 +1,33 @@
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
-
+import path from "path";
 import notesRouter from "./routes/notesRoutes.js";
 import { connectDB } from "./config/db.js";
 import rateLimiter from "./middleware/rateLimiter.js";
-
 
 // Load environment variables
 dotenv.config();
 // console.log("MONGO__URI:", process.env.MONGO_URI);
 
-
 // Initialize Express app
 const app = express();
 const PORT = process.env.PORT || 5001;
+const __dirname = path.resolve();
 
+// Enable CORS for all routes (you can configure this as needed)
+// app.use(cors());
 
+if (process.env.NODE_ENV !== "production") {
+  app.use(
+    cors({
+      origin: "http://localhost:5173", // frontend origin
+      methods: ["GET", "POST", "PUT", "DELETE"], // allowed methods
+      // credentials: true, // allow cookies
+    }),
+  );
+}
 
-// Enable CORS for all routes (you can configure this as needed)   
-// app.use(cors()); 
-app.use(cors({
-    origin: 'http://localhost:5173', // frontend origin
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], // allowed methods
-    // credentials: true, // allow cookies
-})); 
 
 // middleware to parse JSON request bodies
 //  This should be before route registrations
@@ -33,9 +36,6 @@ app.use(cors({
 // e.g., POST / PUT requests
 app.use(express.json());
 app.use(rateLimiter); // Apply rate limiting middleware globally (you can also apply it to specific routes if needed)
-
-
-
 
 // Register routes (after middleware)
 app.use("/api/notes", notesRouter);
@@ -46,10 +46,16 @@ app.use("/api/notes", notesRouter);
 // app.use("/api/socialPosts", socialPostsRouter);
 // app.use("/api/emails", emailsRouter);
 
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "../frontend/dist")));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));
+  });
+}
+
 // Connect to Database after setting up middleware and routes
-connectDB().then(()=> {
-    // Start server after DB connect
-    app.listen(PORT, () => console.log("Server started on PORT", PORT));
+connectDB().then(() => {
+  // Start server after DB connect
+  app.listen(PORT, () => console.log("Server started on PORT", PORT));
 });
-
-
