@@ -1,0 +1,17 @@
+{
+  "name": "nodejs-beginner-tutorial",
+  "version": "1.0.0",
+  "description": "https://www.youtube.com/watch?v=32M1al-Y6Ag",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --env-file=.env index.js"
+  },
+  "keywords": [],
+  "author": "Usman",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
