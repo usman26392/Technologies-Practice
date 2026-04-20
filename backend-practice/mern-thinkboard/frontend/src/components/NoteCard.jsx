@@ -30,7 +30,7 @@ export default function NoteCard({ note, totalNotes }) {
                 !(note?._id) ? (
                     <div className="text-center text-primary py-4">Note not found</div>
                 ) : (
-                    <Link to={`/detail/${note._id}`} className="card bg-base-100 transition-all duration-200 border-t-4 border-solid border-[#00ff9d] hover:shadow-lg">
+                    <Link to={`/detail/${note._id}`} className="card bg-base-100 transition-all duration-200 border-t-4 border-solid border-[#ce9a47] hover:shadow-lg">
                         <div className="card-body">
                             <h3 className="card-title text-base-content">{note?.title}</h3>
                             <p className="text-base-content/70 line-clamp-3">{note?.content}</p>

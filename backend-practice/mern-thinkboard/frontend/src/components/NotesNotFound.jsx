@@ -12,7 +12,7 @@ export default function NotesNotFound() {
             <p className="text-base-content/70">
                 Ready to organize your thoughts? Create your first note to get started on your journey.
             </p>
-            <Link to="/create" className="btn btn-primary">
+            <Link to="/create" className="btn">
                 Create Your First Note
             </Link>
         </div>

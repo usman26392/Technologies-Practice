@@ -89,7 +89,7 @@ export default function NoteCreatePage() {
                   />
                 </div>
                 <div className="card-actions justify-end">
-                  <button type="submit" className="btn btn-primary" disabled={loading}>
+                  <button type="submit" className="btn" disabled={loading}>
                     {
                       loading ? "Creating..." : "Create Note"
                     }
