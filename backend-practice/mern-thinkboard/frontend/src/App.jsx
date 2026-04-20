@@ -17,7 +17,6 @@ function App() {
           <Route path='/' element={<HomePage />} />
           <Route path='/create' element={<NoteCreatePage />} />
           <Route path='/detail/:id' element={<NoteDetailPage />} />
-
         </Routes>
       </div>
 

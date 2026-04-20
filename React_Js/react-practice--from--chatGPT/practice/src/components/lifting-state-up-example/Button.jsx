@@ -1,6 +1,7 @@
 
 // topic: - lifting state up
 function Button({countValue, handleProduct}) {
+  // console.log("lift button child");
   return (
     <div>
         <p>Product Count: {countValue} </p>

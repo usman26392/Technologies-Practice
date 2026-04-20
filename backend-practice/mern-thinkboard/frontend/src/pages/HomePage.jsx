@@ -56,16 +56,16 @@ export default function HomePage() {
           isloading && <div className="text-center text-primary py-4">Loading notes...</div>
         }
         {
-          notes.length === 0 && !isloading && !isRateLimited && (
-            <NotesNotFound/>
+          notes.length === 0 && (!isloading) && (!isRateLimited) && (
+            <NotesNotFound />
           )
         }
         {
           notes.length > 0 && !isRateLimited && !isloading && (
             <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6">
               {
-                notes.map((noteObj, idx )=> (
-                  <NoteCard key={noteObj._id} note={noteObj} remainingNotes={setNotes}/>
+                notes.map((noteObj, idx) => (
+                  <NoteCard key={noteObj._id} note={noteObj} totalNotes={setNotes} />
                 ))
               }
             </div>

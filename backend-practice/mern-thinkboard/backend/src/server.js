@@ -35,24 +35,19 @@ if (process.env.NODE_ENV !== "production") {
 // for all routes that need it
 // e.g., POST / PUT requests
 app.use(express.json());
-app.use(rateLimiter); // Apply rate limiting middleware globally (you can also apply it to specific routes if needed)
+// don't uncomment ratelimiter
+// app.use(rateLimiter); // Apply rate limiting middleware globally (you can also apply it to specific routes if needed)
 
 // Register routes (after middleware)
 app.use("/api/notes", notesRouter);
 
 // sample routes for other modules
-// app.use("/api/product", productRouter);
+// app.use("/api/products", productRouter);
 // app.use("/api/payments", paymentsRouter);
 // app.use("/api/socialPosts", socialPostsRouter);
 // app.use("/api/emails", emailsRouter);
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
-  app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));
-  });
-}
 
 // Connect to Database after setting up middleware and routes
 connectDB().then(() => {

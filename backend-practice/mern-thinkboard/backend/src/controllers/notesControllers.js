@@ -23,13 +23,13 @@ export const getAllNotes = async (req, res) => {
 export const getNoteById = async (req, res) => {
   try {
     const note = await Note.findById(req.params.id);
-    if(!note) {
+    if (!note) {
       return res.status(404).json({ message: "Note not found" });
     }
     res.status(200).json(note);
   } catch (error) {
     console.error("Error fetching note by ID:", error);
-    res.status(500).json({ message: "Server Error" });
+    res.status(500).json({ message: "Server Error abc" });
   }
 }
 
@@ -60,7 +60,9 @@ export const updateNote = async (req, res) => {
         title,
         content,
       },
-      { new: true },
+      {
+        new: true
+      },
     );
 
     if (!updatedNote)
@@ -69,7 +71,7 @@ export const updateNote = async (req, res) => {
       });
 
     res.status(201).json({
-      message: "note updated successfully",
+      message: "Note updated successfully",
       updatedNote,
     });
   } catch (error) {
@@ -77,6 +79,9 @@ export const updateNote = async (req, res) => {
     res.status(500).json({ message: "Server Error" });
   }
 };
+
+
+
 
 export const deleteNote = async (req, res) => {
   try {
@@ -94,3 +99,28 @@ export const deleteNote = async (req, res) => {
     res.status(500).json({ message: "Server Error" });
   }
 };
+
+
+
+
+// Explanation
+/*
+
+Two ways Mongoose talks to MongoDB:
+
+Way 1: Document approach(uses.save())
+// createNote uses this approach
+const newNote = new Note({ title, content }); // create document in JS memory
+await newNote.save();                          // THEN send it to MongoDB
+
+Takes Two steps: create in memory → save to DB.
+
+
+
+Way 2: Direct query approach(no.save() needed)
+// updateNote uses this approach
+await Note.findByIdAndUpdate(id, { title, content }, { new: true });
+
+Take One step: sends the command directly to MongoDB in a single operation.MongoDB finds the document and updates it on its own — nothing is created in JS memory first.
+
+*/

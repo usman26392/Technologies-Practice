@@ -4,15 +4,17 @@ import formatDate from "../lib/utils.js";
 import apiInstance from "../lib/axios.js";
 import toast from "react-hot-toast";
 
-export default function NoteCard({ note, remainingNotes }) {
+export default function NoteCard({ note, totalNotes }) {
 
-    const handleDelete = async(e, id)=> {
+    const handleDelete = async (e, id) => {
         e.preventDefault();
-        if(!window.confirm("Are you sure you want to delete this note?")) return;
+        if (!window.confirm("Are you sure you want to delete this note?")) return;
 
         try {
             await apiInstance.delete(`notes/${id}`);
-            remainingNotes(prevNotes => prevNotes.filter(noteObj => noteObj._id !== id));
+            totalNotes(prevNotes => prevNotes.filter(function (note) {
+                return note._id !== id
+            }));
             toast.success("Note deleted successfully");
         } catch (error) {
             toast.error("Failed to delete note");
@@ -22,21 +24,36 @@ export default function NoteCard({ note, remainingNotes }) {
 
 
     return (
-        <Link to={`/detail/${note._id}`} className="card bg-base-100 transition-all duration-200 border-t-4 border-solid border-[#00ff9d] hover:shadow-lg">
-            <div className="card-body">
-                <h3 className="card-title text-base-content">{note?.title}</h3>
-                <p className="text-base-content/70 line-clamp-3">{note?.content}</p>
-                <div className="card-actions justify-between items-center mt-4">
-                    <span className="text-sm text-base-content/60">{formatDate(new Date(note?.createdAt))}</span>
-                    <div className="flex items-center gap-1">
-                        <PenSquareIcon className="size-4" />
-                        <button className="btn btn-ghost btn-xs text-error" onClick={(e)=> handleDelete(e, note._id)}>
-                            <Trash2Icon className="size-4" />
-                        </button>
-                    </div>
-                </div>
 
-            </div>
-        </Link>
+        <>
+            {
+                !(note?._id) ? (
+                    <div className="text-center text-primary py-4">Note not found</div>
+                ) : (
+                    <Link to={`/detail/${note._id}`} className="card bg-base-100 transition-all duration-200 border-t-4 border-solid border-[#00ff9d] hover:shadow-lg">
+                        <div className="card-body">
+                            <h3 className="card-title text-base-content">{note?.title}</h3>
+                            <p className="text-base-content/70 line-clamp-3">{note?.content}</p>
+                            <div className="card-actions justify-between items-center mt-4">
+                                <span className="text-sm text-base-content/60">{formatDate(new Date(note?.createdAt))}</span>
+                                <div className="flex items-center gap-1">
+                                    <PenSquareIcon className="size-4" />
+                                    <button className="btn btn-ghost btn-xs text-error" onClick={(e) => handleDelete(e, note._id)}>
+                                        <Trash2Icon className="size-4" />
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </Link>
+
+                )
+            }
+
+        </>
+
+
+
+
     )
 }

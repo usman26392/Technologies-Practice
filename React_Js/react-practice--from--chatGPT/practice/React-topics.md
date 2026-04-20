@@ -27,27 +27,27 @@
 
 
 # hooks
- - useState()   
- - useEffect():  
- - useContext():  
- - useRef():  
- - useMemo(): 
- - useCallback(): 
- - useReducer():  
- - useLayoutEffect():
- - useHookName() custom hook:
+ - useState()  (✅ done)
+ - useEffect()  ( ✅ done )
+ - useContext() ( ✅ done )
+ - useRef()  ( ✅ done )
+ - useMemo() ( ✅ done )
+ - useCallback() ( ✅ done )
+ - useReducer()  ( ✅ done )
+ - useLayoutEffect() ( ✅ done )
+ - useHookName() custom hook
 
 
 # React Built-in Components
-- <Fragment> i.e <>...</>
-- <Profiler>
-- <StrictMode>
-- <Suspense>
+- <Fragment> i.e <>...</> ( ✅ done )
+- <Profiler> ( ✅ done )
+- <StrictMode> ( ✅ done )
+- <Suspense> ( ✅ done )
 
 
 # APIs
-- createPortal : we can render a component outside the DOM root element (where id="root" ). use for modal or popups
-- createContext
-- memo
-- lazy
+- React.createPortal() ( ✅ done )
+- React.createContext() ( ✅ done with useContext() hook )
+- React.memo() ( ✅ done with useCallback() hook )
+- React.lazy() ( ✅ done with <Suspense> Component )
 

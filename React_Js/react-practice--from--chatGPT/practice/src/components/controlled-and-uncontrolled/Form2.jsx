@@ -1,3 +1,5 @@
+
+
 import { useRef } from "react"
 
 
@@ -9,18 +11,19 @@ import { useRef } from "react"
 // Key characteristics of uncontrolled components:
 
 // Stateless: The component does not maintain the value in React state.
-// Direct DOM Interaction: The DOM directly manages the value of the form element.
+// Direct DOM Interaction: The DOM directly manages the value of the form element / any DOM element.
 // Ref Usage: Refs are commonly used to interact with and retrieve values from uncontrolled components.
 
-
+// Topic: - useRef()
 
 function Form2() {
     const inputRef = useRef();
-    // console.log(inputRef)
-    // console.log(typeof inputRef)
+    // console.log("input Ref", inputRef);
+    console.log(typeof inputRef)
 
     function handleInputField() {
-        console.log(inputRef.current.value)
+        // console.log(inputRef.current.value);
+        console.log(inputRef);
     }
 
 

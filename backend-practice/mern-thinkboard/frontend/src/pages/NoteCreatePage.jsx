@@ -37,7 +37,7 @@ export default function NoteCreatePage() {
       toast.success("Note created successfully");
 
     } catch (error) {
-      if(error?.response.status === 429) {
+      if (error?.response.status === 429) {
         toast.error("You are creating notes too quickly. Please wait a moment and try again.", {
           duration: 4000,
           icon: "⏳",
@@ -63,6 +63,7 @@ export default function NoteCreatePage() {
           <div className="card bg-base-100">
             <div className="card-body">
               <h2 className="card-title text-2xl mb-4">Create New Note</h2>
+              {/* form */}
               <form onSubmit={handleSubmit}>
                 <div className="form-control mb-4">
                   <label className="label">

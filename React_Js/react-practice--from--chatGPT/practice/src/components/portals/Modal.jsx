@@ -1,16 +1,18 @@
+
 import { useEffect, useState } from "react"
 import style from "./Modal.module.css"
 import { createPortal } from "react-dom";
 
 
 
-// topic: portals
+// topic: - React.createPortal()
+
 // portal component
 function Modal({isOpen, onClose, children}) {
     let portalRoot = document.getElementById('portal-root');
     let modalContainer = document.createElement("div");
 
-    console.log("modal component rendered")
+    console.log("Modal component rendered");
 
     // Attach the modal container to the portal root on mount
     useEffect(() => {

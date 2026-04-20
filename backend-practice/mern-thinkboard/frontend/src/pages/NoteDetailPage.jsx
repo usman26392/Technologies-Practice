@@ -15,11 +15,14 @@ export default function NoteDetailPage() {
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
 
+  // Important
   const navigate = useNavigate();
-
   const { id } = useParams();
 
+  // console.log("client side id:", id)
+
   useEffect(() => {
+
     const fetchNote = async () => {
       try {
         const res = await apiInstance.get(`/notes/${id}`);
@@ -60,6 +63,7 @@ export default function NoteDetailPage() {
       await apiInstance.put(`/notes/${id}`, note);
       toast.success("Note updated successfully");
       navigate("/");
+
     } catch (error) {
       console.log("Error saving the note:", error);
       toast.error("Failed to update note");
@@ -128,6 +132,7 @@ export default function NoteDetailPage() {
           </div>
         </div>
       </div>
+
     </div>
   )
 }

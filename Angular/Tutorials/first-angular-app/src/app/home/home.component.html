@@ -1,0 +1,16 @@
+<p>home works!</p>
+<!-- Different usage of child component into parent component -->
+ <app-greeting/>
+<app-greeting message="Hello, this is a custom message!" />
+<app-greeting [message]="'Hello, this is a custom message!'" />
+<!-- Here: data is passed from home component's class method -->
+<app-greeting [message]="homeMessage()" />
+
+
+<!-- just use of home component's class method  -->
+<!-- <h1>{{ homeMessage() }}</h1> -->
+
+<!-- event handling -->
+ <input type="text" (keyup)="keyUpHandler($event)">
+
+ <app-counter/>
