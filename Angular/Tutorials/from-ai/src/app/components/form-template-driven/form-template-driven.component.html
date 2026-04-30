@@ -1,0 +1,8 @@
+<h2>form template-driven </h2>
+
+<form #userData="ngForm" (ngSubmit)="onSubmit(userData)">
+    <input type="text" name="name" ngModel required placeholder="Enter name">
+    <input type="email" name="email" ngModel required placeholder="Enter email">
+
+    <button type="submit">Submit</button>
+</form>

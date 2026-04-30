@@ -1,0 +1,12 @@
+<div class="container">
+    <h1>Industry SSR Example: Blog Posts</h1>
+    <p class="subtitle">These posts were fetched on the server before the page reached your browser.</p>
+    <div class="post-grid">
+        @for (post of posts(); track post.id) {
+        <div class="post-card">
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.body }}</p>
+        </div>
+        }
+    </div>
+</div>
