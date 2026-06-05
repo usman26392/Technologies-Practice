@@ -18,7 +18,7 @@ import { useState } from "react"
 
 // with destructuring
 function Button({clickEvent}) {
-  console.log("child component rendered");
+  // console.log("child component rendered");
 
   const [first, setFirst] = useState(true);
 

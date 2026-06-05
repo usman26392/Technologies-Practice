@@ -11,6 +11,8 @@ import GreetingTwo from './GreetingTwo';
 // JSX makes it more readable and intuitive to describe the structure of your UI in React, and it's a key part of the React development experience. Under the hood, tools like Babel are often used to transform JSX into equivalent JavaScript that the browser can understand.
 
 function Profile() {
+
+  // console.log("Profile component rendered!")
   
   const name = "Muhammad Usman";
   return (

@@ -34,11 +34,11 @@
 //---- task-3:
 // Create a function that takes a number as an argument, increments the number by +1 and returns the result.
 
-// let nextNumber = function(number){
-//     return (`${number + (1)}`);
-// };
+let nextNumber = function(number){
+    return ( number + 1 );
+};
 
-// // console.log(nextNumber(0));
+console.log(typeof nextNumber(0));
 // // console.log(nextNumber(1));
 // console.log(nextNumber(2));
 
@@ -109,12 +109,31 @@
 // than
 // 2 hour = 2 * 3600s= 7200s
 
-let calcSeconds = function(hour) {
-  return hour * 3600;
-};
+// let calcSeconds = function(hour) {
+//   return hour * 3600;
+// };
 
-console.log(calcSeconds(2));
-console.log(calcSeconds(24));
+// console.log(calcSeconds(2));
+// console.log(calcSeconds(24));
 
 // ---- Task-10:
 // Create a function that takes two numbers as arguments and returns their sum.
+
+
+// ---- my task:
+// take a string and reverse it.
+
+// let str = "laptop";
+// let split = str.split("")
+// let reverse = []
+// for( let item=split.length-1; item >=0; item--) {
+//     let s = split[item]
+//     reverse.push(s)
+// } 
+
+// let reverseStg = ""
+// reverse.map(function(a) {
+//     return reverseStg = reverseStg.concat(a)
+// });
+
+// console.log(reverseStg);

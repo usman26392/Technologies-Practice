@@ -1,6 +1,7 @@
 import { userModel } from "../models/user.model.js";
 import jwt from "jsonwebtoken";
 
+// User Registration
 export async function userRegister(req, res) {
   // Check before creating user
   const existingUser = await userModel.findOne({
@@ -18,11 +19,15 @@ export async function userRegister(req, res) {
     password,
   });
 
+  // Generate JWT token for the registered user
   const token = jwt.sign(
     {
       id: user._id,
     },
     process.env.JWT_SECRET,
+    {
+      expiresIn: "1h", // Token expires in 1 hour
+    }
   );
 
   // console.log(token)

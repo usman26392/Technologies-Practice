@@ -48,6 +48,8 @@ import Header from "./react-hooks/useContextHook/header/header";
 import SoapListing from "./react-hooks/useContextHook/soaps/soap-listing";
 import CartProvider from "./providers/cart-provider";
 import PerfumeListing from "./react-hooks/useContextHook/perfumes/perfume-listing";
+import PrintName from "./APIs-built-in/print-name";
+import ProductDashboard from "./react-hooks/useTransitionHook/product-dashboard";
 // Lazy load the component
 const LazyComponent = React.lazy(
   () => import("./react-built-in-components/suspense/LazyComponent"),
@@ -57,6 +59,7 @@ const LazyComponent = React.lazy(
 // 1. Create a UserContext
 // which can store global data/state.
 // This context will hold the user’s authentication state (logged in or logged out).
+// Topic: - React.createContext()
 export const UserContainerContext = createContext();
 
 // main App component
@@ -249,6 +252,13 @@ function App() {
 
       <h2>State and Props Example</h2>
       <UserProfileDemo name="Ali Khan" age={25} city="Karachi" />
+
+      <h2>React.memo() Example</h2>
+      <PrintName firstName="Muhammad Usman" />
+
+      {/* use Transition Hook */}
+      <h2>useTransition Hook Example</h2>
+      <ProductDashboard />
       
     </div>
   );

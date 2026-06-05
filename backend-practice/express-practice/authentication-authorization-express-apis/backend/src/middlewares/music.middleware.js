@@ -23,7 +23,7 @@ export default function musicMiddleware(req, res, next) {
     }
     // new property creates itself
     req.user = decoded;
-    next();
+    next(); // 
   } catch (error) {
     return res.status(401).json({
       message: "Unauthorized",
