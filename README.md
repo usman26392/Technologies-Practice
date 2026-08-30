@@ -42,13 +42,5 @@ A comprehensive learning repository covering modern web development technologies
 - **Lottie** - Animation files
 - **Copilot & MCP** - AI and protocol exploration
 
-## 🎯 How to Use
-
-Navigate to any folder to explore specific technologies. Each contains tutorials, examples, and practice projects.
-
-## 📖 Learning Path
-
-Start with HTML5 → CSS Beginners → JavaScript → Choose a framework (React/Angular/Next.js) → Backend (Express/Node) → Full Stack (MERN)
-
 
 
