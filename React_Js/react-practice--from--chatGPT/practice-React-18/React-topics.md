@@ -23,7 +23,6 @@
   - controlled and uncontrolled components ( ✅ done )
   - lifecycle methods: concepts in functional component with useEffect hook ( ✅ done )
   - State and Props Demo
-  - HOC ( 🫠 pending )
   - error boundary ( 🫠 pending )
 
 

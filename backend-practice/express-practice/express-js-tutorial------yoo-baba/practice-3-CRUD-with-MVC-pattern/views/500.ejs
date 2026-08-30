@@ -1,0 +1,31 @@
+<%- include("./common/header.ejs") %>
+<title>My Home page</title>
+
+<body>
+  <%- include("./common/navbar.ejs") %>
+  
+  <%# console.log("This will print in the backend terminal!") %>
+
+  <!-- content -->
+  <main class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header card-title">
+              <div class="d-flex align-items-center">
+                <h2 class="mb-0">500 internal</h2>               
+              </div>
+            </div>
+            <div class="card-body">
+                <%= message  %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <%- include("./common/footer.ejs") %>
+</body>
+
+</html>

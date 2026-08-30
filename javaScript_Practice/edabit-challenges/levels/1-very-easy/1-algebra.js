@@ -34,11 +34,11 @@
 //---- task-3:
 // Create a function that takes a number as an argument, increments the number by +1 and returns the result.
 
-let nextNumber = function(number){
-    return ( number + 1 );
-};
+// let nextNumber = function(number){
+//     return ( number + 1 );
+// };
 
-console.log(typeof nextNumber(0));
+// console.log(typeof nextNumber(0));
 // // console.log(nextNumber(1));
 // console.log(nextNumber(2));
 
@@ -53,6 +53,7 @@ console.log(typeof nextNumber(0));
 
 // console.log(triangleArea(10,10));
 // console.log(triangleArea(7,4));
+
 
 // ---- Task-5:
 // Create a function that takes the age in years and returns the age in days.
@@ -137,3 +138,13 @@ console.log(typeof nextNumber(0));
 // });
 
 // console.log(reverseStg);
+
+// Task:
+// Create a function that takes the number of wins, draws and losses and calculates the number of points a football team has obtained so far.
+// wins get 3 points
+// draws get 1 point
+// losses get 0 points 
+
+// function footballPoints(wins, draws, losses) {
+// 	return ( (wins * 3) + (draws * 1) + (losses * 0) )
+// }
