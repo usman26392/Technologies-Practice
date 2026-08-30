@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mosaic layout</title>
+    <style>
+        /*
+        * jo kaam hum grid-area may karray thay, wo ab thora advance tariqay say 
+        * karayn gay:
+        * "grid-area" may numbering karnay k baja hay , us may aik "name asign" karyn gay
+        * wo name , hum "grid-template-areas:" ki property may use karty hu hay
+        * spanning karyn gay  sections ki.
+        */
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        body {
+            margin: 50px;
+        }
+
+        .grid-wrapper {
+            max-width: 960px;
+            margin: 0 auto;
+            background-color: rgb(246, 228, 228);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: minmax(100px, auto);
+            gap: 15px;
+            grid-template-areas: 
+            "header header header header"
+            "aside aside main-sec main-sec"
+            "navbar navbar main-sec main-sec"
+            "sec sec sec sec"
+            "sec sec sec sec"
+            "footer footer footer footer";  
+        } 
+        .grid-wrapper > * {
+            background: #333333;
+            /* padding: 50px; */
+        }
+
+        .grid-wrapper p {
+            color: #ffffff;
+        }
+
+        header {
+            grid-area: header;
+        }
+
+        main {
+            grid-area: main-sec;
+        } 
+
+        section {
+            grid-area: sec;
+        }
+
+        aside {
+            grid-area: aside;
+        }
+
+        nav {
+            grid-area: navbar;
+        } 
+
+        footer {
+            grid-area: footer;
+        }   
+        
+    </style>
+</head>
+<body>
+
+    <div class="grid-wrapper">
+        <header>
+            <p>header Content</p>
+        </header>
+        <main>
+            <p>main Content</p>
+        </main>
+        <section>
+            <p>section Content</p>
+        </section>
+        <aside>
+            <p>aside Content</p>
+        </aside>
+        <nav>
+            <p>navbar Content</p>
+        </nav>
+        <footer>
+            <p>footer Content</p>
+        </footer>
+        
+    </div>
+    
+</body>
+</html>

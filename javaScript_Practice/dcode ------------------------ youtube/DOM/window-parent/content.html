@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Html</title>
+</head>
+<body>
+    
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi iusto quo quidem sed quisquam impedit earum tenetur facere perferendis ipsam amet similique, beatae magnam laborum, culpa fuga fugiat nesciunt voluptates!</p>
+
+    <script>
+        // -------------------------------- window.parent -----------------------
+        // By using the window.parent property in JavaScript you are able to access the Window object associated with the parent (or containing) HTML page.
+        //  This property will give you a Window object.
+        // You will commonly see this property be used with IFrames' as a way for the embedded HTML page (or script)
+        //  to access methods, properties or data from its parent HTML page.
+        //  This can be used to make a generic IFrame structure that is able to
+        //  load different data dynamically depending on the content provided by its parent.
+        //  This is quite useful for web applications.
+
+        console.log(window.parent);
+        console.log(window.parent.document);
+        
+        // here: we are accessing document elements of index.html parent file.
+        let parentDocument = window.parent.document;
+        let parentHeading = parentDocument.querySelector(".title");
+
+        // here: we are accessing p element of this document.
+        let para = document.querySelector("p");
+        
+        // here: text of parent title is appending to child p element.
+        para.textContent = parentHeading.textContent;
+
+    
+    </script>
+
+</body>
+</html>

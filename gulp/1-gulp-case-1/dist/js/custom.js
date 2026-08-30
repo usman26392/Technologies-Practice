@@ -1,0 +1,1 @@
+let num1,num2;function add(n,u){return n+u}num1=10,num2=13,console.log(add(4,5));

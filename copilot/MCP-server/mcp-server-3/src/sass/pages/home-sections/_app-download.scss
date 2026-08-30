@@ -1,0 +1,105 @@
+// App Download section styles (BEM, mobile-first, variables, mixins)
+// Place in sass/pages/home-sections/_app-download.scss
+// Only use variables from _variable.scss or CSS variables from :root
+
+.app-download {
+  background: var(--white-color);
+  padding: 3em 0; // fallback, no spacing variable
+
+  &__row {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2em 0;
+    @media #{$tabL} {
+      padding: 3em 0;
+    }
+  }
+
+  &__title-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 2em;
+  }
+
+  &__title {
+    font-family: $basefont;
+    font-size: 1.5em;
+    font-weight: 900;
+    color: var(--black-color);
+    letter-spacing: 0.135em;
+    text-align: left;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+    line-height: 1.2;
+    @media #{$desktop} {
+      font-size: 2.5em;
+    }
+  }
+
+  &__desc {
+    font-family: $basefont;
+    font-size: 1.125em;
+    color: #7c7c7c;
+    line-height: 1.45;
+    margin-bottom: 2em;
+    font-weight: 500;
+  }
+
+  &__stores {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+  }
+
+  &__store {
+    display: block;
+    border-radius: 0.47em; // 7.5px
+    overflow: hidden;
+    img {
+      display: block;
+      width: 9.56em; // 153px
+      height: 3.33em; // 53.25px
+      object-fit: cover;
+      background: #fff;
+      border-radius: 0.47em;
+    }
+  }
+
+  &__img-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 20em;
+    background: none;
+    @media #{$tabL} {
+      min-height: 30em;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 33em; // 528px
+    height: auto;
+    display: block;
+    object-fit: contain;
+    border-radius: 1em;
+    background: none;
+    @media #{$desktop} {
+      max-width: 33em;
+    }
+  }
+}
+
+// Example: .app-download__store img { border-radius: 0.47em; } // Reason: Rounded corners for store badges, matches Figma

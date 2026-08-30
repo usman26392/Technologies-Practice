@@ -1,0 +1,61 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+p {
+    color: red;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+ul a {
+    text-decoration: none;
+    color: #000;
+    font-size: 30px;
+    padding: 0 20px;
+    background: #80ff00;
+    margin: 0 20px;
+}
+
+
+.box {
+    background-color: aqua;
+}
+
+.box-title {
+    color: azure;
+    margin: auto;
+    line-height: 1;
+}
+
+aside {
+    display: flex;
+}
+
+main {
+    position: relative;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+body {
+    background-image: url("logo.svg");
+}

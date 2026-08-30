@@ -1,0 +1,394 @@
+
+
+@media (max-width: 1680px) {
+    .flipster__button--prev {
+        left: 3%;
+      }
+      
+      .flipster__button--next {
+        right: 3%;
+      }
+
+}
+
+
+@media (max-width: 1439px) {
+    .pack-slider {
+        margin: 0;
+    }
+
+    .flipster__button--prev {
+        left: 1%;
+      }
+      
+      .flipster__button--next {
+        right: 1%;
+      }
+      .sec-padd {
+        padding: 40px 0;
+    }
+    .contact-us-wrapper {
+        padding: 33px 0 0 0;
+    }
+
+    .packg-list > h3 {
+        font-size: 45px;
+    }
+
+
+}
+
+@media (max-width: 1365px) {
+    .flipster__button--prev {
+        left: -2%;
+      }
+      
+      .flipster__button--next {
+        right: -2%;
+      }
+
+    .pack-slider .owl-nav, .portfolio-slider .owl-nav {
+        display: none;
+    }
+
+    .pack-slider {
+        margin: 0;
+    }
+
+    .unique-inner-wrap-450 > p, .unique-inner-wrap-1500 > p {
+        line-height: 35px;
+    }
+
+    .header-cta {
+        justify-content: flex-end;
+    }
+    h1 {
+        font-size: 74px;
+    }
+
+    .banner-txt-wrap h2:first-child::before {
+        left: 56%;
+    }
+
+    .banner-sec {
+        padding: 240px 0 100px; 
+    }
+
+    h3 {
+        line-height: normal;
+    }
+
+    .banner-lp {      
+        top: 25%;     
+    }
+
+    .serv-wrap::before {
+        height: 226px;
+    }
+
+    .unique-inner-wrap > p {
+        line-height: normal;
+    }
+
+    
+
+    .unique-inner-wrap-1 img,
+    .unique-inner-wrap-3 img,
+    .unique-inner-wrap-6 img,
+    .unique-inner-wrap-8 img {
+        height: 100%;
+
+    }
+
+    .unique-inner-wrap-2 ,
+    .unique-inner-wrap-4,
+    .unique-inner-wrap-5,
+    .unique-inner-wrap-7 {
+        padding: 20px 0;
+
+    }
+
+    .contact-us::before {
+        width: 56%;
+    }
+
+
+
+
+
+}
+
+
+@media (max-width: 1199px) {
+    .unique-inner-wrap > h3 {
+        font-size: 57px;
+    }
+
+    .cta-wrap a:first-child,
+    .cta-wrap a:last-child {
+        padding: 12px 25px; 
+        padding-left: 52px;
+    }
+
+}
+
+@media (max-width: 991px) {
+    header,
+    section,
+    footer {
+        overflow-x: hidden;
+    }
+    .banner-lp {
+        display: none;
+    }
+
+    .banner-txt-wrap h2:first-child::before {
+        left: 44%;
+    }
+
+    .banner-txt-wrap h2:last-child::before {
+        width: 80%; 
+    }
+
+    .serv-wrap img {
+        width: auto !important;
+        margin: 0 auto 20px;
+    }
+
+    .serv-wrap::before {
+        display: none;
+    } 
+
+    .serv-wrap {
+        text-align: center;
+        padding: 0 0px 0 0;
+    }
+
+    .serv-slider {
+        margin: 0;
+    }
+
+    .why-trust-img {
+        max-width: 450px;
+        margin: 0 auto;
+        height: 377px;
+    }
+
+    .why-trust-img-wrap {
+        text-align:center;   
+     }
+
+     .contact-us-wrapper {
+        padding: 0px 0 0 0;
+    }
+    .contact-us::before {
+        display: none;
+    }
+
+    .contact-us {
+        margin-top: 0px;
+    }
+
+    .ftr-wrap {
+        flex-wrap: wrap;
+        justify-content: center !important;
+    }
+
+    .ftr-list {
+        margin-bottom: 10px !important;
+    }
+
+    .contact-us-wrapper > h2 br {
+        display: none;
+    }
+
+    .contact-us-wrapper > h2 {
+        margin: 0 0 30px 0;
+    }
+
+    .contact-list > li {
+        padding: 0 0 30px 76px;
+    }
+
+
+}
+
+@media (max-width: 767px) {
+    .cta-left-txt span:first-child,
+    .cta-left-txt span:last-child {
+        display: none;
+    }
+    .banner-sec {
+        padding: 155px 0 100px;
+    }
+    h1 {
+        font-size: 70px;
+    }
+
+    .banner-txt-wrap h2:first-child::before {
+        left: 59%;
+    }
+
+    @keyframes line-color {
+        from {
+            background: #bb0316;
+            width: 0%;
+        }
+        to {
+            background: #b936c5;
+            width: 40%;
+        }
+    }
+
+    .packg-list > h3 {
+        display: inline-block;
+        margin-top: 13px;
+    }
+
+    .packg-list > a {
+        display: block;
+    }
+
+    
+
+    /* .unique-design-slider-1 img,
+    .unique-design-slider-3 img,
+    .unique-design-slider-6 img,
+    .unique-design-slider-8 img {
+        width: auto !important;
+    } */
+
+    .unique-inner-wrap img ,
+    .unique-inner-wrap img,
+    .unique-inner-wrap img,
+    .unique-inner-wrap img {
+        width: auto !important;
+
+    }
+
+    .unique-design-wrap {
+        display: none;  
+      }
+
+      .unique-inner-wrap {
+          height: 326px;
+      }
+
+      .unique-design-mobile {
+        padding: 0 0 12px 0;
+    }
+    .sec-padd {
+        padding: 30px 0;
+    }
+
+    .ftr-list li:nth-child(1) {
+        display: block;
+    }
+
+    .ftr-list  {
+        text-align: center;
+    }
+
+}
+
+@media(min-width: 768px) {
+    .unique-design-mobile {
+        display: none;
+
+    }
+    
+}
+
+@media (max-width: 575px) {
+    .flipster__button--prev {
+        left: -9%;
+      }
+      
+      .flipster__button--next {
+        right: -9%;
+      }
+
+    header {
+        padding: 10px 0;
+    }
+
+    h1 {
+        font-size: 43px;
+    }
+
+    .banner-txt-wrap > h2:first-child {
+        font-size: 30px;
+    }
+
+    .banner-txt-wrap h2:last-child {
+        font-size: 30px;
+    }
+
+    .banner-list li {
+        
+        background: url(../images/check-icon.png) left center/5% no-repeat; 
+    }
+    .banner-list li {
+        font-size: 15px;
+    }
+
+    .banner-sec {
+        padding: 115px 0 50px;
+    }
+
+    .form-wrap > h2 {
+        font-size: 16px; 
+    }
+
+    .tab input {
+        font-size: 14px;
+    }
+
+    .cta-form-btn button {
+        font-size: 12px;
+        padding: 12px 20px;
+    }
+
+    .why-trust-img {
+        max-width: 323px; 
+    }
+    h2 {
+        font-size: 35px;
+    }
+
+    .btn-1 {
+        font-size: 14px;
+    }
+
+    .cta-wrap > h3 {
+        font-size: 16px;
+    }
+    .cta-wrap > h2 {
+        font-size: 24px;
+        line-height: 17px;
+    }
+
+    .pack-col {
+        background-image: none;
+        background-color: #222222;
+    }
+
+    .pack-col > h2 {
+        color: #a724b4;
+    }
+
+    .pack-col li {
+        color: #fff; 
+    }
+
+    .packg-list li::before {
+        top: 0px;
+    }
+
+    .packg-list h3:nth-child(3) {
+        color: #fff;
+    }
+
+
+    
+}

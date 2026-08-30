@@ -1,0 +1,73 @@
+.blog-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.blog-col {
+  flex: 0 0 50%;
+  &--left {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.figure {
+  flex: 0 0 5rem;
+  width: 5rem;
+  height: 5rem;
+  position: relative;
+}
+.author-figure {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1.5rem;
+  align-items: center;
+  margin-top: auto;
+}
+
+.main-figure {
+  position: relative;
+  height: 40rem;
+}
+
+.post-description-row {
+  display: flex;
+}
+
+.post-description-col {
+  flex: 0 0 50%;
+  &--left {
+    flex-basis: 70%;
+  }
+}
+
+.comment-box {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0 2rem;
+  margin: 0 0 3rem;
+}
+.text-area {
+  flex: 0 1 60%;
+  textarea {
+    width: 100%;
+  }
+}
+
+.avatar__name {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 2rem;
+  margin: 0 0 2rem;
+  align-items: center;
+}
+.avatar {
+  flex: 0 0 5.0rem;
+  height: 5.0rem;
+  width: 5.0rem;
+}
+.commentor  {
+  h5 {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,72 @@
+// SASS partial for Brands section (Figma node 1-65)
+// Follows BEM, uses only variables from _variable.scss, responsive, accessible
+.brands-section {
+  background: var(--primary-color2); // Changed to match Figma yellow background
+  padding: 2.5em 0;
+  .brands-section__title {
+    font-family: $basefont;
+    font-size: 2em;
+    color: var(--black-color);
+    text-align: center;
+    margin-bottom: 2em;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+  .brands-section__list {
+    display: flex;
+    flex-wrap: nowrap; // Prevent wrap on desktop for Figma look
+    justify-content: center;
+    align-items: center;
+    gap: 5.7em; // 90.761px from Figma, converted to em (90.761/16)
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow-x: auto; // Allow scroll if too many brands
+  }
+  .brands-section__item {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .brands-section__logo {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    // filter: grayscale(1) contrast(1.1);
+    // opacity: 0.8;
+    // transition: filter 0.2s, opacity 0.2s;
+    // &:hover,
+    // &:focus {
+    //   filter: none;
+    //   opacity: 1;
+    // }
+  }
+  @media #{$ipad} {
+    padding: 2em 0;
+    .brands-section__list {
+      gap: 2em;
+      flex-wrap: wrap; // Allow wrap on tablet
+    }
+    // .brands-section__logo {
+    //   max-width: 6em;
+    //   max-height: 2.5em;
+    // }
+  }
+  @media #{$mob} {
+    padding: 1.5em 0;
+    .brands-section__title {
+      font-size: 1.25em;
+      margin-bottom: 1em;
+    }
+    .brands-section__list {
+      gap: 1em;
+      flex-wrap: wrap; // Allow wrap on mobile
+    }
+    // .brands-section__logo {
+    //   max-width: 9.5em;
+    //   max-height: 4.5em;
+    // }
+  }
+}

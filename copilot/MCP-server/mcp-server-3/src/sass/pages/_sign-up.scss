@@ -1,0 +1,127 @@
+// sign-up.scss: Styles for the sign-up page (sign-up.php)
+// Follows BEM, uses only variables from _variable.scss, all font-size/spacing in em (16px base), media queries nested, and no legacy code remains.
+// Only variables from _variable.scss are used. All others removed.
+
+.sign-up {
+  background: var(--primary-color3); // yellow from _variable.scss
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4em 0;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  &__center {
+    background: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 42.5em; 
+    margin: 0 auto;
+    gap: 2em;
+    padding: 0;
+  }
+
+  &__title {
+    color: var(--white-color);
+    font-size: 2.58em; // 41.25px -> em
+    letter-spacing: 0.077em; // 1.24px -> em
+    text-align: center;
+    line-height: 1.27;
+    margin-bottom: 0.1em;
+    font-weight: 900;
+  }
+
+  &__subtitle {
+    color: var(--gray-color);
+    font-size: 1.5em; // 24px -> em
+    letter-spacing: 0.03em; // 0.72px -> em
+    text-align: center;
+    line-height: 1.1;
+    margin-bottom: 1em;
+  }
+
+  &__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25em;
+  }
+
+  &__field {
+    background: var(--white-color);
+    border-radius: 0.47em; // 7.5px -> em
+    height: 4.06em; // 65px -> em
+    display: flex;
+    align-items: center;
+    padding: 0 1.5em;
+    margin-bottom: 0.5em;
+    box-shadow: none;
+  }
+
+  &__label {
+    color: var(--gray-color2);
+    font-size: 1.125em; // 18px -> em
+    letter-spacing: 0.03em; // 0.54px -> em
+    font-weight: 400;
+    margin-bottom: 0;
+    width: 100%;
+  }
+
+  &__input {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 1.125em;
+    color: var(--gray-color3);
+    padding: 0;
+    &::placeholder {
+      color: var(--gray-color2);
+      opacity: 1;
+    }
+  }
+
+  &__btn {
+    background: var(--black-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 0.38em; // 6px -> em
+    width: 100%;
+    font-size: 1.55em; // 24.75px -> em
+    letter-spacing: 0.03em; // 0.74px -> em
+    padding: 0.7em 1.6em; // 11px 26px -> em
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background var(--transition-ease);
+    margin-top: 0.5em;
+    &:hover {
+      background: var(--primary-color);
+    }
+    @media #{$ipad} {
+      font-size: 1.2em;
+      padding: 0.6em 1em;
+    }
+  }
+
+  &__center {
+    @media #{$ipad} {
+      max-width: 100%;
+      padding: 0 1em;
+    }
+  }
+  &__form {
+    @media #{$ipad} {
+      gap: 1em;
+    }
+  }
+}

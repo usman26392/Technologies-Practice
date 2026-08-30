@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+
+@import "./abstract/fonts";
+@import "./abstract/variable";
+@import "./base/reset";
+
+
+
+
+@import "./base/typography";
+@import "./base/theme";
+@import "./abstract/mixins";
+
+
+// utitlities 
+@import "./base/general";
+@import "./abstract/colors";
+@import "./abstract/animate";
+@import "./layout/grid";
+@import "./abstract/utilities";
+
+
+//  components 
+@import "./components/main-side-panel";
+@import "./components/button";
+@import "./components/cards";
+@import "./components/form-field"; 
+@import "./components/main-header";
+// @import "./components/select"; 
+
+
+// @import "./components/tabs";
+// @import "./components/accordions";
+// @import "./components/news-letter";
+
+
+// layouts
+@import "./layout/navigation";
+@import "./layout/header";
+@import "./layout/footer";
+
+
+
+// pages sections
+@import "./pages/home-sections/hero-banner";
+@import "./pages/home-sections/our-products";
+@import "./pages/home-sections/space-lovers";
+@import "./pages/home-sections/astronomical-work";
+@import "./pages/home-sections/plane-journey";
+@import "./pages/home-sections/testimonials";
+@import "./pages/home-sections/astronomical-insights";
+@import "./pages/home-sections/discover-channels";
+@import "./pages/home-sections/observatory";
+@import "./pages/home-sections/report";
+@import "./pages/home-sections/hero-section";
+@import "./pages/home-sections/brands-section";
+@import "./pages/home-sections/new-arrivals";
+@import "./pages/home-sections/favourites";
+@import "./pages/home-sections/app-download";
+@import "./pages/home-sections/community";
+
+
+
+
+

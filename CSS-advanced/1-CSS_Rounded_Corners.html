@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Rounded Corners</title>
+    <style>
+        .rcorner1{
+            border-radius:  8ch;
+            padding: 8ch;
+            width: 15ch;
+            height: 15ch;
+            background-color: rgb(96, 218, 15);
+        }
+
+        .rcorner2 {
+            border-radius: 5ch;
+            padding: 5ch;
+            width: 15ch;
+            height: 15ch;
+            border: 1ch solid red;
+        }
+
+        .rcorner3 {
+            border-radius: 5ch;
+            background: url('Advanced-Pics/water_lily.jpg');
+            padding: 5ch;
+            width: 15ch;
+            height: 15ch;
+            color: white;
+        }
+        .sp1 {
+            border-radius: 8ch 3ch;
+            padding: 3ch;
+            width: 20ch;
+            height: 15ch;
+            background-color: chartreuse;
+        }
+        .elp1 {
+            border-radius: 1ch / 5ch;
+            padding: 3ch;
+            width: 20ch;
+            height: 15ch;
+            background-color: chartreuse;
+            
+        }
+        .elp2 {
+            border-radius: 5ch / 1ch;
+            padding: 3ch;
+            width: 20ch;
+            height: 15ch;
+            background-color: chartreuse;
+            
+        }
+        .vertical-line {
+            width: 1px;
+            height: 250px;
+            background-color:black;
+            margin: 50px auto;
+        }
+    
+    
+    </style>
+
+    </head>
+
+    <body>
+            <h1>The border-radius Property</h1>
+            <p>Rounded corners for an element with a specified background color:</p>              
+            <p class="rcorner1">Rounded Corners</p>
+
+            <p>Rounded corners for an element with a border:</p>
+            <p class="rcorner2">Rounded Corner with border</p>
+
+            <p>Rounded corners for an element with a background image:</p>
+            <p class="rcorner3">Rounded Corners</p>
+
+            <h1>Specific border property</h1>
+            <p class="sp1">border-radius: 8ch 3ch;</p>
+
+            <h1>Elliptical Corners </h1>          
+            <p class="elp1">border-radius: 1ch / 5ch;</p>
+            <p class="elp2">border-radius: 5ch / 1ch;</p>
+            
+            <h1>Vertical-line</h1>
+            <div class="vertical-line"></div>
+    </body>
+</html>

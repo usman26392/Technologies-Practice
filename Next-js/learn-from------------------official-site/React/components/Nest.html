@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React: Nesting Component </title>
+</head>
+<body>
+    <div id="app"></div>
+    
+    <!-- scripts -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <!-- Babel Script -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- jsx -->
+    <script type="text/jsx">
+        const app = document.getElementById("app");
+        
+        // a child component
+        function Header() {
+            return (<h1>Develop. preview. ship</h1>)
+        }
+
+        // parent component or top-level component
+        function Homepage() {
+            return (
+                <Header/>
+            )
+        }
+
+        
+        ReactDOM.render(<Homepage/> , app);
+    </script>
+
+</body>
+</html>

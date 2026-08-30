@@ -1,0 +1,30 @@
+
+// product system
+.product-sys-sec {
+    scroll-margin-top: 6.25em;
+  }
+  
+  .product-system-panel {
+    .h4 {
+      margin-bottom: 2em;
+    }
+    .product-system__desciption {
+      margin-top: 10.1875em;
+      @media #{$ipad} {
+        margin-top: 2em;
+      }
+      .h1 {
+        background: linear-gradient(90deg, #fff 28.45%, #173056 125.09%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 0.1em;
+        max-width: max-content;
+      }
+      .p {
+        font-size: 1.5em;
+        font-weight: 600;
+      }
+    }
+  }
+  

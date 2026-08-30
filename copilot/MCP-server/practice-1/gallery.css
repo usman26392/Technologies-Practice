@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@400;700&family=Raleway:wght@300;400;700&display=swap');
+
+.gallery-section {
+  background: #fff;
+  padding: 100px 0 60px 0;
+  text-align: center;
+  font-family: 'Playwrite IN', sans-serif;
+  position: relative;
+}
+
+.gallery-title {
+  font-size: 50px;
+  color: #8c5d65;
+  font-family: 'Playwrite IN', sans-serif;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+}
+
+.gallery-grid {
+  column-count: 3;
+  column-gap: 32px;
+  max-width: 1400px;
+  margin: 0 auto 40px auto;
+}
+
+.gallery-item {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 32px;
+  border-radius: 24px;
+  background: #d9d9d9;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  display: block;
+  border-radius: 24px;
+}
+
+.gallery-btn {
+  display: inline-block;
+  background: #e6c5a5;
+  color: #000;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  padding: 16px 48px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 32px;
+  transition: background 0.2s;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+}
+.gallery-btn:hover {
+  background: #cfae8a;
+}
+
+@media (max-width: 1200px) {
+  .gallery-grid {
+    column-count: 2;
+    column-gap: 20px;
+  }
+}
+@media (max-width: 700px) {
+  .gallery-grid {
+    column-count: 1;
+    column-gap: 0;
+  }
+  .gallery-title {
+    font-size: 32px;
+  }
+}

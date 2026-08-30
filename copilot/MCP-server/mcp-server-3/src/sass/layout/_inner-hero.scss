@@ -1,0 +1,132 @@
+.inner-hero {
+  height: 37.5em;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media #{$ipad} {
+    height: 35em;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    background: linear-gradient(to bottom, #181818 20.97%, #747474 44.6%);
+    mix-blend-mode: color-burn;
+    pointer-events: none;
+  }
+
+  &__figure {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  picture {
+    height: 100%;
+  }
+
+  &__search {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    flex: 0 1 73.125em;
+    @media #{$ipadpro} {
+      flex-basis: 80%;
+    }
+    &__wrapper {
+      display: flex;
+      align-items: center;
+      position: relative;
+      border-radius: 1.25em;
+      overflow: hidden;
+    }
+    .c_form-field {
+      flex: 0 0 100%;
+      background: var(--white-color);
+      margin: 0;
+      &::before {
+        content: "";
+        position: absolute;
+        background: url("../svg/search.svg") center/contain no-repeat;
+        width: 1.3125em;
+        height: 1.375em;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 1.0625em;
+      }
+
+      &__control {
+        font-size: 1.375em;
+        color: var(--black-color);
+        padding: 0.8em 14em 0.8em 2.2727em;
+        margin: 0;
+        border: 0;
+        padding-left: 2.2727em;
+        padding-right: 14em;
+        @media #{$mobL} {
+          font-size: 1em;
+          padding-left: 3em;
+          padding-right: 9em;
+        }
+        &::placeholder {
+          color: #646464;
+        }
+      }
+    }
+
+    &__btnn {
+      position: absolute;
+      z-index: 1;
+      right: 0;
+      height: 100%;
+    }
+
+    .btnn {
+      background: var(--primary-color);
+      height: 100%;
+      border: transparent;
+      border-radius: 0;
+      .btnn__icon {
+        @media #{$mobL} {
+          display: none;
+        }
+      }
+    }
+
+    &__reset {
+      position: absolute;
+      right: 19%;
+      width: 1.875em;
+      height: 1.875em;
+      top: 50%;
+      transform: translateY(-50%);
+      overflow: hidden;
+      background: url("../svg/search-cross.svg") center/contain no-repeat;
+      @media #{$ipad} {
+        right: 23%;
+      }
+      @media #{$mobL} {
+        right: 31%;
+        width: 1.5em;
+        height: 1.5em;
+      }
+
+      input {
+        font-size: 2em;
+        opacity: 0;
+        cursor: pointer;
+      }
+    }
+  }
+}

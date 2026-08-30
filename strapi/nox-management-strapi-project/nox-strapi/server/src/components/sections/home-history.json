@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_home_histories",
+  "info": {
+    "displayName": "Home__History"
+  },
+  "options": {},
+  "attributes": {
+    "History__Title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "unique.history"
+    }
+  }
+}

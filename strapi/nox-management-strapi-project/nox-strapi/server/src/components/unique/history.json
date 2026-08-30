@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_unique_histories",
+  "info": {
+    "displayName": "History__items",
+    "icon": "dashboard",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Count": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Event": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}

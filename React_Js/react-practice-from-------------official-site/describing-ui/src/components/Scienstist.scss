@@ -1,0 +1,12 @@
+
+
+
+.scientist {
+    padding: 0;
+    list-style-type: none;
+    max-width: 30rem;
+    &-item {
+      display: flex;
+    }
+  }
+  

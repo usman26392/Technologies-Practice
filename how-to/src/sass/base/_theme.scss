@@ -1,0 +1,72 @@
+
+
+.container-fluid {
+  max-width: 100%;
+  padding: 0;
+
+  @media #{$ipad} {
+    padding: 0 5em;
+  }
+
+  @media #{$ipad} {
+    padding: 0 3em;
+  }
+
+  @media #{$mob} {
+    padding: 0 2em;
+  }
+}
+
+
+.container {
+  max-width: 100%;
+  padding: 0 10.15625%;
+
+  @media #{$ipadpro} {
+    padding: 0 5em;
+  }
+
+  @media #{$ipad} {
+    padding: 0 3em;
+  }
+
+  @media #{$mob} {
+    padding: 0 2em;
+  }
+
+  &.center-content-box {
+    padding: 0 23.69%;
+
+    @media #{$ipad} {
+      padding: 0 5em;
+    }
+
+    @media #{$ipad} {
+      padding: 0 3em;
+    }
+
+    @media #{$mob} {
+      padding: 0 2em;
+    }
+  }
+}
+
+
+.section {
+  position: relative;
+  padding: 2em 0;
+
+  @media #{$tab} {
+    padding: 3em 0;
+  }
+
+  @media #{$desktop} {
+    padding: 5em 0;
+  }
+}
+
+.main-wrapper {
+  max-width: 136.6rem;
+  margin: 0 auto;
+}
+

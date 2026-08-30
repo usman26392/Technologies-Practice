@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined swipers</title>
+    <link rel="stylesheet" href="../css/swiper.css">
+    <style>
+        .swiper,
+        .my-swiper-main {
+            width: 600px;
+            height: 300px;
+            color: #fff;
+        }
+
+        .swiper-item-1 {
+            background-color: rgb(255, 0, 0);
+        }
+
+        .swiper-item-2 {
+            background-color: green;
+        }
+
+        .swiper-item-3 {
+            background-color: blue;
+        }
+
+        .slider-main-sec {
+            position: relative;
+            width: 600px;
+            height: 300px;
+
+        }
+
+        /* swiper -2 */
+        .my-swiper-main-2 {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        .swiper-item-11 {
+            background-color: greenyellow;
+        }
+
+        .swiper-item-22 {
+            background-color: grey;
+        }
+
+        .swiper-item-33 {
+            background-color: hotpink;
+        }
+
+        .swiper-item-44 {
+            background-color: gold;
+        }
+
+        .swiper-item-55 {
+            background-color: fuchsia;
+        }
+
+        .swiper-item-66 {
+            background-color: dodgerblue;
+        }
+
+        .my-swiper-main-2 .swiper-slide-active,
+        .my-swiper-main-2 .swiper-slide-duplicate-active {
+            transform: scale(0.5) !important;
+        }
+
+        
+        
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <section class="slider-main-sec">
+
+        <!-- Slider main container 1-->
+        <div class="swiper my-swiper-main">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide swiper-item-1">Slide 1</div>
+                <div class="swiper-slide swiper-item-2">Slide 2</div>
+                <div class="swiper-slide swiper-item-3">Slide 3</div>     
+            </div>
+    
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            <!-- <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div> -->
+        
+            <!-- If we need scrollbar -->
+            <!-- <div class="swiper-scrollbar"></div> -->
+        </div>
+
+        <!-- Slider main container 2 -->
+        <div class="swiper my-swiper-main-2">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide swiper-item-11">Slide 1</div>
+                <div class="swiper-slide swiper-item-22">Slide 2</div>
+                <div class="swiper-slide swiper-item-33">Slide 3</div>     
+                <div class="swiper-slide swiper-item-44">Slide 4</div>
+                <div class="swiper-slide swiper-item-55">Slide 5</div>
+                <div class="swiper-slide swiper-item-66">Slide 6</div>     
+            </div>
+    
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            <!-- <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div> -->
+        
+            <!-- If we need scrollbar -->
+            <!-- <div class="swiper-scrollbar"></div> -->
+        </div>
+
+
+
+    </section>
+
+
+    <!-- scripts -->
+    <script src="../js/swiper.js"></script>
+
+    <script>
+        const swiper = new Swiper('.my-swiper-main', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: false,
+            autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+            },
+
+            // If we need pagination
+            // pagination: {
+            //     el: '.swiper-pagination',
+            //     clickable: true,
+            // },
+
+            // Navigation arrows
+            // navigation: {
+            //     nextEl: '.swiper-button-next',
+            //     prevEl: '.swiper-button-prev',
+            // },
+
+            // And if we need scrollbar
+            // scrollbar: {
+            //     el: '.swiper-scrollbar',
+            // },
+        });
+
+        const swiper_2 = new Swiper('.my-swiper-main-2', {
+            // Optional parameters
+            direction: 'horizontal',
+            slidesPerView: 6,
+            loop: true,
+            autoplay: {
+            delay: 6500,
+            disableOnInteraction: false,
+            },
+
+            // If we need pagination
+            // pagination: {
+            //     el: '.swiper-pagination',
+            //     clickable: true,
+            // },
+
+            // Navigation arrows
+            // navigation: {
+            //     nextEl: '.swiper-button-next',
+            //     prevEl: '.swiper-button-prev',
+            // },
+
+            // And if we need scrollbar
+            // scrollbar: {
+            //     el: '.swiper-scrollbar',
+            // },
+        });
+    </script>
+
+
+
+</body>
+</html>

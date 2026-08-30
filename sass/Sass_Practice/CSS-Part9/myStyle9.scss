@@ -1,0 +1,14 @@
+// mixin will be taken two arguments.
+@mixin bordered($color, $width) {
+    border: $width solid $color;
+}
+
+.myArticle {
+    @include bordered(blue, 1px);
+    // we are sending two arguments to @mixin bordered($color, $width)
+}
+
+.myNotes {
+    @include bordered(red, 2px);
+}
+

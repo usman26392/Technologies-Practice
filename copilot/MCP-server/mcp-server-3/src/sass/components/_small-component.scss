@@ -1,0 +1,183 @@
+.counter__list-wrapper {
+  margin-bottom: 3.75em;
+  @media #{$mob} {
+    margin-bottom: 1em;
+  }
+}
+
+.counter__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1.2916em;
+  @media (max-width: 1680px) {
+    margin: 0 0.2em;
+  }
+  @media #{$ipad} {
+    margin: 0 -0.4em;
+  }
+  li {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 1.2916em;
+    align-items: center;
+    @media (max-width: 1680px) {
+      padding: 0 0.2em;
+    }
+    @media (max-width: 1365px) {
+      padding: 0 0.5em;
+    }
+    @media #{$ipadpro} {
+      padding: 0 0.4em;
+    }
+    @media #{$mob} {
+      margin-bottom: 1em;
+      flex: 0 0 50%;
+    }
+  }
+
+  &__icon {
+    flex: 0 0 1.958em;
+    img,
+    svg {
+      width: 100%;
+    }
+  }
+
+  &__right {
+    margin: 0 0 0 0.625em;
+  }
+
+  &__digit-wrapper {
+    line-height: 0.8em;
+  }
+
+  &__digit {
+    display: inline-block;
+    font-size: 2.5em;
+    font-weight: 700;
+    line-height: 0.66666em;
+    letter-spacing: -0.03em;
+  }
+
+  &__unit {
+    display: inline-block;
+    font-size: 1.666em;
+    line-height: 1em;
+    letter-spacing: -0.02em;
+  }
+
+  &__desc {
+    font-size: 0.833em;
+    display: inline-block;
+    text-transform: capitalize;
+    font-weight: 300;
+    letter-spacing: -0.03em;
+    line-height: 1.5em;
+  }
+}
+
+// brand logo
+.brand__logo-circle {
+  display: block;
+  width: 19em;
+  height: 19em;
+  border: 1px solid rgba($whitecol, 0.3);
+  border-radius: 50%;
+  padding: 1px;
+  @media #{$ipadpro} {
+    width: 14em;
+    height: 14em;
+  }
+  @media #{$mobL} {
+    margin: 0 1em 2em;
+    flex: 0 0 14em;
+  }
+  
+
+  &__inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    background: $blackcol;
+    border-radius: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: $transition;
+    &:hover {
+      background-color: $whitecol;
+      img {
+        filter: brightness(0%) saturate(0%);
+      }
+    }
+    @media #{$mobL} {
+      padding: 3em;
+    }
+    @media #{$mob} {
+      padding: 2em;
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $blue-gradient;
+    background-size: auto;
+    background-size: 100% 100%;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: inherit;
+  }
+
+  &--text {
+    .brand__logo-circle__inner {
+      font-size: 1.25em;
+      font-weight: 700;
+      padding: 0 2em;
+      text-align: center;
+      line-height: 1.2em;
+      color: $whitecol;
+      transition: $transition;
+      &:hover {
+        color: $blackcol;
+      }
+    }
+  }
+}
+
+.footer-socials {
+  &__list {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 -1.25em;
+    @media #{$ipad} {
+      justify-content: center;
+    }
+    li {
+      padding: 0 1.25em;
+    }
+  }
+  &__link {
+    width: 4.166em;
+    height: 4.166em;
+    border: 1px solid $primarycol;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: $transition;
+    &:hover {
+      background-color: $darkgray;
+    }
+    @media #{$mob} {
+      width: 3.166em;
+      height: 3.166em;
+    }
+  }
+}

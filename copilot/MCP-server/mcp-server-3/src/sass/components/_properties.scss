@@ -1,0 +1,107 @@
+.property-highlight__listing {
+  margin-top: 2.5em;
+  position: relative;
+
+  @media #{$mobL} {
+    margin-top: 2em;
+  }
+
+  .btnn-group {
+    margin-top: -3em;
+    position: absolute;
+    right: 0;
+    top: -3.05em;
+
+    @media #{$mobL} {
+      position: static;
+      margin: 0 0 1em;
+      justify-content: center;
+    }
+  }
+
+  .col_12 {
+    margin-bottom: 5em;
+
+    @media #{$ipadpro} {
+      margin-bottom: 2em;
+    }
+  }
+}
+
+.property-highlight__slider-wrapper {
+  margin: 0 -1.5625em;
+
+  .swiper-slide {
+    width: 35.625em;
+    padding: 0 1.5625em 3.125em;
+
+    @media #{$ipadpro} {
+      width: 28.625em;
+      padding: 0 1em 3.125em;
+
+      @media #{$mobL} {
+        padding-bottom: 2em;
+      }
+    }
+
+    @media #{$mobL} {
+      width: 100%;
+    }
+  }
+}
+
+.property-highlight__navigation__btns {
+  display: flex;
+  align-items: center;
+  gap: 1.875em;
+
+  @media #{$mobL} {
+    gap: 1em;
+  }
+
+  .navigation-swiper {
+    display: flex;
+    align-items: center;
+    gap: 0.625em;
+  }
+
+  .seprator {
+    flex: 0 0 calc(100% - 22.8573125em);
+    height: 1px;
+    background: rgba(var(--primary-color), 0.5);
+
+    @media #{$mobL} {
+      flex: 0 0 calc(100% - 20em);
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: static;
+    margin: 0;
+  }
+}
+
+.property-highlight__loader {
+  max-width: 6.875em;
+  margin: 0 auto;
+  text-align: center;
+  &__icon {
+    margin: 0 auto 0.9375em;
+    animation: rotate-icon 1.5s linear 0s infinite forwards;
+  }
+  .title {
+    font-size: 1.125em;
+    color: rgb(var(--black-color));
+    text-transform: capitalize;
+  }
+}
+
+@keyframes rotate-icon {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

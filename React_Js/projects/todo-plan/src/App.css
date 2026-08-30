@@ -1,0 +1,12 @@
+
+
+input[type="text"],
+input[type="text"]:focus {
+  background-color: transparent;
+  color: #fff;
+}
+
+.form-control::placeholder {
+  color: #fff;
+  opacity: 0.6;
+}

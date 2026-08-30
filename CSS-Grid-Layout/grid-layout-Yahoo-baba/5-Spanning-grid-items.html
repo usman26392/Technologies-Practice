@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .container {
+                background-color: rgb(248, 224, 224);
+                width: 70%;
+                height: 550px;
+                margin: 50px 0 0 90px;
+                text-align: center;
+                display: grid;
+                grid-template-columns: repeat(3,auto);
+                grid-template-rows: repaet(3,auto);
+                grid-row-gap: 20px;
+                grid-column-gap: 50px; 
+            }
+            
+            .items1 {
+                background-color: rgb(211, 168, 251);
+                grid-row: 1 / 2;
+                grid-column: 1 / 4;
+            }
+           
+           
+            .items2 {
+                background-color: dodgerblue;
+                
+                grid-row: 2 / 4;
+                
+                /*
+                grid-row: span 3;
+                */
+                grid-column: 1 / 2;
+            }
+            .items3 {
+                background-color: tomato;
+            }
+            .items4 {
+                background-color:greenyellow;
+            }
+            .items5 {
+                background-color: rgb(97, 227, 231);
+            }
+            .items6 {
+                background-color: pink;
+            }
+            
+        
+        </style>
+
+    </head>
+    <body>
+        <h1>Develop spanning grid./h1>
+        <div class="container">
+            <div class="items1">First</div>
+            
+            <div class="items2">Second</div>
+            <div class="items3">Third</div>
+            <div class="items4">Fourth</div>
+            <div class="items5">Fifth</div>
+            <div class="items6">Six</div>
+            
+        </div>
+        
+    </body>
+</html>

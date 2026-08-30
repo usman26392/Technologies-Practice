@@ -1,0 +1,96 @@
+
+h1, .h1 {
+    font-size: em(55);
+    font-weight: 400;
+    font-family: $el-messeri;
+    color: $black-color;
+    margin: 0 0 0.4em;
+    @media #{$ipadpro} {
+        font-size: 4.5em;
+    }
+    @media #{$tab} {
+        font-size: 2em;
+    }
+}
+
+h2, .h2 {
+    font-size: em(60);
+    font-weight: 400;
+    font-family: $el-messeri;
+    color: $black-color;
+    margin: 0 0 0.5em;
+    letter-spacing: -2px;
+    @media #{$ipadpro} {
+        font-size: 2.2em;
+    }
+    @media #{$tab} {
+        font-size: 2.125em;
+    }
+}
+
+h3, .h3 {
+    font-size: em(40);
+    font-weight: 400;
+    font-family: $el-messeri;
+    color: $black-color;
+    margin: 0 0 0.5em;
+    line-height: 1.3em;
+    @media #{$tab} {
+        font-size: 2em;
+    }
+}
+
+h4, .h4 {
+    font-size: em(30);
+    font-weight: 700;
+    font-family: $el-messeri;
+    color: $black-color;
+    margin: 0;
+    @media #{$tab} {
+        font-size: 1.5em;
+    }
+}
+
+h5, .h5 {
+    font-size: em(25);
+    font-weight: 400;
+    font-family: $el-messeri;
+    color: $black-color;
+    margin: 0;
+    @media #{$tab} {
+        font-size: 1.375em;
+    }
+}
+
+h6, .h6 {
+    font-size: em(23);
+    font-weight: 400;
+    font-family: $el-messeri;
+    color: $black-color;
+    margin: 0;
+    @media #{$tab} {
+        font-size: 1.375em;
+    }
+}
+
+
+
+p {
+    font-size: em(23);
+    margin:0 0 1.9565em;
+    color: $primary-color;
+    line-height: 1.6521em;
+    @media #{$tab} {
+        font-size: 16px;
+    }
+    @media #{$mob} {
+        margin-bottom: 1em;
+    }
+}
+
+
+
+
+
+
+

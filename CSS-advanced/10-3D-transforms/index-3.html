@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform-style: preserve-3d;</title>
+
+    <style>
+        
+        .parent {
+            width: 250px;
+            height: 350px;
+            background-color: cornsilk;
+        }
+
+        .child,
+        .child-1 {
+            width: 90%;
+            height: 90%;
+            background-color: green;
+            color: #ffffff;
+            transform: rotateY(0deg); /* this is by default */
+            transition: all .5s linear;
+        }
+
+        .parent:hover .child {
+            transform: rotateY(180deg);
+        }
+
+      
+        /* parent-1  */
+        .parent-1 {
+            width: 250px;
+            height: 350px;
+            background-color: rgb(130, 226, 20);           
+            transform-style: preserve-3d;
+            transform: rotateY(20deg);
+        }
+        .parent-1:hover .child-1 {
+            transform:rotateX(180deg);
+        }
+
+
+    
+
+
+    </style>
+</head>
+<body>
+
+    <div class="parent">
+        <div class="child">
+            <p>This rotation without preserve-3d</p>
+        </div>
+    </div>
+
+    <div class="parent-1">
+        <div class="child-1">
+            <p>This rotation with preserve-3d</p>
+        </div>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+body {
+	margin: 0;
+}
+.container {
+	background-color: beige;
+	display: flex;
+	flex-direction: row;
+}
+
+li {
+	list-style-type: none;
+}
+  
+
+/*  
+.items1 {
+	width: 100px;
+}
+.items2 {
+	width: 100px;
+}
+.items3 {
+	width: 100px;
+}
+*/  
+  
+/*----------------------------Other Part ------*/
+/*
+.flex-item {
+	width: 100px;
+	height: 100px;
+}
+
+
+/*
+.item1 {
+	background-color: red;
+	color: white;
+}
+.item2 {
+	background-color: green;
+	color: white;
+}
+.item3 {
+	background-color: blue;
+	color: white;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

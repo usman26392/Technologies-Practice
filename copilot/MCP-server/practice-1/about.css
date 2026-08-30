@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@400;700&family=Raleway:wght@300;400;700&display=swap');
+
+.about-section {
+  position: relative;
+  width: 100vw;
+  min-height: 980px;
+  background: #8c5d65;
+  overflow: hidden;
+}
+.about-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 980px;
+  background: #8c5d65;
+  z-index: 1;
+}
+.about-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 1028px;
+  color: #fff;
+  z-index: 2;
+  text-align: center;
+  font-family: 'Playwrite IN', sans-serif;
+}
+.about-title {
+  font-family: 'Playwrite IN', sans-serif;
+  font-size: 50px;
+  font-weight: normal;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+}
+.about-image {
+  margin: 0 auto 40px auto;
+  width: 266px;
+  height: 266px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.about-text h2 {
+  font-family: 'Playwrite IN', sans-serif;
+  font-weight: 400;
+  font-size: 34px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+.about-text p {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 900px;
+}
+@media (max-width: 1100px) {
+  .about-content {
+    width: 90vw;
+  }
+  .about-text p {
+    font-size: 20px;
+  }
+}
+@media (max-width: 700px) {
+  .about-content {
+    width: 98vw;
+    padding: 20px 0;
+  }
+  .about-title {
+    font-size: 32px;
+  }
+  .about-image {
+    width: 180px;
+    height: 180px;
+  }
+  .about-text h2 {
+    font-size: 22px;
+  }
+  .about-text p {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .container {
+                background-color: rgb(223, 213, 213);
+                width: 650px;
+                margin: 50px auto 0;
+                display: grid;
+                grid-template-columns:repeat(2,1fr);
+                grid-template-rows: repeat(2,150px);
+                grid-gap: 10px;
+                                                
+               
+            }
+            
+            .items1 {
+                background-color: rgb(211, 168, 251);
+               
+                
+            }
+            .items2 {
+                background-color: dodgerblue;  
+            }
+            .items3 {
+                background-color: tomato;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 10px;
+                
+            }
+            .items3  div {
+                margin: 6px;
+                padding: 4px;
+                background-color: white;
+            }
+            .items4 {
+                background-color:greenyellow;               
+            }
+            
+            
+        </style>
+
+    </head>
+    <body>
+        
+        <h1>Nested grids.</h1>
+        <div class="container">
+            <div class="items1">One</div>
+            <div class="items2">Two</div>
+            <div class="items3">
+                <div class="subitem1">A</div>
+                <div class="subitem2">B</div>
+                <div class="subitem3">C</div>
+            </div>
+            <div class="items4">Four</div>
+                        
+        </div>
+        
+    </body>
+</html>

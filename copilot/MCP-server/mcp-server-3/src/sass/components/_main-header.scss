@@ -1,0 +1,154 @@
+// SASS partial for main header navigation styles
+// Follows project guidelines: variables, mixins, and BEM naming
+
+.main-header {
+  background: var(--white-color);
+  box-shadow: 0 2px 8px rgba(var(--black-color-rgba), 0.03);
+  padding: 0;
+  direction: ltr;
+  .main-nav {
+    width: 100%;
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2.1875em 4.6875em; // 35px 75px
+    }
+    .nav-left {
+      display: flex;
+      align-items: center;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.625em; // 10px
+      text-decoration: none;
+    }
+    .nav-logo-img {
+      width: 1.4656em; // 23.45px at 16px base
+      height: 1.3596em; // 21.75px at 16px base
+      display: block;
+    }
+    .nav-logo-text {
+      font-family: "Poppins", sans-serif;
+      font-weight: 900;
+      font-size: 1.875em; // 30px
+      color: var(--black-color);
+      letter-spacing: 0.0563em; // 0.9px
+    }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 3.063em; // 49px
+    }
+    .nav-menu {
+      display: flex;
+      gap: 3.063em; // 49px
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-size: 1em;
+      position: static;
+      flex-direction: row;
+      align-items: center;
+      background: none;
+      box-shadow: none;
+      transform: none;
+      transition: none;
+      z-index: auto;
+      @media #{$ipad} {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 70vw;
+        max-width: 20em; // 320px
+        background: var(--white-color);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 5em 2em 2em 2em;
+        gap: 2em;
+        box-shadow: -2px 0 8px rgba(var(--black-color-rgba), 0.08);
+        transform: translateX(100%);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1000;
+      }
+      &.open {
+        @media #{$ipad} {
+          transform: translateX(0);
+        }
+      }
+      li {
+        margin-bottom: 0;
+      }
+    }
+    .nav-item {
+      .nav-link {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-size: 1.0314em; // 16.5px
+        color: #242323;
+        text-decoration: none;
+        letter-spacing: 0.0103em; // 0.165px
+        transition: color 0.2s;
+        &:hover,
+        &:focus {
+          color: var(--primary-color, #000);
+        }
+      }
+    }
+    .nav-signup-btn {
+      background: var(--black-color);
+      color: var(--white-color);
+      border-radius: 0.328em; // 5.25px
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+      font-size: 1.125em; // 18px
+      padding: 0.625em 1.063em; // 10px 17px
+      text-decoration: none;
+      letter-spacing: -0.0338em; // -0.54px
+      transition: background 0.2s, color 0.2s;
+      &:hover,
+      &:focus {
+        background: var(--primary-color, #242323);
+        color: var(--white-color);
+      }
+      @media #{$ipad} {
+        display: none;
+      }
+    }
+    .nav-burger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 2.5em;
+      height: 2.5em;
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin-right: 1.5em;
+      z-index: 1001;
+      @media #{$ipad} {
+        display: flex;
+      }
+      .nav-burger-bar {
+        width: 2em;
+        height: 0.1875em;
+        background: var(--black-color);
+        margin: 0.25em 0;
+        border-radius: 2px;
+        transition: all 0.3s;
+      }
+    }
+    @media #{$ipad} {
+      .nav-inner {
+        padding: 1em 1.5em;
+      }
+      .nav-right {
+        flex: 1;
+        justify-content: flex-end;
+      }
+    }
+  }
+}

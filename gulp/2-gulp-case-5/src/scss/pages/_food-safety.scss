@@ -1,0 +1,332 @@
+.flex-reverse {
+    .stroke-figure {
+        .twocol-row {
+            flex-direction: row-reverse;
+        }
+
+        .stroke-figure__panel {
+            left: 3.5em;
+            right: unset;
+            top: 42%;
+            bottom: unset;
+            transform: translateY(-50%);
+
+            @media #{$tab} {
+                left: auto;
+                top: auto;
+                transform: none;
+            }
+
+
+            &__stroke {
+                left: 98%;
+                right: unset;
+            }
+        }
+    }
+}
+
+.food-safety {
+    .stroke-figure {
+        &__panel {
+            top: 50%;
+            bottom: unset;
+            transform: translateY(-50%);
+            right: 10em;
+
+            &__stroke {
+                left: 97%;
+                right: unset;
+            }
+        }
+
+        &:nth-child(odd) {
+            background-color: transparent;
+            padding: em(200) 0;
+            margin-top: em(-110);
+
+            @media #{$ipadpro} {
+                padding: 6.625em 0;
+                margin-top: 0;
+            }
+
+            @media #{$tab} {
+                padding: 2em 0;
+            }
+
+            .twocol-row {
+                flex-direction: row-reverse;
+            }
+
+            .home-left-panel {
+                margin-left: 12em;
+
+                @media #{$ipadpro} {
+                    margin-left: 6em;
+                }
+
+                @media #{$tab} {
+                    margin-left: 0;
+                }
+
+                p {
+                    color: $black-color;
+                }
+
+            }
+
+            .stroke-figure__panel {
+                right: unset;
+                left: 3.5em;
+                width: 44%;
+
+                @media #{$tab} {
+                    right: unset;
+                    left: unset;
+                    width: 100%;
+                    transform: none;
+                    top: unset;
+                }
+
+                &__img {
+                    width: 100%;
+                    height: em(632);
+
+                    @media #{$ipad} {
+                        height: 22.5em;
+                    }                   
+                    img {
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        &:nth-child(even) {
+            background-color: #F8F8FB;
+            padding: em(250) 0 em(416);
+            margin-top: em(-110);
+
+            @media #{$ipadpro} {
+                padding: 12.625em 0;
+                margin-top: 0;
+            }
+
+            @media #{$ipad} {
+                padding: 5.625em 0;
+            }
+
+            @media #{$tab} {
+                padding: 2em 0;
+            }
+
+            .twocol-row {
+                flex-direction: row;
+
+                .home-left-panel {
+                    margin-left: 0;
+                }
+            }
+
+            .stroke-figure__panel {
+                left: unset;
+                right: 7.5em;
+                width: 44%;
+
+                @media #{$ipad} {
+                    width: 38%;
+                }
+
+                @media #{$tab} {
+                    right: unset;
+                    left: unset;
+                    width: 100%;
+                    transform: none;
+                    top: unset;
+                }
+
+                &__img {
+                    width: 100%;
+                    height: em(632);
+                    @media #{$ipad} {
+                        height: 22.5em;
+                    }
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+
+                &__stroke {
+                    left: 96%;
+                }
+            }
+        }
+
+        &:first-child {
+            .stroke-figure__panel {
+                top: 55%;
+                z-index: 1;
+                @media #{$tab} {
+                    top: unset;
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 30.813em;
+                    height: 30.813em;
+                    border: 1.5px solid $red-color-light;
+                    border-radius: 50%;
+                    left: -7%;
+                    top: -32%;
+
+                    @media #{$ipadpro} {
+                        display: none;
+                    }
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: em(794);
+                    height: em(794);
+                    border-radius: 50%;
+                    left: -53%;
+                    top: -48%;
+                    border: 1.5px solid $grey-color-light;
+
+                    @media #{$ipadpro} {
+                        display: none;
+                    }
+                }
+
+                &__img {
+                    position: relative;
+                    z-index: 1;
+                }
+            }
+        }
+
+        &:last-child {
+            background-color: transparent;
+        }
+
+
+
+    }
+}
+
+
+
+
+.stroke-figure__main {
+    &.food-safety {
+        .stroke-figure {
+            margin-bottom: 0;
+            @media #{$ipad} {
+                padding: 2em 0;
+            }
+        }
+    }
+}
+
+.custom-flex {
+    .stroke-figure {
+        &:first-child {
+            margin-bottom: 15em;
+
+            @media #{$tab} {
+                margin: 0;
+            }
+        }
+
+        &:nth-child(odd) {
+            .twocol-row {
+                flex-direction: row-reverse;
+            }
+
+            .stroke-figure__panel {
+                right: unset;
+                left: 3.5em;
+
+                @media #{$tab} {
+                    right: auto;
+                    left: auto;
+                }
+            }
+        }
+    }
+}
+
+
+.food-safety-details {
+    padding: 3em 0 0;
+
+    .bottom-area {
+        padding: 6.25em 0 2.8125em;
+
+        @media #{$ipadpro} {
+            padding: 1.25em 0 2.8125em;
+        }
+    }
+
+    &.business-sectors-details {
+        padding: 13em 0 0;
+        @media #{$ipadpro} {
+            padding: 4em 0 0;
+        }
+    }
+}
+
+.dishes-table {
+    // padding: 3.125em 0 4em;
+
+    @media #{$mob} {
+        padding: 3.125em 0;
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 0;
+        margin-left: -0.8em;
+        margin-right: -0.8em;
+        padding: 0 2em;
+        justify-content: center;
+
+        @media #{$mob} {
+            padding: 0;
+        }
+
+        li {
+            width: 30%;
+            padding: 0.8em;
+
+            .img-wrapper {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 1em;
+            }
+
+            a {
+                display: flex;
+                justify-content: center;
+            }
+
+            @media #{$tab} {
+                width: 50%;
+            }
+
+            img {
+                width: 80%;
+                @media #{$tab}{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,293 @@
+.header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 3.7em 0;
+    z-index: 9;
+    transition: 0.5s;
+    @media #{$desktop} {
+        padding: 3.5em 0;
+    }
+    @media #{$tab} {
+        padding: 2em 0;
+    }
+    &__container {
+        padding: 0 3.5%;
+        @media #{$ipadpro} {
+            padding: 0 1.5%;
+        }
+        @media #{$ipad} {
+            padding: 0 5em;
+        }
+        @media #{$tab} {
+            padding: 0 3em;
+        }
+        @media #{$mob} {
+            padding: 0 15px;
+        }
+    }
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        @media #{$tab} {
+            padding: 0.5em 0;
+        }
+        .header__wrapper__language__search {
+            flex: 0 1 20%;
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            z-index: 1;
+            .header-languages {
+                display: flex;
+                align-items: baseline;
+                position: relative;
+                margin-right: 2em;
+                @media #{$mob} {
+                    margin-right: 0.5em;
+                }
+                a {
+                    text-decoration: none;
+                    color: $black-color;
+                    font-size: em(20);
+                    padding: 0 em(20);
+                    font-weight: 400;
+                    transition: $transition-ease;
+                    &:first-child {
+                        // visibility: hidden;
+                    }
+                    
+                    &:last-child {
+                        pointer-events: none;
+                        color: var(--);
+                    }
+                    @media #{$mob} {
+                        padding: 0 1em;
+                        font-size: 1em;
+                    }
+                    &.arabic-lang {
+                        pointer-events: none; // temporary
+                        color: $primary-color;
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            width: 20%;
+                            height: 2px;
+                            background: $primary-color;
+                            left: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            right: 0;
+                            margin: 0 auto;
+                            // visibility: hidden;
+                        }
+                    }
+                    &.active {
+                        color: $red-color;
+                    }
+                    &:hover {
+                        color: $red-color;
+                    }
+                }
+                &__popup {
+                    position: absolute;
+                    top: 3em;
+                    background: $white-color;
+                    right: 0;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: all .3s linear;
+                    border-radius: 6px;
+                    z-index: 10;
+                    background: var(--blue-color);
+                    padding: 1em;
+                    color: $white-color;
+                    text-align: center;
+                    position: absolute;
+                    min-width: 11em;
+                    pointer-events: none;
+                    @media #{$mob} {
+                        top: 2em;
+                    }
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        border-width: 10px;
+                        border-style: solid;
+                        border-color: transparent transparent var(--blue-color) transparent;
+                        top: -20px;
+                        right: 1em;
+                        transform: translateX(-50%);
+                        @media #{$ipadproL} {
+                            border-width: 9px;
+                            top: -17px;
+                        }
+
+                    }
+
+                    &.open {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+
+                &:hover {
+                    .header-languages__popup {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+            }
+            .header-searh-icon {
+                cursor: pointer;
+                position: relative;
+                svg {
+                    width: em(20);
+                    path {
+                        // transition: $transition-ease;
+                        fill: $black-color;
+                    }
+                }
+                &:hover {
+                    path {
+                        fill: $red-color;
+                    }
+                }
+
+                .search-bar {
+                    position: absolute;
+                    top: -0.7em;
+                    right: 2em;
+                    z-index: 999;
+                    min-width: 18.75em;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all .3s linear;
+                    @media #{$ipadpro} {
+                        top: -.9em;
+                        right: 3em;
+                        min-width: 21.75em;
+                    }
+
+                    @media #{$mob} {
+                        top: 4em;
+                        right: 0;
+                    }
+                    &__form {
+                        border: 2px solid $yellow-color;
+                        position: relative;
+                        form {
+                            width: 100%;
+                            input {
+                                padding: 1em 3.5em 1em 1em;
+                                width: 100%;
+                                border: none;
+                                @media #{$mob} {
+                                    padding-top: 0.5em;
+                                    padding-bottom: 0.5em;
+                                }
+                                &:focus,
+                                &:focus-visible {
+                                    outline: 0;
+                                }
+
+                                
+                                
+                            }
+                            input[type="search"]::-webkit-search-decoration,
+                            input[type="search"]::-webkit-search-cancel-button,
+                            input[type="search"]::-webkit-search-results-button,
+                            input[type="search"]::-webkit-search-results-decoration {
+                                display: none;
+                            }
+                            input:-webkit-direct-focus {
+                                outline: none;
+                            }
+                            input[type="search"] {
+                                -webkit-appearance:unset;
+                                border-radius: 0;
+                                margin: 0;
+                                @media #{$tab} {
+                                    padding: 1em;
+                                }
+                            }
+                        }
+
+                        &__btn {
+                            position: absolute;
+                            right: 1em;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            cursor: pointer;
+                            z-index: 2;
+                            background: 0 0;
+                            border: none;
+                        } 
+                    }
+
+                    &.search-bar--open {
+                        opacity: 1;
+                        visibility: visible;
+                        // top: 4em;
+                    }
+                }
+
+                .search-icon-2 {
+                    position: absolute;
+                    width: 18px;
+                    height: 18px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 0;
+                    visibility: hidden;
+                }
+
+                .search-icon-1 {
+                    visibility: hidden;
+                }
+
+                .icon-show {
+                    visibility: visible;
+                }
+
+
+            }
+
+
+        }
+    }
+
+}
+
+header .brand-logo {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: em(260);
+    z-index: 2;
+    @media #{$ipadpro} {
+        width: 11.25em;
+    }
+    @media #{$ipad} {
+        left: 1.5em;
+        right: auto;
+    }
+
+    @media #{$mob} {
+        width: 10em;
+    }
+    
+    svg {
+        max-width: 100%;
+    }
+    
+    &__anchor {
+        display: inline-block;
+    }
+}
+
+
+

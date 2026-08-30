@@ -1,0 +1,51 @@
+.panel {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.figure {
+  width: 5rem;
+  flex: 0 0 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: 2px solid var(--softTextColor);
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.desciption {
+  padding-left: 2rem;
+  flex: 0 0 calc(100% - 10.0rem);
+}
+
+
+.label {
+  font-size: 1.3rem;
+  font-weight: 400;
+  padding: 0.3rem 1rem;
+  max-width: max-content;
+  color: var(--white);
+  border-radius: 1rem;
+  background-color: var(--lightblue);
+}
+
+
+
+.main-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.authors {
+    font-size: 1.2rem;
+}
+
+
+
+
+
+
+

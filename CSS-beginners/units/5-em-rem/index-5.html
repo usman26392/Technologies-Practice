@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* is may koi problem hay isko abi mat daykna  */
+
+        html {
+            font-size: 62.5%;
+        }
+
+        /* agar hum body par font-size na lagaen toh phir jo root element par
+        font-size hota hay wo lag jata hay */
+
+        /* body {
+            font-size: 10px;
+        } */
+
+         
+    
+
+        
+        /* font-size em , apnay parent ko duntay duntay  */
+        .btn-1 {
+            display: inline-block;
+            font-size: 9em;         /* 9em = 90px  with respect to its parent */ 
+            padding: 0.444em 2.22em;    /* 199.8px = 2.22 em  */
+            /* we know 90px = 1em 
+                1px = 1 / 90 em
+                40px = (40*1) / 90 em
+
+            */
+
+            /* with respect to its element's font-size */
+            background-color: khaki;
+            border: 0.27em solid #000;    /* 24.3px = 0.27em with respect to 90px */
+            text-decoration: none;
+            color: #000;
+        }
+
+        
+
+        .btn-2 {
+            display: inline-block;
+            font-size: 9rem;        /* 9rem = 90px with respect to root element. */ 
+            padding: 4rem 19.98rem;
+            /*
+                 10px = 1rem;
+                 1px = 1 / 10 rem
+                 than 40px =  (1*40) / 10 
+                 40px = 
+             */         
+            background-color: khaki;
+            border: 2.43rem solid #000;
+            text-decoration: none;
+            color: #000;
+        }
+
+    </style>
+</head>
+<body>
+     
+        <a href="javascript:;" class="btn-1">Button 1 em</a>
+     
+    
+    <a href="javascript:;" class="btn-2">Button 2 rem</a>
+</body>
+</html>

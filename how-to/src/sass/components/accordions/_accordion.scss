@@ -1,0 +1,34 @@
+.c-accordion {
+  &__header {
+    border-bottom: 1px solid $primarycolor;
+  }
+
+  &__button {
+    border: 0;
+    font-size: 2rem;
+    padding: 0.8em 1.5em;
+    background: $blackcolor;
+    color: $whitecolor;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    transition: $transition;
+    &:hover {
+        background: $primarycolor;
+    }
+    &.active {
+        background: $primarycolor;
+    }
+  }
+
+  &__collapse {
+    max-height: 0;
+    overflow: hidden;
+    transition: $transition;
+    &__body {
+      font-size: 1.6rem;
+      padding: 2em;
+      line-height: 1em;
+    }
+  }
+}

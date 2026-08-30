@@ -1,0 +1,30 @@
+.icon-bar {
+  background-color: $blackcolor;
+  display: flex;
+  align-items: center;
+  &__icon {
+    padding: 2em;
+    flex: 1 1 auto;
+    text-align: center;
+    transition: $transition;
+    &:hover {
+      background-color: $primarycolor;
+    }
+    &.active {
+        background-color: $primarycolor;
+    }
+    img {
+      width: 1.6rem;
+      margin: 0 auto;
+      pointer-events: none;
+    }
+  }
+
+  //   modifier
+  &--vertical {
+    display: inline-flex;
+    flex-direction: column;
+  }
+
+
+}

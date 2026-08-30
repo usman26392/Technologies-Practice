@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="jquery-3.4.1.min.js"></script>
+        <style>
+           
+            #div1 {
+                background-color:rgb(255, 255, 10);
+                padding: 1em;
+            }
+            #div2 {
+                background-color: chartreuse;
+                padding: 1em;
+            }
+                       
+        </style>
+    </head>
+    <body>
+            <div id="div1">
+                <p>
+                    It is then quite obvious that Pakistan remains prone
+                    to a variety of climatic hazards, with global warming – 
+                    according to experts in several reports published this year – 
+                    contributing to this.
+                </p>
+                <p>
+                    It is then quite <b>obvious that Pakistan remains</b> prone
+                    to a variety of climatic hazards, with global warming – 
+                    according to experts in several reports published this year – 
+                    contributing to this.
+                </p>
+            </div>
+
+            <ul>
+                <li>Mango</li>
+                <li>Apple</li>
+                <li>Orange</li>
+                <li>watermelon</li>
+            </ul>
+            <div>
+                <p>
+                    It is then quite obvious that Pakistan remains prone
+                    to <b>a variety of climatic hazards,</b>b> with global warming – 
+                    according to <span>experts in several reports</span>s> published this year – 
+                    contributing to this.
+                </p>
+                <p>
+                    It is then quite <span>obvious</span> that Pakistan remains prone
+                    to a variety of climatic hazards, with global warming – 
+                    according to experts in several reports published this year – 
+                    contributing to this.
+                </p>
+            </div>
+        
+        <script>
+            $(document).ready(function(){
+                 
+                 /*
+                $("p").has("b").css("background-color","red");
+                 */
+                
+                /*
+                $("p").has("span").css("background-color","red");
+                */
+                
+                /*
+                $("p").has("b, span").css("background-color","red");
+                */
+                
+            });
+
+        
+        </script>
+        
+    </body>
+</html>

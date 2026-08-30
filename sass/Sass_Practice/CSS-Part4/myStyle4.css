@@ -1,0 +1,12 @@
+/* The default behavior for variable scope can be 
+ overriden by using the !global switch. */
+/* !global indicates that a variable is global, which means
+  that it is accessible on all levels. */
+h1 {
+  color: green;
+}
+
+p {
+  color: green;
+}
+/*# sourceMappingURL=myStyle4.css.map */

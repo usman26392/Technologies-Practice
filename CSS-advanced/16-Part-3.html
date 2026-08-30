@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+        }
+        .container img {
+            width: 100%;
+            height: auto;
+        }
+        .container .btn {
+            position: absolute;     
+            transform: translate(100%, -100%);
+            left: 5%;
+            top: 90%;
+            padding: 1% 4%;
+            background-color: blueviolet;
+            color: white;
+            border: none;
+            font-size: 24px;
+            text-align: center;
+            border: 2px solid rgb(43, 226, 128);
+            border-radius: 10px;
+        }
+        .btn:hover {
+            background-color: chartreuse;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Button on image</h1>
+    <div class="container">
+        <img src="Advanced-Pics/pic1.jpg" alt="ComputerTableroom">
+        <button class="btn">Explore</button>
+
+    </div>
+</body>
+</html>

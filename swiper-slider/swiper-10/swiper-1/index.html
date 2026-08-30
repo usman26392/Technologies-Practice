@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>swiper thumb</title>
+    <link rel="stylesheet" href="../assets/vendors/swiper-bundle.min.css ">
+
+    <style>
+        .swiper {
+            max-width: 600px;
+            height: 300px;
+            margin: 0 auto 40px;
+        }
+
+        .swiper1 .swiper-wrapper .swiper-slide:nth-child(odd) {
+            background-color: red;
+        }
+
+        .swiper1 .swiper-wrapper .swiper-slide:nth-child(even) {
+            background-color: green;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <h1>swiper thumb with controller </h1>
+    <h1> is example may hum nay
+        swiper2 ko thumb banaya hay , swiper1 k liyey 
+        or swiper2 ka control , swiper1 ko diya hay.</h1>
+
+    <h2>swiper 1</h2>
+    <div class="swiper swiper1">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 5</div>
+            <div class="swiper-slide">Slide 6</div>
+        </div>
+
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>       
+    </div>
+
+
+    <!-- swiper 2 -->
+    <h2>swiper 2</h2>
+    <div class="swiper swiper2">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 5</div>
+            <div class="swiper-slide">Slide 6</div>
+        </div>
+
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+    
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    
+        <!-- If we need scrollbar -->
+        <!-- <div class="swiper-scrollbar"></div> -->
+    </div>
+
+  
+
+
+    <!-- js files -->
+    <script src="../assets/vendors/swiper-bundle.min.js"></script>
+
+    <script>
+
+        window.onload = function() {
+            
+            // swiper2 => going to be a thumb
+            const swiper2 = new Swiper('.swiper2', {
+                spaceBetween: 10,
+                slidesPerView: 1,
+                freeMode: false,
+                // allowTouchMove: false,
+                watchSlidesProgress: false,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                    clickable: true
+                },
+                breakpoints: {
+                    576: {
+                        slidesPerView: 1,
+                    },
+                    768: {
+                        slidesPerView: 2,
+
+                    },
+                    993: {
+                        slidesPerView: 3,
+                    },
+                }                   
+            });
+    
+    
+    
+            const swiper1 = new Swiper('.swiper1', {
+                    loop: false,
+                    spaceBetween: 10,
+                    speed: 600,
+                    slidesPerView: 2,
+                    freeMode: false,
+
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                        clickable: true
+                    },
+
+                    // swiper1 ko =>  swiper2 ki navigation say control karnay k liye zarori hay 
+                    //  k "swiper1" may navigation js code ho. or "swiper1" may html code navigation na ho.
+                    // 
+                    
+                    
+                    thumbs: {
+                        // swiper 2 ko thumb(tab) bana diya hay , swiper 1 k liyey
+                        swiper: swiper2,
+                    }          
+            });
+    
+    
+            swiper1.controller.control = swiper2;
+            // swiper2 ka control , swiper1 k pass hay
+        
+        };
+
+        // is example may hum nay
+        // swiper2 ko thumb banaya hay , swiper1 k liyey 
+        // or swiper2 ka control , swiper1 ko diya hay.
+
+
+    </script>
+
+</body>
+</html>

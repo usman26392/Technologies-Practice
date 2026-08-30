@@ -1,0 +1,24 @@
+
+.App {
+    img {
+        margin-right: 1rem;
+    }
+}
+
+
+.card {
+    width: 10rem;
+    height: 10rem;
+    border: 1px solid #000;
+    border-radius: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile {
+    border: 2px solid #000;
+    max-width: 30rem;
+    margin-bottom: 3rem;
+}

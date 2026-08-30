@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_unique_footer_links_urls",
+  "info": {
+    "displayName": "Footer_Links_Urls"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "url": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- This is jquery file library   -->
+        <script src="jquery-3.4.1.min.js"></script>
+
+        <style>
+            #box{
+                border: 5px solid black;
+                padding: 1em;
+                background-color: bisque;
+                position: relative; /* this is for position() method */
+                
+
+            }
+            #box2 {
+                background-color: rgb(221, 117, 117);
+                border: 1px solid black;
+                padding: 1em;
+            }
+            
+        </style>
+
+    </head>
+    <body>
+        <h1>Hello jQuery position & Offset methods......</h1>
+        <div id="box">
+            <h2>test box</h2>
+            <p>All stakeholders involved in Afghanistan need to recognise 
+                that there is no alternative to peace. The country has been 
+                on apart by a war that has essentially continued since 1979
+                and even before that year.</p>
+        </div><br><br>
+
+        <button type="button" id="posbtn">Position is not working now</button>
+        <button type="button" id="offbtn">Offset</button>
+        
+        <script>
+            $(document).ready(function(){
+                $("#offbtn").click(function(){
+                    $("#box ").offset({
+                        left:60,
+                        top:150
+                    });          
+                });           
+            });
+        
+        </script>
+
+    </body>
+</html>

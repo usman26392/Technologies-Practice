@@ -1,0 +1,30 @@
+
+//from Left to Right
+.img__observer__one {
+    .observer__child {
+        overflow: hidden;
+        clip-path: inset(0 100% 0 0);
+    }
+    &.active {
+        .observer__child {
+            transition: clip-path 2s;
+            transition-delay: 0.6s;
+            clip-path: inset(0 0 0 0);
+        }
+    }
+}
+
+//from Right to Left
+.img__observer__two {
+    .observer__child {
+        overflow: hidden;
+        clip-path: inset(0 0 0 100%);
+    }
+    &.active {
+        .observer__child {
+            transition: clip-path 2s;
+            transition-delay: 0.4s;
+            clip-path: inset(0 0 0 0);
+        }
+    }
+}

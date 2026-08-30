@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEM methodology block, element, modifier</title>
+</head>
+<body>
+
+    <!-- without modifier   -->
+    <div class="card">
+        <div class="card__avatar">
+            <img src="" alt="">
+        </div>
+        <div class="card__text">
+            <h4 class="card__title"></h4>
+            <p class="card__description"></p>
+            <a href="javascript:;" class="btn"></a>
+        </div>
+    </div>
+
+
+    <!-- with an element modifier -->
+    <!-- yey modifier hum tab banatay hayn jub card k 'aik element' ko modify karna ho. -->
+    <div class="card">
+        <div class="card__avatar card__avatar--rounded">
+            <img src="" alt="">
+        </div>
+        <div class="card__text">
+            <h4 class="card__title"></h4>
+            <p class="card__description"></p>
+            <a href="javascript:;" class="btn"></a>
+        </div>
+    </div>
+
+
+
+    <!-- with block modifier -->
+    <!-- yey modifier hum tub banatay hayn , jub 'aik say zayeda' cards k elements ko modify karna ho. -->
+    <div class="card card--horizontal">
+        <div class="card__avatar">
+            <img src="" alt="">
+        </div>
+        <div class="card__text">
+            <h4 class="card__title"></h4>
+            <p class="card__description"></p>
+            <a href="javascript:;" class="btn"></a>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #rc1 {
+            background-color: blueviolet;
+            width: 200px;
+            margin: 50px auto;
+            color: white;
+            height: 150px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 50px; 
+        }
+        #rc2 {
+            background-color: rgb(76, 158, 37);
+            width: 200px;
+            margin: 50px auto;
+            color: white;
+            height: 150px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 50px 25px;
+        }
+        #rc3 {
+            background-color: blueviolet;
+            width: 200px;
+            margin: 50px auto;
+            color: white;
+            height: 150px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 50px;
+            border: 5px solid rgb(122, 122, 45);
+        }
+        #rc4 {
+            background-image: url('Advanced-Pics/water_lily.jpg');
+            width: 30%;
+            margin: 50px auto;
+            color: white;
+            height: 30%;
+            padding: 10px;
+            text-align: center;
+            border-radius: 50px;
+        }
+        #rc5 {
+            background-color: blueviolet;
+            width: 200px;
+            margin: 50px auto;
+            color: white;
+            height: 150px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 50px / 25px;
+            outline: 1px solid red; 
+            /* this property(outline) just for understand of elliptical rounding */
+        }
+        #rc6 {
+            background-color: blueviolet;
+            width: 200px;
+            margin: 50px auto;
+            color: white;
+            height: 150px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 25px / 50px;
+            outline: 1px solid red;
+            /* this property(outline) just for understand of elliptical rounding */
+        }
+    
+    </style>
+</head>
+<body>
+    <h1>Rounded Corners</h1>
+    <div id="rc1">
+        with background color
+    </div>
+
+    <div id="rc2">
+        with shorthand property.
+    </div>
+
+    <div id="rc3">
+        with a border
+    </div>
+
+    <div id="rc4">
+        With a background image
+    </div>
+    <div id="rc5">
+        with an elliptical corner.
+        border-radius: 50px / 25px;
+    </div>
+
+    <div id="rc6">
+        <p>With an elliptical corner
+            border-radius: 25px / 50px;
+        </p>
+    </div>
+     
+</body>
+</html>

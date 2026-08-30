@@ -1,0 +1,68 @@
+<DOCTYPE html>
+<html lang = "en-US">
+<head>
+    <title>Introduction to HTML5</title>
+	<meta charset="UTF-8"></meta>
+</head>
+
+<body>
+     
+    <h2>Use JavaScript to Change Text</h2>
+<p>This example writes "Hello JavaScript!" into an HTML element with id="demo":</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = "Hello!";
+</script> 
+
+
+<h1>My First JavaScript</h1>
+
+<p>JavaScript can change the content of an HTML element:</p>
+
+<button type = "button" onclick = "myFunction()">Click me!</button>
+<p id = "demo1">This is a demonstration.</p>
+<script>
+        function myFunction(){
+		document.getElementById("demo1").innerHTML = "This change from method!"}
+</script>
+
+
+
+<h1>My First JavaScript</h1>
+
+<p id="demo2">JavaScript can change the style of an HTML element.</p>
+<button type="button" onclick="myFunction1()">Click Me!</button>
+
+<script>
+function myFunction1() {
+  document.getElementById("demo2").style.fontSize = "25px"; 
+  document.getElementById("demo2").style.color = "red";
+  document.getElementById("demo2").style.backgroundColor = "yellow"; 
+         
+}
+</script>
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

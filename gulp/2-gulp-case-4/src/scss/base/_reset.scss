@@ -1,0 +1,19 @@
+
+
+html {
+    z-index: 99;
+    font-family: "Droid Sans", sans-serif #{"/*rtl:prepend:'Droid Arabic Kufi',*/"} ;
+    direction: ltr;
+    font-size: 50px #{"/*rtl:21px*/"};
+    user-select: auto;
+    transition: width 2s linear;
+}
+
+*,::before,::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+

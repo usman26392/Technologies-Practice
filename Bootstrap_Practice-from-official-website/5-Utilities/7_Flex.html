@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap-4.4.1-dist/bootstrap-4.4.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../custom-style.css">
+
+    <style>
+        .dv {
+            height: 250px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    
+    <!--****************************** .flex-grow when .flex-row ************************-->
+    <!-- <div class="container">
+        <div class="d-flex dv flex-row justify-content-start align-items-stretch">
+            <div class="p-2  bg-primary ">Flex item with a lot of content</div>
+            <div class="p-2 bg-secondary flex-grow-1">Flex item with a lot of content</div>  
+        </div>
+    </div> -->
+
+    <!--****************************** .flex-grow-* when .flex-column ********************-->
+    <!-- <div class="container">
+        <div class="d-flex dv flex-column justify-content-start align-items-stretch">
+            <div class="p-2  bg-primary ">Flex item with a lot of content</div>
+            <div class="p-2 bg-secondary ">Flex item with a lot of content</div>  
+        </div>
+    </div> -->
+
+    
+    <!--******************************* .flex-shrink-0 when .flex-row *********************-->
+    <!-- <div class="container">
+        <div class="dv d-flex flex-row justify-content-start align-items-stretch">
+            <div class="p-2 bg-primary flex-shrink-0">Flex item with a lot of content</div>
+            <div class="p-2 bg-secondary">Flex item with a lot of content</div>
+        </div>
+    </div> -->
+
+    <!--********************************  flex-fill when flex-row **************************-->
+    <div class="container">
+        <div class="dv d-flex justify-content-start align-items-stretch">
+            <div class="p-2 bg-primary">Flex item with a lot of content</div>
+            <div class="p-2 bg-success flex-fill">Flex item with a lot of content</div>
+        </div>
+    </div>
+
+    <!-- <div class="container">
+        <div class="dv d-flex justify-content-start align-items-stretch">
+            <div class="p-2 bg-primary flex-fill">Flex item with a lot of content</div>
+            <div class="p-2 bg-info flex-fill">Flex item with a lot of content</div>
+        </div>
+    </div> -->
+
+    <!-- <div class="container">
+        <div class="dv d-flex flex-column justify-content-start align-items-stretch">
+            <div class="p-2 bg-primary flex-fill">Flex item with a lot of content</div>
+            <div class="p-2 bg-info flex-fill">Flex item with a lot of content</div>
+        </div>
+    </div> -->
+
+
+    <!--******************************** flex-wrap *********************************-->
+    <!-- <div class="container">
+        <div class="dv d-flex flex-row justify-content-start align-items-stretch">
+            <div class="p-2 bg-primary">Flex item with a lot of content</div>
+            <div class="p-2 bg-secondary">Flex item with a lot of content</div>
+            <div class="p-2 bg-success">Flex item with a lot of content</div>
+            <div class="p-2 bg-dark">Flex item with a lot of content</div>
+        </div>
+    </div> -->
+
+    <!-- <div class="container">
+        <div class="dv d-flex flex-row justify-content-start align-items-stretch flex-wrap">
+            <div class="p-2 bg-primary">Flex item with a lot of content</div>
+            <div class="p-2 bg-secondary">Flex item with a lot of content</div>
+            <div class="p-2 bg-success">Flex item with a lot of content</div>
+            <div class="p-2 bg-dark">Flex item with a lot of content</div>
+        </div>
+    </div> -->
+
+
+    <!--*********************** when .flex-row with .justify-content-* , .align-items-*  *********-->
+    <!-- <div class="container">
+        <div class="d-flex dv justify-content-start align-items-stretch">
+            <div class="p-2  bg-primary">Flex item with a lot of content Flex item with a lot of content</div>
+            <div class="p-2 bg-secondary">Flex item with a lot of content</div>        
+        </div>
+    </div> -->
+
+    <!-- <div class="container">
+        <div class="d-flex dv justify-content-start align-items-start">
+            <div class="p-2 bg-primary">Flex item with a lot of content Flex item with a lot of content</div>
+            <div class="p-2 bg-secondary">Flex item with a lot of content</div>
+            
+        </div>
+    </div> -->
+
+     <!-- <div class="container">
+        <div class="d-flex dv justify-content-center align-items-stretch">
+            <div class="p-2 bg-primary">Flex item with a lot of content Flex item with a lot of content</div>
+            <div class="p-2 bg-secondary">Flex item with a lot of content</div>           
+        </div> 
+    </div> -->
+    
+    <!-- <div class="container">
+        <div class="d-flex dv justify-content-start align-items-center">
+            <div class="p-2 bg-primary">Flex item with a lot of content Flex item with a lot of content</div>
+            <div class="p-2 bg-secondary">Flex item with a lot of content</div>           
+        </div> 
+    </div> -->
+
+    <!-- <div class="container">
+        <div class="d-flex dv justify-content-center align-items-center">
+            <div class="p-2 bg-primary">Flex item with a lot of content Flex item with a lot of content</div>
+            <div class="p-2 bg-secondary">Flex item with a lot of content</div>            
+        </div>
+    </div> -->
+
+    <!--*************** when .flex-column with .justify-content-* , .align-items-*  *********-->
+    <!-- <div class="d-flex d-column dv justify-content-start align-items-stretch">
+        <div class="p-2 bg-primary">Flex item with a lot of content Flex item with a lot of content</div>
+        <div class="p-2 bg-secondary">Flex item with a lot of content</div>            
+    </div> -->
+
+    <!-- <div class="d-flex flex-column dv justify-content-center align-items-stretch">
+        <div class="p-2 bg-primary">Flex item with a lot of content Flex item with a lot of content</div>
+        <div class="p-2 bg-secondary">Flex item with a lot of content</div>            
+    </div> -->
+
+    <!-- <div class="d-flex flex-column dv justify-content-start align-items-center">
+        <div class="p-2 bg-primary">Flex item with a lot of content Flex item with a lot of content</div>
+        <div class="p-2 bg-secondary">Flex item with a lot of content</div>            
+    </div>
+     -->
+    <!-- <div class="d-flex flex-column dv justify-content-start align-items-start">
+        <div class="p-2 bg-primary">Flex item with a lot of content Flex item with a lot of content</div>
+        <div class="p-2 bg-secondary">Flex item with a lot of content</div>            
+    </div>
+      -->
+
+    <!-- <div class="d-flex flex-column dv justify-content-center align-items-center">
+        <div class="p-2 bg-primary">Flex item with a lot of content Flex item with a lot of content</div>
+        <div class="p-2 bg-secondary">Flex item with a lot of content</div>            
+    </div>
+       -->
+
+
+    <!--***************** set alignment of individual flex-items when .flex-row *******-->
+    <!-- <div class="container">
+        <div class="d-flex dv">
+            <div class="p-2 bg-primary">Flex item with a lot of content Flex item with a lot of content</div>
+            <div class="p-2 bg-secondary align-self-center">Flex item with a lot of content</div>
+            <div class="p-2 bg-success">Flex item with a lot of content</div> 
+            <div class="p-2 bg-info align-self-start">Flex item with a lot of content</div> 
+        </div>
+    </div> -->
+
+    <!--******************* set alignment of individual flex-items when .flex-column **********-->
+    <!-- <div class="container">
+        <div class="d-flex dv flex-column">
+            <div class="p-2 bg-primary">Flex item with a lot of content Flex item with a lot of content</div>
+            <div class="p-2 bg-secondary align-self-center">Flex item with a lot of content</div>
+            <div class="p-2 bg-success">Flex item with a lot of content</div> 
+            <div class="p-2 bg-info align-self-start">Flex item with a lot of content</div> 
+        </div>
+    </div> -->
+
+    
+    <!--***************** .align-content-* when .flex-row ***********************-->
+    <!-- <div class="container">
+        <div class="dv d-flex flex-row justify-content-start align-items-stretch flex-wrap align-content-start">
+            <div class="p-2 bg-primary">Flex item with a lot of content</div>
+            <div class="p-2 bg-secondary">Flex item with a lot of content</div>
+            <div class="p-2 bg-success">Flex item with a lot of content</div>
+            <div class="p-2 bg-dark">Flex item with a lot of content</div>
+            <div class="p-2 bg-danger">Flex item with a lot of content</div>
+        </div>
+    </div> -->
+
+    <!--******************* .align-content-* when .flex-column ********************-->
+    <!-- <div class="container">
+        <div class="dv d-flex flex-column justify-content-start align-items-stretch flex-wrap align-content-start">
+            <div class="p-2 bg-primary">Flex item with a lot of content</div>
+            <div class="p-2 bg-secondary">Flex item with a lot of content</div>
+            <div class="p-2 bg-success">Flex item with a lot of content</div>
+            <div class="p-2 bg-dark">Flex item with a lot of content</div>
+            <div class="p-2 bg-danger">Flex item with a lot of content</div>
+        </div>
+    </div> -->
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../jquery-3.4.1.min.js"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>-->
+    <script src="../bootstrap-4.4.1-dist/bootstrap-4.4.1-dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>    
+</body>
+
+</html>

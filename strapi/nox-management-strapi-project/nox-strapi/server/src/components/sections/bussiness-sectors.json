@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_sections_bussiness_sectors",
+  "info": {
+    "displayName": "Bussiness__Sectors",
+    "icon": "bold",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Bussiness__slides": {
+      "displayName": "Bussiness__slides",
+      "type": "component",
+      "repeatable": true,
+      "component": "unique.bussiness-slides"
+    }
+  }
+}

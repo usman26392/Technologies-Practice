@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>linear gradient</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .rectangle {
+            width: 300px;
+            height: 200px;
+            border: 1px solid black;
+            margin: 100px 0 0 100px;
+            background-image: linear-gradient(0deg,red,green);
+        }
+
+        /* .circle {
+            width: 300px;
+            height: 300px;
+            margin: 100px 0 0 100px;
+            border: 2px solid black;
+            border-radius: 50%;
+            background-image: linear-gradient(90deg,red,green);
+            background-size: 211%;
+            background-repeat: no-repeat;
+            background-position-x: left;
+            transition: background-position .2s linear;
+        }
+
+        .circle:hover {
+            background-position-x: right;
+        } */
+
+        .circle {
+            width: 300px;
+            height: 300px;
+            margin: 100px 0 0 100px;
+            border: 2px solid black;
+            border-radius: 50%;
+            background-image: linear-gradient(180deg,red,green);
+            background-size: 100% 271%;
+            background-repeat: no-repeat;
+            background-position-y: top;
+            transition: background-position .2s linear;
+        }
+
+        .circle:hover {
+            background-position-y: bottom;
+        }
+    </style>
+</head>
+<body>
+    <div class="rectangle"></div>
+    <div class="circle"></div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            border-radius: 15px;
+            padding: 5px 0px;
+            text-align: center;
+            background-color: rgb(211, 199, 199);
+            color: black;
+            /* Position the tooltip */
+            position: absolute;
+            z-index: 1;          
+        }
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <h1>Tooltips</h1>
+    <div class="tooltip">Hover over me!
+        <span class="tooltiptext">Tooltip text</span>
+    </div>  
+</body>
+</html>

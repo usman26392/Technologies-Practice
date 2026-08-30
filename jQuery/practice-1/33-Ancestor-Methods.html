@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="jquery-3.4.1.min.js"></script>
+        <style>
+            #Maindiv {
+                background-color: aquamarine;
+                padding: 2em;
+            }
+            #outerdiv {
+                background-color: coral;
+                padding: 1em;
+            }
+            #innerdiv {
+                background-color: chartreuse;
+                padding: 1em;
+                /*position: relative; */ /* only checking for offsetParent().*/
+                
+            }
+            #innerdiv div {
+                display: inline-block;
+                width: 200px;
+                height: 200px;
+                background-color: rgb(175, 175, 125);
+                text-align:center;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div id="Maindiv">
+            <h1>Main div</h1>
+
+            <div id="outerdiv">
+                <h1>outer div</h2>
+
+                <div id="innerdiv">
+                    <h1>inner div</h3>
+                    <div>A</div>
+                    <div>B</div>
+                    <div id="child-c">C</div>
+                    <div>E</div>
+
+                </div>
+
+            </div>
+        </div>
+        <script>
+            $(document).ready(function(){
+                ///*
+                $("#child-c").parent().css("border-radius","30px");
+                //*/
+
+               /*
+                $("#child-c").parents().css("border-radius","30px");
+                */
+
+               /*
+                $("#child-c").parents("#Maindiv").css("border-radius","30px");
+                */
+                
+                /*
+                $("#child-c").parentsUntil("#Maindiv").css("border-radius","30px");
+                */
+                
+                /*
+                $("#child-c").offsetParent().css("border-radius","30px");
+                */
+                 
+                /*
+                $("#child-c").closest("div").css("border-radius","30px");
+                */
+            });
+        
+        </script>
+        
+    </body>
+</html>

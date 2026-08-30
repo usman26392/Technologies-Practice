@@ -1,0 +1,11 @@
+<h2>server-users</h2>
+
+@for (user of users; track user.id) {
+<strong>{{ user.name }}</strong>
+<br>
+📧 {{ user.email }}
+<br>
+📞 {{ user.phone }}
+<br>
+<br>
+}

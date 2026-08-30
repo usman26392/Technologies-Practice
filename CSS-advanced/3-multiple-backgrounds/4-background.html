@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background</title>
+    <style>
+        .hero-img {
+            background: url(../Advanced-Pics/img_lights.jpg)
+            center / cover
+            no-repeat
+            fixed;
+            height: 500px;
+            position: relative;
+        }
+
+        /* way 1: centering(horizontal & vertical) absolute element  */
+        .hero-txt {
+            color: #fff;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="hero-img">
+        <div class="hero-txt">
+            <h1>Acurate center (horizontal and vertical): This is an amazing image</h1>
+        </div>
+    </div>
+</body>
+</html>

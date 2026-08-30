@@ -1,0 +1,16 @@
+
+.gray_bg {
+  background: gray;
+}
+
+.main-nav {
+    list-style: none;
+    display: flex;
+    padding: 1rem;
+  }
+  
+  
+  .main-nav li {
+    margin-right: 1rem;
+  }
+  

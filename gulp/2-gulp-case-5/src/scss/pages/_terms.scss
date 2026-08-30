@@ -1,0 +1,25 @@
+
+.terms-sec  {
+    a {
+        font-size: 1.25em;
+        color: var(--black-color);
+        display: block;
+        margin-bottom: 0.5em;
+        font-weight: 400;
+        transition: $transition-ease;
+        text-transform: capitalize;
+        &:hover {
+            color: $red-color;
+        }
+    }
+}
+
+
+.page-404 {
+    &__wrapper {
+        text-align: center;
+        .thm-btn {
+            margin: 0 auto;
+        }
+    }
+}

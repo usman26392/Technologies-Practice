@@ -1,0 +1,103 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    display: block;
+}
+
+.box-1 {
+    background-color: red;
+}
+
+.box-2 {
+    background-color: green;
+}
+
+.box-3 {
+    background-color: blue;
+}
+
+
+/* 
+    pahlay ye core concept samajna paray ga phirh
+    gsap ki animation samajh a hay gi.
+ */
+
+/* Core concept of keyframes */
+/*
+   jo b element animate hota hay , jo keyframes
+   may jo css lagi hoti hay us say animate hota hay.
+   or agar animation infinite nai hay toh phir
+   element animate hokar , apni jaga par ahay ga.
+   matlab ye hay k keyframes say nikal kar apni asal jaga par
+   a hay ga.
+*/
+
+
+/* transform: translateX(0px); by default hoti hay jo .box par lag rahi hogi   */
+/* opacity: 1;  by default hoti hay jo .box par lag rahi hogi */
+/* .box {
+    animation: move1 2s linear 0s 1;
+} */
+
+/* 'from' ka matlab ye hay k yahan say start ho gi. */
+/* @keyframes  move1 {
+    from {
+        transform: translateX(500px);
+        opacity: 0;
+    }
+} */
+
+/* 'to' ka matlab ye hay k yahan tak jae gi.  */
+/* @keyframes  move1 {   
+    to {
+        transform: translateX(500px);
+    }
+}  */
+  
+
+
+
+/* only for timeline */
+/* .container {
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid red;
+    height: 500px;
+    background-color: grey;
+}
+
+.container h2 {
+    text-align: center;
+}
+
+.box-cont {
+    display: flex;
+    align-items: flex-end;
+    height: 86.5%;
+}
+
+.box-cont > .box {
+    flex: 0 0 33.33333%;
+    border: 1px solid #000000;
+    width: 200px;
+    height: 200px;
+}
+
+.box-cont > .box:nth-child(1) {
+    background-color: red;
+}
+
+.box-cont > .box:nth-child(2) {
+    background-color: green;
+}
+
+.box-cont > .box:nth-child(3) {
+    background-color: blue;
+} */

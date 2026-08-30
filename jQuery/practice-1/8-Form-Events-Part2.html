@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- This is jquery file library   -->
+        <script src="jquery-3.4.1.min.js"></script>
+
+    </head>
+    <body>
+        <h1>Hello jQuery......</h1>
+        <select name="countryNames" id="CountryNames">
+            <option value="Pakistan">Pakistan</option>
+            <option value="India">India</option>
+            <option value="England">England</option>
+        </select>
+
+        <div id="d1" style="border:1px solid green;margin-top: 8em;">
+
+        </div>
+        <script>
+            $(document).ready(function(){
+                $("#CountryNames").change(function(){
+                    var a = $("#CountryNames").val();
+                    $("#d1").html(a);
+                });             
+            });
+        </script>
+
+    </body>
+</html>

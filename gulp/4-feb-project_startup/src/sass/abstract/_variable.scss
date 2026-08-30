@@ -1,0 +1,44 @@
+
+
+
+$primarycol:   #FF7C46;
+$secondarycol: #2E2E2E;
+
+// gray variation
+$graycol:      #CCCCCC;
+$graycol2:     rgba(46, 46, 46, 0.06);   // #2E2E2E of 0.06
+$graycol3:     rgba(46, 46, 46, 0.8);    // #2E2E2E of 0.8
+$graycol4:     rgba(46, 46, 46, 0.6);    // #2E2E2E of 0.6
+$graycol5:     #616364;
+$lightgray:     #FBFBFB;
+$lightgray2:     #F0F0F0;
+$lightgray3:     #525252;
+$lightgray4:     #e4e4e4;
+$whitecol:      #ffffff;
+$blackcol:      #000000;
+
+
+$basefont: 'Noto Sans', sans-serif;
+$transition: all 0.3s ease-in-out;
+$bx-shadow: 0px 4px 17px rgba(55, 72, 106, 0.1);
+
+
+//  Form Color
+$successcol : #198754;
+$dangercol : #dc3545;
+
+
+// Media Sizes
+$tab: '(min-width:576px)';
+$tabL: '(min-width:768px)';
+$ipadL: '(min-width:992px)';
+$ipadXL: '(min-width:1025px)';
+$desktop: '(min-width:1200px)';
+
+$ipadpro: '(max-width:1199.98px)';
+$ipad: '(max-width:991.98px)';
+$mob: '(max-width:575.98px)';
+
+$space1: 0.5em;
+$space2: 1em;
+$space3: 1.5em;

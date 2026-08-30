@@ -1,0 +1,97 @@
+
+// leadership
+.leadership--main-slider-wrapper {
+    padding-top: 9.375em;
+    @media #{$ipadpro} {
+      padding-top: 4em;
+    }
+    @media #{$ipad} {
+      padding-top: 2em;
+    }
+  
+    .leadership-thumb-slider {
+      height: 26.75em;
+      max-width: 26em;
+      padding-top: 7em;
+      @media #{$ipadpro} {
+        height: 15.75em;
+        padding-top: 0;
+        padding-bottom: 2em;
+      }
+      @media #{$mobL} {
+        height: 12.75em;
+        padding-bottom: 0;
+        margin-bottom: 1em;
+      }
+      .swiper {
+        height: 100%;
+        // .swiper-wrapper {
+        //   justify-content: center;
+        // }
+      }
+      .leadership-thumb-item {
+        font-size: 2.25em;
+        color: var(--primary-color);
+        letter-spacing: -0.03em;
+        line-height: 0.6666em;
+        display: flex;
+        align-items: center;
+        gap: 0.9166em;
+        cursor: pointer;
+        transition: var(--transition-ease);
+        padding-bottom: 0.2em;
+        justify-content: space-between;
+        @media #{$ipadpro} {
+          font-size: 2em;
+        }
+        &:hover {
+          color: var(--secondary-color);
+          &::before {
+            opacity: 1;
+          }
+          .icon {
+            opacity: 1;
+          }
+          path {
+            fill: var(--secondary-color);
+            stroke: var(--secondary-color);
+          }
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          background: var(--secondary-color);
+          width: 100%;
+          height: 2px;
+          opacity: 0;
+          transition: var(--transition-ease);
+        }
+        .icon {
+          width: 0.9444em;
+          opacity: 0;
+          transition: var(--transition-ease);
+          path {
+            transition: var(--transition-ease);
+          }
+        }
+      }
+  
+      .swiper-slide-thumb-active {
+        .leadership-thumb-item {
+          color: var(--secondary-color);
+          &::before {
+            opacity: 1;
+          }
+          .icon {
+            opacity: 1;
+          }
+          path {
+            fill: var(--secondary-color);
+            stroke: var(--secondary-color);
+          }
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap');
+
+:root {
+  font-size: 62.5%;
+  --white-color:  #fff;
+  --black-color:  #000;
+  --orange-color: #FF4820;
+  --orange-light:   #FF8A71;
+  --blue-color:   #042C54;
+  --light-blue:   #3D6184;
+  --sea-blue:     #13DED2;
+  --para-color:   #81AFDD;
+  --body-color:   #040C18;
+  --footer-bg:    #031B34;
+  --gradient:  linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+  
+}
+
+@media (max-width: 1399px) {
+  :root {
+    font-size: 55.5%;
+  }
+}
+
+@media (max-width: 1365px) {
+  :root {
+    font-size: 50.5%;
+  }
+}
+
+@media (max-width: 1199px) {
+  :root {
+    font-size: 40%;
+  }
+}
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    background-color: var(--body-color);
+    color: var(--para-color);
+    line-height: 3rem;
+    overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;  
+}
+
+
+
+*,::before,::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white-color);
+}
+
+ul {
+  list-style-type: none;
+}
+
+
+h1 {
+  font-size: 6.2rem;
+  font-weight: 800;
+  line-height: 7.5rem;
+}
+
+@media (max-width: 575px) {
+  h1 {
+    font-size: 4.2rem;
+    line-height: normal;
+  }
+}
+
+h2 {
+  font-size: 6.2rem;
+  font-weight: 800;
+  line-height: 8.5rem;
+}
+
+@media (max-width: 575px) {
+  h2 {
+    font-size: 4.2rem;
+    line-height: normal;
+  }
+}
+
+h3 {
+  font-size: 3.4rem;
+  font-weight: 800;
+  line-height: 4.5rem;
+}
+
+h4 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 7.5rem;
+}
+
+
+h5 {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+
+h6 {
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+::placeholder {
+  color: var(--light-blue);
+  opacity: 1;
+}
+
+
+
+
+
+
+

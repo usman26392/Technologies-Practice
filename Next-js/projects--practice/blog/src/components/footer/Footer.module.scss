@@ -1,0 +1,36 @@
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+
+.footer-left-panel {
+  flex: 0 0 40%;
+}
+
+.footer-right-panel {
+  flex: 0 0 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1rem;
+}
+
+.footer-right-panel h4 {
+  font-size: 1.5rem;
+  color: var(--softTextColor);
+  margin-bottom: 2rem;
+}
+.footer-right-panel li {
+  margin-bottom: 0.5em;
+}
+

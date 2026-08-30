@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> <%= title %> </title>
+</head>
+
+<body>
+  <h1> <%= title %> </h1>
+  <p> <%= message %> </p>
+
+  <% if (message) { %>
+  <p> <%= message %> </p>
+  <% } %>
+
+  <ul>
+    <% items.forEach(item => { %>
+    <li> <%= item %> </li>
+    <% }) %>
+  </ul>
+
+  <h2> Users </h2>
+  <ul>
+    <% users.forEach(user => { %>
+        <li>
+            <p> Name: <%=  user?.name  %> / Age: <%= user?.age %> / Email: <%= user?.email %> </p>
+        </li>
+     
+    <% }) %>
+  </ul>
+
+
+
+
+
+</body>
+
+</html>

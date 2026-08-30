@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="jquery-3.4.1.min.js"></script>
+        <style>
+            #box {
+                border: 1px solid black;
+                padding: 2em;
+                background-color: aquamarine;
+
+            }
+        </style>
+    </head>
+    <body>
+        <h1>jquery Fade  Methods</h1>
+        <div id="box">
+            <p>It is then quite obvious that Pakistan remains prone
+                to a variety of climatic hazards, with global warming – 
+                according to experts in several reports published this year – 
+                contributing to this.</p>
+        </div>
+        <br><br>
+        <button type="button" id="slidebtn">Slide up</button>
+        <button type="button" id="slidebtn2">Slide down</button>
+        <button type="button" id="slidebtn3">Slide Toggle</button>
+        
+        
+        <script>
+            $(document).ready(function(){
+                $("#slidebtn").click(function(){
+                    $("#box").slideUp();
+                });
+
+                $("#slidebtn2").click(function(){
+                    $("#box").slideDown();
+                });
+
+                $("#slidebtn3").click(function(){
+                    $("#box").slideToggle();
+                });
+                
+ 
+            });
+                
+        </script>
+        
+    </body>
+</html>

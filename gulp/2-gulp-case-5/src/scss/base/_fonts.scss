@@ -1,0 +1,53 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&display=swap');
+
+
+// these fonts url path from custom-main.css because we will need in production.
+// 400
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('../fonts/AvenirLTStd-Book.woff2') format('woff2'),
+        url('../fonts/AvenirLTStd-Book.woff') format('woff'),
+        url('../fonts/AvenirLTStd-Book.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+// 900
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('../fonts/AvenirLTStd-Black.woff2') format('woff2'),
+        url('../fonts/AvenirLTStd-Black.woff') format('woff'),
+        url('../fonts/AvenirLTStd-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+// there are no need to these fonts
+
+// @font-face {
+//     font-family: 'Avenir Next LT Pro';
+//     src: url('../fonts/AvenirNextLTPro-Regular.woff2') format('woff2'),
+//         url('../fonts/AvenirNextLTPro-Regular.woff') format('woff'),
+//         url('../fonts/AvenirNextLTPro-Regular.ttf') format('truetype');
+//     font-weight: normal;
+//     font-style: normal;
+//     font-display: swap;
+// }
+
+// @font-face {
+//     font-family: 'Avenir Next LT Pro';
+//     src: url('../fonts/AvenirNextLTPro-Bold.woff2') format('woff2'),
+//         url('../fonts/AvenirNextLTPro-Bold.woff') format('woff'),
+//         url('../fonts/AvenirNextLTPro-Bold.ttf') format('truetype');
+//     font-weight: bold;
+//     font-style: normal;
+//     font-display: swap;
+// }
+
+
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+
+        .d1,
+        .d2 {
+            width: 200px;
+            height: 200px;
+        }
+
+        .d1 {
+            background-color: red;
+            animation-name: move1;
+            animation-duration: 10s;
+            animation-iteration-count: 3;
+            animation-direction: alternate;
+            animation-timing-function: ease;
+            
+        }
+
+        .d2 {
+            background-color: blue;
+            animation-name: move2;
+            animation-duration: 10s;
+            animation-iteration-count: 3;
+            animation-direction: alternate;
+            animation-timing-function: linear;
+        }
+
+        @keyframes move1 {
+            100% {
+                transform: translateX(1000px);
+            }
+        }
+
+        @keyframes move2 {
+            100% {
+                transform: translateX(1000px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="d1"></div>
+    <div class="d2"></div>
+</body>
+</html>

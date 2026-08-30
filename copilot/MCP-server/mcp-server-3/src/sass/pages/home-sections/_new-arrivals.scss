@@ -1,0 +1,135 @@
+// SASS partial for New Arrivals section (Figma node 3-36)
+// Follows BEM, uses only variables from _variable.scss, responsive, accessible
+.new-arrivals {
+  background: var(--white-color);
+  padding: 3.25em 0 4.3em 0; // 52px top, 69px bottom
+  &__row {
+    justify-content: center;
+  }
+  &__title-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 4.75em; // 76px
+    @media #{$mob} {
+      margin-bottom: 2em;
+    }
+  }
+  &__leaf {
+    position: absolute;
+    left: 10.125em; // 162px
+    top: 0.75em; // 12px
+    width: 8.72em; // 139.5px
+    height: 1.64em; // 26.2px
+    z-index: 1;
+    pointer-events: none;
+  }
+  &__title {
+    font-family: $basefont;
+    font-size: 2.25em; // 36px
+    font-weight: 900;
+    color: var(--black-color);
+    letter-spacing: 0.135em; // 2.16px
+    text-align: left;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__card {
+    background: none;
+    border-radius: 0.94em; // 15px
+    display: flex;
+    flex-direction: column;
+    gap: 1.3em; // 21px
+    height: auto;
+    box-shadow: 0 0 0 transparent;
+    cursor: pointer;
+    transition: $transition;
+    &:hover .new-arrivals__img .img-hack,
+    &:focus .new-arrivals__img .img-hack {
+      transform: scale(1.08);
+      transition: $transition;
+    }
+    @media #{$ipad} {
+      width: 16em;
+    }
+    @media #{$mob} {
+      width: 100%;
+      min-width: 0;
+    }
+  }
+  &__img {
+    width: 100%;
+    // height: 49em;
+    border-radius: 0.94em; // 15px
+    overflow: hidden;
+    margin-bottom: 0.5em;
+    height: 0;
+    padding-bottom: 145.32967%;
+    position: relative;
+    .img-hack {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: inherit;
+      transition: $transition;
+      display: block;
+      position: absolute;
+      inset: 0;
+    }
+    
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.33em; // 5.25px
+    text-align: left;
+  }
+  &__name {
+    font-family: $basefont;
+    font-size: 1.5em; // 24px
+    color: #191919;
+    font-weight: 500;
+    letter-spacing: -0.06em; // -0.96px
+    margin-bottom: 0.2em;
+  }
+  &__explore {
+    font-family: $basefont;
+    font-size: 1.125em; // 18px
+    color: #7f7f7f;
+    letter-spacing: -0.04em; // -0.72px
+  }
+  &__arrow-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5em; // 24px
+    height: 1.5em;
+    position: relative;
+  }
+  &__arrow {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  @media #{$mob} {
+    padding: 2em 0 2.5em 0;
+  }
+  &__cards {
+    @media #{$mob} {
+      flex-direction: column;
+      row-gap: 2em;
+      column-gap: 0;
+    }
+  }
+}
+// Example: .new-arrivals__leaf { left: 10.125em; } // Reason: Matches Figma leaf position
+// Example: .new-arrivals__cards { gap: 5.94em; } // Reason: Matches Figma card gap

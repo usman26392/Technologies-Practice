@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> hover linear gradient</title>
+    <style>
+         * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* horizontal linear gradient on hover */
+        .btn-1 {
+            display: inline-block;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: black;
+            font-size: 25px;
+            margin: 100px 0 0 100px;
+            padding: 50px 100px;
+            background-image: linear-gradient(
+                to right, 
+                rgba(0, 137, 255,1), 
+                rgba(255, 239, 1,1));
+            /* background-repeat: no-repeat; */
+            background-size: 285% 100%;
+            background-position-x: left;
+            transition: background-position .2s linear;
+        }
+
+        .btn-1:hover {
+            background-position-x: right;
+        }
+
+
+        /* vertical linear gradient on hover */
+        .btn-2 {
+            display: inline-block;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: white;
+            font-size: 25px;
+            margin: 100px 0 0 100px;
+            padding: 50px 100px;
+            background-image: linear-gradient(to top, rgba(0, 137, 255, 1), rgba(255, 0, 0,1));
+            background-repeat: no-repeat;
+            background-size: 100% 211%;
+            background-position-y: top;
+            transition: background-position .2s linear;
+        }
+
+        .btn-2:hover {
+            background-position-y: bottom;
+        }
+
+
+    </style>
+</head>
+<body>
+    <a href="#" class="btn-1">Button</a>
+    <a href="#" class="btn-2">Button</a>
+</body>
+</html>

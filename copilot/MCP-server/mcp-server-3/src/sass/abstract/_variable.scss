@@ -1,0 +1,41 @@
+:root {
+  --primary-color: #000;
+  --primary-color-rgba: 0, 0, 0;
+  --primary-color2: #EBD96B;
+  --primary-color2-rgba: 235, 217, 107;
+  --primary-color3: #E5C643;
+  --primary-color3-rgba: 229, 198, 67;
+  --black-color: #000000;
+  --black-color-rgba: 0, 0, 0;
+  --white-color: #FFFFFF;
+  --white-color-rgba: 255, 255, 255;
+  --gray-color: #F4F6F5;
+  --gray-color-rgba: 244, 246, 245;
+  --gray-color2: #171A1C;
+  --gray-color2-rgba: 23, 26, 28;
+  --gray-color3: #1E1E1E;
+  --gray-color3-rgba: 30, 30, 30;
+  --transition-ease: all 0.5s ease;
+  --blue-gradient: linear-gradient(90deg, #fff 36.68%, #03228F 128.96%);
+}
+
+// font family
+$basefont: "Montserrat", sans-serif;
+$transition: all 0.5s ease;
+$transition-linear: all 0.5s linear;
+$transition-bounce: all 0.3s cubic-bezier(0.47, 1.64, 0.41, 0.8);
+
+// Media Sizes
+// Mobile first approach
+$tab: "(min-width:576px)";
+$tabL: "(min-width:768px)";
+$ipadL: "(min-width:992px)";
+$ipadXL: "(min-width:1025px)";
+$desktop: "(min-width:1200px)";
+
+
+// Desktop first approach
+$ipadpro: "(max-width:1199.98px)";
+$ipad: "(max-width:991.98px)";
+$mobL: "(max-width:767.98px)";
+$mob: "(max-width:575.98px)";

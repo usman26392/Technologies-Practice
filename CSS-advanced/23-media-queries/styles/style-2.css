@@ -1,0 +1,68 @@
+
+
+/* this property apply from 1440px to onwards */
+h1 {
+    font-size: 60px;
+}
+
+
+
+/* MEDIA QUERIES */
+
+/* is may hum pahlay desktop screen k liye media queries
+likhna shuro karray hayn or fr tablets or mobiles phones  ki taraf jaray hayn */
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) and (max-width: 1439.98px) {
+    /* is may hum 1200px ki screen khol kar media queries likhna shuro karyn gay:
+    jo k fr 1439.98px tak k liye hogi */
+    h1 {
+        font-size: 40px;
+    }
+  }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+    /* is may hum 992px ki screen khol kar media queries likhna shuro karyn gay:
+    jo k fr 1199.98px tak k liye hogi */
+    h1 {
+        font-size: 30px;
+    }
+  }  
+
+
+ /* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    /* is may hum 768px ki screen khol kar media queries likhna shuro karyn gay:
+    jo k fr 991.98px tak k liye hogi */
+    h1 {
+        font-size: 20px;
+    }
+
+  } 
+
+
+  /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) { 
+
+    /* is may hum 576px ki screen khol kar media queries likhna shuro karyn gay:
+    jo k fr 767.98px tak k liye hogi */
+
+    h1 {
+        font-size: 15px;
+    }
+ }
+
+ /* Extra small devices (portrait phones, less than 576px) */
+@media (min-width: 320px) and (max-width: 575.98px) { 
+
+    /* is may hum 320px ki screen khol kar media queries likhna shuro karyn gay:
+    jo k fr 575.98px tak k liye hogi */
+    h1 {
+        font-size: 9px;
+    }
+
+}
+

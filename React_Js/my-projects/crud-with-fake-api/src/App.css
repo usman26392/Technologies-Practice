@@ -1,0 +1,10 @@
+
+.bi {
+    cursor: pointer;
+}
+
+.bi-eye:hover,
+.bi-pencil:hover,
+.bi-trash:hover {
+    color: red;
+}

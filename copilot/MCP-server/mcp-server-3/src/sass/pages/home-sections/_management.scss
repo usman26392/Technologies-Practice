@@ -1,0 +1,30 @@
+// management section
+.management-text-panel {
+    .h4 {
+      margin-bottom: 2em;
+    }
+    .management-total-assets {
+      margin-top: 6em;
+      @media #{$ipad} {
+        margin-top: 2em;
+      }
+      .curency-unit {
+        font-size: 2.5em;
+        font-weight: 600;
+        color: var(--primary-color);
+        @media #{$mobL} {
+          font-size: 1.5em;
+        }
+      }
+      .h1 {
+        margin-bottom: 0.1em;
+      }
+      .currency-description {
+        font-size: 1.5em;
+        font-weight: 600;
+      }
+      .currency-name {
+        font-size: 0.5em;
+      }
+    }
+  }

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>em unit</title>
+    <style>
+        body {
+            font-size: 16px;  /* 16px = 100% = 1em */
+        }
+
+        /* ab yahan 5.625rem , 90px hi hay magar ye apnay parent k layhaaz say hay,
+           */
+        h1 {
+            /*  90px = 5.625rem  */
+            font-size: 5.625em;
+            text-align: center;
+        }
+
+        .para-wrap {
+            font-size: 32px; /* here base set 32px */
+        }
+
+        
+        /* px unit independent(azad) hota hay, jub k em unit apnay parent par 
+            depend karta hay. */
+        /* matlab yey hay k, font-size, px unit may kisi element par lagay toh is 
+            ka matlab yey hay k wo element always same font-size rakhay ga,
+            jub tak us ko change na kiya jae, 
+            dosri taraf, font-size , em unit may kisi element par lagay toh is ka
+            matlab yey hay k wo element apnay closest parent element k font-size
+            say apna font-size set kary ga. */
+
+        /* ab yahan "1.9375em" ka matlab "30px" hi hay, magar ye 30px
+            is k parent k font-size k layhaaz say hay.   */
+        p {
+            font-size: 1.9375em;   /* 30/32 =>      30px = 1.9375 */ 
+        }
+
+
+        /* media queries */
+        @media (max-width: 575.98px) {
+            body {
+                font-size: 80%;
+            }
+
+            .para-wrap {
+                font-size: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- is may h1 ka parent element body hay toh , h1 apna font size
+    body k lahaaz say adjust karay ga.     -->
+    <h1>This is a main heading</h1>
+
+
+    
+    <!-- is may "p" ka parent element (div) hay, or is parent element par 
+    font-size laga howa hay, toh is liye yey "p" child element apnay 
+    sub say pahlay closest parent element k layhaaz say , apna font-size adjust karay ga,
+    or agar div par font-size nai hota toh, "p" apnay dosray closest parent element ko
+    talash karta, or isi tarhan check krta howa apnay akhiri parent element (body) may
+    font-size k lahaaz say apna font-size adjust karlayta.     -->
+
+    <!--  matlab yey howa k , em unit apny parent unit k layhaz say kaam karta hay -->
+    <!-- matlab ye howa k, jis element par "em" unit lagay ga, 
+    wo apny parent element k font-size say apna font-size adjust kary ga.  -->
+    <div class="para-wrap">
+        <p>This is a paragraph inside the div.</p>        
+    </div>
+</body>
+</html>

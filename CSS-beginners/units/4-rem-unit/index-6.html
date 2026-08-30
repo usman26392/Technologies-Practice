@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rem unit</title>
+
+    <!-- Important information -->
+
+    <style>
+    
+    /* 62.5% = 10px = 1rem */
+    /*
+        hum nay is may jo technique ka istamaal kiya hay, wo yey hay k
+        hum nay apnay html document ka font-size:62.5%; (jo k 10px k braber hay)
+        par set kar k , browser may yey html document , 16px k layhaaz say
+        daykh rahay hayn. 
+        browsers ka default font-size:16px hota hay !
+
+     */
+    html {
+        font-size: 62.5%;
+    }
+
+    @media (max-width: 575px) {
+        html {
+            font-size: 40%;
+            /* jub may nay root elment ka font-size 40% kiya , toh kiya howa,
+                toh yey howa:
+
+                62.5% = 10px;
+                1% = 10 / 62.5%
+                40% = (10 * 40) / 62.5%;
+                40% = 6.4px;
+             */
+        }
+    }
+
+    body {
+        /* body element par is waqt font-size:10px lag raha hay, 
+        media query ko hata k  */
+        margin: 0;
+    }
+
+    .btn-1 {
+        display: inline-block;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 1.8rem;
+        text-align: center;
+        vertical-align: middle;
+        text-decoration: none;
+        text-transform: capitalize;
+        background-color: #0f0e0e;
+        color: #fff;
+        padding: 1.4rem 3rem;
+        border-radius: .8rem;
+        transition: all .2s ease-in-out;
+    }
+
+    h1 {
+        font-size: 6rem;
+    }
+
+    .cta {
+        padding: 5rem 0;
+        text-align: center;
+        background: antiquewhite;
+    }
+
+    .cta > a:nth-child(2) {
+        margin-right: 3rem;
+    }
+
+
+    </style>
+    </head>
+    <body>
+
+        <!-- 
+            body may kisi b element par koi b "property ki value" agar "rem unit"
+            may use hogi toh phir , un ka base-size, root element(html) ka 
+            font-size hoga.
+
+            is ka matlab ye b howa k, agar padding rem unit may kisi section par
+            lag rahi hay toh phir , root element ka agar font-size kam ya zayeda
+            hoga toh phir padding b usi layhaaz say kam ya zayeda hogi. 
+
+            
+            **********  
+              kiyun k "rem unit" always apnay root element(html) k font-size k layhaaz say
+              lag raha hota hay.  
+            **********  
+         -->
+
+
+    <section class="cta">
+
+        <h1>This is a heading</h1>
+        <!--
+             0 say 575px ki media query par h1 par font size 38.4px
+            lag raha hoga, 6.4px k base size k layhaaz say:
+
+            40% = 1rem = 6.4px;
+            6rem = (6.4 * 6)px;   "6rem h1 ka font-size  hay "
+            6rem  = 38.4px;
+
+            isi tarhan jahan jahan, rem unit use hora hoga , us ki calculation 
+            b isi tarhan ho gi.
+    
+        -->
+
+        <a href="#" class="btn-1">Button 1</a>
+        <a href="#" class="btn-1">Button 1</a>
+    </section>
+    </body>
+    </html>

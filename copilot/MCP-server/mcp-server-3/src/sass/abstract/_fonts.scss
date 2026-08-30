@@ -1,0 +1,80 @@
+// these fonts url path from custom-min.css because we will need in production mode.
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+// 300
+// @font-face {
+//   font-family: "Didot";
+//   src: url("../fonts/Didot-HTF-L06-Light.woff2") format("woff2"),
+//     url("../fonts/Didot-HTF-L06-Light.woff") format("woff"),
+//     url("../fonts/Didot-HTF-L06-Light.ttf") format("ttf");
+//   font-weight: 300;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
+// @font-face {
+//     font-family: 'Gotham';
+//     src: url('../fonts/Gotham-Light.woff2') format('woff2'),
+//         url('../fonts/Gotham-Light.woff') format('woff'),
+//         url('../fonts/Gotham-Light.ttf') format('truetype');
+//     font-weight: 300;
+//     font-style: normal;
+//     font-display: swap;
+// }
+
+// @font-face {
+//     font-family: 'Gotham';
+//     src: url('../fonts/Gotham-Book.woff2') format('woff2'),
+//         url('../fonts/Gotham-Book.woff') format('woff'),
+//         url('../fonts/Gotham-Book.ttf') format('truetype');
+//     font-weight: 325;
+//     font-style: normal;
+//     font-display: swap;
+// }
+
+// @font-face {
+//     font-family: 'Gotham';
+//     src: url('../fonts/Gotham-Medium.woff2') format('woff2'),
+//         url('../fonts/Gotham-Medium.woff') format('woff'),
+//         url('../fonts/Gotham-Medium.ttf') format('truetype');
+//     font-weight: 700;
+//     font-style: normal;
+//     font-display: swap;
+// }
+
+// @font-face {
+//     font-family: 'Gotham';
+//     src: url('../fonts/GothamBold.woff2') format('woff2'),
+//         url('../fonts/GothamBold.woff') format('woff'),
+//         url('../fonts/GothamBold.ttf') format('truetype');
+//     font-weight: bold;
+//     font-style: normal;
+//     font-display: swap;
+// }
+
+// @font-face {
+//     font-family: 'Gotham';
+//     src: url('../fonts/Gotham-Black.woff2') format('woff2'),
+//         url('../fonts/Gotham-Black.woff') format('woff'),
+//         url('../fonts/Gotham-Black.ttf') format('truetype');
+//     font-weight: 900;
+//     font-style: normal;
+//     font-display: swap;
+// }
+
+// @mixin font-face($name, $file, $weight, $style: normal) {
+//   @font-face {
+//     font-family: #{$name};
+//     src: url("../fonts/#{$file}.woff2") format("woff2"), 
+//       url("../fonts/#{$file}.woff") format("woff");
+//     font-weight: $weight;
+//     font-style: $style;
+//     font-display: swap;
+//   }
+// }
+
+// // Gotham font-family declarations
+// @include font-face("SF Compact Display", "SFCompactDisplay-Regular", 400);
+// @include font-face("SF Compact Display", "SFCompactDisplay-Light", 300);
+// @include font-face("SF Compact Display", "SFCompactDisplay-Semibold", 600);

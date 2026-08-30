@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwing CSS</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="input.css">
+  </head>
+
+  <body>
+    <h1 class="text-3xl font-bold text-white bg-red-600 mt-7">
+      Hello Tailwind css
+    </h1>
+    <ul class="flex space-x-4 p-7">
+      <li>Home</li>
+      <li>About</li>
+      <li>News</li>
+    </ul>
+
+    <!-- custom tailwind css classes -->
+    <nav>
+      <ul class="flex mt-[5rem] xl:mt-[10rem] ml-[1.25rem] md:ml-[4.375rem] ">
+        <li>
+          <a href="javascript:;">Home</a>
+        </li>
+        <li>
+          <a href="javascript:;">About</a>
+        </li>
+        <li>
+          <a href="javascript:;">News</a>
+        </li>
+      </ul>
+    </nav>
+
+
+    <!-- @apply directive example -->
+    <!-- Before extracting a custom class -->
+    <h1>@layer and @apply directives example</h1>
+    <button
+      class="py-2 px-5 bg-violet-500 text-white font-semibold rounded-full shadow-md hover:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-400 focus:ring-opacity-75">
+      Save changes
+    </button>
+
+    <!-- After extracting a custom class -->
+    <button class="btn-primary">
+      Save changes
+    </button>
+
+    <!-- how to select third element  -->
+    <h1>How to select third element</h1>
+    <ul>
+      <li>
+        <div class="group">
+          <div class="bg-red-100 group-[:nth-of-type(3)_&]:bg-red-300">First child</div>
+        </div>
+      </li>
+      <li>
+        <div class="group">
+          <div class="bg-red-100 group-[:nth-of-type(3)_&]:bg-red-300">Second child</div>
+        </div>
+      </li>
+      <li>
+        <div class="group">
+          <div class="bg-red-100 group-[:nth-of-type(3)_&]:bg-red-300">Third child</div>
+        </div>
+      </li>
+      <li>
+        <div class="group">
+          <div class="bg-red-100 group-[:nth-of-type(3)_&]:bg-red-300">Forth child</div>
+        </div>
+      </li>
+    </ul>
+
+  </body>
+
+</html>

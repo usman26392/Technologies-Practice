@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- This is jquery file library   -->
+        <script src="jquery-3.4.1.min.js"></script>
+        <style>
+        #box{
+            border: 1px solid black;
+            padding: 2em;
+            background-color: pink;
+        }
+
+        .redClass {
+            color: red;
+
+        }
+        </style>
+        <script>
+        //----------------- text() ------------------------------    
+        $(document).ready(function(){
+            $("#clickButton").click(function(){
+                $("#box h1").text("This change from set's text() method. ");
+            });
+            
+            /*
+            $("#clickButton2").click(function(){
+                $("#box p").html("<i>This is in italic.</i> ");
+            });
+            */
+            
+            $("#clickButton2").click(function(){
+                $("#box h1").attr("id","box");
+            });
+
+            
+
+            
+            
+        });  
+  
+        </script>        
+
+    </head>
+    <body>
+        
+        <div id="box">
+            <h1>Hello jQuery......</h1>
+            <p>All stakeholders involved in Afghanistan need to recognise 
+            that there is no alternative to peace. The country has been on 
+            apart by a war that has essentially continued since 1979
+            and even before that year.</p>
+        </div>
+        <button type="button" id="clickButton">Change Text</button>
+        <button type="button" id="clickButton2">Change html</button>
+        
+
+    </body>
+</html>

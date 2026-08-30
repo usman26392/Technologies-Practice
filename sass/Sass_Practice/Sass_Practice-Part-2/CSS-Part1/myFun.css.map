@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,KAAK,CAAA;EACF,UAAU,EAAG,CAAkD;CACjE",
+    "sources": [
+        "myFun.scss"
+    ],
+    "names": [],
+    "file": "myFun.css"
+}

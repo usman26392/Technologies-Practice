@@ -1,0 +1,113 @@
+.testimonial-sec {
+  border-radius: 1.875em;
+  overflow: hidden;
+  background: #1e1e1e;
+
+  .message {
+    color: var(--white-color);
+    font-weight: 600;
+    font-size: 3.125em; // 50px/16px
+    letter-spacing: -0.04em; // -2px/50px
+    line-height: 1.4em; // 70px/50px
+    margin-bottom: 2.8em; // 140px/50px
+    @media #{$ipadpro} {
+      font-size: 2em;
+    }
+    @media #{$mobL} {
+      margin-bottom: 1em;
+    }
+  }
+  .testimonial-panel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 2em;
+    margin-bottom: 9.5625em;
+    @media #{$mobL} {
+      margin-bottom: 2em;
+    }
+  }
+  .testimonial-panel__left-panel {
+    flex: 0 0 70%;
+    width: 70%; // 70px/16px
+    padding-right: 2em;
+    @media #{$mobL} {
+      flex: 0 0 100%;
+      width: 100%;
+      padding-right: 0;
+    }
+  }
+  .testimonial-panel__profile .figure {
+    width: 8.125em; // 130px/16px
+    height: 5.625em; // 90px/16px
+    border-radius: 100px;
+    overflow: hidden;
+  }
+  .testimonial-panel__profile {
+    display: flex;
+    gap: 1.5625em; // 25px/16px
+    transform: translateX(9.375em); // 150px/16px
+    opacity: 0;
+    transition: all 1s ease 0.2s;
+    @media #{$mobL} {
+      margin-bottom: 2em;
+    }
+  }
+  .testimonial-panel__name {
+    color: var(--white-color);
+  }
+  .testimonial-panel__name .h3 {
+    font-size: 1.875em; // 30px/16px
+    font-weight: 500;
+    letter-spacing: -0.04em; // -1.2px/30px
+    @media #{$mobL} {
+      font-size: 1.5em;
+    }
+  }
+  .testimonial-panel__name .location {
+    font-size: 1.125em; // 18px/16px
+  }
+  .testimonial-panel__right-panel p {
+    color: var(--white-color);
+    font-weight: 500;
+  }
+  .testimonials-girl-wrapper {
+    position: absolute;
+    bottom: 13em;
+    z-index: 2;
+    width: 19.1875em;
+    height: 18.125em;
+    right: 2.4375em;
+    @media #{$ipadpro} {
+      width: 13.188em;
+      height: auto;
+    }
+    @media #{$mobL} {
+      display: none;
+    }
+  }
+}
+
+.testimonial-main-slider-wrapper {
+  .swiper-slide {
+    .testimonial-panel__left-panel {
+      .message {
+        transition: all 1s ease;
+        transform: translate(1em, 2em); // 50px/50px, 100px/50px (based on message font-size)
+        opacity: 0;
+      }
+    }
+    &-active {
+      .testimonial-panel__left-panel {
+        .message {
+          transform: translate(0, 0);
+          opacity: 1;
+        }
+      }
+      .testimonial-panel__profile {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  }
+}

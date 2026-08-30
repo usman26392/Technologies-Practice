@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAIA,AAAA,IAAI,CAAC;EAHD,MAAM,EAD2B,GAAG,CACrB,KAAK,CADA,IAAI;CAM3B;;AAED;;;;EAIE",
+    "sources": [
+        "myStyle10.scss"
+    ],
+    "names": [],
+    "file": "myStyle10.css"
+}

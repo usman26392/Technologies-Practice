@@ -1,0 +1,115 @@
+
+
+.gradient-text {
+  background: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.orange-btn, 
+.black-btn,
+.transparent-btn {
+  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 2.5rem;
+  background-color: var(--orange-color);
+  color: var(--white-color);
+  border-radius: 5px;
+  border: 0;
+  padding: 1.6rem 4.5rem;
+  text-align: center;
+  text-transform: capitalize;
+  cursor: pointer;
+  -webkit-appearance: button;
+  outline: none;
+  transition: background-color 0.25s ease;
+}
+
+.orange-btn:hover, 
+.black-btn:hover,
+.transparent-btn:hover {
+  background: #BC2C0C;
+}
+
+
+
+
+
+@media (max-width: 575px) {
+  .orange-btn, 
+  .black-btn,
+  .transparent-btn { 
+    padding: 1.6rem 2.5rem;
+  }
+}
+
+.black-btn {
+  background-color: var(--black-color);
+  border-radius: 9rem;
+  font-weight: 700;
+  line-height: 3rem;
+}
+
+.transparent-btn {
+  background-color: transparent;
+  border: 2px solid var(--white-color);
+}
+
+.c-py {
+  padding: 6.5rem 0;
+}
+
+@media (max-width: 575px) {
+  .c-py {
+    padding: 2.5rem 0;
+  }
+}
+
+.c-my {
+  margin: 6.5rem 0;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.container {
+  max-width: 132rem;
+  margin: 0 auto;
+  padding: 0 1.2rem;
+}
+
+@media (max-width: 991px) {
+  .container {
+    max-width: 110rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .container {
+    max-width: 100%;
+    padding: 0 2.2rem;
+  }
+}
+
+
+.top-line-title {
+  color: var(--white-color);
+  position: relative;
+}
+
+.top-line-title::before {
+  content: '';
+  position: absolute;
+  width: 4rem;
+  height: 3px;
+  background: var(--gradient);
+  top: 0;
+}
+
+
+
+

@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 200px;
+        }
+        
+        li  a{
+            display: block;       
+            background-color: #dddddd;
+            text-decoration: none;
+            padding: 8px 16px;
+        }      
+         li a.current {
+             background-color: rgb(99, 156, 13);
+             color: black;
+         }
+         li a:hover:not(.current) {
+            background-color: #555;
+            color: white;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1>Active / Current a Navigation link</h1>
+    <ul>
+        <li><a class="current"  href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">about</a></li>
+    </ul>
+</body>
+</html>

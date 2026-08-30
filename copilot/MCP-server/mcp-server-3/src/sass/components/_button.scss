@@ -1,0 +1,229 @@
+.btnn {
+  position: relative;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: $basefont;
+  text-align: left;
+  color: var(--white-color);
+  background-color: transparent;
+  line-height: normal;
+  text-transform: capitalize;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: $transition;
+  user-select: none;
+  border: 1px solid var(--white-color);
+  outline: 0;
+  cursor: pointer;
+  text-decoration: none;
+  vertical-align: middle;
+  border-radius: 0;
+  padding: 1em 1.125em; // 16px 18px
+  gap: 0.508em; // 8.12px to em
+  pointer-events: auto;
+  @media #{$ipadpro} {
+    font-size: 1em;
+    padding: 0.7em 1.125em;
+  }
+  
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    background: var(--white-color);
+    transition: var(--transition-ease);
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+  }
+
+  &__text {
+    margin-left: 0;
+    position: relative;
+    z-index: 1;
+    transition: $transition;
+  }
+
+  &__icon {
+    width: 1.0625em; // 17px
+    height: 0.9375em; // 15px
+    flex: 0 0 1.0625em; // 17px
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: $transition;
+    position: relative;
+    left: 0;
+    user-select: none;
+    pointer-events: none;
+    transform: rotate(-40deg);
+
+    // @media #{$mob} {
+    //   width: 1.5em;
+    //   height: 1.5em;
+    //   flex-basis: 1.5em;
+    // }
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      position: absolute;
+      transition: $transition;
+      z-index: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      transform-origin: center center;
+      background: transparent;
+    }
+
+    img,
+    svg {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      transition: $transition;
+    }
+
+    svg {
+      path {
+        transition: $transition;
+      }
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    color: var(--white-color);
+    &::before {
+      height: 100%;
+    }
+    .btnn__text {
+      color: var(--primary-color);
+    }
+    .btnn__icon {
+      @media #{$desktop} {
+        transform: rotate(0deg);
+      }
+      svg {
+        path {
+          fill: var(--primary-color);
+        }
+      }
+    }
+  }
+
+  &--without-hover {
+    border: 0;
+    padding-left: 0;
+    border-bottom: 1px solid var(--white-color);
+    padding-top: 0;
+    padding-bottom: 0.444em; // 8px/18px
+    padding-right: 0;
+    font-weight: 400;
+    @media #{$desktop} {
+      font-size: 1.125em;
+    }
+    &:hover {
+      &::before {
+        height: 0;
+      }
+      .btnn__text {
+        color: var(--white-color);
+      }
+      .btnn__icon svg path {
+        fill: var(--white-color);
+      }
+    }
+  }
+}
+
+.w-uline {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  transition: $transition;
+
+  @media #{$ipadpro} {
+    font-size: 1em;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.19em;
+    width: 100%;
+    height: 2px;
+    background: var(--primary-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: $transition;
+  }
+
+  &:hover {
+    &::after {
+      transition: $transition;
+      transform: scaleX(1);
+    }
+  }
+}
+
+.uline {
+  @extend .w-uline;
+
+  &::after {
+    transform: scaleX(1);
+  }
+
+  &:hover {
+    &::after {
+      transform: scaleX(0);
+    }
+  }
+}
+
+// .btnn-stretched {
+//   letter-spacing: -9999px;
+//   overflow: hidden;
+//   width: 0;
+//   height: 0;
+//   display: block;
+//   &::before {
+//     display: block;
+//     content: "";
+//     position: absolute;
+//     left: 0;
+//     right: 0;
+//     top: 0;
+//     bottom: 0;
+//     user-select: none;
+//     background: transparent;
+//     z-index: 1;
+//   }
+// }
+
+.absolute-btn-right {
+  position: absolute;
+  top: 7em;
+  right: 3.90625%;
+  display: inline-block;
+  @media #{$ipadpro} {
+    top: 3.5em;
+  }
+  @media #{$mobL} {
+    position: static;
+    margin-top: 2em;
+  }
+}
+
+.btnn-group {
+  display: flex;
+}

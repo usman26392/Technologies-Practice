@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="jquery-3.4.1.min.js"></script>
+        <style>
+            #box {
+                border: 1px solid black;
+                padding: 2em;
+                background-color: aquamarine;
+
+            }
+        </style>
+    </head>
+    <body>
+        <h1>jquery hide  & show  Methods</h1>
+        <div id="box">
+            <p>It is then quite obvious that Pakistan remains prone
+                to a variety of climatic hazards, with global warming – 
+                according to experts in several reports published this year – 
+                contributing to this.</p>
+        </div>
+        <button type="button" id="hidebtn">Hide</button>
+        <button type="button" id="showbtn">Show</button>
+        <button type="button" id="togglebtn">Toggle</button>
+        <script>
+            $(document).ready(function(){
+                /*
+                $("#hidebtn").click(function(){
+                    $("#box").hide();
+                });
+                */
+                
+                /*
+                $("#hidebtn").click(function(){
+                    $("#box").hide("slow");
+                });
+                */
+                
+                /*
+                $("#hidebtn").click(function(){
+                    $("#box").hide("1000");
+                });
+                */
+                 
+                $("#hidebtn").click(function(){
+                    $("#box").hide("slow",function(){
+                        alert("Thank you!");
+                    });
+                });
+
+
+
+                $("#showbtn").click(function(){
+                    $("#box").show();
+                });
+
+                $("#togglebtn").click(function(){
+                    $("#box").toggle();
+                });
+
+            });
+            
+        </script>
+        
+    </body>
+</html>

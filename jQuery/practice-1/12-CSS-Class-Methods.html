@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- This is jquery file library   -->
+        <script src="jquery-3.4.1.min.js"></script>
+
+        <style>
+            #box{
+                border: 1px solid black;
+                padding: 1em;
+
+            }
+            .first{
+                background-color: lime;
+            }
+            .second{
+                background-color: dodgerblue;
+            }
+        </style>
+
+    </head>
+    <body>
+        <h1>Hello jQuery class methods......</h1>
+        <div id="box">
+            <h2>test box</h2>
+            <p>All stakeholders involved in Afghanistan need to recognise 
+                that there is no alternative to peace. The country has been 
+                on apart by a war that has essentially continued since 1979
+                and even before that year.</p>
+
+        </div>
+        <br><br><br>
+        <button type="button" id="add">Add class</button>
+        <button type="button" id="remove">Remove class</button>
+        <button type="button" id="toggle">Toggle class</button>
+        <script>
+                $(document).ready(function(){
+                    $("#add").click(function(){
+                        $("div").addClass("first");
+                    });
+
+                    $("#remove").click(function(){
+                        $("div").removeClass("first");
+                    });
+
+                    $("#toggle").click(function(){
+                        $("div").toggleClass("first");
+                    });
+
+                    
+
+                });
+                    
+                
+        
+        </script>
+
+    </body>
+</html>

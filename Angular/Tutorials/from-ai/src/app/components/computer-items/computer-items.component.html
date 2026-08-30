@@ -1,0 +1,15 @@
+<h2>Computer Items</h2>
+
+
+<!-- *ngFor start from Angular 2 and end at Angular 16  -->
+<!-- <ul>
+    <li *ngFor="let product of products">{{ product.id }} -- {{ product.name }}</li>
+</ul> -->
+
+
+<!-- @for start from Angular 17 and upto -->
+<ul>
+    @for (product of products; track product.id) {
+    <li>{{ product.id }} -- {{ product.name }}</li>
+    }
+</ul>

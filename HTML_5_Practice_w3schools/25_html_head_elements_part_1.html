@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--title element defines the title of the document,
+    and is required in all HTML/XHTML documents-->
+    <title>Introduction to head element</title>
+
+     <!--<meta> viewport element gives the browser instructions
+    on how to control the page's dimensions and scaling for
+     a mobile phone or a tablet. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--link element is used to link to external file-->
+     <link rel="stylesheet" href="25_cssfile.css">
+
+
+     <!--for meta element-->
+     
+     <!--Define the character set-->
+     <meta charset="UTF-8">
+
+     <!--Define a description of your web page-->
+     <meta name="description"   content="information about meta tag">
+
+     <!--Define keywords for search engines-->
+     <meta name="keywords"  content="HTML,XML,CSS">
+
+     <!--Define the author of a page-->
+     <meta name="author" content="Usman">
+
+     <!--Refresh document every 30 seconds-->
+     <meta http-equiv="refresh"  content="30">
+      
+     <script>
+     /* <script> element is used to define client-side JavaScript.*/
+        function ChangeH1(params) {
+            document.getElementById("1").innerHTML = "This Text from method that is into the script tag  which is in Head tag body!";
+        } 
+     </script>
+
+     <!--The <style> element is used to define style information for a single HTML page: -->
+         <style>
+             h1 {
+                 color:chartreuse;
+             }
+         </style>
+
+
+     
+</head>
+<body>
+    <h1 id = "1">This is from head tag link for external style sheet</h1>
+    <button type="button" onclick="ChangeH1()">Change Text</button>
+</body>
+</html>

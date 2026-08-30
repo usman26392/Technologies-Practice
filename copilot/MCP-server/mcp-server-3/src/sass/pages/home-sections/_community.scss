@@ -1,0 +1,147 @@
+// Community section styles (BEM, mobile-first, variables, mixins)
+// Place in sass/pages/home-sections/_community.scss
+// Only use variables from _variable.scss or CSS variables from :root
+
+.community {
+  background: var( --primary-color3); // yellow from your CSS vars
+  padding: 4em 0 4em 0; // fallback, no spacing variable
+
+  &__row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    width: 100%;
+    max-width: 43.75em;
+    margin: 0 auto;
+  }
+
+  &__title-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 2em;
+  }
+
+  &__title {
+    font-family: $basefont;
+    font-size: 1.5em; // reduced for mobile
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin: 0;
+    line-height: 1.27;
+    @media #{$desktop} {
+      font-size: 2.8em;
+    }
+  }
+
+  &__subtitle {
+    font-family: $basefont;
+    font-size: 1.5em; // 24px
+    color: #fffcf8;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin: 0;
+    line-height: 1.1;
+    @media #{$mob} {
+        font-size: 1em;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #fff;
+    border-radius: 0.47em; // 7.5px
+    max-width: 26.25em; // 420px
+    width: 100%;
+    box-shadow: 0 0.25em 1.25em rgba(0,0,0,0.04);
+    padding: 0.5em;
+    margin: 0 auto;
+    gap: 1em;
+  }
+
+  &__input-wrap {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-family: $basefont;
+    font-size: 1.125em; // 18px
+    color: #767676;
+    background: transparent;
+    padding: 0 1em;
+    border-radius: 0.47em;
+    &::placeholder {
+      font-weight: 400;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--black-color);
+    color: #fff;
+    font-family: $basefont;
+    font-size: 1em; // reduced for mobile
+    font-weight: 500;
+    border: none;
+    border-radius: 0.38em; // 6px
+    padding: 0.7em 1.6em;
+    cursor: pointer;
+    letter-spacing: 0.03em;
+    transition: $transition;
+    height: 2.6em;
+    margin-left: 0.5em;
+    &:hover,
+    &:focus {
+      background: #222;
+      color: #fff;
+      outline: none;
+    }
+    @media #{$desktop} {
+      font-size: 1.55em;
+    }
+  }
+
+  @media #{$tabL} {
+    padding: 6em 0 6em 0;
+    &__content {
+      max-width: 900px;
+    }
+    &__form {
+      max-width: 30em;
+    }
+  }
+  @media #{$desktop} {
+    &__title {
+      font-size: 2.8em;
+    }
+    &__subtitle {
+      font-size: 1.7em;
+    }
+    &__form {
+      max-width: 32em;
+    }
+  }
+}
+
+// Example: .community__btn:hover { background: #222; } // Reason: Button hover feedback for accessibility

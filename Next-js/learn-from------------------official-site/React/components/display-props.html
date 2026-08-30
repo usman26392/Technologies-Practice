@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React: Component </title>
+</head>
+<body>
+    <div id="app"></div>
+    
+    <!-- scripts -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <!-- Babel Script -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- jsx -->
+    <script type="text/jsx" >
+        const app = document.getElementById("app");
+        
+        // a child component
+        function Header({title}) {
+            //console.log(title)
+            return (
+                <h1>{title}</h1>
+            )
+        }
+        
+        // a parent component
+        function HomePage() {
+            const [likes, setLikes ] = React.useState(0);
+
+            const navItems = ["Home", "About", "News", "Blogs"];
+            
+            function handleButton() {
+                // console.log("increment like count !");
+                setLikes(()=> likes + 1);
+            }
+
+            return (
+                <>
+                    <Header title="React" />
+                    <Header title="Next js"/>
+                    {
+                        navItems.map(function(ni, idx) {
+                            return (
+                                <h2 key={idx} >{ni}</h2>
+                            )
+                        })
+                    }
+                    <button onClick={handleButton}>like: {likes} </button>
+                </>
+            )
+        }
+        
+        ReactDOM.render(<HomePage/>, app);
+    </script>
+
+</body>
+</html>

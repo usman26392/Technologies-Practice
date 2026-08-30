@@ -1,0 +1,115 @@
+
+
+body {
+    margin: 0px;
+}
+
+/*------------------------ Border work --------------------------*/
+/*
+span {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background-color: cornsilk;
+}
+*/
+
+/*---------------------------Clearfix work---------------------------*/
+/*
+div {
+    width: 200px;
+    height: 300px;
+}
+*/
+
+/*-----------------------------------Colors work----------------------*/
+/*
+h1 {
+    font-size: 60px;
+}
+.chk::before {
+    content:"Usman";
+}
+*/
+/*--------------------------- flexbox --------------------------*/
+ul li {
+    list-style-type: none;
+}
+
+
+
+/*--------------------------------------Float work ------------------------------*/
+/*
+.box {
+    width: 200px;
+    height: 200px;
+}
+*/
+
+/*-----------------------------------Image Replacement -----------*/
+/*
+h1 {
+    background-image: url(logo.png);
+    background-repeat: no-repeat;
+    height: 100px;
+}
+*/
+
+/*------------------------------Overflow --------------------------------*/
+/*
+body {
+    margin-left: 20px;
+}
+.chk {
+    width: 200px;
+    height: 300px; 
+}
+*/
+
+
+/*----------------------------------- Positions -----------------------------*/
+
+
+.chk p:nth-child(1) {
+    z-index: 0;
+    height: 50px;
+}
+
+.chk p:nth-child(2) {
+    z-index: 1;
+    height: 50px;
+    top: 20px;
+}
+
+.chk p:nth-child(3) {
+    z-index: 2;
+    height: 50px;
+    top: 50px;
+}
+
+.chk p:nth-child(4) {
+    height: 100px;
+    top: 80px;
+    z-index: 4; 
+}
+
+.chk p:nth-child(5) {
+    height: 50px;
+    top: 100px;
+    z-index: 3;
+}
+
+/*-------------------------- stretched-link ----------------*/
+.h {
+    transition: all .3s linear;
+}
+.h:hover {
+    box-shadow: 0 1px 6px rgba(0,0,0,.3);
+}
+
+
+/*-------------------------------------------- COMPONENTS ------------------------------------*/
+.cust-separator + .cust-separator::before {
+    display: inline-block;
+    content:">";
+}

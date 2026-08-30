@@ -1,0 +1,36 @@
+{
+	"brandLogoList": [
+		{
+			"whiteLogoUrl": "/svgs/brands/brand-1-white.svg",
+			"colorLogoUrl": "/svgs/brands/brand-1.svg"
+		},
+		{
+			"whiteLogoUrl": "/svgs/brands/brand-2-white.svg",
+			"colorLogoUrl": "/svgs/brands/brand-2.svg"
+		},
+		{
+			"whiteLogoUrl": "/svgs/brands/brand-3-white.svg",
+			"colorLogoUrl": "/svgs/brands/brand-3.svg"
+		},
+		{
+			"whiteLogoUrl": "/svgs/brands/brand-4-white.svg",
+			"colorLogoUrl": "/svgs/brands/brand-4.svg"
+		},
+		{
+			"whiteLogoUrl": "/svgs/brands/brand-5-white.svg",
+			"colorLogoUrl": "/svgs/brands/brand-5.svg"
+		},
+		{
+			"whiteLogoUrl": "/svgs/brands/brand-6-white.svg",
+			"colorLogoUrl": "/svgs/brands/brand-6.svg"
+		},
+		{
+			"whiteLogoUrl": "/svgs/brands/brand-7-white.svg",
+			"colorLogoUrl": "/svgs/brands/brand-7.svg"
+		},
+		{
+			"whiteLogoUrl": "/svgs/brands/brand-8-white.svg",
+			"colorLogoUrl": "/svgs/brands/brand-8.svg"
+		}
+	]
+}
