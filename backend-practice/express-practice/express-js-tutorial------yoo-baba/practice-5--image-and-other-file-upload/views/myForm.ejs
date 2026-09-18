@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap 5 Form</title>
+  <!-- Bootstrap 5 CSS -->
+  <!-- <link href="https://jsdelivr.net" rel="stylesheet"> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body class="bg-light">
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card shadow">
+          <div class="card-header bg-primary text-white">
+            <h4 class="mb-0">Form</h4>
+          </div>
+          <% if (errors.length > 0) { %>
+          <div class="alert alert-danger">
+            <ul class="mb-0">
+              <% errors.forEach((error) => { %>
+              <li><%= error.msg %></li>
+              <% }); %>
+            </ul>
+          </div>
+          <% } %>
+          <div class="card-body">
+            <form action="/my-form" method="POST" enctype="multipart/form-data">
+
+              <!-- Username Field -->
+              <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Enter username">
+              </div>
+
+              <!-- File Upload Field -->
+              <div class="mb-3">
+                <label for="fileUpload" class="form-label">Upload File</label>
+                <input type="file" class="form-control" id="fileUpload" name="fileUpload">
+                <!-- for accepting multiple files -->
+                <!-- <input type="file" multiple class="form-control" id="fileUpload" name="fileUpload"> -->
+              </div>
+
+              <!-- Document Upload Field -->
+              <div class="mb-3">
+                <label for="documentUpload" class="form-label">Upload Document</label>
+                <input type="file" class="form-control" id="documentUpload" name="documentUpload">
+              </div>
+
+              <!-- Submit Button -->
+              <div class="mb-3">
+                <!-- Input Submit Button -->
+                <input type="submit" class="form-control btn btn-primary" value="Submit">
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap 5 Form</title>
+  <!-- Bootstrap 5 CSS -->
+  <!-- <link href="https://jsdelivr.net" rel="stylesheet"> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body class="bg-light">
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card shadow">
+          <div class="card-header bg-primary text-white">
+            <h4 class="mb-0">CSRF Token Form</h4>
+          </div>
+          
+          <div class="card-body">
+            <!-- Form -->
+            <form action="/submit" method="POST" class="p-4 border rounded shadow-sm bg-light max-width-form">
+              <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+              <!-- username Field -->
+              <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" required>
+              </div>
+              <!-- Register Button -->
+              <input type="submit" class="btn btn-primary w-100"/></input>
+            </form>
+
+            
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
