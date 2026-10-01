@@ -41,10 +41,40 @@ const router = express.Router();
 // get all students
 router.get("/students", async (req, res)=> {
     try {
-        const students = await Student.find();
+        // this is for search and pagination
+        const search = req.query.search || "";
+        const page = parseInt(req.query.page) || 1;
+        const limitPage = parseInt(req.query.limit) || 5;
+        const skipPage = (page - 1) * limitPage;
+        const query = {
+          $or: [
+            {
+              firstName: {
+                $regex: search,
+                $options: "i",
+              },
+            },
+            {
+              lastName: {
+                $regex: search,
+                $options: "i",
+              },
+            },
+          ],
+        };
+        // end of search and pagination
+
+        const totalRecords = await Student.countDocuments(query);
+
+        // go to the postman or browswe and enter this URL
+        // http://localhost:3000/api/students?search=raza
+        const students = await Student.find(query).skip(skipPage).limit(limitPage);
         res.status(200).json({
             message: "All students fetched successfully!",
-            data: students
+            data: students,
+            totalRecords,
+            limitPage,
+            totalPage: Math.ceil(totalRecords/limitPage)
         })
         
     } catch (error) {

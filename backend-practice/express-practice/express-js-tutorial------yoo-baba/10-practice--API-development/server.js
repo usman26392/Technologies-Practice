@@ -13,9 +13,9 @@ import cors from 'cors';
 import path from "path";
 import { fileURLToPath } from 'url';
 import {studentRoutes} from "./routes/student.routes.js"
-
-
-
+import multer from "multer";
+import { userRoutes } from "./routes/user.routes.js";
+import auth from "./middleware/auth.js";
 
 // Recreate __dirname for ES Modules
 const __filename = fileURLToPath(import.meta.url);
@@ -37,6 +37,9 @@ app.use(express.static("public"));
 app.use('/public/uploads', express.static(path.join(__dirname, 'public', 'uploads')));
 app.use(cors())
 
+
+app.use("/api", userRoutes);
+app.use(auth);
 app.use("/api", studentRoutes);
 
 
